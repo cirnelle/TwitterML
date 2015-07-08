@@ -1,10 +1,12 @@
+
+
 ##########################
 #
 # version 1.0
 # comments: - initial creation of the class
 #
 ###########################
-__author__ = 'gling'
+__author__ = 'yi-linghwong'
 
 ##
 # imports
@@ -12,23 +14,41 @@ __author__ = 'gling'
 import time
 import tweepy
 import json
+import os
+import sys
 
 
 ##
 # variables
 ##
-querielimit = 180
+querylimit = 180
 timewindow = 15
+users = ["NASA", "CERN"]
+
+if os.path.isfile('../../keys/twitter_api_keys.txt'):
+    lines = open('../../keys/twitter_api_keys.txt','r').readlines()
 
 
-apikey = ""
-apisecret = ""
+else:
+    print "Path not found"
+    sys.exit(1)
 
-AccessToken	= ""
-AccessTokenSecret = ""
+api_dict = {}
 
-starttime = 0
-currentime = 0
+for line in lines:
+    spline=line.replace("\n","").split()
+    #creates a list with key and value. Split splits a string at the space and stores the result in a list
+
+    api_dict[spline[0]]=spline[1]
+
+apikey = api_dict["API_key"]
+apisecret = api_dict["API_secret"]
+
+AccessToken	= api_dict["Access_token"]
+AccessTokenSecret = api_dict["Access_token_secret"]
+
+starttime = time.time()
+
 nrequest = 0
 
 auth = ''
@@ -39,10 +59,11 @@ class extractor():
     def __init__(self):
         self.printer("Welcome",1)
 
+
         global apikey
         global apisecret
 
-        global querielimit
+        global querylimit
         global timewindow
 
         global currenttime
@@ -53,21 +74,21 @@ class extractor():
 
 
 
-    def printer(self,messagew,switch):
+    def printer(self,messagew,case):
         #
         # 1: info
         # 2: error
         # 3: warning
 
 
-        if switch == 1:
-            print ("Info  ==>",messagew)
+        if case == 1:
+            print ("Info  ==> ",messagew)
 
-        elif switch == 2:
-            print ("Error  ==>",messagew)
+        elif case == 2:
+            print ("Error  ==> ",messagew)
 
-        elif switch == 3:
-            print ("Warning  ==>",messagew)
+        elif case == 3:
+            print ("Warning  ==> ",messagew)
 
 
     def requestlimit(self):
@@ -78,18 +99,21 @@ class extractor():
         currenttime=time.time()
         delta= currenttime-starttime
 
-        if nrequest>querielimit:
-            self.printer("Going to sleep for "+delta+" seconds", 3)
-            time.sleep(delta)
 
+         #Reset clock when the 15 mins timewindow is up
         if (delta)>(timewindow*60):
             starttime = currenttime
             self.printer("Resetting clock",1)
-            nrequest=1
+            nrequest = 1
+            delta = 0
+
         else:
             nrequest=+1
 
-
+        #Put program to sleep if more than 180 requests in 15 mins
+        if nrequest>querylimit:
+            self.printer("Going to sleep for "+ str(timewindow*60-delta) +" seconds", 3)
+            time.sleep(delta)
 
 
 
@@ -101,8 +125,10 @@ class extractor():
         #access_token=lines[0]
         #token_secret=lines[1]
 
+        #create an OAuthHandler instance
         auth = tweepy.OAuthHandler(apikey, apisecret)
         auth.set_access_token(AccessToken, AccessTokenSecret)
+
 
         return auth
 
@@ -111,19 +137,27 @@ class extractor():
 
         self.printer("connecting to twitter API",1)
 
+        #create an API instance. API is a class in tweepy that provides access to the entire
+        #Twitter RESTful API methods.
         api = tweepy.API(auth)
 
         return api
 
-    def gettweetst(self,fromuser,api):
+    def gettweets(self,user,api):
 
         self.requestlimit()
 
-        tweets=api.user_timeline(fromuser)
+        #tweets=api.user_timeline(fromuser)
 
-        for i in range(len(tweets)):
+        # create a Cursor instance. Cursor is a class in tweepy to help with pagination (iterate through statuses
+        # to get more than 20 tweets from user_timeline)
+        tweets=tweepy.Cursor(api.user_timeline,id=user).items(100)
 
-            tweet=tweets[i]
+        #for i in range(len(tweets)):
+
+        for tweet in tweets:
+
+            #tweet=tweets[tweet]
 
             json_str= json.dumps(tweet._json)
 
@@ -133,14 +167,14 @@ class extractor():
             print ("Favorited ",data['favorite_count'])
             print (data['created_at'])
             print ("------------")
-            print (data)
-
-
-
+                #print (data)
 
 
 
 ext= extractor()
-auth =ext.loadtokens()
+auth = ext.loadtokens()
 api = ext.connectToAPI(auth)
-ext.gettweetst("@NASA",api)
+
+for user in users:
+
+    ext.gettweets(user,api)
