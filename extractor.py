@@ -16,6 +16,7 @@ import tweepy
 import json
 import os
 import sys
+import csv
 
 
 ##
@@ -30,7 +31,7 @@ if os.path.isfile('../../keys/twitter_api_keys.txt'):
 
 
 else:
-    print "Path not found"
+    print ("Path not found")
     sys.exit(1)
 
 api_dict = {}
@@ -155,6 +156,8 @@ class extractor():
 
         #for i in range(len(tweets)):
 
+        fulltweets=[]
+
         for tweet in tweets:
 
             #tweet=tweets[tweet]
@@ -162,12 +165,28 @@ class extractor():
             json_str= json.dumps(tweet._json)
 
             data=json.loads(json_str)
-            print (data['text'])
-            print ("Retweets ",data['retweet_count'])
-            print ("Favorited ",data['favorite_count'])
-            print (data['created_at'])
-            print ("------------")
-                #print (data)
+
+
+            #add the new tweets to a list
+            fulltweets.append([data['text'], data['retweet_count'], data['favorite_count']])
+
+        return fulltweets
+
+            #print (data['text'])
+            #print ("Retweets ",data['retweet_count'])
+            #print ("Favorited ",data['favorite_count'])
+            #print (data['created_at'])
+            #print ("------------")
+            #print (data)
+
+    def printcsv(self,all_tweets,user):
+
+        with open('output_'+user+'.csv', 'w', newline='') as csvfile:
+            csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
+
+            for al in all_tweets:
+                csvtweets.writerow(al)
+
 
 
 
@@ -177,4 +196,5 @@ api = ext.connectToAPI(auth)
 
 for user in users:
 
-    ext.gettweets(user,api)
+    full_tweets = ext.gettweets(user,api)
+    ext.printcsv(full_tweets,user)
