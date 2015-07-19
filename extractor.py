@@ -17,6 +17,7 @@ import json
 import os
 import sys
 import csv
+from tweepy.streaming import StreamListener
 
 
 ##
@@ -24,7 +25,8 @@ import csv
 ##
 querylimit = 180
 timewindow = 15
-users = ["NASA", "CERN"]
+
+#users = ["nasa","cern"]
 
 if os.path.isfile('../../keys/twitter_api_keys.txt'):
     lines = open('../../keys/twitter_api_keys.txt','r').readlines()
@@ -55,7 +57,7 @@ nrequest = 0
 auth = ''
 
 
-class extractor():
+class Extractor():
 
     def __init__(self):
         self.printer("Welcome",1)
@@ -144,7 +146,7 @@ class extractor():
 
         return api
 
-    def gettweets(self,user,api):
+    def gettweets_user(self,user,api):
 
         self.requestlimit()
 
@@ -152,7 +154,7 @@ class extractor():
 
         # create a Cursor instance. Cursor is a class in tweepy to help with pagination (iterate through statuses
         # to get more than 20 tweets from user_timeline)
-        tweets=tweepy.Cursor(api.user_timeline,id=user).items(100)
+        tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False).items(20)
 
         #for i in range(len(tweets)):
 
@@ -162,14 +164,23 @@ class extractor():
 
             #tweet=tweets[tweet]
 
+            #dumps serialises strings into JSON (which is very similar to python's dict)
             json_str= json.dumps(tweet._json)
 
+            #loads deserialises a string and create a python dict, i.e. it parses the JSON to create a python dict
             data=json.loads(json_str)
 
 
-            #add the new tweets to a list
-            fulltweets.append([data['text'], data['retweet_count'], data['favorite_count']])
 
+
+            #add the new tweets to a list
+            #fulltweets.append([data['created_at'], data['text'], data['followers_count'], data['retweet_count'], data['favorite_count']])
+
+            ##IMPORTANT: the 'followers_count' key is in a dictionary (called 'user') within a dictionary!
+            fulltweets.append([data['user']['followers_count'], data['retweet_count']])
+
+
+        #fulltweets is a list in a list, i.e. [[text, rt count, etc], [text2, rt count2, etc]]
         return fulltweets
 
             #print (data['text'])
@@ -179,22 +190,70 @@ class extractor():
             #print ("------------")
             #print (data)
 
-    def printcsv(self,all_tweets,user):
 
-        with open('output_'+user+'.csv', 'w', newline='') as csvfile:
+
+
+    def gettweets_hashtag(self,hashtag,api):
+
+        self.requestlimit()
+
+
+        tweets=tweepy.Cursor(api.search, q=hashtag).items(100)
+
+        fulltweets=[]
+
+        for tweet in tweets:
+
+            #tweet=tweets[tweet]
+
+            #dumps serialises strings into JSON (which is very similar to python's dict)
+            json_str= json.dumps(tweet._json)
+
+            #loads deserialises a string and create a python dict, i.e. it parses the JSON to create a python dict
+            data=json.loads(json_str)
+
+
+            #add the new tweets to a list
+            fulltweets.append([data['created_at'], data['text'], data['retweet_count'], data['favorite_count']])
+
+        return fulltweets
+
+    def printcsv(self,all_tweets,filename):
+
+        with open('output_'+filename+'.csv', 'w', newline='') as csvfile:
+            csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
+
+            for al in all_tweets:
+                csvtweets.writerow(al)
+
+    def printcsv_all(self,all_tweets,name):
+        with open('output_'+name+'.csv','w', newline='') as csvfile:
             csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
 
             for al in all_tweets:
                 csvtweets.writerow(al)
 
 
+#ext= Extractor()
+#auth = ext.loadtokens()
+#api = ext.connectToAPI(auth)
+
+#full_tweets = []
+
+#for user in users:
+
+    #use extend instead of append to add the second list to the first one!
+    #full_tweets.extend(ext.gettweets_user(user,api))
+    #ext.printcsv(full_tweets,user)
+
+#ext.printcsv_all(full_tweets)
 
 
-ext= extractor()
-auth = ext.loadtokens()
-api = ext.connectToAPI(auth)
 
-for user in users:
+#print (ext.gettweets_hashtag(hashtaglist,api))
 
-    full_tweets = ext.gettweets(user,api)
-    ext.printcsv(full_tweets,user)
+#for ht in hashtaglist:
+
+    #full_tweets = ext.gettweets_hashtag(ht,api)
+    #ext.printcsv(full_tweets,ht)
+
