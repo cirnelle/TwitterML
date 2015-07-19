@@ -7,15 +7,6 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 import json
 
-# Go to http://apps.twitter.com and create an app.
-# The consumer key and secret will be generated for you after
-consumer_key="9a03BV3698yMsKOlkhM05GJm2"
-consumer_secret="Her2DZmZUTZrrUYC7PGbS3LhtLtMJzPYvXGvN4rpUQSncdyihl"
-
-# After the step above, you will be redirected to your app's page.
-# Create an access token under the the "Your access token" section
-access_token="91119742-mgDQ7KhepnGVddcL80UEbKRvH79GrvRtZYXrkuLlv"
-access_token_secret="rNBmfvHCK0Zxcr1d7gxWftWTt3X34mLcgvOBE0pOMrwAg"
 
 hashtaglist = ['pluto']
 
