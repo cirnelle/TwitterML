@@ -5,6 +5,8 @@ import os
 import numpy
 from matplotlib import pyplot as plt
 
+"""
+
 if os.path.isfile('users_temp.txt'):
   lines = open('users_temp.txt','r').readlines()
 
@@ -20,7 +22,9 @@ for line in lines:
 
     user_list.append(spline[0])
 
-#user_list=['nasa','cern']
+"""
+
+user_list=['nasa']
 
 ext= Extractor()
 auth = ext.loadtokens()
@@ -67,8 +71,8 @@ class UserTweets():
             followers=[]
 
             for t in full_tweets:
-                rt.append(t[1])
-                followers.append(t[0])
+                rt.append(t[3])
+                followers.append(t[2])
 
             av_list.append([numpy.average(followers),numpy.average(rt)])
 
@@ -79,10 +83,25 @@ class UserTweets():
 
             #av_list.extend()
 
+    def get_eng_rate(self,users):
+
+        full_tweets = []
+        engrate_list = []
+
+        for user in users:
+            full_tweets = ext.gettweets_user(user,api)
+
+
+            for t in full_tweets:
+                engrate = (numpy.divide(t[3],t[2]))*100
+
+                engrate_list.append([user, t[1], engrate])
+
+        return engrate_list
+
 
 '''
 Get tweets per user per file
-
 '''
 
 ut = UserTweets()
@@ -92,18 +111,25 @@ ut = UserTweets()
 Get tweets all users in one file
 '''
 
-#fulltweets = ut.get_all_user_tweets(user_list)
-#ext.printcsv_all(fulltweets,'all')
+fulltweets = ut.get_all_user_tweets(user_list)
+ext.printcsv_all(fulltweets,'all')
+
+'''
+Get engagement rate
+'''
+#engratelist = ut.get_eng_rate(user_list)
+#ext.printcsv_all(engratelist,'engrate')
+
 
 '''
 Get average
 '''
-average = ut.get_average(user_list)
-ext.printcsv_all(average,'av')
+#average = ut.get_average(user_list)
+#ext.printcsv_all(average,'av')
 
 '''
 Plot graph
-'''
+
 
 lines = open('output_av.csv','r').readlines()
 
@@ -124,4 +150,4 @@ plt.plot(x,y,'*')
 plt.show()
 
 
-
+'''

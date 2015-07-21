@@ -1,3 +1,5 @@
+NASA, 11.2M
+neiltyson, 3.97M
 BillNye, 2.3M
 nasahqphoto, 2.08M
 MarsCuriosity, 1.96M
@@ -10,9 +12,3 @@ ScienceChannel, 1.38M
 CERN, 1.21M
 RichardDawkins, 1.21M
 sciam, 1.1M
-NatureNews, 948K
-SpaceX, 897K
-AstrobiologyNAI, 874K
-NASAKennedy, 860K
-NASAJPL, 789K
-ReutersScience, 748K

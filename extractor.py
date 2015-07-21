@@ -154,7 +154,7 @@ class Extractor():
 
         # create a Cursor instance. Cursor is a class in tweepy to help with pagination (iterate through statuses
         # to get more than 20 tweets from user_timeline)
-        tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False).items(20)
+        tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(200)
 
         #for i in range(len(tweets)):
 
@@ -174,7 +174,7 @@ class Extractor():
 
 
             #add the new tweets to a list
-            #fulltweets.append([data['created_at'], data['text'], data['followers_count'], data['retweet_count'], data['favorite_count']])
+            #fulltweets.append([data['created_at'], data['text'], data['user']['followers_count'], data['retweet_count'], data['favorite_count']])
 
             ##IMPORTANT: the 'followers_count' key is in a dictionary (called 'user') within a dictionary!
             fulltweets.append([data['user']['followers_count'], data['retweet_count']])
