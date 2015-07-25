@@ -6,10 +6,37 @@ from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
 import json
+import csv
+import os
 
-#CONNECT TO API HERE##
 
-hashtaglist = ['pluto']
+if os.path.isfile('../../keys/twitter_api_keys.txt'):
+    lines = open('../../keys/twitter_api_keys.txt','r').readlines()
+
+
+else:
+    print ("Path not found")
+    sys.exit(1)
+
+api_dict = {}
+
+for line in lines:
+    spline=line.replace("\n","").split()
+    #creates a list with key and value. Split splits a string at the space and stores the result in a list
+
+    api_dict[spline[0]]=spline[1]
+
+consumer_key = api_dict["API_key"]
+consumer_secret = api_dict["API_secret"]
+
+access_token = api_dict["Access_token"]
+access_token_secret = api_dict["Access_token_secret"]
+
+
+hashtaglist = ['kepler']
+
+csvfile=open('output_kepler.csv','a', newline='')
+csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
 
 class StdOutListener(StreamListener):
     """ A listener handles tweets are the received from the stream.
@@ -19,13 +46,20 @@ class StdOutListener(StreamListener):
 
 
         data=json.loads(status)
+        print (data['text'])
+        csvtweets.writerow([data['text']])
+        #flush method writes data in buffer directly to the target file (real-time data writing to file)
+        csvfile.flush()
 
 
-        for hashtag in data['entities']['hashtags']:
+        #for hashtag in data['entities']['hashtags']:
 
-            if hashtag['text'].lower() in hashtaglist:
-                print(hashtag['text'])
-                print(data['text'])
+            #if hashtag['text'].lower() in hashtaglist:
+                #print(hashtag['text'])
+                #print(data['text'])
+                #csvtweets.writerow([data['text']])
+                #csvfile.flush()
+                #csvtweets.writerow(status)
 
         return True
 
@@ -44,6 +78,9 @@ if __name__ == '__main__':
     auth.set_access_token(access_token, access_token_secret)
 
     stream = Stream(auth, l)
-    stream.filter(track=["#"+x for x in hashtaglist])
+    #stream.filter(languages=["en"],track=["#"+x for x in hashtaglist])
+    stream.filter(languages=["en"],track=['kepler'])
     #stream.filter(track=hashtaglist)
+
+
 

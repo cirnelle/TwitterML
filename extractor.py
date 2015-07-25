@@ -119,6 +119,12 @@ class Extractor():
             time.sleep(delta)
 
 
+    def is_rate_limit_error(self,e):
+        return isinstance(e.reason, list) \
+            and e.reason[0:] \
+            and 'code' in e.reason[0] \
+            and e.reason[0]['code'] == 88
+
 
     def loadtokens(self):
 
@@ -148,36 +154,51 @@ class Extractor():
 
     def gettweets_user(self,user,api):
 
-        self.requestlimit()
+
+        #self.requestlimit()
 
         #tweets=api.user_timeline(fromuser)
+        while True:
+            try:
 
         # create a Cursor instance. Cursor is a class in tweepy to help with pagination (iterate through statuses
         # to get more than 20 tweets from user_timeline)
-        tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(200)
+                tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(20)
 
         #for i in range(len(tweets)):
 
-        fulltweets=[]
 
-        for tweet in tweets:
+
+
+                fulltweets=[]
+
+                for tweet in tweets:
 
             #tweet=tweets[tweet]
 
             #dumps serialises strings into JSON (which is very similar to python's dict)
-            json_str= json.dumps(tweet._json)
+                    json_str= json.dumps(tweet._json)
 
             #loads deserialises a string and create a python dict, i.e. it parses the JSON to create a python dict
-            data=json.loads(json_str)
+                    data=json.loads(json_str)
 
 
 
 
             #add the new tweets to a list
-            #fulltweets.append([data['created_at'], data['text'], data['user']['followers_count'], data['retweet_count'], data['favorite_count']])
+                    fulltweets.append([data['created_at'], data['text'], data['user']['followers_count'], data['retweet_count'], data['favorite_count']])
 
             ##IMPORTANT: the 'followers_count' key is in a dictionary (called 'user') within a dictionary!
-            fulltweets.append([data['user']['followers_count'], data['retweet_count']])
+                #fulltweets.append([data['user']['followers_count'], data['retweet_count']])
+
+
+            except tweepy.error.TweepError as e:
+
+                print ("entering rate limit error")
+                if self.is_rate_limit_error(e):
+                    raise e
+                time.sleep(60*15)
+                continue
 
 
         #fulltweets is a list in a list, i.e. [[text, rt count, etc], [text2, rt count2, etc]]
@@ -195,9 +216,11 @@ class Extractor():
 
     def gettweets_hashtag(self,hashtag,api):
 
+
+
         self.requestlimit()
 
-
+        print (api.rate_limit_status())
         tweets=tweepy.Cursor(api.search, q=hashtag).items(100)
 
         fulltweets=[]

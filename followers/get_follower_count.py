@@ -187,3 +187,4 @@ now = time.strftime("%c")
 for user in users:
     follcount = ext.get_follower_count(user, api)
     ext.printcsv(follcount, now, user)
+    time.sleep(1)
