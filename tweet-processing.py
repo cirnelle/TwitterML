@@ -7,8 +7,8 @@ import itertools
 from extractor import Extractor
 
 
-if os.path.isfile('output_kepler.csv'):
-  lines = open('output_kepler.csv','r').readlines()
+if os.path.isfile('output/output_kepler.csv'):
+  lines = open('output/output_kepler.csv','r').readlines()
 
 else:
     print ("File not found")
@@ -65,6 +65,7 @@ class DataProcessing():
 
         return clean_tweets
 
+
     def remove_sc(self,tweets):
 
         clean_tweets = []
@@ -83,16 +84,29 @@ class DataProcessing():
 ext = Extractor()
 dp = DataProcessing()
 clean_tweets = dp.remove_sc(dp.remove_mention(dp.remove_RT(dp.remove_url(tweets))))
-print (clean_tweets)
+
+#print (clean_tweets)
 
 #remove duplicates!
-clean_tweets.sort()
-ct = list(clean_tweets for clean_tweets,_ in itertools.groupby(clean_tweets))
-print (ct)
+#clean_tweets.sort()
+#ct = list(clean_tweets for clean_tweets,_ in itertools.groupby(clean_tweets))
+#print (ct)
+
+no_duplicate = []
+duplicate = []
+
+for ct in clean_tweets:
+    if ct not in no_duplicate:
+        no_duplicate.append(ct)
+    else:
+        duplicate.append(ct)
+
+
 
 #print output to csv file
-ext.printcsv_all(ct,'clean')
-
+ext.printcsv_all(no_duplicate,'kepler_clean')
+#ext.printcsv_all(sc_no_dup,'clean_sc')
+ext.printcsv_all(duplicate,'kepler_dup')
 
 
 

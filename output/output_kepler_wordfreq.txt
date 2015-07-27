@@ -1,0 +1,1 @@
+[('kepler', 4260), ('earth', 2277), ('452b', 2149), ('nasa', 1218), ('planet', 954), ('like', 819), ('cousin', 463), ('new', 371), ('found', 342), ('discovery', 305), ('life', 270), ('older', 256), ('mission', 248), ('discovered', 245), ('bigger', 233), ('star', 226), ('sun', 223), ('orbits', 218), ('transiting', 214), ('space', 212)]

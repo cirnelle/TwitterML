@@ -158,47 +158,47 @@ class Extractor():
         #self.requestlimit()
 
         #tweets=api.user_timeline(fromuser)
-        while True:
-            try:
+        #while True:
+            #try:
 
         # create a Cursor instance. Cursor is a class in tweepy to help with pagination (iterate through statuses
         # to get more than 20 tweets from user_timeline)
-                tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(20)
+        tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(20)
 
         #for i in range(len(tweets)):
 
 
 
 
-                fulltweets=[]
+        fulltweets=[]
 
-                for tweet in tweets:
+        for tweet in tweets:
 
             #tweet=tweets[tweet]
 
             #dumps serialises strings into JSON (which is very similar to python's dict)
-                    json_str= json.dumps(tweet._json)
+            json_str= json.dumps(tweet._json)
 
             #loads deserialises a string and create a python dict, i.e. it parses the JSON to create a python dict
-                    data=json.loads(json_str)
+            data=json.loads(json_str)
 
 
 
 
             #add the new tweets to a list
-                    fulltweets.append([data['created_at'], data['text'], data['user']['followers_count'], data['retweet_count'], data['favorite_count']])
+            fulltweets.append([data['created_at'], data['text'], data['user']['followers_count'], data['retweet_count'], data['favorite_count']])
 
             ##IMPORTANT: the 'followers_count' key is in a dictionary (called 'user') within a dictionary!
                 #fulltweets.append([data['user']['followers_count'], data['retweet_count']])
 
 
-            except tweepy.error.TweepError as e:
+            #except tweepy.error.TweepError as e:
 
-                print ("entering rate limit error")
-                if self.is_rate_limit_error(e):
-                    raise e
-                time.sleep(60*15)
-                continue
+                #print ("entering rate limit error")
+                #if self.is_rate_limit_error(e):
+                    #raise e
+                #time.sleep(60*15)
+                #continue
 
 
         #fulltweets is a list in a list, i.e. [[text, rt count, etc], [text2, rt count2, etc]]
@@ -243,14 +243,14 @@ class Extractor():
 
     def printcsv(self,all_tweets,filename):
 
-        with open('output_'+filename+'.csv', 'w', newline='') as csvfile:
+        with open('/Users/yi-linghwong/GitHub/TwitterML/output/output_'+filename+'.csv', 'w', newline='') as csvfile:
             csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
 
             for al in all_tweets:
                 csvtweets.writerow(al)
 
     def printcsv_all(self,all_tweets,name):
-        with open('output_'+name+'.csv','w', newline='') as csvfile:
+        with open('/Users/yi-linghwong/GitHub/TwitterML/output/output_'+name+'.csv','w', newline='') as csvfile:
             csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
 
             for al in all_tweets:
