@@ -56,50 +56,10 @@ class UserTweets():
         return full_tweets
 
 
-'''
-    def get_average(self,users):
-
-        full_tweets = []
-        av_list = []
-
-        for user in users:
-
-            full_tweets = ext.gettweets_user(user,api)
-            #print (full_tweets)
-
-            rt=[]
-            followers=[]
-
-            for t in full_tweets:
-                rt.append(t[3])
-                followers.append(t[2])
-
-            av_list.append([numpy.average(followers),numpy.average(rt)])
-
-        return (av_list)
-
-            #print (averageRT)
-            #print (averageFollowers)
-
-            #av_list.extend()
 
 
-    def get_eng_rate(self,users):
-
-        full_tweets = []
-        engrate_list = []
-
-        for user in users:
-            full_tweets = ext.gettweets_user(user,api)
 
 
-            for t in full_tweets:
-                engrate = (numpy.divide(t[3],t[2]))*100
-
-                engrate_list.append([user, t[1], engrate])
-
-        return engrate_list
-'''
 
 '''
 Get tweets per user per file

@@ -7,8 +7,8 @@ import itertools
 from extractor import Extractor
 
 
-if os.path.isfile('output/output_kepler.csv'):
-  lines = open('output/output_kepler.csv','r').readlines()
+if os.path.isfile('output/output_engrate_textonly.csv'):
+  lines = open('output/output_engrate_textonly.csv','r', encoding = "ISO-8859-1").readlines()
 
 else:
     print ("File not found")
@@ -104,9 +104,9 @@ for ct in clean_tweets:
 
 
 #print output to csv file
-ext.printcsv_all(no_duplicate,'kepler_clean')
+ext.printcsv_all(no_duplicate,'engrate_clean')
 #ext.printcsv_all(sc_no_dup,'clean_sc')
-ext.printcsv_all(duplicate,'kepler_dup')
+#ext.printcsv_all(duplicate,'kepler_dup')
 
 
 

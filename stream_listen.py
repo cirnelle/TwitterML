@@ -35,7 +35,7 @@ access_token_secret = api_dict["Access_token_secret"]
 
 hashtaglist = ['kepler']
 
-csvfile=open('output_kepler.csv','a', newline='')
+csvfile=open('output/output_kepler.csv','a', newline='')
 csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
 
 class StdOutListener(StreamListener):

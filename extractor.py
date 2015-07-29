@@ -152,7 +152,30 @@ class Extractor():
 
         return api
 
+    def user_tweets(self,user,api):
+
+        tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(10)
+
+        return tweets
+
+
+    def hashtag_tweets(self,hashtag,api):
+
+        tweets=tweepy.Cursor(api.search, q=hashtag, lang="en").items(50)
+
+        return tweets
+
+
     def gettweets_user(self,user,api):
+
+        rate_limit = api.rate_limit_status()
+
+        remaining = rate_limit['resources']['statuses']['/statuses/user_timeline']['remaining']
+        reset_time = rate_limit['resources']['statuses']['/statuses/user_timeline']['reset']
+
+        print (remaining)
+
+        if remaining >= 10:
 
 
         #self.requestlimit()
@@ -163,10 +186,44 @@ class Extractor():
 
         # create a Cursor instance. Cursor is a class in tweepy to help with pagination (iterate through statuses
         # to get more than 20 tweets from user_timeline)
-        tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(20)
+
+
+            tweets = self.user_tweets(user,api)
+
+        else:
+
+            print ("Rate limiting. Going to sleep")
+
+            sleep_time = int(reset_time) - int(time.time())
+
+            time.sleep(sleep_time)
+
+            tweets = self.user_tweets(user,api)
+
 
         #for i in range(len(tweets)):
 
+
+        """
+
+        except:
+            print ("Entering error")
+            #if e == {"errors":[{"message":"Rate limit exceeded","code":88}]}:
+                #time.sleep(60*5) #Sleep for 5 minutes
+            #else:
+                #print (e)
+
+
+
+            except tweepy.error.TweepError as e:
+                print ("Entering error")
+                if not self.is_rate_limit_error(e):
+                    raise e
+                else:
+                    print ('Rate limit error')
+                    time.sleep(60*5)
+
+            """
 
 
 
@@ -192,13 +249,7 @@ class Extractor():
                 #fulltweets.append([data['user']['followers_count'], data['retweet_count']])
 
 
-            #except tweepy.error.TweepError as e:
 
-                #print ("entering rate limit error")
-                #if self.is_rate_limit_error(e):
-                    #raise e
-                #time.sleep(60*15)
-                #continue
 
 
         #fulltweets is a list in a list, i.e. [[text, rt count, etc], [text2, rt count2, etc]]
@@ -213,15 +264,32 @@ class Extractor():
 
 
 
-
     def gettweets_hashtag(self,hashtag,api):
 
+        rate_limit = api.rate_limit_status()
 
+        print (rate_limit)
 
-        self.requestlimit()
+        remaining = rate_limit['resources']['statuses']['/statuses/user_timeline']['remaining']
+        reset_time = rate_limit['resources']['statuses']['/statuses/user_timeline']['reset']
 
-        print (api.rate_limit_status())
-        tweets=tweepy.Cursor(api.search, q=hashtag).items(100)
+        print (remaining)
+
+        if remaining >= 10:
+
+        #self.requestlimit()
+
+            tweets=self.hashtag_tweets(hashtag,api)
+
+        else:
+
+            print ("Rate limiting. Going to sleep")
+
+            sleep_time = int(reset_time) - int(time.time())
+
+            time.sleep(sleep_time)
+
+            tweets=self.hashtag_tweets(hashtag,api)
 
         fulltweets=[]
 
@@ -241,6 +309,7 @@ class Extractor():
 
         return fulltweets
 
+
     def printcsv(self,all_tweets,filename):
 
         with open('/Users/yi-linghwong/GitHub/TwitterML/output/output_'+filename+'.csv', 'w', newline='') as csvfile:
@@ -248,6 +317,7 @@ class Extractor():
 
             for al in all_tweets:
                 csvtweets.writerow(al)
+
 
     def printcsv_all(self,all_tweets,name):
         with open('/Users/yi-linghwong/GitHub/TwitterML/output/output_'+name+'.csv','w', newline='') as csvfile:

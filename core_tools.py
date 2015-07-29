@@ -26,7 +26,7 @@ for line in lines:
 
     user_list.append(spline[0])
 
-stop_words = ['2', '0', '1', 'b']
+stop_words = ['2', '0', '1', 'b', 'amp', 'one', 'today', 'via']
 
 #user_list=['nasa']
 
@@ -72,6 +72,8 @@ class Compute():
         engrate_list = []
 
         for user in users:
+
+
             full_tweets = ext.gettweets_user(user,api)
 
 
@@ -106,8 +108,8 @@ class Compute():
 
         words = []
 
-        if os.path.isfile('output/output_kepler_clean.csv'):
-            lines = open('output/output_kepler_clean.csv', 'r').readlines()
+        if os.path.isfile('output/output_engrate_clean.csv'):
+            lines = open('output/output_engrate_clean.csv', 'r').readlines()
 
         else:
             print("File not found")
@@ -154,7 +156,7 @@ Get engagement rate
 
 
 engratelist = cp.get_eng_rate(user_list)
-ext.printcsv_all(engratelist,'engrate')
+ext.printcsv_all(engratelist,'engrate_live')
 
 '''
 
