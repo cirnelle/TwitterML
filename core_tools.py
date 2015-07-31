@@ -10,6 +10,13 @@ from nltk.corpus import stopwords
 import time
 
 
+if os.path.exists("/Users/yi-linghwong/GitHub/TwitterML/"):
+    maindir = "/Users/yi-linghwong/GitHub/TwitterML/"
+elif os.path.exists("/home/yiling/GitHub/GitHub/TwitterML/"):
+    maindir = "/home/yiling/GitHub/GitHub/TwitterML/"
+else:
+    print ("ERROR --> major error")
+    sys.exit(1)
 
 if os.path.isfile('users_temp.txt'):
   lines = open('users_temp.txt','r').readlines()
@@ -75,14 +82,18 @@ class Compute():
 
 
             full_tweets = ext.gettweets_user(user,api)
+            #print (full_tweets)
 
 
             for t in full_tweets:
-                engrate = (np.divide(t[3],t[2]))*100
 
-                engrate_list.append([user, t[1], engrate])
+                engrate = (np.divide(t[5],t[3]))*100
 
-        return engrate_list
+                engrate_list.append([t[0], t[1], t[2], t[3], t[4], engrate])
+
+            ext.printcsv_all(engrate_list,'engrate_live')
+
+        #return engrate_list
 
 
     def get_histogram(self,engrate_list):
@@ -132,7 +143,7 @@ class Compute():
             if w not in stop:
                 word_freq.append(w)
 
-        f = open('/Users/yi-linghwong/GitHub/TwitterML/output/output_kepler_wordfreq.txt', 'w')
+        f = open(maindir+'/output/output_kepler_wordfreq.txt', 'w')
         f.write(str(Counter(word_freq).most_common(20)))
         f.close()
 
@@ -156,7 +167,9 @@ Get engagement rate
 
 
 engratelist = cp.get_eng_rate(user_list)
-ext.printcsv_all(engratelist,'engrate_live')
+
+#write file in function itself! So that if program interrupted data will be flushed to file.
+#ext.printcsv_all(engratelist,'engrate_live')
 
 '''
 

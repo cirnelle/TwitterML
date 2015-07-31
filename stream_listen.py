@@ -35,7 +35,7 @@ access_token_secret = api_dict["Access_token_secret"]
 
 hashtaglist = ['kepler']
 
-csvfile=open('output/output_kepler.csv','a', newline='')
+csvfile=open('output/output_kepler_20-30072015.csv','a', newline='')
 csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
 
 class StdOutListener(StreamListener):
@@ -46,10 +46,12 @@ class StdOutListener(StreamListener):
 
 
         data=json.loads(status)
-        print (data['text'])
-        csvtweets.writerow([data['text']])
+
+        if 'created_at' in data:
+            print ([data['created_at'],data['text']])
+            csvtweets.writerow([data['created_at'], data['text'], data['retweet_count'], data['favorite_count']])
         #flush method writes data in buffer directly to the target file (real-time data writing to file)
-        csvfile.flush()
+            csvfile.flush()
 
 
         #for hashtag in data['entities']['hashtags']:

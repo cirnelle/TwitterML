@@ -28,6 +28,14 @@ timewindow = 15
 
 #users = ["nasa","cern"]
 
+if os.path.exists("/Users/yi-linghwong/GitHub/TwitterML/"):
+    maindir = "/Users/yi-linghwong/GitHub/TwitterML/"
+elif os.path.exists("/home/yiling/GitHub/GitHub/TwitterML/"):
+    maindir = "/home/yiling/GitHub/GitHub/TwitterML/"
+else:
+    print ("ERROR --> major error")
+    sys.exit(1)
+
 if os.path.isfile('../../keys/twitter_api_keys.txt'):
     lines = open('../../keys/twitter_api_keys.txt','r').readlines()
 
@@ -94,30 +102,6 @@ class Extractor():
             print ("Warning  ==> ",messagew)
 
 
-    def requestlimit(self):
-
-        global starttime
-        global nrequest
-
-        currenttime=time.time()
-        delta= currenttime-starttime
-
-
-         #Reset clock when the 15 mins timewindow is up
-        if (delta)>(timewindow*60):
-            starttime = currenttime
-            self.printer("Resetting clock",1)
-            nrequest = 1
-            delta = 0
-
-        else:
-            nrequest=+1
-
-        #Put program to sleep if more than 180 requests in 15 mins
-        if nrequest>querylimit:
-            self.printer("Going to sleep for "+ str(timewindow*60-delta) +" seconds", 3)
-            time.sleep(delta)
-
 
     def is_rate_limit_error(self,e):
         return isinstance(e.reason, list) \
@@ -148,13 +132,14 @@ class Extractor():
 
         #create an API instance. API is a class in tweepy that provides access to the entire
         #Twitter RESTful API methods.
-        api = tweepy.API(auth)
+        #IMPORTANT: remember to set wait_on_rate_limit parameter to True to avoid rate limiting
+        api = tweepy.API(auth, wait_on_rate_limit=True)
 
         return api
 
     def user_tweets(self,user,api):
 
-        tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(10)
+        tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(500)
 
         return tweets
 
@@ -175,10 +160,8 @@ class Extractor():
 
         print (remaining)
 
-        if remaining >= 10:
+        #if remaining >= 10:
 
-
-        #self.requestlimit()
 
         #tweets=api.user_timeline(fromuser)
         #while True:
@@ -188,17 +171,17 @@ class Extractor():
         # to get more than 20 tweets from user_timeline)
 
 
-            tweets = self.user_tweets(user,api)
+        tweets = self.user_tweets(user,api)
 
-        else:
+        #else:
 
-            print ("Rate limiting. Going to sleep")
+            #print ("Rate limiting. Going to sleep")
 
-            sleep_time = int(reset_time) - int(time.time())
+            #sleep_time = int(reset_time) - int(time.time())
 
-            time.sleep(sleep_time)
+            #time.sleep(sleep_time)
 
-            tweets = self.user_tweets(user,api)
+            #tweets = self.user_tweets(user,api)
 
 
         #for i in range(len(tweets)):
@@ -243,7 +226,7 @@ class Extractor():
 
 
             #add the new tweets to a list
-            fulltweets.append([data['created_at'], data['text'], data['user']['followers_count'], data['retweet_count'], data['favorite_count']])
+            fulltweets.append([user, data['created_at'], data['text'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count']])
 
             ##IMPORTANT: the 'followers_count' key is in a dictionary (called 'user') within a dictionary!
                 #fulltweets.append([data['user']['followers_count'], data['retweet_count']])
@@ -268,28 +251,27 @@ class Extractor():
 
         rate_limit = api.rate_limit_status()
 
-        print (rate_limit)
 
         remaining = rate_limit['resources']['statuses']['/statuses/user_timeline']['remaining']
         reset_time = rate_limit['resources']['statuses']['/statuses/user_timeline']['reset']
 
         print (remaining)
 
-        if remaining >= 10:
+        #if remaining >= 10:
 
         #self.requestlimit()
 
-            tweets=self.hashtag_tweets(hashtag,api)
+        tweets=self.hashtag_tweets(hashtag,api)
 
-        else:
+        #else:
 
-            print ("Rate limiting. Going to sleep")
+            #print ("Rate limiting. Going to sleep")
 
-            sleep_time = int(reset_time) - int(time.time())
+            #sleep_time = int(reset_time) - int(time.time())
 
-            time.sleep(sleep_time)
+            #time.sleep(sleep_time)
 
-            tweets=self.hashtag_tweets(hashtag,api)
+            #tweets=self.hashtag_tweets(hashtag,api)
 
         fulltweets=[]
 
@@ -312,19 +294,29 @@ class Extractor():
 
     def printcsv(self,all_tweets,filename):
 
-        with open('/Users/yi-linghwong/GitHub/TwitterML/output/output_'+filename+'.csv', 'w', newline='') as csvfile:
+
+        with open(maindir+'/output/output_'+filename+'.csv', 'w', newline='') as csvfile:
             csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
 
             for al in all_tweets:
                 csvtweets.writerow(al)
+                csvfile.flush()
+                os.fsync(csvfile.fileno())
+
+
 
 
     def printcsv_all(self,all_tweets,name):
-        with open('/Users/yi-linghwong/GitHub/TwitterML/output/output_'+name+'.csv','w', newline='') as csvfile:
+        with open(maindir+'/output/output_'+name+'.csv','w', newline='') as csvfile:
             csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
 
             for al in all_tweets:
                 csvtweets.writerow(al)
+                csvfile.flush()
+                os.fsync(csvfile.fileno())
+
+
+
 
 
 #ext= Extractor()

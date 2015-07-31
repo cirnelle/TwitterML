@@ -2,10 +2,11 @@ __author__ = 'yi-linghwong'
 
 from extractor import Extractor
 import os
+import sys
 import numpy
 from matplotlib import pyplot as plt
 
-"""
+
 
 if os.path.isfile('users_temp.txt'):
   lines = open('users_temp.txt','r').readlines()
@@ -22,9 +23,9 @@ for line in lines:
 
     user_list.append(spline[0])
 
-"""
 
-user_list=['nasa']
+
+#user_list=['nasa']
 
 ext= Extractor()
 auth = ext.loadtokens()
@@ -48,12 +49,13 @@ class UserTweets():
 
             #use extend instead of append to add the second list to the first one!
             full_tweets.extend(ext.gettweets_user(user,api))
-
+            ext.printcsv_all(full_tweets,'all')
 
 
             #ext.printcsv(full_tweets,user)
 
-        return full_tweets
+
+        #return full_tweets
 
 
 
@@ -73,7 +75,8 @@ Get tweets all users in one file
 '''
 
 fulltweets = ut.get_all_user_tweets(user_list)
-ext.printcsv_all(fulltweets,'all')
+# print file in the function itself. So that data will be flushed to file when program interrupted.
+#ext.printcsv_all(fulltweets,'all')
 
 '''
 Get engagement rate
