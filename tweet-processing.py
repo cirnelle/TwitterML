@@ -79,10 +79,68 @@ class DataProcessing():
 
         return clean_tweets
 
+    def label_tweets(self):
+
+        if os.path.isfile('output/output_engrate_010815.csv'):
+            lines = open('output/output_engrate_010815.csv', 'r').read()
+
+        else:
+            print("File not found")
+            sys.exit(1)
+
+
+        tweets_label = []
+
+        print (lines)
+
+        for line in lines:
+
+            tweets = []
+            print (line)
+
+            spline=line.replace("\n","").split(",")
+
+            #split string from 2nd comma until the third last comma, and then join them together into one single string
+            tweets.append("".join(spline[2:len(spline)-3]))
+
+            print (float(spline[-1]))
+
+            if float(spline[-1]) >= 0.02:
+
+                tweets.append('HRT')
+
+
+            elif (float(spline[-1]) >= 0.04) and (float(spline[-1]) < 0.02):
+
+                tweets.append('ART')
+
+            else:
+
+                tweets.append('LRT')
+
+            print (tweets)
+
+            tweets_label.append(tweets)
+
+            #print (tweets_label)
+
+
+
+
+
+
+
+
 
 
 ext = Extractor()
 dp = DataProcessing()
+
+'''
+Clean up tweets
+
+
+
 clean_tweets = dp.remove_sc(dp.remove_mention(dp.remove_RT(dp.remove_url(tweets))))
 
 #print (clean_tweets)
@@ -102,11 +160,12 @@ for ct in clean_tweets:
         duplicate.append(ct)
 
 
-
+'''
 #print output to csv file
-ext.printcsv_all(no_duplicate,'engrate_clean')
+#ext.printcsv_all(no_duplicate,'engrate_clean')
 #ext.printcsv_all(sc_no_dup,'clean_sc')
 #ext.printcsv_all(duplicate,'kepler_dup')
 
+dp.label_tweets()
 
 

@@ -89,7 +89,8 @@ class Compute():
 
                 engrate = (np.divide(t[5],t[3]))*100
 
-                engrate_list.append([t[0], t[1], t[2], t[3], t[4], engrate])
+                #print text of tweet as last element to eliminate complications that comes with comma (or pipe) delimited files when processing tweets
+                engrate_list.append([t[0], t[1], t[3], t[4], engrate, t[2]])
 
             ext.printcsv_all(engrate_list,'engrate_live')
 
@@ -107,9 +108,10 @@ class Compute():
 
         #print (er_list)
 
-        plt.hist(engrate_list,bins=20)
+        plt.hist(engrate_list,bins=25)
         #need block=True to keep plot opened
         plt.xlabel("Engagement rate")
+        plt.ylabel("Number of Tweets")
         plt.show(block=True)
 
 
@@ -166,7 +168,7 @@ Get engagement rate
 '''
 
 
-engratelist = cp.get_eng_rate(user_list)
+#engratelist = cp.get_eng_rate(user_list)
 
 #write file in function itself! So that if program interrupted data will be flushed to file.
 #ext.printcsv_all(engratelist,'engrate_live')
@@ -174,10 +176,11 @@ engratelist = cp.get_eng_rate(user_list)
 '''
 
 Get histogram
+'''
 
 
-if os.path.isfile('output/output_engrate.csv'):
-  lines = open('output/output_engrate.csv','r').readlines()
+if os.path.isfile('output/output_engrate_310715.csv'):
+  lines = open('output/output_engrate_310715.csv','r').readlines()
 
 else:
     print ("File not found")
@@ -195,7 +198,8 @@ for line in lines:
     try:
         #important to convert to float!!
         number=float(spline[len(spline)-1])
-        erlist.append(number)
+        if (number <= 0.10):
+            erlist.append(number)
     except:
         print ("Skipping")
 
@@ -203,7 +207,7 @@ for line in lines:
 
 cp.get_histogram(erlist)
 
-'''
+
 '''
 Get average
 '''

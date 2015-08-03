@@ -226,7 +226,7 @@ class Extractor():
 
 
             #add the new tweets to a list
-            fulltweets.append([user, data['created_at'], data['text'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count']])
+            fulltweets.append([user, data['created_at'], data['text'].replace('\n', ' '), data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count']])
 
             ##IMPORTANT: the 'followers_count' key is in a dictionary (called 'user') within a dictionary!
                 #fulltweets.append([data['user']['followers_count'], data['retweet_count']])
@@ -287,7 +287,7 @@ class Extractor():
 
 
             #add the new tweets to a list
-            fulltweets.append([data['created_at'], data['text'], data['retweet_count'], data['favorite_count']])
+            fulltweets.append([data['created_at'], data['text'].replace('\n', ' '), data['retweet_count'], data['favorite_count']])
 
         return fulltweets
 
@@ -296,7 +296,7 @@ class Extractor():
 
 
         with open(maindir+'/output/output_'+filename+'.csv', 'w', newline='') as csvfile:
-            csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
+            csvtweets = csv.writer(csvfile, delimiter='|',quoting=csv.QUOTE_MINIMAL)
 
             for al in all_tweets:
                 csvtweets.writerow(al)
@@ -308,7 +308,7 @@ class Extractor():
 
     def printcsv_all(self,all_tweets,name):
         with open(maindir+'/output/output_'+name+'.csv','w', newline='') as csvfile:
-            csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
+            csvtweets = csv.writer(csvfile, delimiter='|',quoting=csv.QUOTE_MINIMAL)
 
             for al in all_tweets:
                 csvtweets.writerow(al)
