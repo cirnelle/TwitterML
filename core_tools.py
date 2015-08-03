@@ -121,8 +121,8 @@ class Compute():
 
         words = []
 
-        if os.path.isfile('output/output_engrate_clean.csv'):
-            lines = open('output/output_engrate_clean.csv', 'r').readlines()
+        if os.path.isfile('output/output_kepler_clean.csv'):
+            lines = open('output/output_kepler_clean.csv', 'r').readlines()
 
         else:
             print("File not found")
@@ -168,7 +168,7 @@ Get engagement rate
 '''
 
 
-#engratelist = cp.get_eng_rate(user_list)
+engratelist = cp.get_eng_rate(user_list)
 
 #write file in function itself! So that if program interrupted data will be flushed to file.
 #ext.printcsv_all(engratelist,'engrate_live')
@@ -176,7 +176,7 @@ Get engagement rate
 '''
 
 Get histogram
-'''
+
 
 
 if os.path.isfile('output/output_engrate_310715.csv'):
@@ -208,7 +208,7 @@ for line in lines:
 cp.get_histogram(erlist)
 
 
-'''
+
 Get average
 '''
 

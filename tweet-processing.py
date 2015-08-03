@@ -5,10 +5,11 @@ import os
 import sys
 import itertools
 from extractor import Extractor
+from nltk.corpus import stopwords
 
 
-if os.path.isfile('output/output_engrate_textonly.csv'):
-  lines = open('output/output_engrate_textonly.csv','r', encoding = "ISO-8859-1").readlines()
+if os.path.isfile('output/output_kepler_after.csv'):
+  lines = open('output/output_kepler_after.csv','r', encoding = "ISO-8859-1").readlines()
 
 else:
     print ("File not found")
@@ -24,6 +25,7 @@ for line in lines:
     if line.rstrip():
         tweets.extend(spline)
 
+stop_words = ['s', 'd']
 
 class DataProcessing():
 
@@ -81,8 +83,8 @@ class DataProcessing():
 
     def label_tweets(self):
 
-        if os.path.isfile('output/output_engrate_010815.csv'):
-            lines = open('output/output_engrate_010815.csv', 'r').read()
+        if os.path.isfile('output/output_engrate_010815_clean.csv'):
+            lines = open('output/output_engrate_010815_clean.csv', 'r').readlines()
 
         else:
             print("File not found")
@@ -91,26 +93,45 @@ class DataProcessing():
 
         tweets_label = []
 
-        print (lines)
-
         for line in lines:
 
             tweets = []
-            print (line)
 
             spline=line.replace("\n","").split(",")
 
             #split string from 2nd comma until the third last comma, and then join them together into one single string
-            tweets.append("".join(spline[2:len(spline)-3]))
+            #tweets.append(spline[-1])
 
-            print (float(spline[-1]))
 
-            if float(spline[-1]) >= 0.02:
+            t1 = "".join(spline[2:len(spline)-3])
+
+            #remove URLs
+            t2 = re.sub(r'(?:https?\://)\S+', '', t1)
+            #remove 'RT'
+            t3 = t2.replace('RT','')
+            #remove mentions
+            t4 = re.sub(r'(?:\@)\S+', '', t3)
+            #remove special characters
+            t5 = re.sub("[^A-Za-z]+",' ', t4)
+
+            #remove single characters
+            words=[]
+            for word in t5.split():
+                if (len(word)>=2):
+                    words.append(word)
+
+                    #join the list of words together into a string
+                    _ = " ".join(words)
+
+            tweets.append(_)
+
+
+            if float(spline[-1]) >= 0.012:
 
                 tweets.append('HRT')
 
 
-            elif (float(spline[-1]) >= 0.04) and (float(spline[-1]) < 0.02):
+            elif (float(spline[-1]) >= 0.004) and (float(spline[-1]) < 0.012):
 
                 tweets.append('ART')
 
@@ -118,18 +139,13 @@ class DataProcessing():
 
                 tweets.append('LRT')
 
-            print (tweets)
+
 
             tweets_label.append(tweets)
 
-            #print (tweets_label)
+        ext.printcsv_all(tweets_label,'engrate_label')
 
-
-
-
-
-
-
+        #return (tweets_label)
 
 
 
@@ -160,11 +176,13 @@ for ct in clean_tweets:
         duplicate.append(ct)
 
 
-'''
+
 #print output to csv file
-#ext.printcsv_all(no_duplicate,'engrate_clean')
+ext.printcsv_all(no_duplicate,'kepler_after_clean')
 #ext.printcsv_all(sc_no_dup,'clean_sc')
 #ext.printcsv_all(duplicate,'kepler_dup')
+
+'''
 
 dp.label_tweets()
 
