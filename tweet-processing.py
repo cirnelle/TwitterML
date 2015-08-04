@@ -83,8 +83,8 @@ class DataProcessing():
 
     def label_tweets(self):
 
-        if os.path.isfile('output/output_engrate_010815_clean.csv'):
-            lines = open('output/output_engrate_010815_clean.csv', 'r').readlines()
+        if os.path.isfile('output/output_engrate_030815.csv'):
+            lines = open('output/output_engrate_030815.csv', 'r').readlines()
 
         else:
             print("File not found")
@@ -99,11 +99,13 @@ class DataProcessing():
 
             spline=line.replace("\n","").split(",")
 
+
+
             #split string from 2nd comma until the third last comma, and then join them together into one single string
-            #tweets.append(spline[-1])
+            t1 = spline[-1]
 
 
-            t1 = "".join(spline[2:len(spline)-3])
+            #t1 = "".join(spline[2:len(spline)-3])
 
             #remove URLs
             t2 = re.sub(r'(?:https?\://)\S+', '', t1)
@@ -125,23 +127,30 @@ class DataProcessing():
 
             tweets.append(_)
 
-
-            if float(spline[-1]) >= 0.012:
-
-                tweets.append('HRT')
+            if (len(spline)>=6):
 
 
-            elif (float(spline[-1]) >= 0.004) and (float(spline[-1]) < 0.012):
+                if float(spline[4]) >= 0.012:
 
-                tweets.append('ART')
+                    tweets.append('HRT')
+
+
+                elif (float(spline[4]) >= 0.004) and (float(spline[4]) < 0.012):
+
+                    tweets.append('ART')
+
+                else:
+
+                    tweets.append('LRT')
+
+                tweets_label.append(tweets)
 
             else:
-
-                tweets.append('LRT')
-
+                print ("skipping")
 
 
-            tweets_label.append(tweets)
+
+
 
         ext.printcsv_all(tweets_label,'engrate_label')
 
