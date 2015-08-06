@@ -121,8 +121,8 @@ class Compute():
 
         words = []
 
-        if os.path.isfile('output/output_kepler_clean.csv'):
-            lines = open('output/output_kepler_clean.csv', 'r').readlines()
+        if os.path.isfile('output/output_HRT.txt'):
+            lines = open('output/output_HRT.txt', 'r').readlines()
 
         else:
             print("File not found")
@@ -145,11 +145,11 @@ class Compute():
             if w not in stop:
                 word_freq.append(w)
 
-        f = open(maindir+'/output/output_kepler_wordfreq.txt', 'w')
-        f.write(str(Counter(word_freq).most_common(20)))
+        f = open(maindir+'/output/output_HRT_wordfreq.txt', 'w')
+        f.write(str(Counter(word_freq).most_common(200)))
         f.close()
 
-        print (Counter(word_freq).most_common(20))
+        #print (Counter(word_freq).most_common(20))
 
 
 

@@ -139,7 +139,7 @@ class Extractor():
 
     def user_tweets(self,user,api):
 
-        tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(500)
+        tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(1000)
 
         return tweets
 
