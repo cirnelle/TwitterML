@@ -5,8 +5,8 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
-from sklearn.svm import LinearSVC
-#from sklearn.linear_model import SGDClassifier
+#from sklearn.svm import LinearSVC
+from sklearn.linear_model import SGDClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.grid_search import GridSearchCV
 from sklearn.cross_validation import train_test_split
@@ -16,7 +16,7 @@ import scipy as sp
 
 if __name__ == "__main__":
 
-    dataset = pd.read_csv('output/output_engrate_label_tmp_noART.csv', header=0, names=['tweets', 'class'])
+    dataset = pd.read_csv('output/output_engrate_label_080815_noART.csv', header=0, names=['tweets', 'class'])
 
     X = dataset['tweets']
     y = dataset['class']
@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     # Split the dataset in training and test set:
     docs_train, docs_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.20)
+        X, y, test_size=0.20, random_state=42)
 
     '''
 
@@ -69,8 +69,8 @@ if __name__ == "__main__":
     # Build a vectorizer / classifier pipeline that filters out tokens that are too rare or too frequent
     pipeline = Pipeline([
             ('vect', TfidfVectorizer(stop_words='english', min_df=3, max_df=0.90)),
-            ('clf', LinearSVC(C=1000)),
-            #('clf', SGDClassifier(loss='hinge', penalty='l2', n_iter=5, random_state=42))
+            #('clf', LinearSVC(C=1000)),
+            ('clf', SGDClassifier(loss='hinge', penalty='l2', n_iter=5, random_state=42))
 
     ])
 
