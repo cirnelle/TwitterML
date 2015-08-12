@@ -15,6 +15,7 @@ from sklearn.cross_validation import cross_val_score
 from sklearn import metrics
 import numpy as np
 import scipy as sp
+from sklearn.feature_extraction import text
 
 
 if __name__ == "__main__":
@@ -25,6 +26,15 @@ if __name__ == "__main__":
     y = dataset['class']
 
     print (len(X))
+
+    #stop words
+    lines = open('stopwords.csv', 'r').readlines()
+
+    my_stopwords=[]
+    for line in lines:
+        my_stopwords.append(line.replace("\n", ""))
+
+    stopwords = text.ENGLISH_STOP_WORDS.union(my_stopwords)
 
     ####Split the dataset in training and test set:###
     #docs_train, docs_test, y_train, y_test = train_test_split(
@@ -70,7 +80,7 @@ if __name__ == "__main__":
     '''
 
     ### Get list of features
-    count_vect = CountVectorizer(stop_words='english', min_df=3, max_df=0.90, ngram_range=(1,3))
+    count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=(1,3))
     X_CV = count_vect.fit_transform(docs_train)
     ### print number of unique words (n_features)
     print (X_CV.shape)
@@ -80,7 +90,7 @@ if __name__ == "__main__":
     #print (count_vect.get_feature_names())
     #print (count_vect.vocabulary_)
     #print (len(count_vect.vocabulary_))
-    f1 = open('output/output_vocab.txt', 'w')
+    f1 = open('output/vocab.txt', 'w')
     temp=[]
     for key in count_vect.vocabulary_:
         temp.append(key)
@@ -101,16 +111,24 @@ if __name__ == "__main__":
 
     ###training the classifier
     clf = ExtraTreesClassifier().fit(X_tfidf, y_train)
-    print (clf.feature_importances_)
-    f = open('output/output_feature_importance.txt', 'w')
-    for fea in clf.feature_importances_:
+    feat_imp = clf.feature_importances_
+    f = open('output/extraTree_feat_imp_all.txt', 'w')
+    for fea in feat_imp:
 
         f.write(str(fea)+'\n')
     f.close()
 
+    lines = open('output/extraTree_feat_imp_all.txt', 'r').readlines()
+    lines2 = open('output/vocab.txt', 'r').readlines()
+
+    sortli = sorted(range(len(feat_imp)), key=lambda i:feat_imp[i], reverse=True)[:100]
 
 
-    #print (clf.class_count_)
+    for i in sortli:
+        f = open('output/extraTree_feature_importance.csv', 'a')
+        f.write(lines[i].replace('\n','')+'\t'+lines2[i].replace('\n','')+'\n')
+    f.close()
+
 
     ##test clf on test data
 
@@ -134,25 +152,11 @@ if __name__ == "__main__":
 
 
 '''
-    def most_informative_feature_for_class(vectorizer, classifier, classlabel, n=10):
-    labelid = list(classifier.classes_).index(classlabel)
-    feature_names = vectorizer.get_feature_names()
-    topn = sorted(zip(classifier.coef_[labelid], feature_names))[-n:]
-
-    for coef, feat in topn:
-        print classlabel, feat, coef
-
-    most_informative_feature_for_class(word_vectorizer, mnb, 'bs')
-print
-most_informative_feature_for_class(word_vectorizer, mnb, 'pt')
-
-'''
-'''
 
     # Build a vectorizer / classifier pipeline that filters out tokens that are too rare or too frequent
     pipeline = Pipeline([
-            ('vect', TfidfVectorizer(stop_words='english', min_df=3, max_df=0.90)),
-            ('clf', MultinomialNB()),
+            ('vect', TfidfVectorizer(stop_words=stopwords, min_df=3, max_df=0.90)),
+            ('clf', ExtraTreesClassifier()),
     ])
 
 

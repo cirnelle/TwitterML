@@ -12,6 +12,7 @@ from sklearn.grid_search import GridSearchCV
 from sklearn.cross_validation import train_test_split
 from sklearn import metrics
 import scipy as sp
+from sklearn.feature_extraction import text
 
 
 if __name__ == "__main__":
@@ -27,10 +28,19 @@ if __name__ == "__main__":
     docs_train, docs_test, y_train, y_test = train_test_split(
         X, y, test_size=0.20, random_state=42)
 
+    #stop words
+    lines = open('stopwords.csv', 'r').readlines()
+
+    my_stopwords=[]
+    for line in lines:
+        my_stopwords.append(line.replace("\n", ""))
+
+    stopwords = text.ENGLISH_STOP_WORDS.union(my_stopwords)
+
     '''
 
     ### Get list of features
-    count_vect = CountVectorizer(stop_words='english', min_df=3, max_df=0.95)
+    count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.95)
     X_CV = count_vect.fit_transform(docs_train)
     ### print number of unique words (n_features)
     print (X_CV.shape)
@@ -68,7 +78,7 @@ if __name__ == "__main__":
 
     # Build a vectorizer / classifier pipeline that filters out tokens that are too rare or too frequent
     pipeline = Pipeline([
-            ('vect', TfidfVectorizer(stop_words='english', min_df=3, max_df=0.90)),
+            ('vect', TfidfVectorizer(stop_words=stopwords, min_df=3, max_df=0.90)),
             #('clf', LinearSVC(C=1000)),
             ('clf', SGDClassifier(loss='hinge', penalty='l2', n_iter=5, random_state=42))
 
