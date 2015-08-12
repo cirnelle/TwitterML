@@ -6,7 +6,7 @@ import itertools
 from nltk.util import ngrams
 
 
-lines = open('output/output_engrate_label_080815_noART.csv', 'r').readlines()
+lines = open('output/output_engrate_label_080815_noART_noStop.csv', 'r').readlines()
 
 l1=[]
 l2=[]
@@ -20,10 +20,12 @@ for line in lines:
 
     if (spline[1] == 'HRT'):
         for i in range(1,n):
-            n_grams = ngrams(spline[0].split(), i)
-            gramify = [' '.join(x) for x in n_grams]
-            l1.append(gramify)
+            n_grams = ngrams(spline[0].split(), i) #output [('one', 'two'), ('two', 'three'), ('three', 'four')]
+            #join the elements within the list together
+            gramify = [' '.join(x) for x in n_grams] #output ['one two', 'two three', 'three four']
+            l1.extend(gramify)
             i=i+1
+
 
         #words=spline[0].split()
         #l1.append(words)
@@ -33,18 +35,16 @@ for line in lines:
         for i in range(1,n):
             n_grams = ngrams(spline[0].split(), i)
             gramify = [' '.join(x) for x in n_grams]
-            l2.append(gramify)
+            l2.extend(gramify)
             i=i+1
 
 
-
-
 ##combine lists in a list into one long list. Flattening a list.
-hrt_t = list(itertools.chain(*l1))
-lrt_t = list(itertools.chain(*l2))
+#hrt_t = list(itertools.chain(*l1))
+#lrt_t = list(itertools.chain(*l2))
 
-hrt = [w.lower() for w in hrt_t]
-lrt = [w.lower() for w in lrt_t]
+hrt = [w.lower() for w in l1]
+lrt = [w.lower() for w in l2]
 
 
 
@@ -63,8 +63,8 @@ for f in features:
     hrt_count = hrt.count(f)
     lrt_count = lrt.count(f)
 
-    #print ("HRT %s: " % f + str(hrt_count))
-    #print ("LRT %s: " % f + str(lrt_count))
+    print ("HRT %s: " % f + str(hrt_count))
+    print ("LRT %s: " % f + str(lrt_count))
 
     if (hrt_count-lrt_count)>20:
 
@@ -85,14 +85,5 @@ for f in feat_by_class:
 
 
 
-
-
-'''
-from collections import Counter
-list1=['apple','egg','apple','banana','egg','apple']
-counts = Counter(list1)
-print(counts)
-Counter({'apple': 3, 'egg': 2, 'banana': 1})
-'''
 
 

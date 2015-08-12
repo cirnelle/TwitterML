@@ -2,7 +2,7 @@ __author__ = 'yi-linghwong'
 
 from extractor import Extractor
 
-hashtaglist = ["#pluto", "#kepler", "#plutoflyby"]
+hashtaglist = ["sydsciencefest"]
 
 class UserTweets():
 

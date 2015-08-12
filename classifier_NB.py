@@ -133,6 +133,8 @@ if __name__ == "__main__":
     fb_hrt=clf.feature_log_prob_[0] ##feature probability for HRT
     fb_lrt=clf.feature_log_prob_[1] ##feature probability for LRT
     feature_names = count_vect.get_feature_names()
+    print (feature_names)
+    sys.exit()
 
     """the next two lines are for printing the highest feat_probability for each class"""
     topn_class1 = sorted(zip(fb_hrt, feature_names))[-n:]
@@ -148,39 +150,48 @@ if __name__ == "__main__":
 
 
     ##print out the feature names and their corresponding classes
+
+
+
+    imp_feat=[]
     for i in sortli:
 
-        f4=open('output/important_feat.csv', 'a')
-
         if fb_hrt[i]>fb_lrt[i]:
-            f4.write('HRT '+str(feature_names[i])+'\n')
+            imp_feat.append('HRT '+str(feature_names[i]))
         else:
-            f4.write('LRT '+str(feature_names[i])+'\n')
+            imp_feat.append('LRT '+str(feature_names[i]))
+
+    imp_feat=sorted(imp_feat)
+
+    f4=open('output/nb_important_feat.csv', 'w')
+
+    for imf in imp_feat:
+        f4.write(imf+'\n')
 
     f4.close()
 
 
     """HELPER FILES"""
 
-    f=open('output/feature_names.txt', 'w')
+    f=open('output/nb_feature_names.txt', 'w')
 
     for fn in feature_names:
         f.write(str(fn)+'\n')
     f.close()
 
-    f1=open('output/coef.txt', 'w')
+    f1=open('output/nb_coef.txt', 'w')
 
     for c in clf.coef_[0]:
         f1.write(str(c)+'\n')
 
     f1.close()
 
-    f2=open('output/feature_prob_0.csv', 'w')
+    f2=open('output/nb_feature_prob_0.csv', 'w')
     for fb in clf.feature_log_prob_[0]:
         f2.write(str(fb)+'\n')
     f2.close()
 
-    f3=open('output/feature_prob_1.csv', 'w')
+    f3=open('output/nb_feature_prob_1.csv', 'w')
     for fb in clf.feature_log_prob_[1]:
         f3.write(str(fb)+'\n')
     f3.close()
@@ -217,7 +228,7 @@ if __name__ == "__main__":
 
     """Build a vectorizer / classifier pipeline that filters out tokens that are too rare or too frequent"""
 
-
+    '''
     pipeline = Pipeline([
             ('vect', TfidfVectorizer(stop_words='english', min_df=3, max_df=0.90)),
             ('clf', MultinomialNB()),
@@ -259,6 +270,7 @@ if __name__ == "__main__":
     # import matplotlib.pyplot as plt
     # plt.matshow(cm)
     # plt.show()
+    '''
 
 
 

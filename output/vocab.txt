@@ -2921,7 +2921,6 @@ caves good
 caves good places
 caves microbiology
 caves mission
-caves mt
 caves operations
 caves sardinia
 caves science
@@ -5373,6 +5372,7 @@ discovery nasa
 discovery nasa new
 discovery new
 discovery news
+discovery pluto
 discovery sts
 discovery thanks
 discrimination
@@ -10353,7 +10353,6 @@ iss live
 iss looks
 iss mailbag
 iss mission
-iss mt
 iss nasa
 iss pm
 iss pm et
@@ -13397,28 +13396,6 @@ msl
 msl pewpew
 msnbc
 msnbc com
-mt
-mt amazing
-mt big
-mt chance
-mt cometwatch
-mt earth
-mt follow
-mt fuji
-mt good
-mt great
-mt launch
-mt look
-mt looking
-mt nasa
-mt new
-mt photo
-mt science
-mt sharp
-mt st
-mt think
-mt today
-mt watch
 mtg
 muck
 mud
@@ -15719,7 +15696,6 @@ pianeta
 piano
 pic
 pic mars
-pic mt
 pic pluto
 pic pluto charon
 pic taken
@@ -19885,7 +19861,6 @@ space miniaturized tilt
 space mission
 space missions
 space months
-space mt
 space museum
 space nasa
 space network
@@ -19897,6 +19872,7 @@ space oddity
 space odyssey
 space photo
 space photos
+space pic
 space pictures
 space plane
 space policy
@@ -20206,7 +20182,6 @@ spontaneous
 spontaneously
 spooky
 spookyawesome
-spookyawesome mt
 spookyscience
 spoon
 spores
@@ -21572,6 +21547,7 @@ thanks best
 thanks came
 thanks coming
 thanks ff
+thanks follow
 thanks following
 thanks giving
 thanks great
@@ -21582,7 +21558,6 @@ thanks kepler
 thanks kind
 thanks kind words
 thanks love
-thanks mt
 thanks nasa
 thanks new
 thanks questions
@@ -23050,13 +23025,13 @@ view
 view comet
 view cometwatch
 view earth
+view fantastic
 view jupiter
 view km
 view landing
 view like
 view looking
 view mars
-view mt
 view outside
 view pillars
 view pillars creation
@@ -24084,7 +24059,6 @@ wound
 wounded
 woven
 wow
-wow mt
 wow pretty
 wow really
 wow thanks

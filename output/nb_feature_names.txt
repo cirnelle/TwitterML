@@ -243,6 +243,7 @@ advantage
 advent
 advent day
 adventure
+adventure time
 adventures
 advice
 advise
@@ -485,8 +486,8 @@ alternate reality
 alternative
 alternatives
 altitude
-altitude mt
-altitude mt everest
+altitude everest
+altitude everest ft
 altruistic
 alum
 aluminum
@@ -535,6 +536,7 @@ amazing science
 amazing shot
 amazing story
 amazing things
+amazing time
 amazing video
 amazing view
 amazing year
@@ -585,9 +587,6 @@ ammonia
 ammonites
 amnh
 amounts
-amp
-amp astrobutch
-amp work
 amphibians
 ams
 amsci
@@ -907,7 +906,6 @@ area science
 areas
 arecibo
 aren
-aren just
 aren sure
 argentina
 argh
@@ -1196,6 +1194,7 @@ astronomers chance welooking
 astronomers detected
 astronomers discover
 astronomers discovered
+astronomers join
 astronomers new
 astronomers say
 astronomers spot
@@ -1721,6 +1720,7 @@ begin
 begin yearinspace
 beginning
 beginning end
+beginning time
 beginning universe
 beginnings
 begins
@@ -1814,6 +1814,7 @@ best science fiction
 best space
 best space pictures
 best thing
+best time
 best use
 best view
 best way
@@ -1833,6 +1834,7 @@ better join audience
 better known
 better late
 better science
+better time
 better understand
 better way
 better world
@@ -1891,6 +1893,7 @@ big space
 big step
 big thank
 big thing
+big time
 big universe
 bigapplebbq
 bigbangtheory
@@ -1916,6 +1919,8 @@ biker
 bikes
 biking
 billion
+billion light
+billion light years
 billion mile
 billion mile journey
 billion miles
@@ -1939,6 +1944,8 @@ billion yrs sun
 billionaire
 billionaires
 billions
+billions light
+billions light years
 billions years
 bills
 binaries
@@ -2068,8 +2075,8 @@ bleeding
 blend
 blends
 blessed
-blessed nottheusualsight
-blessed nottheusualsight speleo
+blessed light
+blessed light nottheusualsight
 blew
 blind
 blind people
@@ -2135,6 +2142,7 @@ blu ray
 blue
 blue dot
 blue dot pic
+blue earth
 blue leds
 blue marble
 blue moon
@@ -2181,8 +2189,7 @@ bodybuilding
 bodybuilding mistakes
 bodybuilding mistakes make
 boeing
-boeing just
-boeing just patented
+boeing patented
 bofa
 bofa cardholders
 bofa cardholders free
@@ -3164,6 +3171,7 @@ characteristic
 characterization
 characterizing
 characters
+characters time
 charcoal
 charge
 charged
@@ -3771,6 +3779,7 @@ comet panstarrs
 comet panstarrs lights
 comet siding
 comet siding spring
+comet time
 comet today
 cometary
 cometlanding
@@ -3834,6 +3843,7 @@ commercial crew program
 commercial launch
 commercial partners
 commercial space
+commercial space travel
 commercial spacecraft
 commercial spaceflights
 commission
@@ -4172,6 +4182,7 @@ cool stars
 cool stuff
 cool stuff like
 cool things
+cool time
 cool video
 coolant
 cooled
@@ -4407,7 +4418,6 @@ creativity
 creator
 creators
 creature
-creature just
 creature week
 creatures
 creatures earth
@@ -4642,8 +4652,8 @@ dallas
 dalle
 dam
 damage
-damage ve
-damage ve single
+damage single
+damage single day
 damaged
 damages
 damaging
@@ -4768,7 +4778,6 @@ day life
 day like
 day lilah
 day long
-day long ago
 day march
 day mars
 day million
@@ -4813,7 +4822,6 @@ days arrival
 days away
 days images
 days iss
-days just
 days launch
 days left
 days like
@@ -4834,7 +4842,6 @@ dcscitweetup
 dead
 dead cuttlefish
 dead injured
-dead just
 dead stars
 dead wrong
 dead wrong approach
@@ -4857,7 +4864,7 @@ dean kamen
 dear
 death
 death altitude
-death altitude mt
+death altitude everest
 death penalty
 death row
 death star
@@ -5306,7 +5313,6 @@ dinosaur tracks
 dinosaurs
 dinosaurs jurassicworldancient
 dinosaurs jurassicworldancient humans
-dinosaurs just
 dinosketch
 dione
 dione june
@@ -5399,6 +5405,7 @@ discovery nasa new
 discovery new
 discovery news
 discovery pad
+discovery pluto
 discovery reveal
 discovery reveal earth
 discovery thanks
@@ -5447,6 +5454,7 @@ distance au
 distance earth
 distance km
 distance km navcam
+distance million
 distance moon
 distance record
 distance sun
@@ -5532,6 +5540,7 @@ does saturn
 does say
 does stuff
 does stuff like
+does time
 does universe
 doesn
 doesn believe
@@ -5913,12 +5922,13 @@ earth impact
 earth international
 earth iss
 earth jupiter
-earth just
 earth km
 earth know
 earth left
 earth let
 earth life
+earth light
+earth light years
 earth like
 earth like exoplanets
 earth like planet
@@ -5983,6 +5993,7 @@ earth supports
 earth supports life
 earth surface
 earth taken
+earth time
 earth today
 earth tonight
 earth twin
@@ -6014,7 +6025,7 @@ earths
 earths mini
 earths mini neptunes
 earths seen
-earths seen just
+earths seen light
 earthshine
 ease
 easier
@@ -6029,6 +6040,7 @@ easter egg
 easter eggs
 easter island
 eastern
+eastern time
 easy
 easy healthy
 easy healthy meals
@@ -6326,6 +6338,7 @@ energy tev
 energy uses
 energy uses looks
 energy water
+energy water time
 eng
 engadget
 engage
@@ -6802,6 +6815,7 @@ explained seconds
 explainer
 explaining
 explains
+explains time
 explainthebrain
 explainthebrain briefing
 explainthebrain briefing capitol
@@ -7084,7 +7098,8 @@ fast food
 fast moving
 fast radio
 faster
-faster neutrinos
+faster light
+faster light neutrinos
 faster speed
 fastest
 fat
@@ -7808,7 +7823,6 @@ fridge
 fried
 friedman
 friend
-friend just
 friendly
 friends
 friendship
@@ -7910,6 +7924,7 @@ future quantum
 future science
 future space
 future space exploration
+future space travel
 future spaceflight
 futures
 futurist
@@ -8351,6 +8366,7 @@ going field
 going happen
 going inside
 going make
+going new
 going space
 going start
 going watch
@@ -8382,6 +8398,7 @@ good ad
 good bad
 good bad ugly
 good bye
+good cometlanding
 good day
 good friend
 good golly
@@ -8399,7 +8416,6 @@ good morning earth
 good morning perspective
 good morning solar
 good morning space
-good mt
 good news
 good night
 good night space
@@ -8415,11 +8431,13 @@ good sign
 good stuff
 good thing
 good thing bad
+good time
 good way
 good work
 goodall
 goodbye
 goodbye characters
+goodbye characters time
 goodie
 goodies
 goodness
@@ -8604,6 +8622,7 @@ great team
 great thanks
 great things
 great things look
+great time
 great twitter
 great video
 great view
@@ -8627,6 +8646,7 @@ green blobs
 green flash
 green flight
 green flight challenge
+green light
 greene
 greenhouse
 greenhouse gases
@@ -8792,6 +8812,7 @@ half male
 half male half
 half million
 half size
+half time
 half way
 half world
 halfway
@@ -8913,6 +8934,7 @@ hard beat
 hard believe
 hard drive
 hard science
+hard time
 hard work
 hardcore
 harder
@@ -9325,6 +9347,7 @@ holy shit
 holy wow
 home
 home amazing
+home days
 home earth
 home generates
 home generates energy
@@ -9336,7 +9359,7 @@ home planet
 home signal
 home space
 home sweet
-home ve
+home time
 home weeks
 homecoming
 homeless
@@ -9530,6 +9553,7 @@ hubble telescope
 hubble telescope captures
 hubble th
 hubble th anniversary
+hubble time
 hubble view
 hubblecast
 hubbletreasures
@@ -9678,7 +9702,6 @@ ice cream
 ice crystals
 ice flows
 ice free
-ice just
 ice lab
 ice mantles
 ice mountains
@@ -9817,7 +9840,6 @@ images galaxy
 images help
 images incl
 images including
-images just
 images mars
 images mars express
 images nasa
@@ -10346,7 +10368,6 @@ isle
 isn
 isn bad
 isn great
-isn just
 isn moon
 isn technology
 isolated
@@ -10363,6 +10384,7 @@ iss cupola
 iss di
 iss di concordia
 iss docking
+iss earth
 iss et
 iss exp
 iss exp crew
@@ -10375,12 +10397,10 @@ iss help
 iss home
 iss hours
 iss iss
-iss just
 iss live
 iss looks
 iss mailbag
 iss mission
-iss mt
 iss nasa
 iss nov
 iss pm
@@ -10435,7 +10455,6 @@ itgt
 itty
 itty bitty
 itunes
-itunes amp
 iv
 iv heavy
 ivan
@@ -10730,111 +10749,6 @@ jurassicworld
 jurassicworldancient
 jurassicworldancient humans
 jury
-just
-just added
-just announced
-just arrived
-just asked
-just awesome
-just beginning
-just big
-just bit
-just called
-just came
-just case
-just completed
-just day
-just days
-just days left
-just days spon
-just did
-just died
-just discovered
-just earth
-just enter
-just far
-just figured
-just fine
-just finished
-just flew
-just follow
-just fun
-just fyi
-just giant
-just got
-just got new
-just half
-just happened
-just hit
-just hour
-just hours
-just hours away
-just keeps
-just km
-just km away
-just launched
-just learned
-just left
-just lie
-just like
-just listened
-just little
-just look
-just looking
-just lost
-just love
-just matter
-just million
-just minutes
-just month
-just months
-just need
-just night
-just northern
-just northern white
-just opened
-just outside
-just passed
-just passing
-just patented
-just people
-just posted
-just published
-just read
-just read instructions
-just realized
-just really
-just released
-just remember
-just right
-just said
-just saw
-just say
-just saying
-just sent
-just separation
-just simple
-just simple texts
-just sit
-just staring
-just started
-just think
-just thought
-just took
-just wait
-just want
-just wanted
-just watched
-just way
-just week
-just weeks
-just weeks pluto
-just went
-just won
-just work
-just wow
-just years
-just years away
 justice
 justification
 justify
@@ -11038,10 +10952,10 @@ knots
 know
 know abt
 know answer
+know awesome
 know earth
 know far
 know gravity
-know just
 know know
 know like
 know love
@@ -11058,7 +10972,6 @@ know taking
 know taking pale
 know think
 know true
-know ve
 know video
 know week
 knowing
@@ -11228,8 +11141,8 @@ language speak
 languages
 lanka
 lantern
-lantern earth
-lantern earth pirate
+lantern light
+lantern light travel
 lap
 lapse
 lapse video
@@ -11238,7 +11151,6 @@ lapses
 laptop
 laptops
 larel
-larel ve
 large
 large hadron
 large hadron collider
@@ -11379,6 +11291,7 @@ launch spacex
 launch sts
 launch targeted
 launch targeting
+launch time
 launch today
 launch today pm
 launch tomorrow
@@ -11584,6 +11497,7 @@ let hope
 let know
 let know think
 let make
+let moment
 let play
 let say
 let start
@@ -11661,7 +11575,6 @@ life interesting
 life interview
 life iss
 life jupiter
-life just
 life kepler
 life kepler mission
 life know
@@ -11673,7 +11586,7 @@ life mars doesn
 life nasa
 life new
 life oct
-life oct ve
+life oct got
 life origin
 life planets
 life saving
@@ -11705,6 +11618,32 @@ liftoff falcon dragon
 liftoff pm
 liftoff pm et
 lifts
+light
+light big
+light big bang
+light bulb
+light bulbs
+light early
+light end
+light end cave
+light end ice
+light exoplanet
+light mystery
+light neutrinos
+light night
+light night sky
+light nottheusualsight
+light nottheusualsight speleo
+light particle
+light pollution
+light shows
+light travel
+light travel time
+light year
+light years
+light years away
+light years distant
+light years earth
 lighter
 lightfoot
 lighthouse
@@ -11726,6 +11665,7 @@ lightyears
 ligo
 like
 like alien
+like ask
 like astronaut
 like bacon
 like best
@@ -11749,7 +11689,6 @@ like ice
 like image
 like inside
 like iss
-like just
 like know
 like live
 like losing
@@ -11773,6 +11712,7 @@ like riding
 like saturn
 like science
 like science fiction
+like seen
 like space
 like star
 like stars
@@ -11782,8 +11722,6 @@ like think
 like today
 like triton
 like uranus
-like ve
-like ve seen
 like water
 like years
 likeagirl
@@ -11795,7 +11733,6 @@ likeness
 likes
 lil
 lilah
-lilah just
 lilah school
 lillard
 limb
@@ -11962,8 +11899,8 @@ local news
 local universe
 local void
 located
-located years
-located years away
+located light
+located light years
 location
 locations
 loch
@@ -12007,6 +11944,8 @@ long journey
 long piece
 long shadows
 long term
+long time
+long time ago
 long way
 long years
 longer
@@ -12021,14 +11960,13 @@ look
 look big
 look closely
 look damage
-look damage ve
+look damage single
 look familiar
 look forward
 look forward seeing
 look great
 look hand
 look inside
-look just
 look latest
 look like
 look like alien
@@ -12048,6 +11986,7 @@ look small
 look small mind
 look space
 look stars
+look time
 look tonight
 look west
 looked
@@ -12122,6 +12061,7 @@ lot
 lot fun
 lot like
 lot people
+lot time
 lot work
 lots
 lots people
@@ -12403,6 +12343,7 @@ males
 mall
 malta
 mammal
+mammal time
 mammalian
 mammals
 mammatus
@@ -12542,7 +12483,6 @@ mars gale
 mars gale crater
 mars habitable
 mars images
-mars just
 mars lander
 mars landing
 mars look
@@ -12557,8 +12497,6 @@ mars moons
 mars mount
 mars mount sharp
 mars msl
-mars mt
-mars mt sharp
 mars nasa
 mars new
 mars orbit
@@ -12575,6 +12513,7 @@ mars rovers
 mars science
 mars science laboratory
 mars seen
+mars sharp
 mars space
 mars taken
 mars today
@@ -12713,7 +12652,6 @@ maxwell
 maya
 maya skies
 maybe
-maybe just
 maybe new
 mayo
 mayor
@@ -12748,6 +12686,7 @@ meaning life
 meaningful
 means
 means days
+means time
 meant
 meantime
 measles
@@ -13063,6 +13002,8 @@ million km earth
 million km earthmillion
 million km sun
 million km sunmillion
+million light
+million light years
 million lyrs
 million miles
 million miles away
@@ -13403,7 +13344,6 @@ moon image
 moon io
 moon io volcanoes
 moon jupiter
-moon just
 moon landing
 moon look
 moon mars
@@ -13530,31 +13470,6 @@ msg
 msl
 msnbc
 msnbc com
-mt
-mt amazing
-mt big
-mt earth
-mt everest
-mt everest ft
-mt fuji
-mt good
-mt great
-mt hart
-mt just
-mt launch
-mt looking
-mt love
-mt nasa
-mt new
-mt photo
-mt pluto
-mt science
-mt sharp
-mt st
-mt think
-mt today
-mt took
-mt watch
 mtg
 mud
 muddy
@@ -13780,7 +13695,6 @@ nasa iris
 nasa iss
 nasa iss exp
 nasa jpl
-nasa just
 nasa kennedy
 nasa kennedy space
 nasa kepler
@@ -14034,10 +13948,11 @@ nebula
 nebula coldest
 nebula coldest place
 nebula hubble
+nebula light
+nebula light years
 nebula ngc
 nebula orion
 nebula space
-nebula years
 nebulae
 nebularavengers
 nebulas
@@ -14272,7 +14187,9 @@ new kepler
 new kind
 new ksccoverpic
 new launch
+new launch time
 new life
+new light
 new line
 new line insulin
 new live
@@ -14496,8 +14413,8 @@ nigh
 night
 night cometlanding
 night hike
-night just
 night launch
+night light
 night seen
 night sky
 night sky images
@@ -14506,6 +14423,7 @@ night sky photographer
 night sky photos
 night sleep
 night space
+night time
 night vision
 night watch
 night watch streaming
@@ -14798,11 +14716,11 @@ oceanprom
 oceans
 oco
 oct
+oct got
+oct got months
 oct pm
 oct technovation
 oct th
-oct ve
-oct ve got
 october
 octopus
 octopuses
@@ -14850,6 +14768,7 @@ oh good
 oh hey
 oh look
 oh man
+oh really
 oh snap
 oh wait
 oh yeah
@@ -14875,7 +14794,6 @@ old days
 old friend
 old girl
 old idea
-old just
 old new
 old potion
 old potion successfully
@@ -14919,8 +14837,8 @@ ones
 ones like
 oneweb
 onget
-onget just
-onget just simple
+onget simple
+onget simple texts
 ongoing
 onion
 online
@@ -15033,7 +14951,6 @@ orbit charred
 orbit charred ember
 orbit earth
 orbit insertion
-orbit just
 orbit mars
 orbit saturn
 orbit star
@@ -15552,6 +15469,7 @@ people living
 people make
 people play
 people really
+people run
 people say
 people space
 people stop
@@ -15569,7 +15487,7 @@ perception
 perch
 perfect
 perfect vision
-perfect vision just
+perfect vision days
 perfect xmas
 perfect xmas picture
 perfectly
@@ -15617,7 +15535,7 @@ person
 person gives
 person gives right
 person secret
-person secret ve
+person secret wished
 personal
 personalities
 personality
@@ -15627,6 +15545,7 @@ personalrocketscientist
 personhood
 personnel
 perspective
+perspective big
 perspective earth
 perspective far
 perspective far far
@@ -15746,7 +15665,8 @@ photobomb
 photog
 photograph
 photographed
-photographed years
+photographed time
+photographed time years
 photographer
 photographer year
 photographers
@@ -15817,7 +15737,6 @@ pics
 pics expedition
 pics info
 pics mars
-pics mt
 pics pluto
 pics today
 pictoris
@@ -15827,7 +15746,6 @@ picture dragon
 picture earth
 picture gorner
 picture gorner glacier
-picture just
 picture perfect
 picture photo
 picture photo blog
@@ -15902,6 +15820,7 @@ place
 place alien
 place alien life
 place earth
+place like
 place universe
 placed
 placement
@@ -15934,8 +15853,8 @@ planet hunter
 planet hunters
 planet hunting
 planet imager
-planet just
 planet kind
+planet light
 planet mars
 planet mercury
 planet million
@@ -15950,6 +15869,7 @@ planet pride
 planet solar
 planet star
 planet systems
+planet time
 planet train
 planet uranus
 planetarium
@@ -15986,7 +15906,6 @@ planets goldilocks zone
 planets habitable
 planets habitable zone
 planets hd
-planets just
 planets like
 planets milky
 planets milky way
@@ -16115,8 +16034,6 @@ pluto icy
 pluto icy plains
 pluto image
 pluto images
-pluto just
-pluto just look
 pluto km
 pluto known
 pluto known moons
@@ -16148,13 +16065,14 @@ pluto reaches
 pluto reaches historic
 pluto really
 pluto science
-pluto shine
-pluto shine just
+pluto sent
 pluto shows
 pluto space
 pluto sure
 pluto surface
 pluto taken
+pluto time
+pluto time shine
 pluto today
 pluto usa
 pluto usa today
@@ -16335,7 +16253,6 @@ post flight video
 post future
 post gamma
 post happy
-post just
 post kepler
 post launch
 post looking
@@ -16353,6 +16270,7 @@ post star
 post stars
 post sts
 post super
+post time
 post ultralight
 post ultralight spaceflight
 post ur
@@ -16580,6 +16498,7 @@ primates
 prime
 prime meridian
 prime minister
+prime time
 primitive
 primo
 primordial
@@ -16819,7 +16738,6 @@ psychology
 pt
 pt et
 pt itunes
-pt itunes amp
 pt pm
 pt pm et
 pt ut
@@ -17197,6 +17115,7 @@ real story
 real sunrise
 real sunrise earth
 real thing
+real time
 real twitter
 real world
 realise
@@ -17226,12 +17145,11 @@ really good
 really hard
 really hit
 really interesting
-really just
-really just matter
 really know
 really like
 really looking
 really looking forward
+really matter
 really need
 really need reason
 really nice
@@ -17244,7 +17162,6 @@ realm
 realms
 rear
 reason
-reason doesn
 reason gym
 reasonable
 reasoning
@@ -17337,6 +17254,7 @@ red blue
 red dwarf
 red giant
 red hot
+red light
 red planet
 red rocks
 red sea
@@ -17824,6 +17742,7 @@ right place
 right questions
 right questions claude
 right stuff
+right time
 right way
 right way ad
 rights
@@ -18012,7 +17931,7 @@ rosetta philae
 rosetta philae lander
 rosetta spacecraft
 rosetta unlike
-rosetta unlike ve
+rosetta unlike seen
 rosettaarewethereyet
 ross
 rotate
@@ -18304,7 +18223,6 @@ saving earth
 saving world
 savings
 saw
-saw night
 sawfish
 say
 say farewell
@@ -18312,6 +18230,7 @@ say flunked
 say flunked astro
 say flunked intro
 say goodbye
+say got
 say hello
 say hi
 say researchers
@@ -18320,7 +18239,6 @@ say scientists
 say thanks
 say took
 say took physics
-say ve
 saying
 saying goodbye
 saying goodbye characters
@@ -18471,7 +18389,6 @@ science isn
 science iss
 science jokes
 science journalism
-science just
 science lab
 science laboratory
 science learning
@@ -18613,7 +18530,6 @@ scientists finally
 scientists finding
 scientists identify
 scientists invented
-scientists just
 scientists know
 scientists learn
 scientists like
@@ -18775,8 +18691,10 @@ seattle
 seattle center
 seaweed
 seaweed tastes
+seaweed tastes like
 sec
-sec earth
+sec light
+sec light travel
 second
 second added
 second brightest
@@ -18796,8 +18714,8 @@ secret dog food
 secret life
 secret manifest
 secret manifest dream
-secret ve
-secret ve wished
+secret wished
+secret wished ad
 secret words
 secret words make
 secret world
@@ -18835,8 +18753,8 @@ seen farthest distance
 seen international
 seen international space
 seen iss
-seen just
-seen just years
+seen light
+seen light years
 seen nasa
 seen new
 seen orbit
@@ -18981,7 +18899,6 @@ set launch
 set new
 set pm
 set pm et
-set record
 set start
 set thursday
 setback
@@ -19086,9 +19003,12 @@ shatters
 shaw
 shea
 shed
+shed light
 shedding
+shedding light
 sheds
-sheds early
+sheds light
+sheds light early
 sheep
 sheer
 sheet
@@ -19112,16 +19032,14 @@ shifts
 shimmer
 shimmering
 shine
-shine just
-shine just hours
+shine hours
+shine hours away
 shines
 shining
 shiny
 ship
-ship earth
-ship earth km
-ship km
-ship km earth
+ship light
+ship light travel
 shipment
 shipping
 ships
@@ -19167,7 +19085,6 @@ shorty awards
 shostak
 shot
 shot earth
-shot mt
 shot nasa
 shot space
 shots
@@ -19276,11 +19193,11 @@ sign starting
 sign starting pst
 signal
 signal aos
-signal earth
-signal just
 signal received
 signal space
 signal surface
+signal travel
+signal travel time
 signaling
 signaling available
 signaling available scisig
@@ -19364,8 +19281,7 @@ sir
 siri
 sister
 sister ship
-sister ship earth
-sister ship km
+sister ship light
 sister site
 sisters
 sit
@@ -19716,7 +19632,6 @@ solar flares
 solar formation
 solar impulse
 solar impulse plane
-solar just
 solar live
 solar orbiter
 solar panels
@@ -19838,7 +19753,6 @@ soyuz exp
 soyuz fires
 soyuz hatch
 soyuz iss
-soyuz kazakhstan
 soyuz landing
 soyuz landing site
 soyuz launch
@@ -19911,13 +19825,11 @@ space launch
 space like
 space live
 space look
-space look like
 space miniaturized
 space miniaturized tilt
 space mission
 space missions
 space months
-space mt
 space museum
 space nasa
 space network
@@ -19929,6 +19841,7 @@ space odyssey
 space people
 space photo
 space photos
+space pic
 space pictures
 space plane
 space policy
@@ -19979,8 +19892,11 @@ space telescope picture
 space telescope th
 space thanks
 space theme
+space time
 space today
 space toilet
+space travel
+space travel time
 space tweep
 space tweep society
 space tweeps
@@ -20135,6 +20051,7 @@ speculative
 speech
 speeches
 speed
+speed light
 speed limit
 speed record
 speeding
@@ -20153,8 +20070,10 @@ spelling
 spells
 spencer
 spend
+spend time
 spend yr
 spending
+spending time
 spends
 spends millions
 spends millions make
@@ -20239,7 +20158,6 @@ spontaneous
 spontaneously
 spooky
 spookyawesome
-spookyawesome mt
 spookyscience
 spoon
 spores
@@ -20318,6 +20236,7 @@ st picture earth
 st space
 st stage
 st test
+st time
 st woman
 stability
 stable
@@ -20371,7 +20290,8 @@ star formation
 star forming
 star forming region
 star hd
-star just
+star light
+star light years
 star multiple
 star nicknamed
 star nicknamed nasty
@@ -20381,15 +20301,13 @@ star sky
 star star
 star stuff
 star stuff cosmos
+star sun
 star systems
 star tracker
 star trails
 star trek
 star tribune
 star wars
-star years
-star years away
-star years earth
 starbucks
 starburst
 starcity
@@ -20424,7 +20342,6 @@ stars dust
 stars earth
 stars galaxy
 stars night
-stars night sky
 stars planets
 stars solar
 stars theygalaxies
@@ -20452,7 +20369,6 @@ started today
 starter
 starting
 starting july
-starting just
 starting live
 starting pst
 starting pst fri
@@ -20732,6 +20648,7 @@ students
 students nsffunded
 students satellite
 students satellite images
+students want
 students work
 studied
 studies
@@ -20890,7 +20807,6 @@ sun discovered
 sun distance
 sun earth
 sun glint
-sun just
 sun like
 sun like star
 sun like stars
@@ -21024,7 +20940,7 @@ sure ad
 sure check
 sure didn
 sure follow
-sure just
+sure got
 surely
 surf
 surface
@@ -21036,7 +20952,6 @@ surface cometlanding
 surface features
 surface harpoons
 surface harpoons did
-surface just
 surface mars
 surface moon
 surface pluto
@@ -21193,7 +21108,6 @@ taken hubble
 taken hubble space
 taken iss
 taken july
-taken just
 taken moon
 taken new
 taken new horizons
@@ -21276,6 +21190,7 @@ targeted
 targeted et
 targeted launch
 targeting
+targeting et
 targeting pm
 targeting pm et
 targets
@@ -21286,6 +21201,8 @@ tasmania
 taste
 tasted
 tastes
+tastes like
+tastes like bacon
 tasting
 tasty
 tatooine
@@ -21583,7 +21500,6 @@ thanks joining
 thanks kepler
 thanks kind
 thanks kind words
-thanks mt
 thanks new
 thanks nice
 thanks plutoflyby
@@ -21651,18 +21567,17 @@ thing
 thing bad
 thing bad thing
 thing going
-thing just
 thing makes
 thing science
 thing today
 thing today topic
-thing ve
 thing week
 thing week topic
 things
 things happen
 things know
 things learned
+things learned eris
 things like
 things look
 things look great
@@ -21674,23 +21589,21 @@ things say
 things say flunked
 things say took
 things science
-things ve
-things ve learned
 things way
 things wrong
 think
 think best
 think far
 think going
+think got
 think great
-think just
 think know
 think life
 think like
 think need
 think pluto
 think really
-think ve
+think time
 thinkfurther
 thinking
 thinkprogress
@@ -21787,7 +21700,6 @@ till
 till launch
 till pm
 till yearonmars
-till yearonmars ve
 tilt
 tilt shift
 tilted
@@ -21796,6 +21708,62 @@ tim hunt
 tim hunt sexist
 tim lichtenberg
 tim peake
+time
+time accept
+time ago
+time alive
+time astrobiology
+time backwards
+time capsule
+time change
+time charm
+time cosmos
+time day
+time dilation
+time doesn
+time earth
+time earth km
+time earth pirate
+time et
+time flies
+time good
+time good thing
+time head
+time history
+time kind
+time km
+time km earth
+time lapse
+time lapse video
+time looking
+time machine
+time new
+time night
+time novanext
+time place
+time pm
+time rest
+time runs
+time runs backward
+time says
+time science
+time scifrilive
+time scifrilive tells
+time shine
+time shine hours
+time sign
+time space
+time story
+time thanks
+time time
+time travel
+time try
+time watch
+time week
+time work
+time world
+time years
+time zone
 timegt
 timelapse
 timeline
@@ -21805,11 +21773,11 @@ times brighter
 times brighter earth
 times changed
 times earth
-times just
 times mass
 times mass jupiter
 times massive
 times productive
+times second
 times size
 times uk
 timetable
@@ -21874,7 +21842,6 @@ today apod
 today apollo
 today april
 today aug
-today begin
 today best
 today big
 today cassini
@@ -21910,7 +21877,6 @@ today join
 today july
 today june
 today june million
-today just
 today launch
 today learn
 today live
@@ -22214,6 +22180,10 @@ trapped amber
 trash
 trauma
 traumatic
+travel
+travel time
+travel time earth
+travel time km
 traveled
 traveling
 traveling mph
@@ -22226,7 +22196,6 @@ treadmill
 treasure
 treasures
 treat
-treat just
 treated
 treating
 treatment
@@ -22385,7 +22354,7 @@ turing
 turkey
 turn
 turn onget
-turn onget just
+turn onget simple
 turned
 turning
 turning salt
@@ -22611,7 +22580,6 @@ universe cosmos
 universe exist
 universe expanding
 universe explained
-universe just
 universe morning
 universe new
 universe new video
@@ -22622,6 +22590,7 @@ universe purpose
 universe revealed
 universe star
 universe supervoid
+universe time
 universe today
 universes
 universities
@@ -22630,8 +22599,8 @@ university washington
 unknown
 unless
 unlike
-unlike ve
-unlike ve seen
+unlike seen
+unlike seen cometlanding
 unlikely
 unlimited
 unlock
@@ -22721,7 +22690,6 @@ use pi
 use site
 use site sign
 use spacetoground
-use sun
 use twitter
 used
 used scientific
@@ -22829,39 +22797,6 @@ vast
 vatican
 vax
 vaxxers
-ve
-ve added
-ve arrived
-ve come
-ve come long
-ve got
-ve got months
-ve gotten
-ve heard
-ve just
-ve known
-ve learned
-ve learned eris
-ve lost
-ve missed
-ve new
-ve reached
-ve read
-ve research
-ve research prior
-ve seen
-ve seen cometlanding
-ve single
-ve single day
-ve taken
-ve told
-ve tried
-ve visited
-ve waiting
-ve wanted
-ve wished
-ve wished ad
-ve working
 vecchia
 vega
 vega vv
@@ -23006,7 +22941,6 @@ view landing
 view like
 view looking
 view mars
-view mt
 view outside
 view pluto
 view saturn
@@ -23066,13 +23000,14 @@ viscous
 visibility
 visible
 visible earth
+visible light
 visible naked
 visible naked eye
 visible space
 vision
+vision days
+vision days spon
 vision future
-vision just
-vision just days
 visionary
 visions
 visit
@@ -23292,6 +23227,7 @@ wasp uses
 wasp uses virus
 wasps
 waste
+waste time
 wasted
 wastes
 watch
@@ -23331,6 +23267,7 @@ watch spacetoground
 watch spacex
 watch streaming
 watch streaming online
+watch time
 watch today
 watch tomorrow
 watch tonight
@@ -23387,6 +23324,7 @@ water quality
 water surface
 water teaspoons
 water teaspoons salt
+water time
 water using
 water using solar
 water vapor
@@ -23435,6 +23373,7 @@ way glows
 way home
 way inside
 way iss
+way light
 way like
 way make
 way mars
@@ -23444,7 +23383,9 @@ way remember
 way round
 way seen
 way signal
+way signal travel
 way space
+way think
 way today
 way trip
 way trip mars
@@ -23518,6 +23459,7 @@ week asked
 week cassini
 week folks
 week folks week
+week great
 week health
 week health news
 week hope
@@ -23881,7 +23823,6 @@ words make
 words make fall
 wore
 work
-work just
 work nasa
 work new
 work online
@@ -23998,8 +23939,6 @@ wound
 wounded
 wounds
 wow
-wow just
-wow just wow
 wow looks
 wow pretty
 wow thanks
@@ -24032,7 +23971,6 @@ wrongly
 wrote
 wsw
 wswq
-wswq amp
 wtf
 wtg
 wunderkind
@@ -24077,7 +24015,6 @@ year end
 year eve
 year journey
 year jupiter
-year lapse
 year long
 year mars
 year mission
@@ -24090,6 +24027,8 @@ year olds
 year record
 year register
 year space
+year time
+year time lapse
 year today
 year watch
 yearinspace
@@ -24098,7 +24037,6 @@ yearinspace launch
 yearinspace mission
 yearlong
 yearonmars
-yearonmars ve
 years
 years advance
 years ago
@@ -24117,7 +24055,6 @@ years landing
 years landing gear
 years later
 years long
-years make
 years making
 years mars
 years nasa
@@ -24141,7 +24078,6 @@ yesterday
 yesterday cometwatch
 yesterday exhausting
 yesterday exhausting actually
-yesterday just
 yeti
 yeuta
 yield

@@ -8,6 +8,7 @@ from tweepy import Stream
 import json
 import csv
 import os
+import sys
 
 
 if os.path.isfile('../../keys/twitter_api_keys.txt'):
@@ -33,9 +34,9 @@ access_token = api_dict["Access_token"]
 access_token_secret = api_dict["Access_token_secret"]
 
 
-hashtaglist = ['kepler']
+hashtaglist = ['sydsciencefest']
 
-csvfile=open('output/output_kepler_20-30072015.csv','a', newline='')
+csvfile=open('output/output_sydsciencefest_stream.csv','a', newline='')
 csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
 
 class StdOutListener(StreamListener):
@@ -49,7 +50,7 @@ class StdOutListener(StreamListener):
 
         if 'created_at' in data:
             print ([data['created_at'],data['text']])
-            csvtweets.writerow([data['created_at'], data['text'], data['retweet_count'], data['favorite_count']])
+            csvtweets.writerow([data['created_at'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace(',', ' ')])
         #flush method writes data in buffer directly to the target file (real-time data writing to file)
             csvfile.flush()
 
@@ -81,7 +82,7 @@ if __name__ == '__main__':
 
     stream = Stream(auth, l)
     #stream.filter(languages=["en"],track=["#"+x for x in hashtaglist])
-    stream.filter(languages=["en"],track=['kepler'])
+    stream.filter(languages=["en"],track=['sydsciencefest'])
     #stream.filter(track=hashtaglist)
 
 

@@ -287,7 +287,7 @@ class Extractor():
 
 
             #add the new tweets to a list
-            fulltweets.append([data['created_at'], data['text'].replace('\n', ' ').replace(',', ' '), data['retweet_count'], data['favorite_count']])
+            fulltweets.append([data['created_at'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace(',', ' ')])
 
         return fulltweets
 
