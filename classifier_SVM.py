@@ -17,7 +17,7 @@ from sklearn.feature_extraction import text
 
 if __name__ == "__main__":
 
-    dataset = pd.read_csv('output/output_engrate_label_080815_noART.csv', header=0, names=['tweets', 'class'])
+    dataset = pd.read_csv('output/output_engrate_label_080815_noART_noStop.csv', header=0, names=['tweets', 'class'])
 
     X = dataset['tweets']
     y = dataset['class']

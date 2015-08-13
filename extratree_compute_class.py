@@ -6,7 +6,7 @@ import itertools
 from nltk.util import ngrams
 
 
-lines = open('output/output_engrate_label_080815_noART_noStop.csv', 'r').readlines()
+lines = open('temp.txt', 'r').readlines()
 
 l1=[]
 l2=[]
@@ -15,8 +15,8 @@ for line in lines:
     spline=line.replace("\n", "").split(",")
     #creates a list with key and value. Split splits a string at the comma and stores the result in a list
 
+    #create a list of word which includes ngrams
     n=4
-
 
     if (spline[1] == 'HRT'):
         for i in range(1,n):
@@ -25,6 +25,7 @@ for line in lines:
             gramify = [' '.join(x) for x in n_grams] #output ['one two', 'two three', 'three four']
             l1.extend(gramify)
             i=i+1
+
 
 
         #words=spline[0].split()
@@ -38,15 +39,12 @@ for line in lines:
             l2.extend(gramify)
             i=i+1
 
-
 ##combine lists in a list into one long list. Flattening a list.
 #hrt_t = list(itertools.chain(*l1))
 #lrt_t = list(itertools.chain(*l2))
 
 hrt = [w.lower() for w in l1]
 lrt = [w.lower() for w in l2]
-
-
 
 lines2 = open('output/extraTree_feature_importance.csv', 'r').readlines()
 

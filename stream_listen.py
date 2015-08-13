@@ -34,7 +34,7 @@ access_token = api_dict["Access_token"]
 access_token_secret = api_dict["Access_token_secret"]
 
 
-hashtaglist = ['sydsciencefest']
+hashtaglist = ['ssf15']
 
 csvfile=open('output/output_sydsciencefest_stream.csv','a', newline='')
 csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
@@ -82,7 +82,7 @@ if __name__ == '__main__':
 
     stream = Stream(auth, l)
     #stream.filter(languages=["en"],track=["#"+x for x in hashtaglist])
-    stream.filter(languages=["en"],track=['sydsciencefest'])
+    stream.filter(languages=["en"],track=['ssf15'])
     #stream.filter(track=hashtaglist)
 
 

@@ -21,7 +21,7 @@ from sklearn.feature_extraction import text
 
 if __name__ == "__main__":
 
-    dataset = pd.read_csv('output/output_engrate_label_080815_noART.csv', header=0, names=['tweets', 'class'])
+    dataset = pd.read_csv('output/output_engrate_label_080815_noART_noStop.csv', header=0, names=['tweets', 'class'])
 
     X = dataset['tweets']
     y = dataset['class']
@@ -77,6 +77,7 @@ if __name__ == "__main__":
         docs_train, docs_test = X[train_index], X[test_index]
         y_train, y_test = y[train_index], y[test_index]
 
+    '''
     '''
 
     ### Get list of features
@@ -199,7 +200,7 @@ if __name__ == "__main__":
 
     """TO REMOVE: print the highest feat_probability for each class"""
 
-    '''
+
     for (coef, feat) in topn_class1:
         print (class_labels[0], coef, feat)
 
@@ -228,9 +229,9 @@ if __name__ == "__main__":
 
     """Build a vectorizer / classifier pipeline that filters out tokens that are too rare or too frequent"""
 
-    '''
+
     pipeline = Pipeline([
-            ('vect', TfidfVectorizer(stop_words='english', min_df=3, max_df=0.90)),
+            ('vect', TfidfVectorizer(stop_words=stopwords, min_df=3, max_df=0.90)),
             ('clf', MultinomialNB()),
     ])
 
@@ -270,7 +271,7 @@ if __name__ == "__main__":
     # import matplotlib.pyplot as plt
     # plt.matshow(cm)
     # plt.show()
-    '''
+
 
 
 
