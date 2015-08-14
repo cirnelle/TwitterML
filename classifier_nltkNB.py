@@ -2,6 +2,8 @@ __author__ = 'yi-linghwong'
 
 import nltk.corpus
 from nltk.classify import NaiveBayesClassifier
+import collections
+import nltk.metrics
 import random
 from nltk.corpus import movie_reviews
 import sys
@@ -56,26 +58,27 @@ for line in lines:
         l4.append(l2)
 
 
+#Create list of tuples for HRT, i.e [(['word', 'word2'], 'HRT')]
 HRT = [(tweets,'HRT')
         for tweets in l3]
 
+#Create list of tuples for LRT, i.e [(['word', 'word2'], 'LRT')]
 LRT = [(tweets, 'LRT')
        for tweets in l4]
 
 print ("Creating word list...")
 
-words_list = l5 + l6
+words_list = l5 + l6 #list of all words, i.e. ['word, 'two words', 'one two three', ...]
+print (len(words_list))
 
 
-documents = HRT + LRT
+documents = HRT + LRT #complete list of tuples for all tweets
 random.shuffle(documents)
 
 
-#all_words = nltk.FreqDist(w.lower() for w in movie_reviews.words())
-
 all_words = nltk.FreqDist(w.lower() for w in words_list)
 
-word_features = list(all_words)[:5000]
+word_features = list(all_words)[:500]
 
 def document_features(wordlist):
     document_words = set(wordlist)
@@ -95,6 +98,39 @@ print ("Putting classifier to work...")
 classifier = nltk.NaiveBayesClassifier.train(train_set)
 
 print (nltk.classify.accuracy(classifier, test_set))
+print (classifier.show_most_informative_features())
+
+
+"""Confusion matrix, precision and recall"""
+
+
+print ('train on %d instances, test on %d instances' % (len(train_set), len(test_set)))
+
+classifier = nltk.NaiveBayesClassifier.train(train_set)
+refsets = collections.defaultdict(set) #refset is a dictionary of set, {'HRT':set(1,3,4,6,...)} where 'HRT' is key, and (1,3,4,6) is value
+testsets = collections.defaultdict(set)
+
+reflist = [] #a list of known labels
+testlist = [] #a list of predicted labels
+
+for i, (feats, label) in enumerate(test_set):
+    refsets[label].add(i)
+    reflist.append(label)
+    observed = classifier.classify(feats) #returns the predicted labels for each tweet (equivalent to y_predicted)
+    testsets[observed].add(i)
+    testlist.append(observed)
+
+print (len(reflist), len(testlist))
+
+print ('HRT precision:', nltk.metrics.precision(refsets['HRT'], testsets['HRT']))
+print ('HRT recall:', nltk.metrics.recall(refsets['HRT'], testsets['HRT']))
+print ('HRT F-measure:', nltk.metrics.f_measure(refsets['HRT'], testsets['HRT']))
+print ('LRT precision:', nltk.metrics.precision(refsets['LRT'], testsets['LRT']))
+print ('LRT recall:', nltk.metrics.recall(refsets['LRT'], testsets['LRT']))
+print ('LRT F-measure:', nltk.metrics.f_measure(refsets['LRT'], testsets['LRT']))
+
+cm = nltk.ConfusionMatrix(reflist,testlist) #(y_test, y_predicted)
+print(cm.pretty_format(sort_by_count=True, show_percents=False, truncate=2))
 
 
 

@@ -2,7 +2,7 @@ __author__ = 'yi-linghwong'
 
 
 lines = open('output/sydscifest/sydsciencefest_TMP.csv', 'r').readlines()
-f = open('output/sydscifest/sdysciencefest_CLEAN.csv', 'w')
+f = open('output/sydscifest/sydsciencefest_CLEAN.csv', 'w')
 
 tweets = []
 

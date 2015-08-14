@@ -36,7 +36,7 @@ access_token_secret = api_dict["Access_token_secret"]
 
 hashtaglist = ['ssf15']
 
-csvfile=open('output/output_sydsciencefest_stream.csv','a', newline='')
+csvfile=open('output/output_ssf15_stream.csv','a', newline='')
 csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
 
 class StdOutListener(StreamListener):
