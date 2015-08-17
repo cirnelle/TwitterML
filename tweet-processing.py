@@ -83,8 +83,8 @@ class DataProcessing():
 
     def label_tweets(self):
 
-        if os.path.isfile('output/output_engrate_080815.csv'):
-            lines = open('output/output_engrate_080815.csv', 'r').readlines()
+        if os.path.isfile('output/output_engrate_140815.csv'):
+            lines = open('output/output_engrate_140815.csv', 'r').readlines()
 
         else:
             print("File not found")
@@ -152,7 +152,7 @@ class DataProcessing():
 
 
 
-        ext.printcsv_all(tweets_label,'engrate_label_080815')
+        ext.printcsv_all(tweets_label,'engrate_label_140815')
 
         #return (tweets_label)
 

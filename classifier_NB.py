@@ -21,7 +21,7 @@ from sklearn.feature_extraction import text
 
 if __name__ == "__main__":
 
-    dataset = pd.read_csv('output/output_engrate_label_080815_noART_noStop.csv', header=0, names=['tweets', 'class'])
+    dataset = pd.read_csv('output/output_engrate_label_140815_noART.csv', header=0, names=['tweets', 'class'])
 
     X = dataset['tweets']
     y = dataset['class']
@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
 
     """Split the dataset in training and test set:"""
-    docs_train, docs_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42)
+    docs_train, docs_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
 
 
     """Stratified ShuffleSplit cross validation iterator"""
@@ -78,7 +78,7 @@ if __name__ == "__main__":
         y_train, y_test = y[train_index], y[test_index]
 
     '''
-    '''
+
 
     ### Get list of features
     count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=(1,3))
@@ -134,8 +134,6 @@ if __name__ == "__main__":
     fb_hrt=clf.feature_log_prob_[0] ##feature probability for HRT
     fb_lrt=clf.feature_log_prob_[1] ##feature probability for LRT
     feature_names = count_vect.get_feature_names()
-    print (feature_names)
-    sys.exit()
 
     """the next two lines are for printing the highest feat_probability for each class"""
     topn_class1 = sorted(zip(fb_hrt, feature_names))[-n:]
@@ -199,7 +197,7 @@ if __name__ == "__main__":
 
 
     """TO REMOVE: print the highest feat_probability for each class"""
-
+    '''
 
     for (coef, feat) in topn_class1:
         print (class_labels[0], coef, feat)
@@ -207,10 +205,10 @@ if __name__ == "__main__":
     for coef, feat in (topn_class2):
         print (class_labels[1], coef, feat)
 
-    '''
+
 
     """If there are more than two classes"""
-    """
+
 
     def most_informative_feature_for_class(classlabel, n=10):
         labelid = list(clf.classes_).index(classlabel)
@@ -224,11 +222,10 @@ if __name__ == "__main__":
 
     print (most_informative_feature_for_class('LRT'))
 
-    """
+
 
 
     """Build a vectorizer / classifier pipeline that filters out tokens that are too rare or too frequent"""
-
 
     pipeline = Pipeline([
             ('vect', TfidfVectorizer(stop_words=stopwords, min_df=3, max_df=0.90)),
@@ -271,6 +268,7 @@ if __name__ == "__main__":
     # import matplotlib.pyplot as plt
     # plt.matshow(cm)
     # plt.show()
+    '''
 
 
 
