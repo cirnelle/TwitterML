@@ -1,57 +1,33 @@
 __author__ = 'yi-linghwong'
 
-import collections
-import nltk.metrics
-from nltk.classify import NaiveBayesClassifier
-from nltk.corpus import movie_reviews
 import sys
+import os
+import numpy as np
 
-def word_feats(words):
-    return dict([(word, True) for word in words])
-
-negids = movie_reviews.fileids('neg')
-posids = movie_reviews.fileids('pos')
-
-
-negfeats = [(word_feats(movie_reviews.words(fileids=[f])), 'neg') for f in negids]
-posfeats = [(word_feats(movie_reviews.words(fileids=[f])), 'pos') for f in posids]
-
-#print (negfeats) #output [(word_dict,'LRT'), ...]
+lines1 = open('output/output_engrate_150815.csv', 'r').readlines()
+lines2 = open('user_science.csv', 'r').readlines()
 
 
-negcutoff = int(len(negfeats)*3/4)
-poscutoff = int(len(posfeats)*3/4)
+l1=[]
 
-trainfeats = negfeats[:negcutoff] + posfeats[:poscutoff]
-testfeats = negfeats[negcutoff:] + posfeats[poscutoff:]
-print ('train on %d instances, test on %d instances' % (len(trainfeats), len(testfeats)))
+for line in lines2:
+    spline2 = line.replace('\n','').split(',')
 
-classifier = NaiveBayesClassifier.train(trainfeats)
-refsets = collections.defaultdict(set)
-testsets = collections.defaultdict(set)
+    for line in lines1:
+        spline1 = line.replace('\n','').split(',')
 
-#f=open('temp.txt', 'w')
-
-reflist = []
-testlist = []
-
-for i, (feats, label) in enumerate(testfeats):
-    refsets[label].add(i)
-    reflist.append(label)
-    observed = classifier.classify(feats)
-    testsets[observed].add(i)
-    testlist.append(observed)
-
-#f.write(str(reflist))
-#f.close()
+        if (spline1[0] == spline2[0]):
+            l1.append(line)
 
 
-print ('pos precision:', nltk.metrics.precision(refsets['pos'], testsets['pos']))
-print ('pos recall:', nltk.metrics.recall(refsets['pos'], testsets['pos']))
-print ('pos F-measure:', nltk.metrics.f_measure(refsets['pos'], testsets['pos']))
-print ('neg precision:', nltk.metrics.precision(refsets['neg'], testsets['neg']))
-print ('neg recall:', nltk.metrics.recall(refsets['neg'], testsets['neg']))
-print ('neg F-measure:', nltk.metrics.f_measure(refsets['neg'], testsets['neg']))
+f = open('output/output_engrate_science.csv', 'w')
 
-cm = nltk.ConfusionMatrix(reflist, testlist) #(y_test, y_predicted)
-print(cm.pretty_format(sort_by_count=True, show_percents=False, truncate=2))
+for l in l1:
+    f.write(str(l))
+
+f.close()
+
+
+
+
+

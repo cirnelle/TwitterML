@@ -13,7 +13,7 @@ for line in lines:
 stopwords = text.ENGLISH_STOP_WORDS.union(my_stopwords)
 
 
-lines = open('output/output_engrate_label_080815_noART.csv', 'r').readlines()
+lines = open('output/sydscifest/output_sydsciencefest_ALL_CLEAN.csv', 'r').readlines()
 
 tweetlist = []
 for line in lines:
@@ -35,7 +35,7 @@ for line in lines:
 
     tweetlist.extend(no_stopwords)#output ['this is a tweet,LRT', 'this is also a tweet,HRT']
 
-f = open('output/output_engrate_label_080815_noART_noStop.csv', 'w')
+f = open('output/sydscifest/output_sydsciencefest_ALL_CLEAN_nostop.csv', 'w')
 
 for t in tweetlist:
     f.write(str(t)+'\n')

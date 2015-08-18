@@ -7,6 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB
+#from sklearn.naive_bayes import BernoulliNB
 from sklearn.pipeline import Pipeline
 from sklearn.grid_search import GridSearchCV
 from sklearn.cross_validation import train_test_split
@@ -21,7 +22,7 @@ from sklearn.feature_extraction import text
 
 if __name__ == "__main__":
 
-    dataset = pd.read_csv('output/output_engrate_label_140815_noART.csv', header=0, names=['tweets', 'class'])
+    dataset = pd.read_csv('output/output_engrate_label_space_noART.csv', header=0, names=['tweets', 'class'])
 
     X = dataset['tweets']
     y = dataset['class']
@@ -40,7 +41,7 @@ if __name__ == "__main__":
 
 
     """Split the dataset in training and test set:"""
-    docs_train, docs_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+    docs_train, docs_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42)
 
 
     """Stratified ShuffleSplit cross validation iterator"""
@@ -197,8 +198,8 @@ if __name__ == "__main__":
 
 
     """TO REMOVE: print the highest feat_probability for each class"""
-    '''
 
+    '''
     for (coef, feat) in topn_class1:
         print (class_labels[0], coef, feat)
 
@@ -222,11 +223,12 @@ if __name__ == "__main__":
 
     print (most_informative_feature_for_class('LRT'))
 
-
+    '''
 
 
     """Build a vectorizer / classifier pipeline that filters out tokens that are too rare or too frequent"""
 
+    '''
     pipeline = Pipeline([
             ('vect', TfidfVectorizer(stop_words=stopwords, min_df=3, max_df=0.90)),
             ('clf', MultinomialNB()),
@@ -269,6 +271,7 @@ if __name__ == "__main__":
     # plt.matshow(cm)
     # plt.show()
     '''
+
 
 
 

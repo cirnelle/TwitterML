@@ -6,7 +6,7 @@ import itertools
 from nltk.util import ngrams
 
 
-lines = open('temp.txt', 'r').readlines()
+lines = open('output/output_engrate_label_science_noART.csv', 'r').readlines()
 
 l1=[]
 l2=[]
@@ -61,8 +61,8 @@ for f in features:
     hrt_count = hrt.count(f)
     lrt_count = lrt.count(f)
 
-    print ("HRT %s: " % f + str(hrt_count))
-    print ("LRT %s: " % f + str(lrt_count))
+    #print ("HRT %s: " % f + str(hrt_count))
+    #print ("LRT %s: " % f + str(lrt_count))
 
     if (hrt_count-lrt_count)>20:
 
@@ -80,6 +80,7 @@ feat_by_class = sorted(feat_by_class)
 
 for f in feat_by_class:
     file.write(f+'\n')
+file.close()
 
 
 

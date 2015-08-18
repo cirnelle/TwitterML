@@ -5,11 +5,20 @@ import os
 import sys
 import itertools
 from extractor import Extractor
-from nltk.corpus import stopwords
+#from nltk.corpus import stopwords
+from sklearn.feature_extraction import text
+
+lines = open('stopwords.csv', 'r').readlines()
+
+my_stopwords=[]
+for line in lines:
+    my_stopwords.append(line.replace("\n", ""))
+
+stop_words = text.ENGLISH_STOP_WORDS.union(my_stopwords)
 
 
-if os.path.isfile('output/output_kepler_after.csv'):
-  lines = open('output/output_kepler_after.csv','r', encoding = "ISO-8859-1").readlines()
+if os.path.isfile('output/sydscifest/sydsciencefest_only_tweets.csv'):
+  lines = open('output/sydscifest/sydsciencefest_only_tweets.csv','r', encoding = "ISO-8859-1").readlines()
 
 else:
     print ("File not found")
@@ -25,7 +34,7 @@ for line in lines:
     if line.rstrip():
         tweets.extend(spline)
 
-stop_words = ['s', 'd']
+#stop_words = ['ve', 're', 'll', 'amp']
 
 class DataProcessing():
 
@@ -76,15 +85,94 @@ class DataProcessing():
 
             text = re.sub('[^A-Za-z0-9]+',' ', t)
             #creates a list with square brackets! So printcsv (which takes list of a list as input) could process this data.
-            clean_tweets.append([text])
+            clean_tweets.append(text)
 
 
         return clean_tweets
 
+    def remove_stopwords(self,tweets):
+
+        clean_tweets=[]
+
+
+        for t in tweets:
+            no_stop=[] #important
+
+            for w in t.split():
+                #remove single characters and stop words
+                if (len(w.lower())>=2) and (w.lower() not in stop_words):
+                    no_stop.append(w.lower())
+
+
+                    #join the list of words together into a string
+                    text = " ".join(no_stop)
+
+
+
+            clean_tweets.append([text])
+
+        return clean_tweets
+
+
+    def cleanup(self):
+
+        if os.path.isfile('output/sydscifest/sydsciencefest_only_tweets.csv'):
+            lines = open('output/sydscifest/sydsciencefest_only_tweets.csv', 'r', encoding = "ISO-8859-1").readlines()
+
+        else:
+            print("File not found")
+            sys.exit(1)
+
+
+        tweets_label = []
+
+        tweets = []
+        for line in lines:
+
+            spline=line.replace("\n","").split(",")
+
+            t1 = spline[-1]
+
+            #split string from 2nd comma until the third last comma, and then join them together into one single string
+            #t1 = "".join(spline[2:len(spline)-3])
+
+            #remove URLs
+            t2 = re.sub(r'(?:https?\://)\S+', '', t1)
+            #remove 'RT'
+            t3 = t2.replace('RT','')
+            #remove mentions
+            t4 = re.sub(r'(?:\@)\S+', '', t3)
+            #remove special characters
+            t5 = re.sub("[^A-Za-z]+",' ', t4)
+
+
+            #remove single characters
+
+            words=[]
+            for word in t5.split():
+
+
+                if (len(word)>=2):
+                    words.append(word)
+
+
+
+                    #join the list of words together into a string
+                _ = " ".join(words)
+
+                #print (_)
+
+
+            tweets.append([_])
+
+
+        ext.printcsv_all(tweets,'sydsciencefest_ALL_CLEAN')
+
+
     def label_tweets(self):
 
-        if os.path.isfile('output/output_engrate_140815.csv'):
-            lines = open('output/output_engrate_140815.csv', 'r').readlines()
+        if os.path.isfile('output/output_engrate_science.csv'):
+            lines = open('output/output_engrate_science.csv', 'r').readlines()
 
         else:
             print("File not found")
@@ -130,12 +218,12 @@ class DataProcessing():
             if (len(spline)>=8):
 
 
-                if float(spline[6]) >= 0.025:
+                if float(spline[6]) >= 0.015:
 
                     tweets.append('HRT')
 
 
-                elif (float(spline[6]) >= 0.0012) and (float(spline[6]) < 0.025):
+                elif (float(spline[6]) >= 0.002) and (float(spline[6]) < 0.015):
 
                     tweets.append('ART')
 
@@ -152,7 +240,7 @@ class DataProcessing():
 
 
 
-        ext.printcsv_all(tweets_label,'engrate_label_140815')
+        ext.printcsv_all(tweets_label,'engrate_label_science')
 
         #return (tweets_label)
 
@@ -161,12 +249,14 @@ class DataProcessing():
 ext = Extractor()
 dp = DataProcessing()
 
+#dp.cleanup()
+
+
+"""Clean up tweets"""
+
 '''
-Clean up tweets
 
-
-
-clean_tweets = dp.remove_sc(dp.remove_mention(dp.remove_RT(dp.remove_url(tweets))))
+clean_tweets = dp.remove_mention(dp.remove_RT(dp.remove_url(tweets)))
 
 #print (clean_tweets)
 
@@ -187,12 +277,11 @@ for ct in clean_tweets:
 
 
 #print output to csv file
-ext.printcsv_all(no_duplicate,'kepler_after_clean')
+ext.printcsv_all(no_duplicate,'sydsciencefest_ALL_CLEAN')
 #ext.printcsv_all(sc_no_dup,'clean_sc')
 #ext.printcsv_all(duplicate,'kepler_dup')
 
 '''
 
 dp.label_tweets()
-
 

@@ -151,6 +151,77 @@ class Compute():
 
         #print (Counter(word_freq).most_common(20))
 
+    def lexical_diversity(self):
+
+        lines = open('output/output_engrate_label_140815.csv', 'r', encoding = "ISO-8859-1").readlines()
+
+        l1=[]
+        l2=[]
+        l3=[]
+
+
+        for line in lines:
+            spline=line.replace("\n","").split(",")
+
+            words=spline[0].split()
+
+            if (spline[1]=='LRT'):
+
+                lexdiv=1.0*len(set(words))/len(words)
+
+                l1.append(lexdiv)
+
+            elif (spline[1]=='HRT'):
+
+                lexdiv=1.0*len(set(words))/len(words)
+                l2.append(lexdiv)
+
+            else:
+                lexdiv=1.0*len(set(words))/len(words)
+                l3.append(lexdiv)
+
+
+        average_lrt = np.average(l1)
+        average_hrt = np.average(l2)
+        average_art = np.average(l3)
+
+        print (average_lrt)
+        print (average_hrt)
+        print (average_art)
+
+    def average_words(self):
+
+        lines = open('output/output_engrate_label_140815.csv', 'r', encoding = "ISO-8859-1").readlines()
+
+        l1=[]
+        l2=[]
+        l3=[]
+
+
+        for line in lines:
+            spline=line.replace("\n","").split(",")
+
+            words=spline[0].split()
+
+            if (spline[1] == 'LRT'):
+
+                l1.append(len(words))
+
+            elif (spline[1] == 'HRT'):
+
+                l2.append(len(words))
+
+            else:
+
+                l3.append(len(words))
+
+        average_words_lrt=np.average(l1)
+        average_words_hrt=np.average(l2)
+        average_words_art=np.average(l3)
+
+        print (average_words_lrt)
+        print (average_words_hrt)
+        print (average_words_art)
 
 
 cp = Compute()
@@ -168,19 +239,19 @@ Get engagement rate
 '''
 
 
-engratelist = cp.get_eng_rate(user_list)
+#engratelist = cp.get_eng_rate(user_list)
 
 #write file in function itself! So that if program interrupted data will be flushed to file.
 #ext.printcsv_all(engratelist,'engrate_live')
 
-'''
-
-Get histogram
 
 
+"""Get histogram"""
 
-if os.path.isfile('output/output_engrate_070815.csv'):
-  lines = open('output/output_engrate_070815.csv','r').readlines()
+
+
+if os.path.isfile('output/output_engrate_individuals.csv'):
+  lines = open('output/output_engrate_individuals.csv','r').readlines()
 
 else:
     print ("File not found")
@@ -207,19 +278,29 @@ for line in lines:
 
 cp.get_histogram(erlist)
 
-
-
-Get average
 '''
+
+
+"""Get lexical diversity"""
+
+#cp.lexical_diversity()
+
+
+"""Get average number of words"""
+
+#cp.average_words()
+
+"""Get average"""
+
 
 #average = cp.get_average(user_list)
 #ext.printcsv_all(average,'av')
 
 
 '''
-Plot graph
+"""Plot graph"""
 
-
+'''
 
 lines = open('output_av.csv','r').readlines()
 

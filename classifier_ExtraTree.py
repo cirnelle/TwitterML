@@ -20,7 +20,7 @@ from sklearn.feature_extraction import text
 
 if __name__ == "__main__":
 
-    dataset = pd.read_csv('output/output_engrate_label_080815_noART.csv', header=0, names=['tweets', 'class'])
+    dataset = pd.read_csv('output/output_engrate_label_individuals_noART.csv', header=0, names=['tweets', 'class'])
 
     X = dataset['tweets']
     y = dataset['class']
@@ -121,6 +121,7 @@ if __name__ == "__main__":
     lines = open('output/extraTree_feat_imp_all.txt', 'r').readlines()
     lines2 = open('output/vocab.txt', 'r').readlines()
 
+    #create a list with elements sorted by feature importance
     sortli = sorted(range(len(feat_imp)), key=lambda i:feat_imp[i], reverse=True)[:100]
 
 
