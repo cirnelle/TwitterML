@@ -1,0 +1,1 @@
+[('kepler', 1213), ('earth', 629), ('452b', 542), ('cousin', 253), ('planet', 184), ('tickets', 172), ('sale', 167), ('like', 165), ('nasa', 138), ('transiting', 107), ('orbits', 106), ('larger', 100), ('star', 95), ('sun', 82), ('new', 79), ('telescope', 66), ('chinese', 66), ('cygnus', 65), ('site', 65), ('days', 63)]

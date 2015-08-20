@@ -6,7 +6,7 @@ import itertools
 from nltk.util import ngrams
 
 
-lines = open('output/output_engrate_label_science_noART.csv', 'r').readlines()
+lines = open('output/engrate/output_engrate_label_science_noART.csv', 'r').readlines()
 
 l1=[]
 l2=[]
@@ -46,7 +46,7 @@ for line in lines:
 hrt = [w.lower() for w in l1]
 lrt = [w.lower() for w in l2]
 
-lines2 = open('output/extraTree_feature_importance.csv', 'r').readlines()
+lines2 = open('output/feature_importance/extraTree_feature_importance.csv', 'r').readlines()
 
 features=[]
 for line in lines2:
@@ -54,7 +54,6 @@ for line in lines2:
 
     features.append(spline[1])
 
-file = open('output/extraTree_feat_byClass.csv', 'w')
 
 feat_by_class=[]
 for f in features:
@@ -64,12 +63,12 @@ for f in features:
     #print ("HRT %s: " % f + str(hrt_count))
     #print ("LRT %s: " % f + str(lrt_count))
 
-    if (hrt_count-lrt_count)>20:
+    if (hrt_count-lrt_count)>10:
 
         feat_by_class.append('HRT'+','+f+','+str(hrt_count))
         #file.write('HRT'+','+f+','+str(hrt_count)+'\n')
 
-    elif (lrt_count-hrt_count)>20:
+    elif (lrt_count-hrt_count)>10:
         feat_by_class.append('LRT'+','+f+','+str(lrt_count))
         #file.write('LRT'+','+f+','+str(lrt_count)+'\n')
     else:
@@ -77,6 +76,8 @@ for f in features:
         #file.write('BOTH'+','+f+','+str(hrt_count)+','+str(lrt_count)+'\n')
 
 feat_by_class = sorted(feat_by_class)
+
+file = open('output/feature_importance/extraTree_feat_byClass.csv', 'w')
 
 for f in feat_by_class:
     file.write(f+'\n')

@@ -106,3 +106,6 @@ auscicomm, 2945
 Aus_ScienceWeek, 6366
 ScienceAU, 4506
 sleekgeeks, 4368
+earthskyscience, 118K
+NASAblueshift, 54.6K
+

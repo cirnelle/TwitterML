@@ -28,6 +28,3 @@ for l in l1:
 f.close()
 
 
-
-
-

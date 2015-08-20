@@ -33,7 +33,7 @@ for line in lines:
 
     user_list.append(spline[0])
 
-stop_words = ['2', '0', '1', 'b', 'amp', 'one', 'today', 'via']
+stop_words = ['2', '0', '1', 'b', 'amp', 'one', 'today', 'via', 'us', 'sw', 'get', 'dr', 'ks', 'sowetoshutdown']
 
 #user_list=['nasa']
 
@@ -121,8 +121,8 @@ class Compute():
 
         words = []
 
-        if os.path.isfile('output/output_HRT.txt'):
-            lines = open('output/output_HRT.txt', 'r').readlines()
+        if os.path.isfile('output/sydscifest/output_sydsciencefest_ALL_CLEAN.csv'):
+            lines = open('output/sydscifest/output_sydsciencefest_ALL_CLEAN.csv', 'r').readlines()
 
         else:
             print("File not found")
@@ -145,8 +145,13 @@ class Compute():
             if w not in stop:
                 word_freq.append(w)
 
-        f = open(maindir+'/output/output_HRT_wordfreq.txt', 'w')
-        f.write(str(Counter(word_freq).most_common(200)))
+        f = open(maindir+'/output/sydscifest/sydscifest_wordfreq.txt', 'w')
+
+        wf = Counter(word_freq).most_common(200)
+
+        for w in wf:
+            f.write(str(w)+'\n')
+
         f.close()
 
         #print (Counter(word_freq).most_common(20))
@@ -224,14 +229,45 @@ class Compute():
         print (average_words_art)
 
 
+    def get_specific_user_tweets(self):
+        lines1 = open('output/engrate/output_engrate_MASTER.csv', 'r').readlines()
+        lines2 = open('user_space.csv', 'r').readlines()
+
+
+        l1=[]
+
+        for line in lines2:
+            spline2 = line.replace('\n','').split(',')
+
+            for line in lines1:
+                spline1 = line.replace('\n','').split(',')
+
+                if (spline1[0] == spline2[0]):
+                    l1.append(line)
+
+
+        f = open('output/engrate/output_engrate_space.csv', 'w')
+
+        for l in l1:
+            f.write(str(l))
+
+        f.close()
+
+
 cp = Compute()
 
 '''
 Get word frequency
 '''
-#word_list = cp.get_words()
+word_list = cp.get_words()
 
-#cp.get_word_freq(word_list)
+cp.get_word_freq(word_list)
+
+'''
+Get specific user tweet
+'''
+
+#cp.get_specific_user_tweets()
 
 
 '''
@@ -248,7 +284,7 @@ Get engagement rate
 
 """Get histogram"""
 
-
+'''
 
 if os.path.isfile('output/output_engrate_individuals.csv'):
   lines = open('output/output_engrate_individuals.csv','r').readlines()
@@ -279,7 +315,7 @@ for line in lines:
 cp.get_histogram(erlist)
 
 '''
-
+'''
 
 """Get lexical diversity"""
 

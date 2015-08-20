@@ -15,7 +15,7 @@ from nltk.util import ngrams
 ##Creates list of tuples in the format [(['one','two','one two', ...], 'HRT'), ...]
 
 
-lines = open('output/output_engrate_label_080815_noART_noStop.csv', 'r').readlines()
+lines = open('output/engrate/output_engrate_label_080815_noART_noStop.csv', 'r').readlines()
 
 l3=[] #list of tuples for HRT
 l4=[] #list of tuples for LRT
