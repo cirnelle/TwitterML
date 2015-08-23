@@ -13,6 +13,8 @@ from sklearn.cross_validation import train_test_split
 from sklearn.cross_validation import StratifiedShuffleSplit
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.cross_validation import cross_val_score
+from sklearn.feature_selection import RFE
+from sklearn.feature_selection import RFECV
 from sklearn import metrics
 import scipy as sp
 from sklearn.feature_extraction import text
@@ -88,7 +90,6 @@ class SVM():
         #print (len(count_vect.vocabulary_))
         #file.close()
 
-
         ###tfidf transformation###
 
         tfidf_transformer = TfidfTransformer()
@@ -99,7 +100,7 @@ class SVM():
     def train_classifier(self,X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer):
 
         ###training the classifier
-        clf = SGDClassifier().fit(X_tfidf, y_train)
+        clf = SGDClassifier(loss='hinge', penalty='l2', n_iter=5, random_state=42).fit(X_tfidf, y_train)
 
         ##test clf on test data
 
@@ -113,6 +114,45 @@ class SVM():
 
         #print the mean accuracy on the given test data and labels.
         print ("Classifier score is: %s " % clf.score(X_test_tfidf,y_test))
+
+        return y_predicted
+
+    def use_feature_selection(self,X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer):
+
+        # Create the RFE object and compute a cross-validated score.
+        svm = SGDClassifier(loss='hinge', penalty='l2', n_iter=3, random_state=42)
+
+        # The "accuracy" scoring is proportional to the number of correct
+        # classifications
+
+        #rfecv = RFE(estimator=svm, n_features_to_select=10000, step=1) #use recursive feature elimination
+        rfecv = RFECV(estimator=svm, step=1, cv=3, scoring='accuracy')#use recursive feature elimination with cross validation
+
+        print ("Fit transform using RFECV ...")
+
+        rfecv.fit(X_tfidf, y_train)
+        X_rfecv = rfecv.transform(X_tfidf)
+        print (X_rfecv.shape)
+
+        print("Optimal number of features : %d" % rfecv.n_features_)
+
+        clf = SGDClassifier(loss='hinge', penalty='l2', n_iter=5, random_state=42).fit(X_rfecv, y_train)
+
+        """test clf on test data"""
+
+
+        X_test_CV = count_vect.transform(docs_test)
+        X_test_tfidf = tfidf_transformer.transform(X_test_CV)
+        X_test_rfecv = rfecv.transform(X_test_tfidf)
+
+        y_predicted = clf.predict(X_test_rfecv)
+
+        """print the mean accuracy on the given test data and labels"""
+
+        print ("Classifier score is: %s " % clf.score(X_test_rfecv,y_test))
+
+        scores = cross_val_score(clf, X_test_tfidf, y_test, cv=3, scoring='f1_weighted')
+        print ("Cross validation score:%s " % scores)
 
         return y_predicted
 
@@ -141,7 +181,7 @@ class SVM():
         # Fit the pipeline on the training set using grid search for the parameters
         parameters = {
             'vect__ngram_range': [(1, 2), (1, 3)],
-            'vect__use_idf': (True, False)
+            'vect__use_idf': (True, False),
         }
 
         grid_search = GridSearchCV(pipeline, parameters, n_jobs=-1)
@@ -203,7 +243,12 @@ if __name__ == '__main__':
     X_tfidf,count_vect,tfidf_transformer = svm.get_features(docs_train)
 
     """SVM Classifier"""
+
     y_predicted = svm.train_classifier(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
+
+    """Use Feature Selection"""
+
+    #y_predicted = svm.use_feature_selection(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
 
     """Confusion matrix"""
 

@@ -18,20 +18,6 @@ else:
     print ("ERROR --> major error")
     sys.exit(1)
 
-if os.path.isfile('users_temp.txt'):
-  lines = open('users_temp.txt','r').readlines()
-
-else:
-    print ("File not found")
-    sys.exit(1)
-
-user_list=[]
-
-for line in lines:
-    spline=line.replace("\n", "").split(",")
-    #creates a list with key and value. Split splits a string at the comma and stores the result in a list
-
-    user_list.append(spline[0])
 
 stop_words = ['2', '0', '1', 'b', 'amp', 'one', 'today', 'via', 'us', 'sw', 'get', 'dr', 'ks', 'sowetoshutdown']
 
@@ -231,7 +217,7 @@ class Compute():
 
     def get_specific_user_tweets(self):
         lines1 = open('output/engrate/output_engrate_MASTER.csv', 'r').readlines()
-        lines2 = open('user_space.csv', 'r').readlines()
+        lines2 = open('user_individuals.csv', 'r').readlines()
 
 
         l1=[]
@@ -246,7 +232,7 @@ class Compute():
                     l1.append(line)
 
 
-        f = open('output/engrate/output_engrate_space.csv', 'w')
+        f = open('output/engrate/output_engrate_individuals.csv', 'w')
 
         for l in l1:
             f.write(str(l))
@@ -254,20 +240,36 @@ class Compute():
         f.close()
 
 
+if os.path.isfile('users_temp.txt'):
+  lines = open('users_temp.txt','r').readlines()
+
+else:
+    print ("File not found")
+    sys.exit(1)
+
+user_list=[]
+
+for line in lines:
+    spline=line.replace("\n", "").split(",")
+    #creates a list with key and value. Split splits a string at the comma and stores the result in a list
+
+    user_list.append(spline[0])
+
+
 cp = Compute()
 
 '''
 Get word frequency
 '''
-word_list = cp.get_words()
+#word_list = cp.get_words()
 
-cp.get_word_freq(word_list)
+#cp.get_word_freq(word_list)
 
 '''
 Get specific user tweet
 '''
 
-#cp.get_specific_user_tweets()
+cp.get_specific_user_tweets()
 
 
 '''

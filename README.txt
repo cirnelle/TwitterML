@@ -1,3 +1,3 @@
-THIS IS THE README FILE FOR THE TWITTERML PROJECT!
+THIS IS THE README FILE FOR THE TWITTERML PROJECT
 
-This is a new line of text in the 'test branch' branch. 
+A toolkit for the study of science communication on social media using machine learning 

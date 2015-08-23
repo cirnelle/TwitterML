@@ -114,8 +114,8 @@ class NaiveBayes():
         X_test_CV = count_vect.transform(docs_test)
         X_test_tfidf = tfidf_transformer.transform(X_test_CV)
 
-        #scores = cross_val_score(rfecv, X_test_tfidf, y_test, cv=5, scoring='f1_weighted')
-        #print ("Cross validation score:%s " % scores)
+        scores = cross_val_score(clf, X_test_tfidf, y_test, cv=3, scoring='f1_weighted')
+        print ("Cross validation score:%s " % scores)
 
         y_predicted = clf.predict(X_test_tfidf)
 
@@ -133,28 +133,33 @@ class NaiveBayes():
 
         # The "accuracy" scoring is proportional to the number of correct
         # classifications
-        rfecv = RFE(estimator=nb, n_features_to_select=16972, step=1)
+        #rfecv = RFE(estimator=nb, n_features_to_select=10000, step=1) #use recursive feature elimination
+        rfecv = RFECV(estimator=nb, step=1, cv=3, scoring='accuracy')#use recursive feature elimination with cross validation
 
-        print ("Fitting data ...")
+        print ("Fitting data with RFECV...")
         rfecv.fit(X_tfidf, y_train)
+        X_rfecv=rfecv.transform(X_tfidf)
+        print (X_rfecv.shape)
 
         print("Optimal number of features : %d" % rfecv.n_features_)
 
+        clf = MultinomialNB(alpha=0.5).fit(X_rfecv, y_train)
 
         """test clf on test data"""
 
 
         X_test_CV = count_vect.transform(docs_test)
         X_test_tfidf = tfidf_transformer.transform(X_test_CV)
+        X_test_rfecv = rfecv.transform(X_test_tfidf)
 
-        #scores = cross_val_score(rfecv, X_test_tfidf, y_test, cv=5, scoring='f1_weighted')
-        #print ("Cross validation score:%s " % scores)
-
-        y_predicted = rfecv.predict(X_test_tfidf)
+        y_predicted = clf.predict(X_test_rfecv)
 
         """print the mean accuracy on the given test data and labels"""
 
-        print ("Classifier score is: %s " % rfecv.score(X_test_tfidf,y_test))
+        print ("Classifier score is: %s " % clf.score(X_test_rfecv,y_test))
+
+        scores = cross_val_score(clf, X_test_tfidf, y_test, cv=3, scoring='f1_weighted')
+        print ("Cross validation score:%s " % scores)
 
         return y_predicted
 
@@ -277,7 +282,7 @@ class NaiveBayes():
 
         pipeline = Pipeline([
                 ('vect', TfidfVectorizer(stop_words=stopwords, min_df=3, max_df=0.90)),
-                #('feature_selection', SelectKBest()),
+                ('feature_selection', RFECV(estimator=MultinomialNB(), step=1, cv=2, scoring='accuracy')),
                 ('clf', MultinomialNB()),
         ])
 
@@ -365,7 +370,7 @@ if __name__ == '__main__':
 
     """Feature importance"""
 
-    nb.get_important_features(clf,count_vect)
+    #nb.get_important_features(clf,count_vect)
 
     """Pipeline"""
 
