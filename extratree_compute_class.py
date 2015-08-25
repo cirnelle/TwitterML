@@ -60,8 +60,8 @@ for f in features:
     hrt_count = hrt.count(f)
     lrt_count = lrt.count(f)
 
-    #print ("HRT %s: " % f + str(hrt_count))
-    #print ("LRT %s: " % f + str(lrt_count))
+    print ("HRT %s: " % f + str(hrt_count))
+    print ("LRT %s: " % f + str(lrt_count))
 
     if (hrt_count-lrt_count)>10:
 

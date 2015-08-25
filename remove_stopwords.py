@@ -28,10 +28,10 @@ for line in lines:
     #join all elements in the list (individual words) into one string
     no_stopwords = [' '.join(rm_stopwords)] #output ['two three']
 
-    no_stopwords.append(spline[1]) #output ['this is a tweet', 'LRT']
+    #no_stopwords.append(spline[1]) #output ['this is a tweet', 'LRT']
 
     #join all elements in the list (individual words) into one string
-    no_stopwords = [','.join(no_stopwords)] #output ['this is a tweet,LRT']
+    #no_stopwords = [','.join(no_stopwords)] #output ['this is a tweet,LRT']
 
     tweetlist.extend(no_stopwords)#output ['this is a tweet,LRT', 'this is also a tweet,HRT']
 

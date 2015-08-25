@@ -128,6 +128,24 @@ class ExtraTree():
 
     def get_important_features(self,clf):
 
+        ##get vocabulary
+        vocab = count_vect.vocabulary_
+        vl = []
+
+        for key in vocab.keys():
+
+            vl.append(key)
+
+        vl.sort()
+
+        f = open ('output/feature_importance/vocab.txt', 'w')
+
+
+        for v in vl:
+            f.write(str(v)+'\n')
+        f.close()
+
+
         ##get most important features
         feat_imp = clf.feature_importances_
         f = open('output/feature_importance/extraTree_feat_imp_all.txt', 'w')
@@ -142,9 +160,10 @@ class ExtraTree():
         #create a list with elements sorted by feature importance
         sortli = sorted(range(len(feat_imp)), key=lambda i:feat_imp[i], reverse=True)[:100]
 
+        print (sortli)
 
+        f = open('output/feature_importance/extraTree_feature_importance.csv', 'w')
         for i in sortli:
-            f = open('output/feature_importance/extraTree_feature_importance.csv', 'a')
             f.write(lines[i].replace('\n','')+'\t'+lines2[i].replace('\n','')+'\n')
         f.close()
 
@@ -197,7 +216,7 @@ class ExtraTree():
 
 if __name__ == '__main__':
 
-    dataset = pd.read_csv('output/engrate/output_engrate_label_space_noART.csv', header=0, names=['tweets', 'class'])
+    dataset = pd.read_csv('output/engrate/output_engrate_label_science_noART.csv', header=0, names=['tweets', 'class'])
 
     X = dataset['tweets']
     y = dataset['class']

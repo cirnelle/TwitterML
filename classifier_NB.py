@@ -14,9 +14,11 @@ from sklearn.cross_validation import train_test_split
 from sklearn.cross_validation import StratifiedShuffleSplit
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.cross_validation import cross_val_score
-from sklearn.feature_selection import RFE
+#from sklearn.feature_selection import RFE
 from sklearn.feature_selection import RFECV
-from sklearn.feature_selection import SelectKBest
+#from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import SelectPercentile
+from sklearn.feature_selection import chi2, f_classif
 from sklearn import metrics
 import numpy as np
 import scipy as sp
@@ -163,6 +165,51 @@ class NaiveBayes():
 
         return y_predicted
 
+    def cv_and_train(self):
+
+
+        """Stratified ShuffleSplit cross validation iterator"""
+        #Provides train/test indices to split data in train test sets.
+        #This cross-validation object is a merge of StratifiedKFold and ShuffleSplit, which returns stratified randomized folds.
+        #The folds are made by preserving the percentage of samples for each class.
+
+
+        sss = StratifiedShuffleSplit(y, 5, test_size=0.2, random_state=42)
+
+        print (len(sss))
+        print (sss)
+
+        for train_index, test_index in sss:
+            #print("TRAIN:", train_index, "TEST:", test_index)
+            docs_train, docs_test = X[train_index], X[test_index]
+            y_train, y_test = y[train_index], y[test_index]
+            count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=(1,3))
+            X_CV = count_vect.fit_transform(docs_train)
+            ### print number of unique words (n_features)
+            print (X_CV.shape)
+            tfidf_transformer = TfidfTransformer()
+            X_tfidf = tfidf_transformer.fit_transform(X_CV)
+
+            clf = MultinomialNB(alpha=0.5).fit(X_tfidf, y_train)
+
+            print ("Fitting data ...")
+            clf.fit(X_tfidf, y_train)
+
+            X_test_CV = count_vect.transform(docs_test)
+            X_test_tfidf = tfidf_transformer.transform(X_test_CV)
+
+
+
+            y_predicted = clf.predict(X_test_tfidf)
+
+            scores = cross_val_score(clf, X_test_tfidf, y_test, cv=3, scoring='f1_weighted')
+            print ("Cross validation score:%s " % scores)
+
+            print ("Classifier score is: %s " % clf.score(X_test_tfidf,y_test))
+            print(metrics.classification_report(y_test, y_predicted))
+            cm = metrics.confusion_matrix(y_test, y_predicted)
+            print(cm)
+
 
     def confusion_matrix(self,y_test,y_predicted):
 
@@ -282,7 +329,7 @@ class NaiveBayes():
 
         pipeline = Pipeline([
                 ('vect', TfidfVectorizer(stop_words=stopwords, min_df=3, max_df=0.90)),
-                ('feature_selection', RFECV(estimator=MultinomialNB(), step=1, cv=2, scoring='accuracy')),
+                ("selector", SelectPercentile(score_func=chi2)),
                 ('clf', MultinomialNB()),
         ])
 
@@ -292,7 +339,8 @@ class NaiveBayes():
         parameters = {
             'vect__ngram_range': [(1, 2), (1, 3)],
             'vect__use_idf': (True, False),
-            #'feature_selection__k': (10000, "all"),
+            'selector__score_func': (chi2, f_classif),
+            'selector__percentile': (85, 95),
             'clf__alpha': (0.4, 0.5)
         }
 
@@ -358,15 +406,20 @@ if __name__ == '__main__':
 
     X_tfidf,count_vect,tfidf_transformer = nb.get_features(docs_train)
 
+    """CV and train"""
+
+    #nb.cv_and_train()
+
+
     """NB Classifier"""
-    y_predicted, clf = nb.train_classifier(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
+    #y_predicted, clf = nb.train_classifier(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
 
     """Use Feature Selection"""
     #y_predicted = nb.use_feature_selection(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
 
     """Confusion matrix"""
 
-    nb.confusion_matrix(y_test,y_predicted)
+    #nb.confusion_matrix(y_test,y_predicted)
 
     """Feature importance"""
 
@@ -374,7 +427,7 @@ if __name__ == '__main__':
 
     """Pipeline"""
 
-    #nb.use_pipeline(docs_train,y_train,docs_test,y_test)
+    nb.use_pipeline(docs_train,y_train,docs_test,y_test)
 
 
 

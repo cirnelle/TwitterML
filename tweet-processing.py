@@ -171,8 +171,8 @@ class DataProcessing():
 
     def label_tweets(self):
 
-        if os.path.isfile('output/engrate/output_engrate_individuals.csv'):
-            lines = open('output/engrate/output_engrate_individuals.csv', 'r').readlines()
+        if os.path.isfile('output/engrate/output_engrate_MASTER.csv'):
+            lines = open('output/engrate/output_engrate_MASTER.csv', 'r').readlines()
 
         else:
             print("File not found")
@@ -218,12 +218,12 @@ class DataProcessing():
             if (len(spline)>=8):
 
 
-                if float(spline[6]) >= 0.045:
+                if float(spline[6]) >= 0.055:
 
                     tweets.append('HRT')
 
 
-                elif (float(spline[6]) >= 0.0006) and (float(spline[6]) < 0.05):
+                elif (float(spline[6]) >= 0.0012) and (float(spline[6]) < 0.0):
 
                     tweets.append('ART')
 
@@ -240,7 +240,7 @@ class DataProcessing():
 
 
 
-        ext.printcsv_all(tweets_label,'engrate_label_individuals')
+        ext.printcsv_all(tweets_label,'engrate_label_MASTER')
 
         #return (tweets_label)
 
