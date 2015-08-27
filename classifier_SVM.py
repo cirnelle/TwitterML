@@ -137,7 +137,7 @@ class SVM():
         #rfecv = RFECV(estimator=svm, step=1, cv=3, scoring='accuracy')#use recursive feature elimination with cross validation
         selector = SelectPercentile(score_func=chi2, percentile=85)
 
-        print ("Fit transform using SelectPercentile ...")
+        print ("Fit transform using feature selection ...")
 
         selector.fit(X_tfidf, y_train)
         X_features = selector.transform(X_tfidf)
@@ -161,8 +161,10 @@ class SVM():
 
         print ("Classifier score is: %s " % clf.score(X_test_selector,y_test))
 
+        """returns cross validation score"""
+
         scores = cross_val_score(clf, X_features, y_train, cv=3, scoring='f1_weighted')
-        print ("Cross validation score:%s " % scores.mean())
+        print ("Cross validation score:%s " % scores)
 
         return y_predicted, clf
 
@@ -294,7 +296,7 @@ class SVM():
 
         vectorizer = TfidfVectorizer(stop_words=stopwords, use_idf=True, ngram_range=(1,3), min_df=3, max_df=0.90)
 
-        selector = SelectPercentile(score_func=f_classif, percentile=85)
+        selector = SelectPercentile(score_func=chi2, percentile=85)
 
         combined_features = Pipeline([
                                         ("vect", vectorizer),
@@ -356,11 +358,6 @@ class SVM():
 
     def plot_feature_selection(self,docs_train,y_train):
 
-        count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=(1,3))
-        X_CV = count_vect.fit_transform(docs_train)
-
-        tfidf_transformer = TfidfTransformer()
-        X_tfidf = tfidf_transformer.fit_transform(X_CV)
 
         transform = SelectPercentile(score_func=chi2)
 
@@ -428,11 +425,11 @@ if __name__ == '__main__':
 
     """Use Feature Selection"""
 
-    y_predicted, clf = svm.use_feature_selection(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
+    #y_predicted, clf = svm.use_feature_selection(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
 
     """Confusion matrix"""
 
-    svm.confusion_matrix(y_test,y_predicted)
+    #svm.confusion_matrix(y_test,y_predicted)
 
     """Get important features"""
 
@@ -441,7 +438,7 @@ if __name__ == '__main__':
     """Pipeline"""
 
     #svm.use_pipeline(docs_train,y_train,docs_test,y_test)
-    #svm.use_pipeline_with_fs(docs_train,y_train,docs_test,y_test)
+    svm.use_pipeline_with_fs(docs_train,y_train,docs_test,y_test)
 
     """Plot feature selection"""
     #svm.plot_feature_selection(docs_train,y_train)

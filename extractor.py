@@ -146,7 +146,7 @@ class Extractor():
 
     def hashtag_tweets(self,hashtag,api):
 
-        tweets=tweepy.Cursor(api.search, q=hashtag, lang="en").items(5000)
+        tweets=tweepy.Cursor(api.search, q=hashtag, since="2014-01-01", until="2015-08-26", lang="en").items(5000)
 
         return tweets
 

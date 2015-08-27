@@ -8,6 +8,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from nltk.corpus import stopwords
 import time
+from sklearn.feature_extraction import text
 
 
 if os.path.exists("/Users/yi-linghwong/GitHub/TwitterML/"):
@@ -107,8 +108,8 @@ class Compute():
 
         words = []
 
-        if os.path.isfile('output/sydscifest/output_sydsciencefest_ALL_CLEAN.csv'):
-            lines = open('output/sydscifest/output_sydsciencefest_ALL_CLEAN.csv', 'r').readlines()
+        if os.path.isfile('output/misc/engrate_space_only_tweets.csv'):
+            lines = open('output/misc/engrate_space_only_tweets.csv', 'r').readlines()
 
         else:
             print("File not found")
@@ -124,14 +125,23 @@ class Compute():
     def get_word_freq(self,word_list):
 
         word_freq = []
-        stop = stopwords.words('english')
-        stop.extend(stop_words)
+
+        lines = open('stopwords.csv', 'r').readlines()
+
+        my_stopwords=[]
+        for line in lines:
+            my_stopwords.append(line.replace("\n", ""))
+
+        stop = text.ENGLISH_STOP_WORDS.union(my_stopwords)
+
+        #stop = stopwords.words('english')
+        #stop.extend(stop_words)
 
         for w in word_list:
             if w not in stop:
                 word_freq.append(w)
 
-        f = open(maindir+'/output/sydscifest/sydscifest_wordfreq.txt', 'w')
+        f = open(maindir+'/output/misc/engrate_space_wordfreq.txt', 'w')
 
         wf = Counter(word_freq).most_common(200)
 
@@ -261,15 +271,15 @@ cp = Compute()
 '''
 Get word frequency
 '''
-#word_list = cp.get_words()
+word_list = cp.get_words()
 
-#cp.get_word_freq(word_list)
+cp.get_word_freq(word_list)
 
 '''
 Get specific user tweet
 '''
 
-cp.get_specific_user_tweets()
+#cp.get_specific_user_tweets()
 
 
 '''
