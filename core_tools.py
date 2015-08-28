@@ -226,6 +226,9 @@ class Compute():
 
 
     def get_specific_user_tweets(self):
+
+        ###Get the tweets of specified users from a tweet dump###
+
         lines1 = open('output/engrate/output_engrate_MASTER.csv', 'r').readlines()
         lines2 = open('user_individuals.csv', 'r').readlines()
 
@@ -249,6 +252,35 @@ class Compute():
 
         f.close()
 
+    def get_related_hashtags(self):
+
+        lines = open('output/education/output_aussieED.csv', 'r').readlines()
+
+        hashtag_list=[]
+
+        ##create a list of all hashtags###
+
+        for line in lines:
+
+            hl = [word.strip("#") for word in line.replace('\n','').split() if word.startswith("#")]
+            hashtag_list.extend(hl)
+
+        ##convert all hashtags to lowercase##
+        hash_list = [ht.lower() for ht in hashtag_list]
+
+
+        ##count occurences of each hashtag and list the top 10 most common##
+        hash_count=Counter(hash_list).most_common(15)
+
+        #print (hash_count)
+
+        f=open('output/education/aussieED_related_hashtag.csv', 'w')
+
+        for hc in hash_count:
+            f.write(str(hc)+'\n')
+
+        f.close
+
 
 if os.path.isfile('users_temp.txt'):
   lines = open('users_temp.txt','r').readlines()
@@ -271,9 +303,9 @@ cp = Compute()
 '''
 Get word frequency
 '''
-word_list = cp.get_words()
+#word_list = cp.get_words()
 
-cp.get_word_freq(word_list)
+#cp.get_word_freq(word_list)
 
 '''
 Get specific user tweet
@@ -344,8 +376,14 @@ cp.get_histogram(erlist)
 #average = cp.get_average(user_list)
 #ext.printcsv_all(average,'av')
 
-
 '''
+
+"""Get related hashtags"""
+
+cp.get_related_hashtags()
+
+
+
 """Plot graph"""
 
 '''
@@ -369,4 +407,5 @@ plt.plot(x,y,'*')
 plt.show()
 
 '''
+
 

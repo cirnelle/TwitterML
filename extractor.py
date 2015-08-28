@@ -62,8 +62,6 @@ starttime = time.time()
 
 nrequest = 0
 
-auth = ''
-
 
 class Extractor():
 
@@ -146,7 +144,26 @@ class Extractor():
 
     def hashtag_tweets(self,hashtag,api):
 
-        tweets=tweepy.Cursor(api.search, q=hashtag, since="2014-01-01", until="2015-08-26", lang="en").items(5000)
+        tweets=tweepy.Cursor(api.search, q=hashtag, lang="en").items(10000)
+
+        return tweets
+
+    def get_status_by_id(self,id_list,api):
+
+        tweets=[]
+
+        for id in id_list:
+
+            tweet=api.get_status(id=id)
+
+            #dumps serialises strings into JSON (which is very similar to python's dict)
+            json_str= json.dumps(tweet._json)
+
+            #loads deserialises a string and create a python dict, i.e. it parses the JSON to create a python dict
+            data=json.loads(json_str)
+
+            tweets.append([data['user']['screen_name'], data['id_str'], data['created_at'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace(',', ' ')])
+
 
         return tweets
 
@@ -287,7 +304,7 @@ class Extractor():
 
 
             #add the new tweets to a list
-            fulltweets.append([data['created_at'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace(',', ' ')])
+            fulltweets.append([data['user']['screen_name'], data['id_str'], data['created_at'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace(',', ' ')])
 
         return fulltweets
 
@@ -317,11 +334,21 @@ class Extractor():
 
 
 
+'''
+
+ext= Extractor()
+auth = ext.loadtokens()
+api = ext.connectToAPI(auth)
+
+id_list=[637069329259851776]
+
+tweets=ext.get_status_by_id(id_list,api)
+
+print (tweets)
+
+'''
 
 
-#ext= Extractor()
-#auth = ext.loadtokens()
-#api = ext.connectToAPI(auth)
 
 #full_tweets = []
 
