@@ -34,9 +34,9 @@ access_token = api_dict["Access_token"]
 access_token_secret = api_dict["Access_token_secret"]
 
 
-hashtaglist = ['ssf15']
+hashtaglist = ['MarsAnnouncement']
 
-csvfile=open('output/output_ssf15_stream.csv','a', newline='')
+csvfile=open('output/mars_announcement/output_marsannouncement_stream.csv','a', newline='')
 csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
 
 class StdOutListener(StreamListener):
@@ -50,7 +50,7 @@ class StdOutListener(StreamListener):
 
         if 'created_at' in data:
             print ([data['created_at'],data['text']])
-            csvtweets.writerow([data['created_at'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace(',', ' ')])
+            csvtweets.writerow([data['user']['screen_name'], data['id_str'], data['created_at'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace(',', ' ')])
         #flush method writes data in buffer directly to the target file (real-time data writing to file)
             csvfile.flush()
 
@@ -82,7 +82,7 @@ if __name__ == '__main__':
 
     stream = Stream(auth, l)
     #stream.filter(languages=["en"],track=["#"+x for x in hashtaglist])
-    stream.filter(languages=["en"],track=['ssf15'])
+    stream.filter(languages=["en"],track=['MarsAnnouncement'])
     #stream.filter(track=hashtaglist)
 
 

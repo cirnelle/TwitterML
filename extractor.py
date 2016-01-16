@@ -137,14 +137,14 @@ class Extractor():
 
     def user_tweets(self,user,api):
 
-        tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(2000)
+        tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(2)
 
         return tweets
 
 
     def hashtag_tweets(self,hashtag,api):
 
-        tweets=tweepy.Cursor(api.search, q=hashtag, lang="en").items(10000)
+        tweets=tweepy.Cursor(api.search, q=hashtag, lang="en").items(3)
 
         return tweets
 
@@ -155,6 +155,7 @@ class Extractor():
         for id in id_list:
 
             tweet=api.get_status(id=id)
+
 
             #dumps serialises strings into JSON (which is very similar to python's dict)
             json_str= json.dumps(tweet._json)
@@ -189,6 +190,7 @@ class Extractor():
 
 
         tweets = self.user_tweets(user,api)
+
 
         #else:
 
@@ -230,6 +232,8 @@ class Extractor():
         fulltweets=[]
 
         for tweet in tweets:
+
+            print (tweet)
 
             #tweet=tweets[tweet]
 
@@ -346,7 +350,11 @@ tweets=ext.get_status_by_id(id_list,api)
 
 print (tweets)
 
+t = ext.gettweets_user('nasa',api)
+print (t)
+
 '''
+
 
 
 
