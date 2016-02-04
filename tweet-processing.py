@@ -143,7 +143,7 @@ class DataProcessing():
             #remove mentions
             t4 = re.sub(r'(?:\@)\S+', '', t3)
             #remove special characters
-            t5 = re.sub("[^A-Za-z]+",' ', t4)
+            t5 = re.sub("[^A-Za-z0-9]+",' ', t4)
 
 
             #remove single characters
@@ -202,7 +202,7 @@ class DataProcessing():
             #remove mentions
             t4 = re.sub(r'(?:\@)\S+', '', t3)
             #remove special characters
-            t5 = re.sub("[^A-Za-z]+",' ', t4)
+            t5 = re.sub("[^A-Za-z0-9]+",' ', t4)
 
             #remove single characters
             words=[]

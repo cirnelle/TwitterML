@@ -38,6 +38,7 @@ else:
 
 if os.path.isfile('../../keys/twitter_api_keys.txt'):
     lines = open('../../keys/twitter_api_keys.txt','r').readlines()
+    #lines is a list of strings (e.g. ['1,2,3,4,', '2,3,4,5,', ...]
 
 
 else:
@@ -163,7 +164,7 @@ class Extractor():
             #loads deserialises a string and create a python dict, i.e. it parses the JSON to create a python dict
             data=json.loads(json_str)
 
-            tweets.append([data['user']['screen_name'], data['id_str'], data['created_at'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace(',', ' ')])
+            tweets.append([data['user']['screen_name'], data['id_str'], data['created_at'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace('\r', '').replace(',', ' ')])
 
 
         return tweets
@@ -247,7 +248,7 @@ class Extractor():
 
 
             #add the new tweets to a list
-            fulltweets.append([user, data['created_at'], data['text'].replace('\n', ' ').replace(',', ' '), data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count']])
+            fulltweets.append([user, data['created_at'], data['text'].replace('\n', ' ').replace('\r', '').replace(',', ' '), data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count']])
 
             ##IMPORTANT: the 'followers_count' key is in a dictionary (called 'user') within a dictionary!
                 #fulltweets.append([data['user']['followers_count'], data['retweet_count']])
@@ -308,7 +309,7 @@ class Extractor():
 
 
             #add the new tweets to a list
-            fulltweets.append([data['user']['screen_name'], data['id_str'], data['created_at'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace(',', ' ')])
+            fulltweets.append([data['user']['screen_name'], data['id_str'], data['created_at'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace('\r', '').replace(',', ' ')])
 
         return fulltweets
 
