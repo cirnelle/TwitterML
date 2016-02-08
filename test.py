@@ -1,13 +1,56 @@
 __author__ = 'yi-linghwong'
 
-a = [1,2,3]
+import sys
+import os
+from matplotlib import *
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy.stats import linregress
+from scipy.interpolate import interp1d
 
-print (range(len(a)))
 
-for index in range(len(a)):
+lines = open('followers/follcount_NASA_no_inter.csv','r').readlines()
 
-    print (index,a[index])
+follcount_list = []
 
 
-for index,value in enumerate(a):
-    print (index,value)
+for line in lines:
+    spline = line.replace('\n','').split(',')
+
+    follcount_list.append(float(spline[1]))
+
+print (len(follcount_list))
+
+
+x = range (0,39)
+
+print (len(x))
+
+
+
+coefficients = np.polyfit(x, follcount_list, 1)
+polynomial = np.poly1d(coefficients)
+ys = polynomial(x)
+print (coefficients)
+print (polynomial)
+
+plt.plot(x, follcount_list, 'o')
+plt.plot(x, ys)
+
+print("Linregress is "+str(linregress(x, ys)))
+
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+__author__ = 'yi-linghwong'
+
+import os
+import sys
+import time
+
+
+lines = open('followers/user_slope.txt','r').readlines()
+
+slope_dict = {}
+
+for line in lines:
+    spline = line.replace('\n','').split(',')
+    slope_dict[spline[0]] = spline[1]
+
+print ("Length of slope_dict is "+str(len(slope_dict)))
+
+
+class ComputeFollowerCount():
+
+
+    def create_tweet_list(self):
+
+        ###############
+        # create tweet list with updated follower count
+        ###############
+
+
+        lines = open('temp.txt','r').readlines()
+
+        tweets = []
+        for line in lines:
+            spline = line.replace('\n','').split(',')
+            tweets.append(spline)
+
+        print (tweets)
+
+        unique_user = []
+        updated_tweets = []
+
+        for t in tweets:
+
+            if t[0] not in unique_user:
+                unique_user.append(t[0])
+                t1 = t[1].split(' ')
+                t2 = t1[1]+' '+t1[2]+' '+t1[5]
+                t3 = time.strptime(t2,'%b %d %Y')
+                t_max = time.mktime(t3)
+
+            foll_count = self.compute_follower_count(t[0],t[1],t_max,t[2])
+
+            updated_tweets.append([t[0],t[1],foll_count,t[3],t[4],t[5],t[6],t[7]])
+
+        print (updated_tweets)
+
+
+
+    def compute_follower_count(self,user,date,t_max,foll_count_max):
+
+        ###############
+        # function to compute follower count, taking the tweet date and latest follower count as arguments
+        ###############
+
+        # split the date by blank space
+        # input = 'Thu Aug 06 22:18:01 +0000 2015'
+        # result = ['Thu', 'Aug', '06', '22:18:01', '+0000', '2015']
+
+
+        d1 = date.split(' ')
+
+        d2 = d1[1]+' '+d1[2]+' '+d1[5]
+
+        t1 = time.strptime(d2,'%b %d %Y')
+        t_epoch = time.mktime(t1)
+
+
+
+        t_delta = t_max - t_epoch
+
+        slope = float(slope_dict[user])
+
+        y_delta = slope*t_delta
+
+        foll_count = float(foll_count_max) - y_delta
+
+        foll_count = str(int(foll_count))
+
+        #print ("Updated foll count is "+str(int(foll_count)))
+
+        return foll_count
+
+
+if __name__ == "__main__":
+
+    cf = ComputeFollowerCount()
+    cf.create_tweet_list()
