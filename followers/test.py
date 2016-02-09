@@ -1,30 +1,19 @@
 __author__ = 'yi-linghwong'
 
 import time
-import matplotlib.pyplot as plt
+import sys
+import os
+import numpy as np
 
-a = "Jan 24 2016"
+lines = open('updated_followers.txt','r').readlines()
 
-b = time.strptime(a,'%b %d %Y')
+eng_rate_new = []
 
-t_epoch = time.mktime(b)
+for line in lines:
+    spline = line.replace('\n','').split(',')
 
-print (t_epoch)
+    engrate = (np.divide(spline[4],spline[2]))*100
 
-t2 = "Feb 6 2016"
+    eng_rate_new.append([spline[0],spline[1],spline[2],spline[3],spline[4],spline[5],engrate,spline[6],spline[7]])
 
-t2b = time.strptime(t2,'%b %d %Y')
-
-t2_epoch = time.mktime(t2b)
-
-print (t2_epoch)
-
-x_delta = t2_epoch - t_epoch
-
-y_delta = 0.1849586*x_delta
-
-print (y_delta)
-
-y = 14553986 - y_delta
-
-print (y)
+print (len(eng_rate_new))

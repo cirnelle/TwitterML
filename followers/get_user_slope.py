@@ -1,5 +1,10 @@
 __author__ = 'yi-linghwong'
 
+#############
+# Get the slope of the linear equation for a list of user
+# y = mx + c, where y is number of follower, x is epoch time
+#############
+
 import sys
 import os
 from matplotlib import *
@@ -13,13 +18,14 @@ import time
 
 #lines = open('user_list_old.txt','r').readlines()
 
-user_list = ['SpaceTweeps']
+user_list = ['MarsCuriosity']
 
 '''
 for line in lines:
     spline = line.replace('\n','')
     user_list.append(spline)
 '''
+
 
 user_slope_list = []
 
@@ -73,17 +79,20 @@ for ul in user_list:
     plt.plot(x, y, '*')
     plt.plot(x, ys)
 
-    #print("Slope is "+str(linregress(x, y)[0]))
 
     plt.show()
 
     user_slope.append(ul)
+
+    # linregress method returns (slope, interception, etc)
+    # first item in the list returned is the slope of the linear line
+
     user_slope.append(str(linregress(x, y)[0]))
 
     user_slope_list.append(user_slope)
 
-
 '''
+# write results to a file
 f = open('user_slope.txt','w')
 
 for usl in user_slope_list:

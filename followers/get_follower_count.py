@@ -149,7 +149,7 @@ class Extractor():
 
         # create an API instance. API is a class in tweepy that provides access to the entire
         # Twitter RESTful API methods.
-        api = tweepy.API(auth)
+        api = tweepy.API(auth, wait_on_rate_limit=True)
 
         return api
 
