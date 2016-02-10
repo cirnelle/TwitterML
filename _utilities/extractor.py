@@ -207,28 +207,6 @@ class Extractor():
         #for i in range(len(tweets)):
 
 
-        """
-
-        except:
-            print ("Entering error")
-            #if e == {"errors":[{"message":"Rate limit exceeded","code":88}]}:
-                #time.sleep(60*5) #Sleep for 5 minutes
-            #else:
-                #print (e)
-
-
-
-            except tweepy.error.TweepError as e:
-                print ("Entering error")
-                if not self.is_rate_limit_error(e):
-                    raise e
-                else:
-                    print ('Rate limit error')
-                    time.sleep(60*5)
-
-            """
-
-
 
         fulltweets=[]
 

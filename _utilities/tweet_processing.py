@@ -23,25 +23,6 @@ for line in lines:
 stop_words = text.ENGLISH_STOP_WORDS.union(my_stopwords)
 
 
-if os.path.isfile('output/sydscifest/sydsciencefest_only_tweets.csv'):
-  lines = open('output/sydscifest/sydsciencefest_only_tweets.csv','r', encoding = "ISO-8859-1").readlines()
-
-else:
-    print ("File not found")
-    sys.exit(1)
-
-tweets = []
-
-for line in lines:
-    spline=line.replace("\n", "").split("\n")
-    #creates a list with key and value. Split splits a string at the comma and stores the result in a list
-
-    #remove empty lines!
-    if line.rstrip():
-        tweets.extend(spline)
-
-#stop_words = ['ve', 're', 'll', 'amp']
-
 class DataProcessing():
 
     def remove_url(self,tweets):
@@ -177,24 +158,19 @@ class DataProcessing():
 
     def label_tweets(self):
 
-        if os.path.isfile('output/engrate/output_engrate_MASTER.csv'):
-            lines = open('output/engrate/output_engrate_MASTER.csv', 'r').readlines()
+        if os.path.isfile('updated_followers_space_1.txt'):
+            lines = open('updated_followers_space_1.txt', 'r').readlines()
 
         else:
             print("File not found")
             sys.exit(1)
 
-
-        tweets_label = []
+        print (len(lines))
+        labelled_tweets = []
 
         for line in lines:
 
-            tweets = []
-
             spline=line.replace("\n","").split(",")
-
-
-
 
             t1 = spline[-1]
 
@@ -217,41 +193,28 @@ class DataProcessing():
                     words.append(word)
 
                     #join the list of words together into a string
-                    _ = " ".join(words)
+                    t6 = " ".join(words)
 
-            tweets.append(_)
-
-            if (len(spline)>=8):
+            spline[7] = t6
 
 
-                if float(spline[6]) >= 0.055:
+            if float(spline[6]) > 0.06:
 
-                    tweets.append('HRT')
+                labelled_tweets.append([spline[7],'HRT'])
 
+            elif float(spline[6]) < 0.0005:
 
-                elif (float(spline[6]) >= 0.0012) and (float(spline[6]) < 0.0):
+                labelled_tweets.append([spline[7],'LRT'])
 
-                    tweets.append('ART')
-
-                else:
-
-                    tweets.append('LRT')
-
-                tweets_label.append(tweets)
-
-            else:
-                print ("skipping")
+        print (len(labelled_tweets))
 
 
-
-
-
-        ext.printcsv_all(tweets_label,'engrate_label_MASTER')
+        ext.printcsv_all(labelled_tweets,'engrate_label_space_1')
 
         #return (tweets_label)
 
 
-if __name__ == "__main__"
+if __name__ == "__main__":
 
     ext = Extractor()
     dp = DataProcessing()

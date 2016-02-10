@@ -155,9 +155,22 @@ class Extractor():
 
     def get_follower_count(self, user, api):
 
-        self.requestlimit()
+        rate_limit = api.rate_limit_status()
 
-        user_info = api.get_user(user)
+        remaining = rate_limit['resources']['statuses']['/statuses/user_timeline']['remaining']
+        reset_time = rate_limit['resources']['statuses']['/statuses/user_timeline']['reset']
+
+        print ("Rate limit remaining "+str(remaining))
+
+        try:
+
+            user_info = api.get_user(user)
+            follcount = user_info.followers_count
+
+        except:
+            print ("error for "+str(user))
+            follcount = 'nan'
+
 
         # create a Cursor instance. Cursor is a class in tweepy to help with pagination (iterate through statuses
         # to get more than 20 tweets from user_timeline)
@@ -165,7 +178,7 @@ class Extractor():
 
         # for i in range(len(tweets)):
 
-        return user_info.followers_count
+        return follcount
 
     def printcsv(self, date, follcount, user):
 
@@ -179,7 +192,7 @@ ext = Extractor()
 auth = ext.loadtokens()
 api = ext.connectToAPI(auth)
 
-ext.get_follower_count('nasa', api)
+#ext.get_follower_count('nasa', api)
 now = time.strftime("%c")
 
 #print ("Current time %s"  % now )

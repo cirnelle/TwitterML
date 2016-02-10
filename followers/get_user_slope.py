@@ -9,6 +9,7 @@ import sys
 import os
 from matplotlib import *
 import matplotlib.pyplot as plt
+import pylab
 import numpy as np
 from scipy.stats import linregress
 from scipy.interpolate import interp1d
@@ -16,15 +17,14 @@ from decimal import Decimal
 import time
 
 
-#lines = open('user_list_old.txt','r').readlines()
+lines = open('../user_list/user_space.csv','r').readlines()
 
-user_list = ['MarsCuriosity']
+user_list = []
 
-'''
+
 for line in lines:
-    spline = line.replace('\n','')
-    user_list.append(spline)
-'''
+    spline = line.replace('\n','').split(',')
+    user_list.append(spline[0])
 
 
 user_slope_list = []
@@ -76,31 +76,38 @@ for ul in user_list:
     polynomial = np.poly1d(coefficients)
     ys = polynomial(x)
 
-    plt.plot(x, y, '*')
+    plt.plot(x, y, '*', label=str(ul))
+    pylab.legend(loc='upper right')
     plt.plot(x, ys)
 
 
-    plt.show()
+    #plt.show()
 
     user_slope.append(ul)
 
     # linregress method returns (slope, interception, etc)
     # first item in the list returned is the slope of the linear line
 
-    user_slope.append(str(linregress(x, y)[0]))
+    slope = linregress(x, y)[0]
+
+    if slope < 0:
+
+        slope = 0.0
+
+    user_slope.append(str(slope))
 
     user_slope_list.append(user_slope)
 
-'''
+
 # write results to a file
-f = open('user_slope.txt','w')
+f = open('user_slope_space.txt','w')
 
 for usl in user_slope_list:
     f.write(','.join(usl)+'\n')
 
 f.close()
 
-'''
+
 
 
 

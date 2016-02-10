@@ -181,7 +181,7 @@ class SVM():
 
         ###get coef_ ###
 
-        f=open('output/feature_importance/svm_coef.csv', 'w')
+        f=open('../output/feature_importance/svm_coef.csv', 'w')
 
         coef=clf.coef_[0]
 
@@ -195,7 +195,7 @@ class SVM():
 
         feature_names=count_vect.get_feature_names()
 
-        f=open('output/feature_importance/svm_feature_names.csv', 'w')
+        f=open('../output/feature_importance/svm_feature_names.csv', 'w')
 
         for fn in feature_names:
             f.write(str(fn)+'\n')
@@ -212,7 +212,7 @@ class SVM():
         feat_list.sort()
 
 
-        f=open('output/feature_importance/svm_coef_and_feat.csv', 'w')
+        f=open('../output/feature_importance/svm_coef_and_feat.csv', 'w')
 
         #f.write(str(feat_list))
 
@@ -230,7 +230,7 @@ class SVM():
             if fl[0] > 0:
                 lrt.append('LRT '+str(fl))
 
-        f=open('output/feature_importance/svm_feat_by_class.svm', 'w')
+        f=open('../output/feature_importance/svm_feat_by_class_2.csv', 'w')
 
         for feat in hrt[:100]:
             f.write(str(feat)+'\n')
@@ -391,7 +391,7 @@ class SVM():
 
 if __name__ == '__main__':
 
-    dataset = pd.read_csv('output/engrate/output_engrate_label_space_noART.csv', header=0, names=['tweets', 'class'])
+    dataset = pd.read_csv('../_utilities/binned_tweets_labelled', header=0, names=['tweets', 'class'])
 
     X = dataset['tweets']
     y = dataset['class']
@@ -399,7 +399,7 @@ if __name__ == '__main__':
     print (len(X))
 
     #stop words
-    lines = open('stopwords.csv', 'r').readlines()
+    lines = open('../stopwords/stopwords.csv', 'r').readlines()
 
     my_stopwords=[]
     for line in lines:
@@ -421,24 +421,24 @@ if __name__ == '__main__':
 
     """SVM Classifier"""
 
-    #y_predicted, clf = svm.train_classifier(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
+    y_predicted, clf = svm.train_classifier(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
 
     """Use Feature Selection"""
 
-    #y_predicted, clf = svm.use_feature_selection(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
+    y_predicted, clf = svm.use_feature_selection(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
 
     """Confusion matrix"""
 
-    #svm.confusion_matrix(y_test,y_predicted)
+    svm.confusion_matrix(y_test,y_predicted)
 
     """Get important features"""
 
-    #svm.get_important_features(clf,count_vect)
+    svm.get_important_features(clf,count_vect)
 
     """Pipeline"""
 
     #svm.use_pipeline(docs_train,y_train,docs_test,y_test)
-    svm.use_pipeline_with_fs(docs_train,y_train,docs_test,y_test)
+    #svm.use_pipeline_with_fs(docs_train,y_train,docs_test,y_test)
 
     """Plot feature selection"""
     #svm.plot_feature_selection(docs_train,y_train)

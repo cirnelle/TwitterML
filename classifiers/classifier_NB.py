@@ -248,7 +248,7 @@ class NaiveBayes():
         diff = [abs(a-b) for a,b in zip(fb_hrt,fb_lrt)]
 
         ##sort the list by the value of the difference, and return index of that element###
-        sortli = sorted(range(len(diff)), key=lambda i:diff[i], reverse=True)[:100]
+        sortli = sorted(range(len(diff)), key=lambda i:diff[i], reverse=True)[:200]
 
 
         ##print out the feature names and their corresponding classes
@@ -263,7 +263,7 @@ class NaiveBayes():
 
         imp_feat=sorted(imp_feat)
 
-        f4=open('output/feature_importance/nb_important_feat.csv', 'w')
+        f4=open('../output/feature_importance/nb_important_feat_2.csv', 'w')
 
         for imf in imp_feat:
             f4.write(imf+'\n')
@@ -282,7 +282,7 @@ class NaiveBayes():
 
         feat_list.sort(reverse=True)
 
-        f=open('output/feature_importance/nb_feat_by_prob.csv', 'w')
+        f=open('../output/feature_importance/nb_feat_by_prob.csv', 'w')
 
         for fl in feat_list:
             f.write(str(fl)+'\n')
@@ -292,25 +292,25 @@ class NaiveBayes():
 
         """HELPER FILES"""
 
-        f=open('output/feature_importance/nb_feature_names.txt', 'w')
+        f=open('../output/feature_importance/nb_feature_names.txt', 'w')
 
         for fn in feature_names:
             f.write(str(fn)+'\n')
         f.close()
 
-        f1=open('output/feature_importance/nb_coef.txt', 'w')
+        f1=open('../output/feature_importance/nb_coef.txt', 'w')
 
         for c in clf.coef_[0]:
             f1.write(str(c)+'\n')
 
         f1.close()
 
-        f2=open('output/feature_importance/nb_feature_prob_0.csv', 'w')
+        f2=open('../output/feature_importance/nb_feature_prob_0.csv', 'w')
         for fb in clf.feature_log_prob_[0]:
             f2.write(str(fb)+'\n')
         f2.close()
 
-        f3=open('output/feature_importance/nb_feature_prob_1.csv', 'w')
+        f3=open('../output/feature_importance/nb_feature_prob_1.csv', 'w')
         for fb in clf.feature_log_prob_[1]:
             f3.write(str(fb)+'\n')
         f3.close()
@@ -498,7 +498,7 @@ class NaiveBayes():
 
 if __name__ == '__main__':
 
-    dataset = pd.read_csv('output/engrate/output_engrate_label_space_noART.csv', header=0, names=['tweets', 'class'])
+    dataset = pd.read_csv('../_utilities/binned_tweets_labelled', header=0, names=['tweets', 'class'])
 
     X = dataset['tweets']
     y = dataset['class']
@@ -507,7 +507,7 @@ if __name__ == '__main__':
 
     #stopwords
 
-    lines = open('stopwords.csv', 'r').readlines()
+    lines = open('../stopwords/stopwords.csv', 'r').readlines()
 
     my_stopwords=[]
     for line in lines:
@@ -537,11 +537,11 @@ if __name__ == '__main__':
     y_predicted, clf = nb.train_classifier(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
 
     """Use Feature Selection"""
-    #y_predicted, clf = nb.use_feature_selection(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
+    y_predicted, clf = nb.use_feature_selection(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
 
     """Confusion matrix"""
 
-    #nb.confusion_matrix(y_test,y_predicted)
+    nb.confusion_matrix(y_test,y_predicted)
 
     """Feature importance"""
 
