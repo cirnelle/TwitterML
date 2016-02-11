@@ -17,14 +17,16 @@ from decimal import Decimal
 import time
 
 
-lines = open('../user_list/user_space.csv','r').readlines()
+lines = open('user_list.txt','r').readlines()
 
 user_list = []
 
-
 for line in lines:
-    spline = line.replace('\n','').split(',')
-    user_list.append(spline[0])
+    spline = line.replace('\n','')
+    user_list.append(spline)
+
+    # if creating list for space user:
+    #user_list.append(spline[0])
 
 
 user_slope_list = []
@@ -34,7 +36,6 @@ for ul in user_list:
     user_slope = []
 
     lines = open('follcount_'+ul+'.csv','r').readlines()
-    #lines = open('test.txt','r').readlines()
 
     follcount_list = []
     date = []
@@ -81,7 +82,7 @@ for ul in user_list:
     plt.plot(x, ys)
 
 
-    #plt.show()
+    plt.show()
 
     user_slope.append(ul)
 
@@ -100,7 +101,7 @@ for ul in user_list:
 
 
 # write results to a file
-f = open('user_slope_space.txt','w')
+f = open('user_slope.txt','w')
 
 for usl in user_slope_list:
     f.write(','.join(usl)+'\n')
