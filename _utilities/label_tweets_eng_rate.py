@@ -39,22 +39,31 @@ class LabelTweetsEngRate():
             t3 = t2.replace('RT','')
             #remove mentions
             t4 = re.sub(r'(?:\@)\S+', '', t3)
+
+            # replace &amp; with 'and'
+
+            t5 = re.sub(r"&amp;", "and", t4).strip()
+
+            # replace &amp with 'and'
+
+            t6 = re.sub(r"&amp", "and", t5).strip()
+
             #remove special characters
-            t5 = re.sub("[^A-Za-z0-9]+",' ', t4)
+            t7 = re.sub("[^A-Za-z0-9]+",' ', t6)
 
             #remove single characters
             words=[]
-            for word in t5.split():
+            for word in t7.split():
                 if (len(word)>=2):
                     words.append(word)
 
                     #join the list of words together into a string
-                    t6 = " ".join(words)
+                    t8 = " ".join(words)
 
             # convert tweet to lower case
-            t7 = t6.lower()
+            t9 = t8.lower()
 
-            t[6] = t7
+            t[6] = t9
 
             clean_tweets.append(t)
 
