@@ -160,7 +160,7 @@ class Extractor():
         remaining = rate_limit['resources']['statuses']['/statuses/user_timeline']['remaining']
         reset_time = rate_limit['resources']['statuses']['/statuses/user_timeline']['reset']
 
-        print ("Rate limit remaining "+str(remaining))
+        #print ("Rate limit remaining "+str(remaining))
 
         try:
 
