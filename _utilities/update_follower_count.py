@@ -113,9 +113,9 @@ class UpdateFollowerCount():
 
 if __name__ == "__main__":
 
-    path_to_tweet_file = '../extracted_data/ALL_nofollcorr.csv'
+    path_to_tweet_file = '../tweets/ALL_nofollcorr.csv'
     path_to_slope_file = '../followers/user_slope_space.txt'
-    path_to_store_updated_tweet_file = '../extracted_data/space_follcorr.csv'
+    path_to_store_updated_tweet_file = '../tweets/space_follcorr.csv'
 
     ################
     # create slope dict

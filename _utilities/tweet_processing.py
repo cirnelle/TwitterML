@@ -10,7 +10,6 @@ import re
 import os
 import sys
 import itertools
-from extractor import Extractor
 #from nltk.corpus import stopwords
 from sklearn.feature_extraction import text
 
@@ -23,237 +22,296 @@ for line in lines:
 stop_words = text.ENGLISH_STOP_WORDS.union(my_stopwords)
 
 
-class DataProcessing():
+class TweetProcessing():
 
-    def remove_url(self,tweets):
+    def get_element_number_per_line(self):
 
-        clean_tweets = []
+        lines = open(path_to_raw_tweet_file,'r').readlines()
 
-        for t in tweets:
+        for line in lines[:1]:
+            spline = line.replace('\n','').split(',')
 
-            # r"(?:\@|https?\://)\S+" removes both URL and mentions at the same time
-            text = re.sub(r'(?:https?\://)\S+', '', t)
-            clean_tweets.append(text)
+        length = len(spline)
 
-
-        return clean_tweets
-
-    def remove_RT(self,tweets):
-
-        clean_tweets = []
-
-        for t in tweets:
-            text = t.replace('RT','')
-            clean_tweets.append(text)
+        return length
 
 
-        return clean_tweets
+    def remove_url_mention_hashtag(self):
 
+        lines = open(path_to_raw_tweet_file,'r').readlines()
 
-    def remove_mention(self,tweets):
+        tweets = []
+        for line in lines:
 
-        clean_tweets = []
+            spline = line.replace('\n','').split(',')
+            tweets.append(spline)
 
-        for t in tweets:
+        tweet_list = []
 
-            text = re.sub(r'(?:\@)\S+', '', t)
-            #creates a list with square brackets! So printcsv (which takes list of a list as input) could process this data.
-            clean_tweets.append(text)
+        length = self.get_element_number_per_line()
 
-
-        return clean_tweets
-
-
-    def remove_sc(self,tweets):
-
-        clean_tweets = []
+        print ("Removing url, mentions and hashtags...")
 
         for t in tweets:
 
-            text = re.sub('[^A-Za-z0-9]+',' ', t)
-            #creates a list with square brackets! So printcsv (which takes list of a list as input) could process this data.
-            clean_tweets.append(text)
+            if (len(t)) == length:
+
+                t1 = t[-1]
+
+                #remove URLs
+                t2 = re.sub(r'(?:https?\://)\S+', '', t1)
+
+                #remove mentions
+                t3 = re.sub(r'(?:\@)\S+', '', t2)
+
+                #remove hashtags (just the symbol, not the key word)
+
+                t4 = re.sub(r"#","", t3).strip()
+
+                t5 = t4.lower()
+
+                t[-1] = ' '+t5+' '
+
+                tweet_list.append(t)
+
+            else:
+                print ("error")
+                print (t)
+
+        print (len(tweet_list))
+
+        return tweet_list
 
 
-        return clean_tweets
+    def remove_punctuations(self):
 
-    def remove_stopwords(self,tweets):
+        # Replace punctuation with white space, not nil! So that words won't join together when punctuation is removed
 
-        clean_tweets=[]
+        tweets = self.remove_url_mention_hashtag()
 
+        tweet_list = []
+
+        print ("Removing punctuations ...")
+
+        for t in tweets:
+
+            #remove special characters
+            t1 = re.sub("[^A-Za-z0-9]+",' ', t[-1])
+            t[-1] = t1
+
+            tweet_list.append(t)
+
+        print (len(tweet_list))
+
+        return tweet_list
+
+
+    def expand_contractions(self):
+
+        contractions_dict = {
+            ' isn\'t ': ' is not ',
+            ' isn’t ': ' is not ',
+            ' isnt ': ' is not ',
+            ' isn ': ' is not ',
+            ' aren\'t ': ' are not ',
+            ' aren’t ': ' are not ',
+            ' arent ': ' are not ',
+            ' aren ': ' are not ',
+            ' wasn\'t ': ' was not ',
+            ' wasn’t ': ' was not ',
+            ' wasnt ': ' was not ',
+            ' wasn ': ' was not ',
+            ' weren\'t ': ' were not ',
+            ' weren’t ': ' were not ',
+            ' werent ': ' were not ',
+            ' weren ': ' were not ',
+            ' haven\'t ': ' have not ',
+            ' haven’t ': ' have not ',
+            ' havent ': ' have not ',
+            ' haven ': ' have not ',
+            ' hasn\'t ': ' has not ',
+            ' hasn’t ': ' has not ',
+            ' hasnt ': ' has not ',
+            ' hasn ': ' has not ',
+            ' hadn\'t ': ' had not ',
+            ' hadn’t ': ' had not ',
+            ' hadnt ': ' had not ',
+            ' hadn ': ' had not ',
+            ' won\'t ': ' will not ',
+            ' won’t ': ' will not ',
+            ' wouldn\'t ': ' would not ',
+            ' wouldn’t ': ' would not ',
+            ' wouldnt ': ' would not ',
+            ' wouldn ': ' would not ',
+            ' didn\'t ': ' did not ',
+            ' didn’t ': ' did not ',
+            ' didnt ': ' did not ',
+            ' didn ': ' did not ',
+            ' don\'t ': ' do not ',
+            ' don’t ': ' do not ',
+            ' dont ': ' do not ',
+            ' don ': ' do not ',
+            ' doesn\'t ': ' does not ',
+            ' doesn’t ': ' does not ',
+            ' doesnt ': ' does not ',
+            ' doesn ': ' does not ',
+            ' can\'t ': ' can not ',
+            ' can’t ': ' can not ',
+            ' cant ': ' can not ',
+            ' couldn\'t ': ' could not ',
+            ' couldn’t ': ' could not ',
+            ' couldnt ': ' could not ',
+            ' couldn ': ' could not ',
+            ' shouldn\'t ': ' should not ',
+            ' shouldn’t ': ' should not ',
+            ' shouldnt ': ' should not ',
+            ' shouldn ': ' should not ',
+            ' mightn\'t ': ' might not ',
+            ' mightn’t ': ' might not ',
+            ' mightnt ': ' might not ',
+            ' mightn ': ' might not ',
+            ' mustn\'t ': ' must not ',
+            ' mustn’t ': ' must not ',
+            ' mustnt ': ' must not ',
+            ' mustn ': ' must not ',
+            ' shan\'t ': ' shall not ',
+            ' shan’t ': ' shall not ',
+            ' shant ': ' shall not ',
+            ' shan ': ' shall not ',
+        }
+
+        tweets = self.remove_punctuations()
+        tweet_list = []
+
+        contractions_re = re.compile('(%s)' % '|'.join(contractions_dict.keys()), re.IGNORECASE)
+
+        def replace(match):
+
+            return contractions_dict[match.group(0).lower()]
+
+        print ("Expanding contractions ...")
+
+        for t in tweets:
+
+            t1 = contractions_re.sub(replace, t[-1])
+            t[-1] = t1
+            tweet_list.append(t)
+
+        print (len(tweet_list))
+
+        return tweet_list
+
+
+    def remove_stopwords(self):
+
+        tweets = self.expand_contractions()
+
+        tweet_list=[]
+
+        print ("Removing stopwords ...")
 
         for t in tweets:
             no_stop=[] #important
 
-            for w in t.split():
+            for w in t[-1].split():
                 #remove single characters and stop words
                 if (len(w.lower())>=2) and (w.lower() not in stop_words):
                     no_stop.append(w.lower())
 
 
                     #join the list of words together into a string
-                    text = " ".join(no_stop)
+                    t[-1] = " ".join(no_stop)
+
+            tweet_list.append(t)
+
+        print (len(tweet_list))
+
+        return tweet_list
 
 
+    def remove_rt(self):
 
-            clean_tweets.append([text])
+    #############
+    # remove the term 'rt'
+    #############
 
-        return clean_tweets
+        tweets = self.remove_stopwords()
 
+        tweet_list = []
 
-    def cleanup(self):
+        print ("Removing rt...")
 
-        if os.path.isfile('output/sydscifest/sydsciencefest_only_tweets.csv'):
-            lines = open('output/sydscifest/sydsciencefest_only_tweets.csv', 'r', encoding = "ISO-8859-1").readlines()
+        for t in tweets:
 
-        else:
-            print("File not found")
-            sys.exit(1)
+            # add blank space before and after tweet so that if sentence starts with rt it can be detected (e.g. 'rt @nasa blah blah')
+            t1 = ' '+t[-1]+' '
+            t2 = t1.replace(' rt ',' ')
+            t[-1] = t2
+            tweet_list.append(t)
 
+        print (len(tweet_list))
 
-        tweets_label = []
-
-        tweets = []
-        for line in lines:
-
-            spline=line.replace("\n","").split(",")
-
-            t1 = spline[-1]
-
-            #split string from 2nd comma until the third last comma, and then join them together into one single string
-            #t1 = "".join(spline[2:len(spline)-3])
-
-            #remove URLs
-            t2 = re.sub(r'(?:https?\://)\S+', '', t1)
-            #remove 'RT'
-            t3 = t2.replace('RT','')
-            #remove mentions
-            t4 = re.sub(r'(?:\@)\S+', '', t3)
-            #remove special characters
-            t5 = re.sub("[^A-Za-z0-9]+",' ', t4)
+        return tweet_list
 
 
-            #remove single characters
+    def remove_duplicate(self):
 
-            words=[]
-            for word in t5.split():
+        tweets = self.remove_rt()
 
+        tweet_list = []
+        temp = []
 
-                if (len(word)>=2):
-                    words.append(word)
+        print ("Removing duplicates...")
 
+        for t in tweets:
+            if t[-1] not in temp:
+                temp.append(t[-1])
+                tweet_list.append(t)
 
+        print (len(tweet_list))
 
-                    #join the list of words together into a string
-                _ = " ".join(words)
-
-                #print (_)
-
-
-            tweets.append([_])
-
-
-        ext.printcsv_all(tweets,'sydsciencefest_ALL_CLEAN')
+        return tweet_list
 
 
-    def label_tweets(self):
+    def write_to_file(self):
 
-        if os.path.isfile('updated_followers_space_1.txt'):
-            lines = open('updated_followers_space_1.txt', 'r').readlines()
+        tweets = self.remove_duplicate()
+        length = self.get_element_number_per_line()
 
-        else:
-            print("File not found")
-            sys.exit(1)
+        print ("Number of element per line is "+str(length))
 
-        print (len(lines))
-        labelled_tweets = []
+        f = open(path_to_store_processed_tweet_file,'w')
 
-        for line in lines:
+        print ("Writing to file ...")
 
-            spline=line.replace("\n","").split(",")
+        for t in tweets:
+            if (len(t)) == length:
 
-            t1 = spline[-1]
+                f.write(','.join(t)+'\n')
 
-            #split string from 2nd comma until the third last comma, and then join them together into one single string
-            #t1 = "".join(spline[2:len(spline)-3])
+            else:
+                print ("error")
+                print (t)
 
-            #remove URLs
-            t2 = re.sub(r'(?:https?\://)\S+', '', t1)
-            #remove 'RT'
-            t3 = t2.replace('RT','')
-            #remove mentions
-            t4 = re.sub(r'(?:\@)\S+', '', t3)
-            #remove special characters
-            t5 = re.sub("[^A-Za-z0-9]+",' ', t4)
+        f.close()
 
-            #remove single characters
-            words=[]
-            for word in t5.split():
-                if (len(word)>=2):
-                    words.append(word)
-
-                    #join the list of words together into a string
-                    t6 = " ".join(words)
-
-            spline[7] = t6
+        return
 
 
-            if float(spline[6]) > 0.06:
+###############
+# variables
+###############
 
-                labelled_tweets.append([spline[7],'HRT'])
-
-            elif float(spline[6]) < 0.0005:
-
-                labelled_tweets.append([spline[7],'LRT'])
-
-        print (len(labelled_tweets))
-
-
-        ext.printcsv_all(labelled_tweets,'engrate_label_space_1')
-
-        #return (tweets_label)
-
+path_to_raw_tweet_file = '../output/mars_announcement/output_mars_and_water_stream.csv'
+path_to_store_processed_tweet_file = '../../TopicModelling/input/preprocessed_tweets/preprocessed_mars_and_water_stream.csv'
 
 if __name__ == "__main__":
 
-    ext = Extractor()
-    dp = DataProcessing()
+    tp = TweetProcessing()
 
-    #dp.cleanup()
-
-    dp.label_tweets()
+    tp.write_to_file()
 
 
-    """Clean up tweets"""
-
-    '''
-
-    clean_tweets = dp.remove_mention(dp.remove_RT(dp.remove_url(tweets)))
-
-    #print (clean_tweets)
-
-    #remove duplicates!
-    #clean_tweets.sort()
-    #ct = list(clean_tweets for clean_tweets,_ in itertools.groupby(clean_tweets))
-    #print (ct)
-
-    no_duplicate = []
-    duplicate = []
-
-    for ct in clean_tweets:
-        if ct not in no_duplicate:
-            no_duplicate.append(ct)
-        else:
-            duplicate.append(ct)
-
-
-
-    #print output to csv file
-    ext.printcsv_all(no_duplicate,'sydsciencefest_ALL_CLEAN')
-    #ext.printcsv_all(sc_no_dup,'clean_sc')
-    #ext.printcsv_all(duplicate,'kepler_dup')
-
-    '''
 
 
 

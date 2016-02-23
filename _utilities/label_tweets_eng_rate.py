@@ -2,7 +2,7 @@ __author__ = 'yi-linghwong'
 
 ################
 # label tweets by engagement rate (HRT, LRT)
-# subroutines: clean up tweets, calculate engagement rate, label tweets
+# subroutines: calculate engagement rate, label tweets
 ################
 
 import time
@@ -14,10 +14,9 @@ import numpy as np
 
 class LabelTweetsEngRate():
 
+    def get_eng_rate(self):
 
-    def clean_up_tweets(self):
-
-        lines = open(path_to_tweet_file,'r').readlines()
+        lines = open(path_to_preprocessed_tweet_file,'r').readlines()
 
         tweets = []
 
@@ -25,54 +24,13 @@ class LabelTweetsEngRate():
             spline = line.replace('\n','').split(',')
             tweets.append(spline)
 
-        clean_tweets = []
+        print ("Length of tweet list is "+str(len(tweets)))
 
-        print ("Cleaning up tweets ...")
+        for line in lines[:1]:
+            spline = line.replace('\n','').split(',')
+            length = len(spline)
 
-        for t in tweets:
-
-            t1 = t[-1]
-
-            #remove URLs
-            t2 = re.sub(r'(?:https?\://)\S+', '', t1)
-            #remove 'RT'
-            t3 = t2.replace('RT','')
-            #remove mentions
-            t4 = re.sub(r'(?:\@)\S+', '', t3)
-
-            # replace &amp; with 'and'
-
-            t5 = re.sub(r"&amp;", "and", t4).strip()
-
-            # replace &amp with 'and'
-
-            t6 = re.sub(r"&amp", "and", t5).strip()
-
-            #remove special characters
-            t7 = re.sub("[^A-Za-z0-9]+",' ', t6)
-
-            #remove single characters
-            words=[]
-            for word in t7.split():
-                if (len(word)>=2):
-                    words.append(word)
-
-                    #join the list of words together into a string
-                    t8 = " ".join(words)
-
-            # convert tweet to lower case
-            t9 = t8.lower()
-
-            t[6] = t9
-
-            clean_tweets.append(t)
-
-        return clean_tweets
-
-
-    def get_eng_rate(self):
-
-        tweets = self.clean_up_tweets()
+        print ("Number of element per line is "+str(length))
 
         engrate_list = []
 
@@ -80,7 +38,7 @@ class LabelTweetsEngRate():
 
         for t in tweets:
 
-            if len(t) == 7:
+            if len(t) == length:
 
                 engrate = str((np.divide(int(t[4]),int(t[2])))*100)
 
@@ -109,8 +67,6 @@ class LabelTweetsEngRate():
 
         print ("Labelling tweets ...")
 
-        print ("Length of tweet list is "+str(len(tweets)))
-
         for t in tweets:
 
             if float(t[6]) > 0.06:
@@ -136,13 +92,16 @@ class LabelTweetsEngRate():
 
         return labelled_tweets
 
+################
+# variables
+################
+
+path_to_preprocessed_tweet_file = '../tweets/preprocessed_space_follcorr.csv'
+path_to_store_engrate_output = '../output/engrate/engrate_space_follcorr.csv'
+path_to_store_labelled_tweets = '../output/engrate/labelled_space_follcorr.csv'
 
 
 if __name__ == "__main__":
-
-    path_to_tweet_file = '../extracted_data/ALL_nofollcorr.csv'
-    path_to_store_engrate_output = '../output/engrate/engrate_ALL_nofollcorr.csv'
-    path_to_store_labelled_tweets = '../output/engrate/labelled_ALL_nofollcorr.csv'
 
 
     lt = LabelTweetsEngRate()
