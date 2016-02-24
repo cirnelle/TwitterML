@@ -20,33 +20,34 @@ import numpy as np
 import scipy as sp
 from sklearn.feature_extraction import text
 import matplotlib.pyplot as plt
-
+from collections import Counter
+from nltk.util import ngrams
 
 
 class ExtraTree():
-
-
     def train_test_split(self):
 
-        """Split the dataset in training and test set:"""
+        #################
+        # Split the dataset in training and test set:
+        #################
+
         docs_train, docs_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42)
+
+        print("Number of data point is " + str(len(y)))
 
         return docs_train, docs_test, y_train, y_test
 
-
     def stratified_shufflesplit(self):
 
-
-        """Stratified ShuffleSplit cross validation iterator"""
-        #Provides train/test indices to split data in train test sets.
-        #This cross-validation object is a merge of StratifiedKFold and ShuffleSplit, which returns stratified randomized folds.
-        #The folds are made by preserving the percentage of samples for each class.
+        ####################
+        # Stratified ShuffleSplit cross validation iterator
+        # Provides train/test indices to split data in train test sets.
+        # This cross-validation object is a merge of StratifiedKFold and ShuffleSplit, which returns stratified randomized folds.
+        # The folds are made by preserving the percentage of samples for each class.
+        ####################
 
 
         sss = StratifiedShuffleSplit(y, 5, test_size=0.2, random_state=42)
-
-        print (len(sss))
-        print (sss)
 
         for train_index, test_index in sss:
             print("TRAIN:", train_index, "TEST:", test_index)
@@ -55,19 +56,18 @@ class ExtraTree():
 
         return docs_train, docs_test, y_train, y_test
 
-
     def stratified_kfolds(self):
 
-
-        """Stratified K-Folds cross validation iterator"""
-        #Provides train/test indices to split data in train test sets.
-        #This cross-validation object is a variation of KFold that returns stratified folds.
+        ##################
+        # Stratified K-Folds cross validation iterator
+        # Provides train/test indices to split data in train test sets.
+        # This cross-validation object is a variation of KFold that returns stratified folds.
         # The folds are made by preserving the percentage of samples for each class.
-
+        ##################
 
         skf = StratifiedKFold(y, n_folds=5)
 
-        print (len(skf))
+        print(len(skf))
         print(skf)
 
         for train_index, test_index in skf:
@@ -77,149 +77,121 @@ class ExtraTree():
 
         return docs_train, docs_test, y_train, y_test
 
-    def get_features(self, docs_train):
 
+    def train_classifier(self):
 
-        ### Get list of features
+        # Get list of features
         count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=(1,3))
         X_CV = count_vect.fit_transform(docs_train)
-        ### print number of unique words (n_features)
-        print (X_CV.shape)
 
-        ### Get list of features ###
-        #file = open('output/output_features.txt', "w")
-        #file.write(count_vect.get_feature_names())
-        #file.write(count_vect.vocabulary_)
-        #print (len(count_vect.vocabulary_))
-        #file.close()
+        # print number of unique words (n_features)
+        print ("Shape of train data is "+str(X_CV.shape))
 
+        # tfidf transformation###
 
-        ###tfidf transformation###
-
-        tfidf_transformer = TfidfTransformer()
+        tfidf_transformer = TfidfTransformer(use_idf = True)
         X_tfidf = tfidf_transformer.fit_transform(X_CV)
 
-        return X_tfidf, count_vect, tfidf_transformer
-
-    def train_classifier(self,X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer):
-
-        ###training the classifier
+        # train the classifier
         clf = ExtraTreesClassifier().fit(X_tfidf, y_train)
 
-        ##test clf on test data
+        print ("Fitting data ...")
+        clf.fit(X_tfidf, y_train)
+
+
+        ##################
+        # run classifier on test data
+        ##################
 
         X_test_CV = count_vect.transform(docs_test)
+
+        print ("Shape of test data is "+str(X_test_CV.shape))
+
         X_test_tfidf = tfidf_transformer.transform(X_test_CV)
 
-        scores = cross_val_score(clf, X_test_tfidf, y_test, cv=5, scoring='f1_weighted')
+        scores = cross_val_score(clf, X_test_tfidf, y_test, cv=3, scoring='f1_weighted')
         print ("Cross validation score:%s " % scores)
 
         y_predicted = clf.predict(X_test_tfidf)
 
-        #print the mean accuracy on the given test data and labels.
+        # print the mean accuracy on the given test data and labels
+
         print ("Classifier score is: %s " % clf.score(X_test_tfidf,y_test))
-
-        return y_predicted, clf
-
-    def use_feature_selection(self,X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer):
-
-        # Create the RFE object and compute a cross-validated score.
-        nb = ExtraTreesClassifier()
-
-        # The "accuracy" scoring is proportional to the number of correct
-        # classifications
-        #rfecv = RFE(estimator=nb, n_features_to_select=10000, step=1) #use recursive feature elimination
-        #rfecv = RFECV(estimator=nb, step=1, cv=3, scoring='accuracy')#use recursive feature elimination with cross validation
-        selector = SelectPercentile(score_func=chi2, percentile=95)
-
-        print ("Fitting data with feature selection ...")
-        selector.fit(X_tfidf, y_train)
-        X_features = selector.transform(X_tfidf)
-        print (X_features.shape)
-
-        #print("Optimal number of features : %d" % rfecv.n_features_)
-
-        clf = ExtraTreesClassifier().fit(X_features, y_train)
-
-        """test clf on test data"""
-
-
-        X_test_CV = count_vect.transform(docs_test)
-        X_test_tfidf = tfidf_transformer.transform(X_test_CV)
-        X_test_selector = selector.transform(X_test_tfidf)
-        print (X_test_selector.shape)
-
-        y_predicted = clf.predict(X_test_selector)
-
-        """print the mean accuracy on the given test data and labels"""
-
-        print ("Classifier score is: %s " % clf.score(X_test_selector,y_test))
-
-        """returns cross validation score"""
-
-        scores = cross_val_score(clf, X_features, y_train, cv=3, scoring='f1_weighted')
-        print ("Cross validation score:%s " % scores)
-
-        return y_predicted, clf
-
-
-    def confusion_matrix(self,y_test,y_predicted):
-
-        # Print and plot the confusion matrix
 
         print(metrics.classification_report(y_test, y_predicted))
         cm = metrics.confusion_matrix(y_test, y_predicted)
         print(cm)
 
-
-    def get_important_features(self,clf):
-
-        ##get vocabulary
-        vocab = count_vect.vocabulary_
-        vl = []
-
-        for key in vocab.keys():
-
-            vl.append(key)
-
-        vl.sort()
-
-        f = open ('output/feature_importance/vocab.txt', 'w')
+        return clf,count_vect
 
 
-        for v in vl:
-            f.write(str(v)+'\n')
-        f.close()
+    def train_classifier_use_feature_selection(self):
+
+        # Get list of features
+        count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=(1,3))
+        X_CV = count_vect.fit_transform(docs_train)
+
+        # print number of unique words (n_features)
+        print ("Shape of train data is "+str(X_CV.shape))
+
+        # tfidf transformation###
+
+        tfidf_transformer = TfidfTransformer(use_idf = False)
+        X_tfidf = tfidf_transformer.fit_transform(X_CV)
+
+        selector = SelectPercentile(score_func=chi2, percentile=85)
+
+        print ("Fitting data with feature selection ...")
+        selector.fit(X_tfidf, y_train)
+
+        # get how many features are left after feature selection
+        X_features = selector.transform(X_tfidf)
+
+        print ("Shape of array after feature selection is "+str(X_features.shape))
+
+        clf = ExtraTreesClassifier().fit(X_features, y_train)
+
+        ####################
+        #test clf on test data
+        ####################
+
+        X_test_CV = count_vect.transform(docs_test)
+
+        print ("Shape of test data is "+str(X_test_CV.shape))
+
+        X_test_tfidf = tfidf_transformer.transform(X_test_CV)
+
+        # apply feature selection on test data too
+        X_test_selector = selector.transform(X_test_tfidf)
+        print ("Shape of array for test data after feature selection is "+str(X_test_selector.shape))
+
+        y_predicted = clf.predict(X_test_selector)
+
+        # print the mean accuracy on the given test data and labels
+
+        print ("Classifier score is: %s " % clf.score(X_test_selector,y_test))
+
+        # returns cross validation score
+
+        scores = cross_val_score(clf, X_features, y_train, cv=3, scoring='f1_weighted')
+        print ("Cross validation score:%s " % scores)
 
 
-        ##get most important features
-        feat_imp = clf.feature_importances_
-        f = open('output/feature_importance/extraTree_feat_imp_all.txt', 'w')
-        for fea in feat_imp:
+        print(metrics.classification_report(y_test, y_predicted))
+        cm = metrics.confusion_matrix(y_test, y_predicted)
+        print(cm)
 
-            f.write(str(fea)+'\n')
-        f.close()
-
-        lines = open('output/feature_importance/extraTree_feat_imp_all.txt', 'r').readlines()
-        lines2 = open('output/feature_importance/vocab.txt', 'r').readlines()
-
-        #create a list with elements sorted by feature importance
-        sortli = sorted(range(len(feat_imp)), key=lambda i:feat_imp[i], reverse=True)[:100]
-
-        print (sortli)
-
-        f = open('output/feature_importance/extraTree_feature_importance.csv', 'w')
-        for i in sortli:
-            f.write(lines[i].replace('\n','')+'\t'+lines2[i].replace('\n','')+'\n')
-        f.close()
+        return clf,count_vect
 
 
-    def use_pipeline(self,docs_train,y_train,docs_test,y_test):
+    def use_pipeline(self):
 
-        # Build a vectorizer / classifier pipeline that filters out tokens that are too rare or too frequent
+        #####################
+        #Build a vectorizer / classifier pipeline that filters out tokens that are too rare or too frequent
+        #####################
+
         pipeline = Pipeline([
                 ('vect', TfidfVectorizer(stop_words=stopwords, min_df=3, max_df=0.90)),
-                ("selector", SelectPercentile(score_func=chi2)),
                 ('clf', ExtraTreesClassifier()),
         ])
 
@@ -227,20 +199,17 @@ class ExtraTree():
         # Build a grid search to find the best parameter
         # Fit the pipeline on the training set using grid search for the parameters
         parameters = {
-            'vect__ngram_range': [(1, 2), (1, 3)],
+            'vect__ngram_range': [(1,2), (1,3)],
             'vect__use_idf': (True, False),
-            #'selector__score_func': (chi2, f_classif),
-            'selector__percentile': (85, 95),
-            #'clf__alpha': (0.4, 0.5)
         }
 
-        grid_search = GridSearchCV(pipeline, parameters, n_jobs=-1)
+        cv = StratifiedShuffleSplit(y_train, n_iter=5, test_size=0.2, random_state=42)
+        grid_search = GridSearchCV(pipeline, param_grid=parameters, cv=cv, n_jobs=-1)
         clf_gs = grid_search.fit(docs_train, y_train)
 
-
-        # print the cross-validated scores for the each parameters set
-        # explored by the grid search
-        #print(clf_gs.grid_scores_)
+        ###############
+        # print the cross-validated scores for the each parameters set explored by the grid search
+        ###############
 
 
         best_parameters, score, _ = max(clf_gs.grid_scores_, key=lambda x: x[1])
@@ -249,8 +218,52 @@ class ExtraTree():
 
         print("score is %s" % score)
 
+        #y_predicted = clf_gs.predict(docs_test)
 
-        y_predicted = clf_gs.predict(docs_test)
+
+        ###############
+        # run the classifier again with the best parameters
+        # in order to get 'clf' for get_important_feature function!
+        ###############
+
+        ngram_range = best_parameters['vect__ngram_range']
+        use_idf = best_parameters['vect__use_idf']
+
+        # vectorisation
+
+        count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=ngram_range)
+        X_CV = count_vect.fit_transform(docs_train)
+
+        # print number of unique words (n_features)
+        print ("Shape of train data is "+str(X_CV.shape))
+
+        # tfidf transformation
+
+        tfidf_transformer = TfidfTransformer(use_idf=use_idf)
+        X_tfidf = tfidf_transformer.fit_transform(X_CV)
+
+        # train the classifier
+
+        clf = ExtraTreesClassifier().fit(X_tfidf, y_train)
+
+        print ("Fitting data with best parameters ...")
+        clf.fit(X_tfidf, y_train)
+
+        # run classifier on test data
+
+        X_test_CV = count_vect.transform(docs_test)
+
+        X_test_tfidf = tfidf_transformer.transform(X_test_CV)
+
+        scores = cross_val_score(clf, X_test_tfidf, y_test, cv=3, scoring='f1_weighted')
+        print ("Cross validation score:%s " % scores)
+
+        y_predicted = clf.predict(X_test_tfidf)
+
+        # print the mean accuracy on the given test data and labels
+
+        print ("Classifier score is: %s " % clf.score(X_test_tfidf,y_test))
+
 
         # Print and plot the confusion matrix
 
@@ -262,58 +275,89 @@ class ExtraTree():
         # plt.matshow(cm)
         # plt.show()
 
-    def use_pipeline_with_fs(self,docs_train,y_train,docs_test,y_test):
+        return clf,count_vect
 
-        vectorizer = TfidfVectorizer(stop_words=stopwords, use_idf=True, ngram_range=(1,3), min_df=3, max_df=0.90)
 
-        selector = SelectPercentile(score_func=chi2, percentile=85)
+    def use_pipeline_with_fs(self):
+
+        #####################
+        #Build a vectorizer / classifier pipeline that filters out tokens that are too rare or too frequent
+        #####################
+
+        pipeline = Pipeline([
+                ('vect', TfidfVectorizer(stop_words=stopwords, min_df=3, max_df=0.90)),
+                ("selector", SelectPercentile()),
+                ('clf', ExtraTreesClassifier()),
+        ])
+
+
+        # Build a grid search to find the best parameter
+        # Fit the pipeline on the training set using grid search for the parameters
+        parameters = {
+            'vect__ngram_range': [(1,2), (1,3)],
+            'vect__use_idf': (True, False),
+            'selector__score_func': (chi2, f_classif),
+            'selector__percentile': (85, 95),
+        }
+
+        cv = StratifiedShuffleSplit(y_train, n_iter=5, test_size=0.2, random_state=42)
+        grid_search = GridSearchCV(pipeline, param_grid=parameters, cv=cv, n_jobs=-1)
+        clf_gs = grid_search.fit(docs_train, y_train)
+
+        ###############
+        # print the cross-validated scores for the each parameters set explored by the grid search
+        ###############
+
+        best_parameters, score, _ = max(clf_gs.grid_scores_, key=lambda x: x[1])
+        for param_name in sorted(parameters.keys()):
+            print("%s: %r" % (param_name, best_parameters[param_name]))
+
+        print("score is %s" % score)
+
+        #y_predicted = clf_gs.predict(docs_test)
+
+        ###############
+        # run the classifier again with the best parameters
+        # in order to get 'clf' for get_important_feature function!
+        ###############
+
+        ngram_range = best_parameters['vect__ngram_range']
+        use_idf = best_parameters['vect__use_idf']
+        score_func = best_parameters['selector__score_func']
+        percentile = best_parameters['selector__percentile']
+
+        # vectorisation
+
+        count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=ngram_range)
+        X_CV = count_vect.fit_transform(docs_train)
+
+        # print number of unique words (n_features)
+        print ("Shape of train data is "+str(X_CV.shape))
+
+        # tfidf transformation
+
+        tfidf_transformer = TfidfTransformer(use_idf=use_idf)
+
+        selector = SelectPercentile(score_func=score_func, percentile=percentile)
 
         combined_features = Pipeline([
-                                        ("vect", vectorizer),
-                                        ("feat_select", selector)
+            ("vect", count_vect),
+            ("tfidf", tfidf_transformer),
+            ("feat_select", selector)
         ])
 
         X_features = combined_features.fit_transform(docs_train,y_train)
         X_test_features = combined_features.transform(docs_test)
 
-        #selector.fit(X_tfidf, y_train)
-        #X_selector=selector.transform(X_tfidf)
-
-        print (X_features.shape)
-        print (X_test_features.shape)
-
-        # Build a vectorizer / classifier pipeline that filters out tokens that are too rare or too frequent
-        pipeline = Pipeline([
-                ('clf', ExtraTreesClassifier())
-
-        ])
-
-        # Build a grid search to find the best parameter
-        # Fit the pipeline on the training set using grid search for the parameters
-        parameters = {
-            #'clf__': ()
-        }
-
-        skf = StratifiedShuffleSplit(y_train,3)
-
-        grid_search = GridSearchCV(pipeline, parameters, cv=skf, n_jobs=-1)
-        clf_gs = grid_search.fit(X_features, y_train)
+        print ("Shape of train data after feature selection is "+str(X_features.shape))
+        print ("Shape of test data after feature selection is "+str(X_test_features.shape))
 
 
-        # print the cross-validated scores for the each parameters set
-        # explored by the grid search
-        #print(clf_gs.grid_scores_)
+        # run classifier on selected features
 
+        clf = ExtraTreesClassifier().fit(X_features, y_train)
 
-        best_parameters, score, _ = max(clf_gs.grid_scores_, key=lambda x: x[1])
-        for param_name in sorted(parameters.keys()):
-            print("%s: %r" % (param_name, best_parameters[param_name]))
-
-        print("score is %s" % score)
-
-
-
-        y_predicted = clf_gs.predict(X_test_features)
+        y_predicted = clf.predict(X_test_features)
 
 
         # Print and plot the confusion matrix
@@ -326,8 +370,139 @@ class ExtraTree():
         # plt.matshow(cm)
         # plt.show()
 
+        return clf,count_vect
 
-    def plot_feature_selection(self,docs_train,y_train):
+
+    def get_important_features(self, clf, count_vect):
+
+        # get vocabulary
+        vocab = count_vect.vocabulary_
+        vl = []
+
+        for key in vocab.keys():
+            vl.append(key)
+
+        vl.sort()
+
+        f = open(path_to_store_vocabulary_file, 'w')
+
+        for v in vl:
+            f.write(str(v) + '\n')
+        f.close()
+
+
+        # get most important features
+        feat_imp = clf.feature_importances_
+
+        f = open(path_to_store_complete_feature_importance_file, 'w')
+        for fea in feat_imp:
+            f.write(str(fea) + '\n')
+        f.close()
+
+        lines = open(path_to_store_complete_feature_importance_file, 'r').readlines()
+        lines2 = open(path_to_store_vocabulary_file, 'r').readlines()
+
+        # create a list with elements sorted by feature importance
+        sortli = sorted(range(len(feat_imp)), key=lambda i: feat_imp[i], reverse=True)[:100]
+
+        f = open(path_to_store_top_important_features_file, 'w')
+        for i in sortli:
+            f.write(lines[i].replace('\n', '') + '\t' + lines2[i].replace('\n', '') + '\n')
+        f.close()
+
+
+        ##################
+        # get feature importance by class
+        ##################
+
+        lines = open(path_to_labelled_file, 'r').readlines()
+
+        l1=[] #hrt ngram list
+        l2=[] #lrt ngram list
+
+        for line in lines:
+            spline=line.replace("\n", "").split(",")
+            #creates a list with key and value. Split splits a string at the comma and stores the result in a list
+
+            #create a list of word which includes ngrams
+            n=4
+
+            if spline[1] == 'HRT':
+                for i in range(1,n):
+                    n_grams = ngrams(spline[0].split(), i) #output [('one', 'two'), ('two', 'three'), ('three', 'four')]
+                    #join the elements within the list together
+                    gramify = [' '.join(x) for x in n_grams] #output ['one two', 'two three', 'three four']
+                    l1.extend(gramify)
+
+            elif spline[1] == 'LRT':
+                for i in range(1,n):
+                    n_grams = ngrams(spline[0].split(), i)
+                    gramify = [' '.join(x) for x in n_grams]
+                    l2.extend(gramify)
+
+        ##combine lists in a list into one long list. Flattening a list.
+        #hrt_t = list(itertools.chain(*l1))
+        #lrt_t = list(itertools.chain(*l2))
+
+        hrt = [w.lower() for w in l1]
+        lrt = [w.lower() for w in l2]
+
+        lines2 = open(path_to_store_top_important_features_file, 'r').readlines()
+
+        features=[]
+
+        for line in lines2:
+            spline=line.replace("\n", "").split("\t")
+
+            features.append(spline[1])
+
+
+        feat_by_class=[]
+
+        for f in features:
+
+            # count the occurrences of each important feature in HRT and LRT list respectively
+            hrt_count = hrt.count(f)
+            lrt_count = lrt.count(f)
+
+            print ("HRT %s: " % f + str(hrt_count))
+            print ("LRT %s: " % f + str(lrt_count))
+
+            if (hrt_count-lrt_count)>10:
+
+                feat_by_class.append('HRT'+','+f+','+str(hrt_count))
+
+
+            elif (lrt_count-hrt_count)>10:
+                feat_by_class.append('LRT'+','+f+','+str(lrt_count))
+
+            else:
+                feat_by_class.append('BOTH'+','+f+','+str(hrt_count)+','+str(lrt_count))
+
+
+        feat_by_class = sorted(feat_by_class)
+
+        file = open(path_to_store_important_features_by_class_file, 'w')
+
+        for f in feat_by_class:
+            file.write(f+'\n')
+        file.close()
+
+
+    def plot_feature_selection(self):
+
+        # vectorisation
+
+        count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=(1,3))
+        X_CV = count_vect.fit_transform(docs_train)
+
+        # print number of unique words (n_features)
+        print ("Shape of train data is "+str(X_CV.shape))
+
+        # tfidf transformation
+
+        tfidf_transformer = TfidfTransformer(use_idf=True)
+        X_tfidf = tfidf_transformer.fit_transform(X_CV)
 
 
         transform = SelectPercentile(score_func=chi2)
@@ -347,7 +522,6 @@ class ExtraTree():
             score_means.append(this_scores.mean())
             score_stds.append(this_scores.std())
 
-
         plt.errorbar(percentiles, score_means, np.array(score_stds))
 
         plt.title(
@@ -359,17 +533,38 @@ class ExtraTree():
         plt.show()
 
 
-if __name__ == '__main__':
+###############
+# variables
+###############
 
-    dataset = pd.read_csv('output/engrate/output_engrate_label_space_noART.csv', header=0, names=['tweets', 'class'])
+path_to_labelled_file = 'test.txt'
+path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
+path_to_store_vocabulary_file = '../output/feature_importance/extratree_vocab.txt'
+path_to_store_complete_feature_importance_file = '../output/feature_importance/extratree_feat_imp_all.txt'
+path_to_store_top_important_features_file = '../output/feature_importance/extratree_feature_importance.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/extratree_feat_byClass.csv'
+
+
+def get_data_set():
+
+    #############
+    # Get dataset
+    #############
+
+    dataset = pd.read_csv(path_to_labelled_file, header=0, names=['tweets', 'class'])
 
     X = dataset['tweets']
     y = dataset['class']
 
-    print (len(X))
+    return X,y
 
-    #stop words
-    lines = open('stopwords.csv', 'r').readlines()
+def get_stop_words():
+
+    ###########
+    # get stopwords
+    ###########
+
+    lines = open(path_to_stopword_file, 'r').readlines()
 
     my_stopwords=[]
     for line in lines:
@@ -377,41 +572,62 @@ if __name__ == '__main__':
 
     stopwords = text.ENGLISH_STOP_WORDS.union(my_stopwords)
 
+    return stopwords
+
+
+if __name__ == '__main__':
+
+    X = get_data_set()[0]
+    y = get_data_set()[1]
+    stopwords = get_stop_words()
+
     et = ExtraTree()
 
-    """Split data using Cross Validation"""
+    ###################
+    # select one of the method to split data using Cross Validation
+    ###################
 
-    #docs_train,docs_test,y_train,y_test = et.train_test_split()
-    docs_train,docs_test,y_train,y_test = et.stratified_shufflesplit()
+    docs_train,docs_test,y_train,y_test = et.train_test_split()
+    #docs_train,docs_test,y_train,y_test = et.stratified_shufflesplit()
     #docs_train,docs_test,y_train,y_test = et.stratified_kfolds()
 
-    """Get features"""
 
-    X_tfidf,count_vect,tfidf_transformer = et.get_features(docs_train)
+    ##################
+    # run ExtraTree Classifier
+    ##################
 
-    """ExtraTree Classifier"""
-
-    #y_predicted, clf = et.train_classifier(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
-
-    """Use feature selection"""
-
-    y_predicted, clf = et.use_feature_selection(X_tfidf,y_train,docs_test,y_test,count_vect,tfidf_transformer)
+    #clf, count_vect = et.train_classifier()
 
 
-    """Confusion matrix"""
+    ###################
+    # run ExtraTree Classifier and use feature selection
+    ###################
 
-    et.confusion_matrix(y_test,y_predicted)
-
-    """Feature importance"""
-
-    #et.get_important_features(clf)
-
-    """Pipeline"""
-
-    #et.use_pipeline(docs_train,y_train,docs_test,y_test)
-    #et.use_pipeline_with_fs(docs_train,y_train,docs_test,y_test)
-
-    """Plot feature selection"""
-    #et.plot_feature_selection(docs_train,y_train)
+    #clf, count_vect = et.train_classifier_use_feature_selection()
 
 
+    ###################
+    # use pipeline
+    ###################
+
+    #clf, count_vect = et.use_pipeline()
+
+    ###################
+    # use pipeline and use feature selection
+    ###################
+
+    clf, count_vect = et.use_pipeline_with_fs()
+
+
+    ###################
+    # Get feature importance
+    ###################
+
+    et.get_important_features(clf,count_vect)
+
+
+    ##################
+    # Plot feature selection
+    ##################
+
+    #et.plot_feature_selection()

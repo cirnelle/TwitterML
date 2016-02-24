@@ -18,18 +18,12 @@ for line in lines:
     #create a list of word which includes ngrams
     n=4
 
-    if (spline[1] == 'HRT'):
+    if spline[1] == 'HRT':
         for i in range(1,n):
             n_grams = ngrams(spline[0].split(), i) #output [('one', 'two'), ('two', 'three'), ('three', 'four')]
             #join the elements within the list together
             gramify = [' '.join(x) for x in n_grams] #output ['one two', 'two three', 'three four']
             l1.extend(gramify)
-            i=i+1
-
-
-
-        #words=spline[0].split()
-        #l1.append(words)
 
 
     elif spline[1] == 'LRT':
@@ -37,7 +31,6 @@ for line in lines:
             n_grams = ngrams(spline[0].split(), i)
             gramify = [' '.join(x) for x in n_grams]
             l2.extend(gramify)
-            i=i+1
 
 ##combine lists in a list into one long list. Flattening a list.
 #hrt_t = list(itertools.chain(*l1))
@@ -56,7 +49,10 @@ for line in lines2:
 
 
 feat_by_class=[]
+
 for f in features:
+
+    # count the occurrences of each important feature in HRT and LRT list respectively
     hrt_count = hrt.count(f)
     lrt_count = lrt.count(f)
 
@@ -66,14 +62,14 @@ for f in features:
     if (hrt_count-lrt_count)>10:
 
         feat_by_class.append('HRT'+','+f+','+str(hrt_count))
-        #file.write('HRT'+','+f+','+str(hrt_count)+'\n')
+
 
     elif (lrt_count-hrt_count)>10:
         feat_by_class.append('LRT'+','+f+','+str(lrt_count))
-        #file.write('LRT'+','+f+','+str(lrt_count)+'\n')
+
     else:
         feat_by_class.append('BOTH'+','+f+','+str(hrt_count)+','+str(lrt_count))
-        #file.write('BOTH'+','+f+','+str(hrt_count)+','+str(lrt_count)+'\n')
+
 
 feat_by_class = sorted(feat_by_class)
 
