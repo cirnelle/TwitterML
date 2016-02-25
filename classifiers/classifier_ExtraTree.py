@@ -93,10 +93,9 @@ class ExtraTree():
         X_tfidf = tfidf_transformer.fit_transform(X_CV)
 
         # train the classifier
-        clf = ExtraTreesClassifier().fit(X_tfidf, y_train)
 
         print ("Fitting data ...")
-        clf.fit(X_tfidf, y_train)
+        clf = ExtraTreesClassifier().fit(X_tfidf, y_train)
 
 
         ##################
@@ -131,6 +130,7 @@ class ExtraTree():
         count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=(1,3))
         X_CV = count_vect.fit_transform(docs_train)
 
+
         # print number of unique words (n_features)
         print ("Shape of train data is "+str(X_CV.shape))
 
@@ -139,17 +139,30 @@ class ExtraTree():
         tfidf_transformer = TfidfTransformer(use_idf = False)
         X_tfidf = tfidf_transformer.fit_transform(X_CV)
 
+        #################
+        # run classifier on pre-feature-selection data
+        # need it to get feature importance later
+        # cannot use post-feature-selection clf, will result in unequal length!
+        #################
+
+        clf = ExtraTreesClassifier().fit(X_tfidf, y_train)
+
+        #################
+        # feature selection
+        #################
+
         selector = SelectPercentile(score_func=chi2, percentile=85)
 
         print ("Fitting data with feature selection ...")
         selector.fit(X_tfidf, y_train)
+
 
         # get how many features are left after feature selection
         X_features = selector.transform(X_tfidf)
 
         print ("Shape of array after feature selection is "+str(X_features.shape))
 
-        clf = ExtraTreesClassifier().fit(X_features, y_train)
+        clf_fs = ExtraTreesClassifier().fit(X_features, y_train)
 
         ####################
         #test clf on test data
@@ -165,15 +178,15 @@ class ExtraTree():
         X_test_selector = selector.transform(X_test_tfidf)
         print ("Shape of array for test data after feature selection is "+str(X_test_selector.shape))
 
-        y_predicted = clf.predict(X_test_selector)
+        y_predicted = clf_fs.predict(X_test_selector)
 
         # print the mean accuracy on the given test data and labels
 
-        print ("Classifier score is: %s " % clf.score(X_test_selector,y_test))
+        print ("Classifier score is: %s " % clf_fs.score(X_test_selector,y_test))
 
         # returns cross validation score
 
-        scores = cross_val_score(clf, X_features, y_train, cv=3, scoring='f1_weighted')
+        scores = cross_val_score(clf_fs, X_features, y_train, cv=3, scoring='f1_weighted')
         print ("Cross validation score:%s " % scores)
 
 
@@ -181,7 +194,7 @@ class ExtraTree():
         cm = metrics.confusion_matrix(y_test, y_predicted)
         print(cm)
 
-        return clf,count_vect
+        return clf, count_vect
 
 
     def use_pipeline(self):
@@ -337,6 +350,19 @@ class ExtraTree():
         # tfidf transformation
 
         tfidf_transformer = TfidfTransformer(use_idf=use_idf)
+        X_tfidf = tfidf_transformer.fit_transform(X_CV)
+
+        #################
+        # run classifier on pre-feature-selection data
+        # need it to get feature importance later
+        # cannot use post-feature-selection clf, will result in unequal length!
+        #################
+
+        clf = ExtraTreesClassifier().fit(X_tfidf, y_train)
+
+        #################
+        # feature selection
+        #################
 
         selector = SelectPercentile(score_func=score_func, percentile=percentile)
 
@@ -355,9 +381,9 @@ class ExtraTree():
 
         # run classifier on selected features
 
-        clf = ExtraTreesClassifier().fit(X_features, y_train)
+        clf_fs = ExtraTreesClassifier().fit(X_features, y_train)
 
-        y_predicted = clf.predict(X_test_features)
+        y_predicted = clf_fs.predict(X_test_features)
 
 
         # Print and plot the confusion matrix
@@ -393,6 +419,9 @@ class ExtraTree():
 
         # get most important features
         feat_imp = clf.feature_importances_
+
+        print (len(vl))
+        print (len(feat_imp))
 
         f = open(path_to_store_complete_feature_importance_file, 'w')
         for fea in feat_imp:
@@ -603,7 +632,7 @@ if __name__ == '__main__':
     # run ExtraTree Classifier and use feature selection
     ###################
 
-    #clf, count_vect = et.train_classifier_use_feature_selection()
+    clf, count_vect = et.train_classifier_use_feature_selection()
 
 
     ###################
@@ -616,7 +645,7 @@ if __name__ == '__main__':
     # use pipeline and use feature selection
     ###################
 
-    clf, count_vect = et.use_pipeline_with_fs()
+    #clf, count_vect = et.use_pipeline_with_fs()
 
 
     ###################

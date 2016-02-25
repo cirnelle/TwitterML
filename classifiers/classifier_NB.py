@@ -101,10 +101,10 @@ class NaiveBayes():
         X_tfidf = tfidf_transformer.fit_transform(X_CV)
 
         # train the classifier
-        clf = MultinomialNB(alpha=0.5).fit(X_tfidf, y_train)
 
         print ("Fitting data ...")
-        clf.fit(X_tfidf, y_train)
+        clf = MultinomialNB(alpha=0.5).fit(X_tfidf, y_train)
+
 
         ##################
         # run classifier on test data
@@ -146,7 +146,19 @@ class NaiveBayes():
         tfidf_transformer = TfidfTransformer(use_idf = False)
         X_tfidf = tfidf_transformer.fit_transform(X_CV)
 
-        selector = SelectPercentile(score_func=chi2, percentile=95)
+        #################
+        # run classifier on pre-feature-selection data
+        # need it to get feature importance later
+        # cannot use post-feature-selection clf, will result in unequal length!
+        #################
+
+        clf = MultinomialNB(alpha=0.5).fit(X_tfidf, y_train)
+
+        #################
+        # feature selection
+        #################
+
+        selector = SelectPercentile(score_func=chi2, percentile=85)
 
         print ("Fitting data with feature selection ...")
         selector.fit(X_tfidf, y_train)
@@ -156,7 +168,7 @@ class NaiveBayes():
 
         print ("Shape of array after feature selection is "+str(X_features.shape))
 
-        clf = MultinomialNB(alpha=0.5).fit(X_features, y_train)
+        clf_fs = MultinomialNB(alpha=0.5).fit(X_features, y_train)
 
         ####################
         #test clf on test data
@@ -172,15 +184,15 @@ class NaiveBayes():
         X_test_selector = selector.transform(X_test_tfidf)
         print ("Shape of array for test data after feature selection is "+str(X_test_selector.shape))
 
-        y_predicted = clf.predict(X_test_selector)
+        y_predicted = clf_fs.predict(X_test_selector)
 
         # print the mean accuracy on the given test data and labels
 
-        print ("Classifier score is: %s " % clf.score(X_test_selector,y_test))
+        print ("Classifier score is: %s " % clf_fs.score(X_test_selector,y_test))
 
         # returns cross validation score
 
-        scores = cross_val_score(clf, X_features, y_train, cv=3, scoring='f1_weighted')
+        scores = cross_val_score(clf_fs, X_features, y_train, cv=3, scoring='f1_weighted')
         print ("Cross validation score:%s " % scores)
 
 
@@ -204,7 +216,7 @@ class NaiveBayes():
         return clf, count_vect
 
 
-    def use_pipeline(self,docs_train,y_train,docs_test,y_test):
+    def use_pipeline(self):
 
         #####################
         #Build a vectorizer / classifier pipeline that filters out tokens that are too rare or too frequent
@@ -319,7 +331,7 @@ class NaiveBayes():
             'vect__ngram_range': [(1,2), (1,3)],
             'vect__use_idf': (True, False),
             'selector__score_func': (chi2, f_classif),
-            'selector__percentile': (95, 100),
+            'selector__percentile': (85, 95),
             'clf__alpha': (0.4, 0.5)
         }
 
@@ -361,9 +373,21 @@ class NaiveBayes():
         # tfidf transformation
 
         tfidf_transformer = TfidfTransformer(use_idf=use_idf)
+        X_tfidf = tfidf_transformer.fit_transform(X_CV)
+
+        #################
+        # run classifier on pre-feature-selection data
+        # need it to get feature importance later
+        # cannot use post-feature-selection clf, will result in unequal length!
+        #################
+
+        clf = MultinomialNB(alpha=alpha).fit(X_tfidf, y_train)
+
+        #################
+        # feature selection
+        #################
 
         selector = SelectPercentile(score_func=score_func, percentile=percentile)
-
 
         combined_features = Pipeline([
                                         ("vect", count_vect),
@@ -380,9 +404,9 @@ class NaiveBayes():
 
         # run classifier on selected features
 
-        clf = MultinomialNB(alpha=alpha).fit(X_features, y_train)
+        clf_fs = MultinomialNB(alpha=alpha).fit(X_features, y_train)
 
-        y_predicted = clf.predict(X_test_features)
+        y_predicted = clf_fs.predict(X_test_features)
 
 
         # Print and plot the confusion matrix
@@ -455,6 +479,10 @@ class NaiveBayes():
         fb_hrt=clf.feature_log_prob_[0] ##feature probability for HRT
         fb_lrt=clf.feature_log_prob_[1] ##feature probability for LRT
         feature_names = count_vect.get_feature_names()
+
+        print (len(fb_hrt))
+        print (len(fb_lrt))
+        print (len(feature_names))
 
         ################
         #the next two lines are for printing the highest feat_probability for each class
@@ -593,7 +621,7 @@ class NaiveBayes():
 
 path_to_labelled_file = 'test.txt'
 path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/nb_important_feat.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/nb_feat_by_class.csv'
 path_to_store_features_by_probability_file = '../output/feature_importance/nb_feat_by_prob.csv'
 path_to_store_list_of_feature_file = '../output/feature_importance/nb_feature_names.txt'
 path_to_store_coefficient_file = '../output/feature_importance/nb_coef.txt'
@@ -665,7 +693,7 @@ if __name__ == '__main__':
     # use pipeline
     ###################
 
-    #clf_gs,count_vect = nb.use_pipeline(docs_train,y_train,docs_test,y_test)
+    #clf, count_vect = nb.use_pipeline()
 
     ###################
     # use pipeline and use feature selection
@@ -694,4 +722,5 @@ if __name__ == '__main__':
     ##################
 
     #nb.plot_feature_selection()
+
 
