@@ -15,7 +15,7 @@ import time
 class UpdateFollowerCount():
 
 
-    def create_tweet_list(self):
+    def update_tweet_list(self):
 
         ###############
         # create tweet list with updated follower count
@@ -51,7 +51,7 @@ class UpdateFollowerCount():
 
                 if foll_count <= 0:
 
-                    foll_count = follower_count[- 1]
+                    foll_count = follower_count[-1]
                     t[2] = str(foll_count)
                     updated_tweets.append(t)
 
@@ -132,4 +132,4 @@ if __name__ == "__main__":
     print ("Length of slope_dict is "+str(len(slope_dict)))
 
     uf = UpdateFollowerCount()
-    uf.create_tweet_list()
+    uf.update_tweet_list()
