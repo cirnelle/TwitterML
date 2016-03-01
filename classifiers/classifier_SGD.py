@@ -528,10 +528,10 @@ class SGD():
 
 path_to_labelled_file = 'test.txt'
 path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
-path_to_store_coefficient_file = '../output/feature_importance/sgd_coef.csv'
-path_to_store_list_of_feature_file = '../output/feature_importance/sgd_feature_names.csv'
-path_to_store_feature_and_coef_file = '../output/feature_importance/sgd_coef_and_feat.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/sgd_feat_by_class.csv'
+path_to_store_coefficient_file = '../output/feature_importance/sgd/sgd_coef.csv'
+path_to_store_list_of_feature_file = '../output/feature_importance/sgd/sgd_feature_names.csv'
+path_to_store_feature_and_coef_file = '../output/feature_importance/sgd/sgd_coef_and_feat.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/sgd/sgd_feat_by_class.csv'
 
 
 

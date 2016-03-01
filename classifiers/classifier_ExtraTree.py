@@ -569,9 +569,9 @@ class ExtraTree():
 path_to_labelled_file = 'test.txt'
 path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
 path_to_store_vocabulary_file = '../output/feature_importance/extratree_vocab.txt'
-path_to_store_complete_feature_importance_file = '../output/feature_importance/extratree_feat_imp_all.txt'
-path_to_store_top_important_features_file = '../output/feature_importance/extratree_feature_importance.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/extratree_feat_byClass.csv'
+path_to_store_complete_feature_importance_file = '../output/feature_importance/extratree/extratree_feat_imp_all.txt'
+path_to_store_top_important_features_file = '../output/feature_importance/extratree/extratree_feature_importance.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/extratree/extratree_feat_byClass.csv'
 
 
 def get_data_set():

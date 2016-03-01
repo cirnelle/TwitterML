@@ -622,11 +622,11 @@ class NaiveBayes():
 path_to_labelled_file = 'test.txt'
 path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
 path_to_store_important_features_by_class_file = '../output/feature_importance/nb_feat_by_class.csv'
-path_to_store_features_by_probability_file = '../output/feature_importance/nb_feat_by_prob.csv'
-path_to_store_list_of_feature_file = '../output/feature_importance/nb_feature_names.txt'
-path_to_store_coefficient_file = '../output/feature_importance/nb_coef.txt'
-path_to_store_feature_log_prob_for_class_0 = '../output/feature_importance/nb_feature_prob_0.csv' #Empirical log probability of features given a class
-path_to_store_feature_log_prob_for_class_1 = '../output/feature_importance/nb_feature_prob_1.csv'
+path_to_store_features_by_probability_file = '../output/feature_importance/nb/nb_feat_by_prob.csv'
+path_to_store_list_of_feature_file = '../output/feature_importance/nb/nb_feature_names.txt'
+path_to_store_coefficient_file = '../output/feature_importance/nb/nb_coef.txt'
+path_to_store_feature_log_prob_for_class_0 = '../output/feature_importance/nb/nb_feature_prob_0.csv' #Empirical log probability of features given a class
+path_to_store_feature_log_prob_for_class_1 = '../output/feature_importance/nb/nb_feature_prob_1.csv'
 
 def get_data_set():
 
