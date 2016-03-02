@@ -17,16 +17,13 @@ from decimal import Decimal
 import time
 
 
-lines = open('user_list.txt','r').readlines()
+lines = open('../user_list/user_space.csv','r').readlines()
 
 user_list = []
 
 for line in lines:
-    spline = line.replace('\n','')
-    user_list.append(spline)
-
-    # if creating list for space user:
-    #user_list.append(spline[0])
+    spline = line.replace('\n','').split(',')
+    user_list.append(spline[0])
 
 
 user_slope_list = []
@@ -72,17 +69,34 @@ for ul in user_list:
 
     x = date_epoch
     y = follcount_list
+    mean_follcount = np.mean(y)
 
     coefficients = np.polyfit(x, y, 1)
     polynomial = np.poly1d(coefficients)
     ys = polynomial(x)
 
+
+    # get standard deviation of follower count
+
+
+    error = abs(ys-y)
+    mean_error = error.mean()
+    error_std = (ys-y).std()
+    error_std_percent = round(((error_std / mean_follcount) * 100),2)
+
+
+    #print ("Mean follcount for "+str(ul)+" is "+str(mean_follcount)+". Mean error is "+str(mean_error)+". Standard deviation is "+str(error_std)+"("+str(error_std_percent)+"%)")
+
     plt.plot(x, y, '*', label=str(ul))
-    pylab.legend(loc='upper right')
-    plt.plot(x, ys)
+    plt.xlabel('Epoch time')
+    plt.ylabel('Follower count')
+
+    plt.errorbar(x,ys,error, label='std error '+str(error_std_percent)+'%')
+    pylab.legend(loc='upper left')
+    #plt.plot(x, ys)
 
 
-    plt.show()
+    #plt.show()
 
     user_slope.append(ul)
 
@@ -101,7 +115,7 @@ for ul in user_list:
 
 
 # write results to a file
-f = open('user_slope.txt','w')
+f = open('user_slope_space.txt','w')
 
 for usl in user_slope_list:
     f.write(','.join(usl)+'\n')

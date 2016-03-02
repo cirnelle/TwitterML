@@ -26,8 +26,8 @@ from tweepy.streaming import StreamListener
 querylimit = 180
 timewindow = 15
 
-if os.path.isfile('user_list.txt'):
-  lines = open('user_list.txt','r').readlines()
+if os.path.isfile('../user_list/users_MASTER.txt'):
+  lines = open('../user_list/users_MASTER.txt','r').readlines()
 
 else:
     print ("Path not found")
@@ -36,7 +36,7 @@ else:
 users = []
 
 for line in lines:
-    spline=line.split("\n")
+    spline=line.replace('\n','').split(',')
     #creates a list with key and value. Split splits a string at the comma and stores the result in a list
 
     users.append(spline[0])
