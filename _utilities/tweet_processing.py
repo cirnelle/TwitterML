@@ -275,7 +275,7 @@ class TweetProcessing():
 
     def write_to_file(self):
 
-        tweets = self.remove_duplicate()
+        tweets = self.remove_rt()
         length = self.get_element_number_per_line()
 
         print ("Number of element per line is "+str(length))
@@ -302,8 +302,8 @@ class TweetProcessing():
 # variables
 ###############
 
-path_to_raw_tweet_file = '../output/mars_announcement/output_mars_and_water_stream.csv'
-path_to_store_processed_tweet_file = '../../TopicModelling/input/preprocessed_tweets/preprocessed_mars_and_water_stream.csv'
+path_to_raw_tweet_file = '../tweets/raw_space.csv'
+path_to_store_processed_tweet_file = '../tweets/preprocessed_space.csv'
 
 if __name__ == "__main__":
 

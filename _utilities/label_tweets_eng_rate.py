@@ -24,6 +24,7 @@ class LabelTweetsEngRate():
             spline = line.replace('\n','').split(',')
             tweets.append(spline)
 
+        print ()
         print ("Length of tweet list is "+str(len(tweets)))
 
         for line in lines[:1]:
@@ -59,26 +60,82 @@ class LabelTweetsEngRate():
         return engrate_list
 
 
+    def get_eng_rate_raw_tweets(self):
+
+        lines = open(path_to_raw_tweet_file,'r').readlines()
+
+        tweets = []
+
+        for line in lines:
+            spline = line.replace('\n','').split(',')
+            tweets.append(spline)
+
+        print ()
+        print ("Length of tweet list is "+str(len(tweets)))
+
+        for line in lines[:1]:
+            spline = line.replace('\n','').split(',')
+            length = len(spline)
+
+        print ("Number of element per line is "+str(length))
+
+        engrate_list = []
+
+        print ("Calculating engagement rate...")
+
+        for t in tweets:
+
+            if len(t) == length:
+
+                engrate = str((np.divide(int(t[4]),int(t[2])))*100)
+
+                engrate_list.append([t[0],t[1],t[2],t[3],t[4],t[5],engrate,t[6]])
+
+            else:
+                print ("error")
+                print(t)
+                pass
+
+        f = open(path_to_store_engrate_output_raw,'w')
+
+        for el in engrate_list:
+            f.write(','.join(el)+'\n')
+
+        f.close()
+
+        return engrate_list
+
+
     def label_tweets(self):
 
         tweets = self.get_eng_rate()
 
         labelled_tweets = []
+        high_rt = []
+        low_rt = []
 
-        print ("Labelling tweets ...")
+        print ("#############################")
+        print ("Labelling preprocessed tweets ...")
 
         for t in tweets:
 
-            if float(t[6]) > 0.06:
+            if float(t[6]) > hrt_boundary:
 
                 labelled_tweets.append([t[7],'HRT'])
+                high_rt.append([t[7],'HRT'])
 
-            elif float(t[6]) < 0.0005:
+            elif float(t[6]) < lrt_boundary:
 
                 labelled_tweets.append([t[7],'LRT'])
+                low_rt.append([t[7],'LRT'])
 
             else:
                 pass
+
+
+        print ("Length of high RT list is "+str(len(high_rt)))
+        print ("Length of low RT list is "+str(len(low_rt)))
+
 
         f = open(path_to_store_labelled_tweets, 'w')
 
@@ -92,72 +149,79 @@ class LabelTweetsEngRate():
 
         return labelled_tweets
 
+
+    def label_tweets_raw(self):
+
+        tweets = self.get_eng_rate_raw_tweets()
+
+        labelled_tweets = []
+        high_rt = []
+        low_rt = []
+
+        print ("#############################")
+        print ("Labelling raw tweets ...")
+
+        for t in tweets:
+
+            if float(t[6]) > hrt_boundary:
+
+                labelled_tweets.append([t[7],'HRT'])
+                high_rt.append([t[7],'HRT'])
+
+            elif float(t[6]) < lrt_boundary:
+
+                labelled_tweets.append([t[7],'LRT'])
+                low_rt.append([t[7],'LRT'])
+
+            else:
+                pass
+
+        print ("Length of high RT list is "+str(len(high_rt)))
+        print ("Length of low RT list is "+str(len(low_rt)))
+
+        f = open(path_to_store_labelled_tweets_raw, 'w')
+
+        for lt in labelled_tweets:
+
+            f.write(','.join(lt)+'\n')
+
+        f.close()
+
+        print ("Length of labelled posts is "+str(len(labelled_tweets)))
+
+        return labelled_tweets
+
+
 ################
 # variables
 ################
 
-path_to_preprocessed_tweet_file = '../tweets/preprocessed_space_follcorr.csv'
-path_to_store_engrate_output = '../output/engrate/engrate_space_follcorr.csv'
-path_to_store_labelled_tweets = '../output/engrate/labelled_space_follcorr.csv'
+path_to_preprocessed_tweet_file = '../tweets/preprocessed_space.csv'
+path_to_store_engrate_output = '../output/engrate/engrate_space.csv'
+path_to_store_labelled_tweets = '../output/engrate/labelled_space.csv'
+
+# for LIWC
+path_to_raw_tweet_file = '../tweets/raw_space.csv'
+path_to_store_engrate_output_raw = '../output/engrate/engrate_space_raw.csv'
+path_to_store_labelled_tweets_raw = '../output/engrate/labelled_space_raw.csv'
+
+# engrate parameters
+hrt_boundary = 0.06
+lrt_boundary = 0.0005
 
 
 if __name__ == "__main__":
 
 
     lt = LabelTweetsEngRate()
-    #lt.clean_up_tweets()
+
     #lt.get_eng_rate()
     lt.label_tweets()
 
-
-
-'''
-
-lines = open('../followers/user_slope_space.txt','r').readlines()
-
-slope_dict = {}
-
-for line in lines:
-    spline = line.replace('\n','').split(',')
-    slope_dict[spline[0]] = spline[1]
-
-print ("Length of slope_dict is "+str(len(slope_dict)))
+    #lt.get_eng_rate_raw_tweets()
+    lt.label_tweets_raw()
 
 
 
-###############
-# create tweet list with updated follower count
-###############
 
-
-lines = open('../output/engrate/_old/output_engrate_MASTER.csv','r').readlines()
-
-tweets = []
-for line in lines:
-    spline = line.replace('\n','').split(',')
-    tweets.append(spline)
-
-print ("Length of tweet list is "+str(len(tweets)))
-
-updated_tweets = []
-
-for t in tweets:
-
-    key = t[0]
-
-    if key in slope_dict:
-
-        del t[6]
-        updated_tweets.append(t)
-
-print (len(updated_tweets))
-
-f = open('../extracted_data/space_nofollcorr.csv','w')
-
-for ut in updated_tweets:
-    f.write(','.join(ut)+'\n')
-
-f.close()
-
-'''
 

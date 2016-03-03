@@ -26,8 +26,8 @@ from tweepy.streaming import StreamListener
 querylimit = 180
 timewindow = 15
 
-if os.path.isfile('../user_list/users_MASTER.txt'):
-  lines = open('../user_list/users_MASTER.txt','r').readlines()
+if os.path.isfile('../user_list/user_MASTER.csv'):
+  lines = open('../user_list/user_MASTER.csv','r').readlines()
 
 else:
     print ("Path not found")
