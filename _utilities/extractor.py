@@ -20,14 +20,6 @@ import csv
 from tweepy.streaming import StreamListener
 
 
-##
-# variables
-##
-querylimit = 180
-timewindow = 15
-
-#users = ["nasa","cern"]
-
 if os.path.exists("/Users/yi-linghwong/GitHub/TwitterML/"):
     maindir = "/Users/yi-linghwong/GitHub/TwitterML/"
 elif os.path.exists("/home/yiling/GitHub/GitHub/TwitterML/"):
@@ -36,260 +28,444 @@ else:
     print ("ERROR --> major error")
     sys.exit(1)
 
-if os.path.isfile('../../../keys/twitter_api_keys.txt'):
-    lines = open('../../../keys/twitter_api_keys.txt','r').readlines()
-    #lines is a list of strings (e.g. ['1,2,3,4,', '2,3,4,5,', ...]
-
-
-else:
-    print ("Path not found")
-    sys.exit(1)
-
-api_dict = {}
-
-for line in lines:
-    spline=line.replace("\n","").split()
-    #creates a list with key and value. Split splits a string at the space and stores the result in a list
-
-    api_dict[spline[0]]=spline[1]
-
-apikey = api_dict["API_key"]
-apisecret = api_dict["API_secret"]
-
-AccessToken	= api_dict["Access_token"]
-AccessTokenSecret = api_dict["Access_token_secret"]
-
-starttime = time.time()
-
-nrequest = 0
-
 
 class Extractor():
 
     def __init__(self):
-        self.printer("Welcome",1)
 
+        print ()
+        print ("Welcome")
 
-        global apikey
-        global apisecret
+    def connetToApi(self):
 
-        global querylimit
-        global timewindow
+        ###################
+        # create dict with api keys
+        ###################
 
-        global currenttime
+        if os.path.isfile('../../../keys/twitter_api_keys.txt'):
+            lines = open('../../../keys/twitter_api_keys.txt','r').readlines()
 
-        global AccessToken
-        global AccessTokenSecret
+        else:
+            print ("Path not found")
+            sys.exit(1)
 
+        api_dict = {}
 
+        for line in lines:
+            spline=line.replace("\n","").split()
 
+            api_dict[spline[0]]=spline[1]
 
-    def printer(self,messagew,case):
-        #
-        # 1: info
-        # 2: error
-        # 3: warning
+        apikey = api_dict["API_key"]
+        apisecret = api_dict["API_secret"]
 
+        AccessToken	= api_dict["Access_token"]
+        AccessTokenSecret = api_dict["Access_token_secret"]
 
-        if case == 1:
-            print ("Info  ==> ",messagew)
-
-        elif case == 2:
-            print ("Error  ==> ",messagew)
-
-        elif case == 3:
-            print ("Warning  ==> ",messagew)
-
-
-
-    def is_rate_limit_error(self,e):
-        return isinstance(e.reason, list) \
-            and e.reason[0:] \
-            and 'code' in e.reason[0] \
-            and e.reason[0]['code'] == 88
-
-
-    def loadtokens(self):
-
-        #tokenfile = open("access.txt","o")
-        #lines=tokenfile.readlines()
-
-        #access_token=lines[0]
-        #token_secret=lines[1]
-
-        #create an OAuthHandler instance
         auth = tweepy.OAuthHandler(apikey, apisecret)
         auth.set_access_token(AccessToken, AccessTokenSecret)
 
+        print ("Connecting to twitter API...")
 
-        return auth
-
-
-    def connectToAPI(self,auth):
-
-        self.printer("connecting to twitter API",1)
-
-        #create an API instance. API is a class in tweepy that provides access to the entire
-        #Twitter RESTful API methods.
-        #IMPORTANT: remember to set wait_on_rate_limit parameter to True to avoid rate limiting
         api = tweepy.API(auth, wait_on_rate_limit=True)
 
         return api
 
-    def user_tweets(self,user,api):
 
-        tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(2)
+    def create_user_list(self):
 
-        return tweets
+        lines = open(path_to_user_list,'r').readlines()
+
+        users = []
+
+        for line in lines:
+            spline = line.replace('\n','').split(',')
+            users.append(spline[0])
+
+        print ("Length of user list is "+str(len(users)))
+
+        return users
 
 
-    def hashtag_tweets(self,hashtag,api):
+    def get_tweet_id_list(self):
 
-        tweets=tweepy.Cursor(api.search, q=hashtag, lang="en").items(3)
+        pass
 
-        return tweets
 
-    def get_status_by_id(self,id_list,api):
+    def gettweets_by_user(self):
 
-        tweets=[]
+        user_list = self.create_user_list()
+        retries = 5
+        sleep_time = 50
+
+        for user in user_list:
+
+            print ("Getting tweets for "+str(user))
+
+            user_tweets = []
+
+            for r in range(retries):
+
+                try:
+
+                    rate_limit = api.rate_limit_status()
+
+                    remaining = rate_limit['resources']['statuses']['/statuses/user_timeline']['remaining']
+                    reset_time = rate_limit['resources']['statuses']['/statuses/user_timeline']['reset']
+
+                    print (remaining)
+
+                    ##################
+                    # get tweets with twitter user_timeline, excluding RTs and Replies
+                    ##################
+
+                    tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(2000)
+
+                    for t in tweets:
+
+                        #dumps serialises strings into JSON (which is very similar to python's dict)
+                        json_str= json.dumps(t._json)
+
+                        #loads deserialises a string and create a python dict, i.e. it parses the JSON to create a python dict
+                        data=json.loads(json_str)
+
+                        #################
+                        # check if media exists, and which type
+                        #################
+
+                        if 'extended_entities' in data:
+
+                            if 'media' in data['extended_entities']:
+
+                                if data['extended_entities']['media'] != []:
+
+                                    length = len(data['extended_entities']['media'])
+
+                                    for n in range(length):
+
+                                        type = data['extended_entities']['media'][n]['type']
+
+
+                        elif 'entities' in data:
+
+                            if 'urls' in data['entities']:
+
+                                if (data['entities']['urls'] != []):
+
+                                    length = len(data['entities']['urls'])
+
+                                    for n in range(length):
+
+                                        if (data['entities']['urls'][n]['display_url'].startswith('youtu')):
+                                            type = 'video'
+                                            break
+
+                                        elif (data['entities']['urls'][n]['display_url'].startswith('vine')):
+                                            type = 'video'
+                                            break
+
+                                        elif (data['entities']['urls'][n]['display_url'].startswith('amp.twimg')):
+                                            type = 'video'
+                                            break
+
+                                        elif (data['entities']['urls'][n]['display_url'].startswith('snpy.tv')):
+                                            type = 'video'
+                                            break
+
+                                        elif (data['entities']['urls'][n]['display_url'].startswith('vimeo')):
+                                            type = 'video'
+                                            break
+
+                                        else:
+                                            type = 'no_media'
+
+                                else:
+                                    type = 'no_media'
+
+                            else:
+                                type = 'no_media'
+
+                        else:
+                            type = 'no_media'
+
+
+                        ################
+                        # append list of parameters to tweet list
+                        ################
+
+                        user_tweets.append([user,data['created_at'],data['id_str'],str(data['user']['followers_count']),str(data['user']['friends_count']),str(data['retweet_count']),str(data['favorite_count']),'has_'+type,data['text'].replace('\n', ' ').replace('\r', '').replace('\t',' ').replace(',', ' ')])
+
+
+                    #################
+                    # write (append) data to file for each user
+                    #################
+
+                    f = open(path_to_store_raw_tweets,'a')
+
+                    # if file is empty create heading
+                    if user == 'NASA':
+                        f.write('user,created_time,tweet_id,followers,following,retweet,favourite,has_media,message' + '\n')
+
+                        for ut in user_tweets:
+                            f.write(','.join(ut) + '\n')
+
+                    else:
+                        for ut in user_tweets:
+                            f.write(','.join(ut) + '\n')
+
+                    break
+
+                except Exception as e:
+                    print('Failed: ' + str(e))
+                    time.sleep(sleep_time)
+
+
+
+    def gettweets_by_hashtag(self):
+
+        hashtag_list = ['science','astrobiology']
+        retries = 5
+        sleep_time = 50
+
+        for hashtag in hashtag_list:
+
+            print ("Getting tweets for #"+str(hashtag))
+
+            hashtag_tweets = []
+
+            for r in range(retries):
+
+                try:
+
+                    rate_limit = api.rate_limit_status()
+
+                    remaining = rate_limit['resources']['statuses']['/statuses/user_timeline']['remaining']
+                    reset_time = rate_limit['resources']['statuses']['/statuses/user_timeline']['reset']
+
+                    print (remaining)
+
+                    #################
+                    # get tweets with Twitter search api, EXCLUDING retweets
+                    #################
+
+                    tweets=tweepy.Cursor(api.search, q='#'+hashtag+'-filter:retweets', count=100, lang="en").items(1500)
+
+                    for t in tweets:
+
+                        #dumps serialises strings into JSON (which is very similar to python's dict)
+                        json_str= json.dumps(t._json)
+
+                        #loads deserialises a string and create a python dict, i.e. it parses the JSON to create a python dict
+                        data=json.loads(json_str)
+
+                        #################
+                        # check if media exists, and which type
+                        #################
+
+                        if 'extended_entities' in data:
+
+                            if 'media' in data['extended_entities']:
+
+                                if data['extended_entities']['media'] != []:
+
+                                    length = len(data['extended_entities']['media'])
+
+                                    for n in range(length):
+
+                                        type = data['extended_entities']['media'][n]['type']
+
+
+                        elif 'entities' in data:
+
+                            if 'urls' in data['entities']:
+
+                                if (data['entities']['urls'] != []):
+
+                                    length = len(data['entities']['urls'])
+
+                                    for n in range(length):
+
+                                        if (data['entities']['urls'][n]['display_url'].startswith('youtu')):
+                                            type = 'video'
+                                            break
+
+                                        elif (data['entities']['urls'][n]['display_url'].startswith('vine')):
+                                            type = 'video'
+                                            break
+
+                                        elif (data['entities']['urls'][n]['display_url'].startswith('amp.twimg')):
+                                            type = 'video'
+                                            break
+
+                                        elif (data['entities']['urls'][n]['display_url'].startswith('snpy.tv')):
+                                            type = 'video'
+                                            break
+
+                                        elif (data['entities']['urls'][n]['display_url'].startswith('vimeo')):
+                                            type = 'video'
+                                            break
+
+                                        else:
+                                            type = 'no_media'
+
+                                else:
+                                    type = 'no_media'
+
+                            else:
+                                type = 'no_media'
+
+                        else:
+                            type = 'no_media'
+
+
+                        ################
+                        # append list of parameters to tweet list
+                        ################
+
+                        hashtag_tweets.append([data['user']['screen_name'],data['created_at'],data['id_str'],str(data['user']['followers_count']),str(data['user']['friends_count']),str(data['retweet_count']),str(data['favorite_count']),'has_'+str(type),data['text'].replace('\n', ' ').replace('\r', '').replace('\t',' ').replace(',', ' ')])
+
+
+                    #################
+                    # write (append) data to file for each user
+                    #################
+
+                    f = open(path_to_store_raw_tweets_hashtag+str(hashtag)+'.csv','w')
+
+                    header = ['user','created_time','tweet_id','user_follcount','user_following','retweet','favourite','has_media','message']
+
+                    hashtag_tweets.insert(0,header)
+
+                    for ht in hashtag_tweets:
+                            f.write(','.join(ht) + '\n')
+
+                    f.close()
+
+                    break
+
+                except Exception as e:
+                    print('Failed: ' + str(e))
+                    time.sleep(sleep_time)
+
+
+
+    def gettweets_by_id(self):
+
+
+        id_list = self.get_tweet_id_list()
+        retries = 5
+        sleep_time = 50
+
+        id_list = [705606247375085569,705589118458265601]
+
+        print ("Getting tweets for id list...")
 
         for id in id_list:
 
+            tweets = []
+
             tweet=api.get_status(id=id)
 
+            for r in range(retries):
 
-            #dumps serialises strings into JSON (which is very similar to python's dict)
-            json_str= json.dumps(tweet._json)
+                try:
 
-            #loads deserialises a string and create a python dict, i.e. it parses the JSON to create a python dict
-            data=json.loads(json_str)
+                    rate_limit = api.rate_limit_status()
 
-            tweets.append([data['user']['screen_name'], data['id_str'], data['created_at'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace('\r', ' ').replace('\t',' ').replace(',', ' ')])
+                    remaining = rate_limit['resources']['statuses']['/statuses/user_timeline']['remaining']
+                    reset_time = rate_limit['resources']['statuses']['/statuses/user_timeline']['reset']
 
+                    print (remaining)
 
-        return tweets
 
+                    #dumps serialises strings into JSON (which is very similar to python's dict)
+                    json_str= json.dumps(tweet._json)
 
-    def gettweets_user(self,user,api):
+                    #loads deserialises a string and create a python dict, i.e. it parses the JSON to create a python dict
+                    data=json.loads(json_str)
 
-        rate_limit = api.rate_limit_status()
+                    #################
+                    # check if media exists, and which type
+                    #################
 
-        remaining = rate_limit['resources']['statuses']['/statuses/user_timeline']['remaining']
-        reset_time = rate_limit['resources']['statuses']['/statuses/user_timeline']['reset']
+                    if 'extended_entities' in data:
 
-        print (remaining)
+                        if 'media' in data['extended_entities']:
 
-        #if remaining >= 10:
+                            if data['extended_entities']['media'] != []:
 
+                                length = len(data['extended_entities']['media'])
 
-        #tweets=api.user_timeline(fromuser)
-        #while True:
-            #try:
+                                for n in range(length):
 
-        # create a Cursor instance. Cursor is a class in tweepy to help with pagination (iterate through statuses
-        # to get more than 20 tweets from user_timeline)
+                                    type = data['extended_entities']['media'][n]['type']
 
 
-        tweets = self.user_tweets(user,api)
+                    elif 'entities' in data:
 
+                        if 'urls' in data['entities']:
 
-        #else:
+                            if (data['entities']['urls'] != []):
 
-            #print ("Rate limiting. Going to sleep")
+                                length = len(data['entities']['urls'])
 
-            #sleep_time = int(reset_time) - int(time.time())
+                                for n in range(length):
 
-            #time.sleep(sleep_time)
+                                    if (data['entities']['urls'][n]['display_url'].startswith('youtu')):
+                                        type = 'video'
+                                        break
 
-            #tweets = self.user_tweets(user,api)
+                                    elif (data['entities']['urls'][n]['display_url'].startswith('vine')):
+                                        type = 'video'
+                                        break
 
+                                    elif (data['entities']['urls'][n]['display_url'].startswith('amp.twimg')):
+                                        type = 'video'
+                                        break
 
-        #for i in range(len(tweets)):
+                                    elif (data['entities']['urls'][n]['display_url'].startswith('snpy.tv')):
+                                        type = 'video'
+                                        break
 
+                                    elif (data['entities']['urls'][n]['display_url'].startswith('vimeo')):
+                                        type = 'video'
+                                        break
 
+                                    else:
+                                        type = 'no_media'
 
-        fulltweets=[]
+                            else:
+                                type = 'no_media'
 
-        for tweet in tweets:
+                        else:
+                            type = 'no_media'
 
-            print (tweet)
+                    else:
+                        type = 'no_media'
 
-            #tweet=tweets[tweet]
 
-            #dumps serialises strings into JSON (which is very similar to python's dict)
-            json_str= json.dumps(tweet._json)
+                    ################
+                    # append list of parameters to tweet list
+                    ################
 
-            #loads deserialises a string and create a python dict, i.e. it parses the JSON to create a python dict
-            data=json.loads(json_str)
+                    tweets.append([data['user']['screen_name'],data['created_at'],data['id_str'],str(data['user']['followers_count']),str(data['user']['friends_count']),str(data['retweet_count']),str(data['favorite_count']),'has_'+str(type),data['text'].replace('\n', ' ').replace('\r', '').replace('\t',' ').replace(',', ' ')])
 
 
+                    #################
+                    # write (append) data to file for each user
+                    #################
 
+                    f = open(path_to_store_tweets_by_id,'a')
 
-            #add the new tweets to a list
-            fulltweets.append([user, data['created_at'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'],data['text'].replace('\n', ' ').replace('\r', '').replace('\t',' ').replace(',', ' ')])
+                    for t in tweets:
+                        f.write(','.join(t) + '\n')
 
-            ##IMPORTANT: the 'followers_count' key is in a dictionary (called 'user') within a dictionary!
-                #fulltweets.append([data['user']['followers_count'], data['retweet_count']])
+                    f.close()
 
+                    break
 
-
-
-
-        #fulltweets is a list in a list, i.e. [[text, rt count, etc], [text2, rt count2, etc]]
-        return fulltweets
-
-            #print (data['text'])
-            #print ("Retweets ",data['retweet_count'])
-            #print ("Favorited ",data['favorite_count'])
-            #print (data['created_at'])
-            #print ("------------")
-            #print (data)
-
-
-
-    def gettweets_hashtag(self,hashtag,api):
-
-        rate_limit = api.rate_limit_status()
-
-
-        remaining = rate_limit['resources']['statuses']['/statuses/user_timeline']['remaining']
-        reset_time = rate_limit['resources']['statuses']['/statuses/user_timeline']['reset']
-
-        print (remaining)
-
-        #if remaining >= 10:
-
-        #self.requestlimit()
-
-        tweets=self.hashtag_tweets(hashtag,api)
-
-        #else:
-
-            #print ("Rate limiting. Going to sleep")
-
-            #sleep_time = int(reset_time) - int(time.time())
-
-            #time.sleep(sleep_time)
-
-            #tweets=self.hashtag_tweets(hashtag,api)
-
-        fulltweets=[]
-
-        for tweet in tweets:
-
-            #tweet=tweets[tweet]
-
-            #dumps serialises strings into JSON (which is very similar to python's dict)
-            json_str= json.dumps(tweet._json)
-
-            #loads deserialises a string and create a python dict, i.e. it parses the JSON to create a python dict
-            data=json.loads(json_str)
-
-
-            #add the new tweets to a list
-            fulltweets.append([data['user']['screen_name'], data['id_str'], data['created_at'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace('\r', '').replace('\t',' ').replace(',', ' ')])
-
-        return fulltweets
+                except Exception as e:
+                    print('Failed: ' + str(e))
+                    time.sleep(sleep_time)
 
 
     def printcsv(self,all_tweets,filename):
@@ -316,43 +492,43 @@ class Extractor():
                 os.fsync(csvfile.fileno())
 
 
+###############
+# variables
+###############
 
-'''
-
-ext= Extractor()
-auth = ext.loadtokens()
-api = ext.connectToAPI(auth)
-
-id_list=[637069329259851776]
-
-tweets=ext.get_status_by_id(id_list,api)
-
-print (tweets)
-
-t = ext.gettweets_user('nasa',api)
-print (t)
-
-'''
+path_to_user_list = '../user_list/user_space.csv'
+path_to_store_raw_tweets = '../tweets/raw_space_20160304.csv'
+path_to_store_raw_tweets_hashtag = '../tweets/hashtags/raw_#'
+path_to_store_tweets_by_id = 'test.csv'
 
 
+if __name__ == '__main__':
+
+    ################
+    # connect to Twitter api
+    ################
+
+    ext = Extractor()
+    api = ext.connetToApi()
 
 
-#full_tweets = []
+    #################
+    # get tweets by user
+    #################
 
-#for user in users:
-
-    #use extend instead of append to add the second list to the first one!
-    #full_tweets.extend(ext.gettweets_user(user,api))
-    #ext.printcsv(full_tweets,user)
-
-#ext.printcsv_all(full_tweets)
+    #ext.gettweets_by_user()
 
 
+    #################
+    # get tweets by hashtag
+    #################
 
-#print (ext.gettweets_hashtag(hashtaglist,api))
+    #ext.gettweets_by_hashtag()
 
-#for ht in hashtaglist:
 
-    #full_tweets = ext.gettweets_hashtag(ht,api)
-    #ext.printcsv(full_tweets,ht)
+    #################
+    # get tweets by id
+    #################
+
+    ext.gettweets_by_id()
 

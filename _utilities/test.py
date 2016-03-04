@@ -36,7 +36,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 
 #tweets=tweepy.Cursor(api.user_timeline,id='nasa', include_rts=False, exclude_replies=True).items(1)
 
-tweet=api.get_status(id=705364886784618496)
+tweet=api.get_status(id=705580361657372672)
 print (tweet)
 
 fulltweets = []
@@ -54,12 +54,17 @@ if 'extended_entities' in data:
 
     if 'media' in data['extended_entities']:
 
-        print ("Extended")
+        if data['extended_entities']['media'] != []:
 
-        type = data['extended_entities']['media'][0]['type']
+            length = len(data['extended_entities']['media'])
+
+            for n in range(length):
+
+                print ('yes')
+                type = data['extended_entities']['media'][n]['type']
 
 
-    fulltweets.append(type)
+    fulltweets.append('has_'+type)
     #fulltweets.append(['nasa', data['created_at'], data['id'], data['entities']['media']['type'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'],data['text'].replace('\n', ' ').replace('\r', '').replace('\t',' ').replace(',', ' ')])
 
     print (fulltweets)
@@ -71,11 +76,34 @@ elif 'entities' in data:
 
         if (data['entities']['urls'] != []):
 
-            if (data['entities']['urls'][0]['display_url'].startswith('youtu')):
-                type = 'video'
+            length = len(data['entities']['urls'])
 
-            else:
-                type = 'no_media'
+            for n in range(length):
+
+                print (n)
+
+                if (data['entities']['urls'][n]['display_url'].startswith('youtu')):
+                    type = 'video'
+                    break
+
+                elif (data['entities']['urls'][n]['display_url'].startswith('vine')):
+                    type = 'video'
+                    break
+
+                elif (data['entities']['urls'][n]['display_url'].startswith('amp.twimg')):
+                    type = 'video'
+                    break
+
+                elif (data['entities']['urls'][n]['display_url'].startswith('snpy.tv')):
+                    type = 'video'
+                    break
+
+                elif (data['entities']['urls'][n]['display_url'].startswith('vimeo')):
+                    type = 'video'
+                    break
+
+                else:
+                    type = 'no_media'
 
         else:
             type = 'no_media'
@@ -84,7 +112,7 @@ elif 'entities' in data:
         type = 'no_media'
 
 
-    fulltweets.append(type)
+    fulltweets.append('has_'+type)
     #fulltweets.append(['nasa', data['created_at'], data['id'], data['entities']['media']['type'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'],data['text'].replace('\n', ' ').replace('\r', '').replace('\t',' ').replace(',', ' ')])
 
 
