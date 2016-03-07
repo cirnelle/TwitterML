@@ -407,6 +407,12 @@ class FeatureConstruction():
         for t in tweets:
             features = []
 
+            #append the type (i.e. photo, video, link, etc)
+
+            if t[2] != 'has_no_media':
+
+                features.append(t[2])
+
             ################
             #replace special character at end of sentence with white space
             #so that hashtags without a space in front of them can be detected too (e.g. This is it.#space)
@@ -434,20 +440,20 @@ class FeatureConstruction():
 
             if len(features) == 0:
                 print("No feature for this post")
-                print (spline[0])
+                print (t[0])
                 features.append('none')
 
 
             features = ' '.join(features)
 
             # append the label to the list
-            tweet_features.append([features,p[1]])
+            tweet_features.append([features,t[1]])
 
         print ("Length of post features list is "+str(len(tweet_features)))
         print ("Length of url list is "+str(len(url_list)))
         print ("Length of hashtag list is "+str(len(hashtag_list)))
 
-        f = open(path_to_store_labelled_urlhashtagtype_file,'w')
+        f = open(path_to_store_labelled_urlhashtagmedia_file,'w')
 
         for tf in tweet_features:
             f.write(','.join(tf)+'\n')
@@ -794,6 +800,12 @@ class FeatureConstruction():
         for t in tweets:
             features_sm = []
 
+            #append the type (i.e. photo, video, link, etc)
+
+            if t[2] != 'has_no_media':
+
+                features_sm.append(t[2])
+
             ################
             #replace special character at end of sentence with white space
             #so that hashtags without a space in front of them can be detected too (e.g. This is it.#space)
@@ -817,6 +829,11 @@ class FeatureConstruction():
                     features_sm.append("has_url")
                     url_list.append(word)
                     break
+
+            if len(features_sm) == 0:
+                print("No feature for this post")
+                print (t[0])
+                features_sm.append('none')
 
 
             features_sm = ' '.join(features_sm)
@@ -974,8 +991,8 @@ class FeatureConstruction():
 ###############
 
 path_to_liwc_result_file = '../output/liwc/liwc_raw_space.txt'
-path_to_labelled_raw_file = '../output/engrate/labelled_space_raw.csv'
-path_to_labelled_preprocessed_file = '../output/engrate/labelled_space.csv'
+path_to_labelled_raw_file = '../output/engrate/labelled_space_20160304_raw.csv'
+path_to_labelled_preprocessed_file = '../output/engrate/labelled_space_20160304.csv'
 
 path_to_store_psychometric_feature_file = '../output/features/psychometrics.txt'
 path_to_store_grammar_feature_file = '../output/features/grammar.txt'
@@ -984,7 +1001,7 @@ path_to_store_combined_feature_all_file = '../output/features/combined_all.txt' 
 
 path_to_store_labelled_psychometric_file = '../output/features/labelled_psychometrics.csv'
 path_to_store_labelled_grammar_file = '../output/features/labelled_grammar.csv'
-path_to_store_labelled_urlhashtagtype_file = '../output/features/labelled_urlhashtagtype.csv'
+path_to_store_labelled_urlhashtagmedia_file = '../output/features/labelled_urlhashtagmedia.csv'
 path_to_store_labelled_combined_features_file = '../output/features/labelled_combined.csv'
 path_to_store_labelled_combined_features_all_file = '../output/features/labelled_combined_all.csv'
 
@@ -996,7 +1013,7 @@ if __name__ == '__main__':
 
     #fc.liwc_psychometric_features()
     #fc.liwc_grammar_features()
-    #fc.url_hashtag_type_feature()
+    #fc.url_hashtag_media_feature()
     #fc.combine_features()
     fc.combine_features_all()
 

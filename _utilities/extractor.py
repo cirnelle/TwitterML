@@ -470,7 +470,6 @@ class Extractor():
 
     def printcsv(self,all_tweets,filename):
 
-
         with open(maindir+'/output/output_'+filename+'.csv', 'w', newline='') as csvfile:
             csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
 
@@ -478,8 +477,6 @@ class Extractor():
                 csvtweets.writerow(al)
                 csvfile.flush()
                 os.fsync(csvfile.fileno())
-
-
 
 
     def printcsv_all(self,all_tweets,name):
@@ -516,7 +513,7 @@ if __name__ == '__main__':
     # get tweets by user
     #################
 
-    #ext.gettweets_by_user()
+    ext.gettweets_by_user()
 
 
     #################
@@ -530,5 +527,5 @@ if __name__ == '__main__':
     # get tweets by id
     #################
 
-    ext.gettweets_by_id()
+    #ext.gettweets_by_id()
 

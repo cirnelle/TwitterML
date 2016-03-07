@@ -1,0 +1,7 @@
+HRT,few_sixltr,2191
+HRT,high_wps,2233
+HRT,no_exclam,6630
+LRT,has_exclam,1781
+LRT,has_qmark,866
+LRT,low_wps,2095
+LRT,many_sixltr,2662

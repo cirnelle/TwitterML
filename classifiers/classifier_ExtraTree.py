@@ -81,7 +81,7 @@ class ExtraTree():
     def train_classifier(self):
 
         # Get list of features
-        count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=(1,3))
+        count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=_ngram_range)
         X_CV = count_vect.fit_transform(docs_train)
 
         # print number of unique words (n_features)
@@ -89,13 +89,25 @@ class ExtraTree():
 
         # tfidf transformation###
 
-        tfidf_transformer = TfidfTransformer(use_idf = True)
+        tfidf_transformer = TfidfTransformer(use_idf=_use_idf)
         X_tfidf = tfidf_transformer.fit_transform(X_CV)
 
         # train the classifier
 
         print ("Fitting data ...")
         clf = ExtraTreesClassifier().fit(X_tfidf, y_train)
+
+
+        ##################
+        # get cross validation score
+        ##################
+
+        scores = cross_val_score(clf, X_tfidf, y_train, cv=10, scoring='f1_weighted')
+        print ("Cross validation score: "+str(scores))
+
+        # Get average performance of classifier on training data using 10-fold CV, along with standard deviation
+
+        print("Cross validation accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
 
 
         ##################
@@ -108,14 +120,11 @@ class ExtraTree():
 
         X_test_tfidf = tfidf_transformer.transform(X_test_CV)
 
-        scores = cross_val_score(clf, X_test_tfidf, y_test, cv=3, scoring='f1_weighted')
-        print ("Cross validation score:%s " % scores)
-
         y_predicted = clf.predict(X_test_tfidf)
 
         # print the mean accuracy on the given test data and labels
 
-        print ("Classifier score is: %s " % clf.score(X_test_tfidf,y_test))
+        print ("Classifier score on test data is: %s " % clf.score(X_test_tfidf,y_test))
 
         print(metrics.classification_report(y_test, y_predicted))
         cm = metrics.confusion_matrix(y_test, y_predicted)
@@ -127,7 +136,7 @@ class ExtraTree():
     def train_classifier_use_feature_selection(self):
 
         # Get list of features
-        count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=(1,3))
+        count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=_ngram_range)
         X_CV = count_vect.fit_transform(docs_train)
 
 
@@ -136,7 +145,7 @@ class ExtraTree():
 
         # tfidf transformation###
 
-        tfidf_transformer = TfidfTransformer(use_idf = False)
+        tfidf_transformer = TfidfTransformer(use_idf=_use_idf)
         X_tfidf = tfidf_transformer.fit_transform(X_CV)
 
         #################
@@ -151,7 +160,7 @@ class ExtraTree():
         # feature selection
         #################
 
-        selector = SelectPercentile(score_func=chi2, percentile=85)
+        selector = SelectPercentile(score_func=_score_func, percentile=_percentile)
 
         print ("Fitting data with feature selection ...")
         selector.fit(X_tfidf, y_train)
@@ -163,6 +172,19 @@ class ExtraTree():
         print ("Shape of array after feature selection is "+str(X_features.shape))
 
         clf_fs = ExtraTreesClassifier().fit(X_features, y_train)
+
+
+        ##################
+        # get cross validation score
+        ##################
+
+        scores = cross_val_score(clf_fs, X_features, y_train, cv=10, scoring='f1_weighted')
+        print ("Cross validation score: "+str(scores))
+
+        # Get average performance of classifier on training data using 10-fold CV, along with standard deviation
+
+        print("Cross validation accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+
 
         ####################
         #test clf on test data
@@ -182,12 +204,7 @@ class ExtraTree():
 
         # print the mean accuracy on the given test data and labels
 
-        print ("Classifier score is: %s " % clf_fs.score(X_test_selector,y_test))
-
-        # returns cross validation score
-
-        scores = cross_val_score(clf_fs, X_features, y_train, cv=3, scoring='f1_weighted')
-        print ("Cross validation score:%s " % scores)
+        print ("Classifier score on test data is: %0.2f " % clf_fs.score(X_test_selector,y_test))
 
 
         print(metrics.classification_report(y_test, y_predicted))
@@ -212,9 +229,14 @@ class ExtraTree():
         # Build a grid search to find the best parameter
         # Fit the pipeline on the training set using grid search for the parameters
         parameters = {
-            'vect__ngram_range': [(1,2), (1,3)],
+            'vect__ngram_range': [(1,1), (1,2), (1,3)],
             'vect__use_idf': (True, False),
         }
+
+        #################
+        # Exhaustive search over specified parameter values for an estimator, use cv to generate data to be used
+        # implements the usual estimator API: when “fitting” it on a dataset all the possible combinations of parameter values are evaluated and the best combination is retained.
+        #################
 
         cv = StratifiedShuffleSplit(y_train, n_iter=5, test_size=0.2, random_state=42)
         grid_search = GridSearchCV(pipeline, param_grid=parameters, cv=cv, n_jobs=-1)
@@ -224,12 +246,11 @@ class ExtraTree():
         # print the cross-validated scores for the each parameters set explored by the grid search
         ###############
 
-
         best_parameters, score, _ = max(clf_gs.grid_scores_, key=lambda x: x[1])
         for param_name in sorted(parameters.keys()):
             print("%s: %r" % (param_name, best_parameters[param_name]))
 
-        print("score is %s" % score)
+        print("Score for gridsearch is %0.2f" % score)
 
         #y_predicted = clf_gs.predict(docs_test)
 
@@ -257,25 +278,33 @@ class ExtraTree():
 
         # train the classifier
 
+        print ("Fitting data with best parameters ...")
         clf = ExtraTreesClassifier().fit(X_tfidf, y_train)
 
-        print ("Fitting data with best parameters ...")
-        clf.fit(X_tfidf, y_train)
+        ##################
+        # get cross validation score
+        ##################
 
+        scores = cross_val_score(clf, X_tfidf, y_train, cv=10, scoring='f1_weighted')
+        print ("Cross validation score: "+str(scores))
+
+        # Get average performance of classifier on training data using 10-fold CV, along with standard deviation
+
+        print("Cross validation accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+
+        ##################
         # run classifier on test data
+        ##################
 
         X_test_CV = count_vect.transform(docs_test)
 
         X_test_tfidf = tfidf_transformer.transform(X_test_CV)
 
-        scores = cross_val_score(clf, X_test_tfidf, y_test, cv=3, scoring='f1_weighted')
-        print ("Cross validation score:%s " % scores)
-
         y_predicted = clf.predict(X_test_tfidf)
 
         # print the mean accuracy on the given test data and labels
 
-        print ("Classifier score is: %s " % clf.score(X_test_tfidf,y_test))
+        print ("Classifier score on test data is: %0.2f " % clf.score(X_test_tfidf,y_test))
 
 
         # Print and plot the confusion matrix
@@ -307,11 +336,16 @@ class ExtraTree():
         # Build a grid search to find the best parameter
         # Fit the pipeline on the training set using grid search for the parameters
         parameters = {
-            'vect__ngram_range': [(1,2), (1,3)],
+            'vect__ngram_range': [(1,1), (1,2), (1,3)],
             'vect__use_idf': (True, False),
             'selector__score_func': (chi2, f_classif),
-            'selector__percentile': (85, 95),
+            'selector__percentile': (85, 95, 100),
         }
+
+        #################
+        # Exhaustive search over specified parameter values for an estimator, use cv to generate data to be used
+        # implements the usual estimator API: when “fitting” it on a dataset all the possible combinations of parameter values are evaluated and the best combination is retained.
+        #################
 
         cv = StratifiedShuffleSplit(y_train, n_iter=5, test_size=0.2, random_state=42)
         grid_search = GridSearchCV(pipeline, param_grid=parameters, cv=cv, n_jobs=-1)
@@ -325,7 +359,7 @@ class ExtraTree():
         for param_name in sorted(parameters.keys()):
             print("%s: %r" % (param_name, best_parameters[param_name]))
 
-        print("score is %s" % score)
+        print("Score for gridsearch is %0.2f" % score)
 
         #y_predicted = clf_gs.predict(docs_test)
 
@@ -383,7 +417,28 @@ class ExtraTree():
 
         clf_fs = ExtraTreesClassifier().fit(X_features, y_train)
 
+
+        ##################
+        # get cross validation score
+        ##################
+
+        scores = cross_val_score(clf_fs, X_features, y_train, cv=10, scoring='f1_weighted')
+        print ("Cross validation score: "+str(scores))
+
+        # Get average performance of classifier on training data using 10-fold CV, along with standard deviation
+
+        print("Cross validation accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+
+
+        #################
+        # run classifier on test data
+        #################
+
         y_predicted = clf_fs.predict(X_test_features)
+
+        # print the mean accuracy on the given test data and labels
+
+        print ("Classifier score on test data is: %0.2f " % clf_fs.score(X_test_features,y_test))
 
 
         # Print and plot the confusion matrix
@@ -497,12 +552,12 @@ class ExtraTree():
             print ("HRT %s: " % f + str(hrt_count))
             print ("LRT %s: " % f + str(lrt_count))
 
-            if (hrt_count-lrt_count)>10:
+            if (hrt_count-lrt_count)>15:
 
                 feat_by_class.append('HRT'+','+f+','+str(hrt_count))
 
 
-            elif (lrt_count-hrt_count)>10:
+            elif (lrt_count-hrt_count)>15:
                 feat_by_class.append('LRT'+','+f+','+str(lrt_count))
 
             else:
@@ -522,7 +577,7 @@ class ExtraTree():
 
         # vectorisation
 
-        count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=(1,3))
+        count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=_ngram_range)
         X_CV = count_vect.fit_transform(docs_train)
 
         # print number of unique words (n_features)
@@ -530,11 +585,11 @@ class ExtraTree():
 
         # tfidf transformation
 
-        tfidf_transformer = TfidfTransformer(use_idf=True)
+        tfidf_transformer = TfidfTransformer(use_idf=_use_idf)
         X_tfidf = tfidf_transformer.fit_transform(X_CV)
 
 
-        transform = SelectPercentile(score_func=chi2)
+        transform = SelectPercentile(score_func=_score_func)
 
         clf = Pipeline([('anova', transform), ('clf', ExtraTreesClassifier())])
 
@@ -566,12 +621,19 @@ class ExtraTree():
 # variables
 ###############
 
-path_to_labelled_file = 'test.txt'
+path_to_labelled_file = '../output/features/labelled_combined_all.csv'
 path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
-path_to_store_vocabulary_file = '../output/feature_importance/extratree_vocab.txt'
+path_to_store_vocabulary_file = '../output/feature_importance/extratree/extratree_vocab.txt'
 path_to_store_complete_feature_importance_file = '../output/feature_importance/extratree/extratree_feat_imp_all.txt'
 path_to_store_top_important_features_file = '../output/feature_importance/extratree/extratree_feature_importance.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/extratree/extratree_feat_byClass.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/extratree/extratree_feat_byClass_combined_all.csv'
+
+
+# for classifier without pipeline
+_ngram_range = (1,1)
+_use_idf = True
+_percentile = 100
+_score_func = chi2
 
 
 def get_data_set():
@@ -632,7 +694,7 @@ if __name__ == '__main__':
     # run ExtraTree Classifier and use feature selection
     ###################
 
-    clf, count_vect = et.train_classifier_use_feature_selection()
+    #clf, count_vect = et.train_classifier_use_feature_selection()
 
 
     ###################
@@ -645,7 +707,7 @@ if __name__ == '__main__':
     # use pipeline and use feature selection
     ###################
 
-    #clf, count_vect = et.use_pipeline_with_fs()
+    clf, count_vect = et.use_pipeline_with_fs()
 
 
     ###################
