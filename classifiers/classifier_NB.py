@@ -687,8 +687,8 @@ path_to_store_important_features_by_class_file = '../output/feature_importance/n
 # for classifier without pipeline
 _ngram_range = (1,1)
 _alpha = 0.4
-_use_idf = False
-_percentile = 85
+_use_idf = True
+_percentile = 100
 _score_func = chi2
 
 
@@ -744,7 +744,7 @@ if __name__ == '__main__':
     # run NB Classifier
     ##################
 
-    #clf, count_vect = nb.train_classifier()
+    clf, count_vect = nb.train_classifier()
 
 
     ###################
@@ -764,7 +764,7 @@ if __name__ == '__main__':
     # use pipeline and use feature selection
     ###################
 
-    clf, count_vect = nb.use_pipeline_with_fs()
+    #clf, count_vect = nb.use_pipeline_with_fs()
 
 
     ###################

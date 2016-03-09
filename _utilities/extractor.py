@@ -355,7 +355,7 @@ class Extractor():
         retries = 5
         sleep_time = 50
 
-        id_list = [705606247375085569,705589118458265601]
+        id_list = [706762867681456128,706761185459363840]
 
         print ("Getting tweets for id list...")
 
@@ -364,6 +364,8 @@ class Extractor():
             tweets = []
 
             tweet=api.get_status(id=id)
+
+            print (tweet)
 
             for r in range(retries):
 
@@ -513,7 +515,7 @@ if __name__ == '__main__':
     # get tweets by user
     #################
 
-    ext.gettweets_by_user()
+    #ext.gettweets_by_user()
 
 
     #################
@@ -527,5 +529,5 @@ if __name__ == '__main__':
     # get tweets by id
     #################
 
-    #ext.gettweets_by_id()
+    ext.gettweets_by_id()
 

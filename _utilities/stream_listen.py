@@ -13,8 +13,8 @@ import os
 import sys
 
 
-if os.path.isfile('../../keys/twitter_api_keys.txt'):
-    lines = open('../../keys/twitter_api_keys.txt','r').readlines()
+if os.path.isfile('../../../keys/twitter_api_keys.txt'):
+    lines = open('../../../keys/twitter_api_keys.txt','r').readlines()
 
 
 else:
@@ -35,40 +35,70 @@ consumer_secret = api_dict["API_secret"]
 access_token = api_dict["Access_token"]
 access_token_secret = api_dict["Access_token_secret"]
 
+tweets = []
 
-hashtaglist = ['MarsAnnouncement']
 
-csvfile=open('output/mars_announcement/output_marsannouncement_stream.csv','a', newline='')
-csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
+#csvfile=open('output/mars_announcement/output_marsannouncement_stream.csv','a', newline='')
+#csvtweets = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_MINIMAL)
 
 class StdOutListener(StreamListener):
-    """ A listener handles tweets are the received from the stream.
+
+    def __init__(self):
+
+        print ("Waiting for data ...")
+
+    ##############
+    # defines a class that inherits from tweepy's StreamListener class
+    ##############
+
+    """ A listener handles tweets that are received from the stream.
     This is a basic listener that just prints received tweets to stdout.
     """
     def on_data(self, status):
 
-
         data=json.loads(status)
 
         if 'created_at' in data:
-            print ([data['created_at'],data['text']])
-            csvtweets.writerow([data['user']['screen_name'], data['id_str'], data['created_at'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace(',', ' ')])
-        #flush method writes data in buffer directly to the target file (real-time data writing to file)
-            csvfile.flush()
+
+            # exclude retweets from stream
+
+            if 'retweeted_status' not in data:
+
+                print ([data['created_at'],data['text']])
+
+                tweet = [data['user']['screen_name'],data['created_at'],data['id_str'],str(data['user']['followers_count']),str(data['user']['friends_count']),str(data['retweet_count']),str(data['favorite_count']),data['text'].replace('\n', ' ').replace('\r', '').replace('\t',' ').replace(',', ' ')]
 
 
-        #for hashtag in data['entities']['hashtags']:
+                f = open(path_to_store_streamed_tweets,'a')
 
-            #if hashtag['text'].lower() in hashtaglist:
-                #print(hashtag['text'])
-                #print(data['text'])
-                #csvtweets.writerow([data['text']])
+                f.write(','.join(tweet)+'\n')
+
+                f.close()
+
+                #csvtweets.writerow([data['user']['screen_name'], data['id_str'], data['created_at'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace(',', ' ')])
+                #flush method writes data in buffer directly to the target file (real-time data writing to file)
                 #csvfile.flush()
-                #csvtweets.writerow(status)
+
 
         return True
 
+
+    def write_to_file(self,tweets):
+
+        print ("Writing data to file ...")
+
+        f = open(path_to_store_streamed_tweets,'a')
+
+        for t in tweets:
+            f.write(','.join(t)+'\n')
+
+        f.close()
+
+        return
+
+
     def on_error(self, status):
+
         print(status)
 
         return True
@@ -77,15 +107,24 @@ class StdOutListener(StreamListener):
         print('Timeout...')
         return True # To continue listening
 
+
+###############
+# variables
+###############
+
+path_to_store_streamed_tweets = '../tweets/streaming/raw_#space.csv'
+hashtaglist = ['coffee','science'] #amounts to logical OR
+
 if __name__ == '__main__':
+
     l = StdOutListener()
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
 
     stream = Stream(auth, l)
-    #stream.filter(languages=["en"],track=["#"+x for x in hashtaglist])
-    stream.filter(languages=["en"],track=['MarsAnnouncement'])
-    #stream.filter(track=hashtaglist)
+
+    stream.filter(languages=["en"],track=['#space'], async=True)
+    #stream.filter(languages=["en"], track=hashtaglist, async=True)
 
 
 

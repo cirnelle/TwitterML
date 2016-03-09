@@ -594,11 +594,11 @@ path_to_store_important_features_by_class_file = '../output/feature_importance/s
 # for classifier without pipeline
 _ngram_range = (1,1)
 _use_idf = True
-_loss = 'log'
-_penalty = 'l1'
+_loss = 'hinge'
+_penalty = 'elasticnet'
 _alpha = 0.0001
 _score_func = chi2
-_percentile = 85
+_percentile = 95
 
 
 
@@ -659,7 +659,7 @@ if __name__ == '__main__':
     # run SGD Classifier and use feature selection
     ###################
 
-    #clf, count_vect = sgd.train_classifier_use_feature_selection()
+    clf, count_vect = sgd.train_classifier_use_feature_selection()
 
 
     ###################
@@ -672,7 +672,7 @@ if __name__ == '__main__':
     # use pipeline and use feature selection
     ###################
 
-    clf, count_vect = sgd.use_pipeline_with_fs()
+    #clf, count_vect = sgd.use_pipeline_with_fs()
 
 
     ###################

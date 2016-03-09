@@ -632,8 +632,8 @@ path_to_store_important_features_by_class_file = '../output/feature_importance/e
 # for classifier without pipeline
 _ngram_range = (1,1)
 _use_idf = True
-_percentile = 100
-_score_func = chi2
+_percentile = 95
+_score_func = f_classif
 
 
 def get_data_set():
@@ -687,7 +687,7 @@ if __name__ == '__main__':
     # run ExtraTree Classifier
     ##################
 
-    #clf, count_vect = et.train_classifier()
+    clf, count_vect = et.train_classifier()
 
 
     ###################
@@ -707,7 +707,7 @@ if __name__ == '__main__':
     # use pipeline and use feature selection
     ###################
 
-    clf, count_vect = et.use_pipeline_with_fs()
+    #clf, count_vect = et.use_pipeline_with_fs()
 
 
     ###################
