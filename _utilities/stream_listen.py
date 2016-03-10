@@ -11,6 +11,7 @@ import json
 import csv
 import os
 import sys
+import time
 
 
 if os.path.isfile('../../../keys/twitter_api_keys.txt'):
@@ -58,26 +59,42 @@ class StdOutListener(StreamListener):
 
         data=json.loads(status)
 
-        if 'created_at' in data:
+        for n in range(5):
 
-            # exclude retweets from stream
+            try:
 
-            if 'retweeted_status' not in data:
+                if 'created_at' in data:
 
-                print ([data['created_at'],data['text']])
+                    # exclude retweets from stream
 
-                tweet = [data['user']['screen_name'],data['created_at'],data['id_str'],str(data['user']['followers_count']),str(data['user']['friends_count']),str(data['retweet_count']),str(data['favorite_count']),data['text'].replace('\n', ' ').replace('\r', '').replace('\t',' ').replace(',', ' ')]
+                    if 'retweeted_status' not in data:
+
+                        print ([data['created_at'],data['text']])
+
+                        tweet = [data['user']['screen_name'],data['created_at'],data['id_str'],str(data['user']['followers_count']),str(data['user']['friends_count']),str(data['retweet_count']),str(data['favorite_count']),data['text'].replace('\n', ' ').replace('\r', '').replace('\t',' ').replace(',', ' ')]
 
 
-                f = open(path_to_store_streamed_tweets,'a')
+                        f = open(path_to_store_streamed_tweets,'a')
 
-                f.write(','.join(tweet)+'\n')
+                        f.write(','.join(tweet)+'\n')
 
-                f.close()
+                        f.close()
 
-                #csvtweets.writerow([data['user']['screen_name'], data['id_str'], data['created_at'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace(',', ' ')])
-                #flush method writes data in buffer directly to the target file (real-time data writing to file)
-                #csvfile.flush()
+                        break
+
+                        #csvtweets.writerow([data['user']['screen_name'], data['id_str'], data['created_at'], data['user']['followers_count'], data['user']['friends_count'], data['retweet_count'], data['favorite_count'], data['text'].replace('\n', ' ').replace(',', ' ')])
+                        #flush method writes data in buffer directly to the target file (real-time data writing to file)
+                        #csvfile.flush()
+
+                    else:
+                        break
+
+                else:
+                    break
+
+            except Exception as e:
+                print('Failed: ' + str(e))
+                time.sleep(10)
 
 
         return True
@@ -112,7 +129,7 @@ class StdOutListener(StreamListener):
 # variables
 ###############
 
-path_to_store_streamed_tweets = '../tweets/streaming/raw_#space.csv'
+path_to_store_streamed_tweets = '../tweets/streaming/raw_astrobiology.csv'
 hashtaglist = ['coffee','science'] #amounts to logical OR
 
 if __name__ == '__main__':
@@ -123,7 +140,7 @@ if __name__ == '__main__':
 
     stream = Stream(auth, l)
 
-    stream.filter(languages=["en"],track=['#space'], async=True)
+    stream.filter(languages=["en"],track=['astrobiology'], async=True)
     #stream.filter(languages=["en"], track=hashtaglist, async=True)
 
 

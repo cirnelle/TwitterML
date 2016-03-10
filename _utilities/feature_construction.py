@@ -116,34 +116,34 @@ class FeatureConstruction():
 
                     if n == 0:
 
-                        if float(spline[analytic_index]) > 98.0:
+                        if float(spline[analytic_index]) > analytic_top:
                             features.append('is_analytic_yes')
 
-                        elif float(spline[analytic_index]) < 87.0:
+                        elif float(spline[analytic_index]) < analytic_bottom:
                             features.append('is_analytic_no')
 
                     if n == 1:
 
-                        if float(spline[clout_index]) > 74.0:
+                        if float(spline[clout_index]) > clout_top:
                             features.append('is_clout_yes')
 
-                        elif float(spline[clout_index]) < 50.0:
+                        elif float(spline[clout_index]) < clout_bottom:
                             features.append('is_clout_no')
 
                     if n == 2:
 
-                        if float(spline[authentic_index]) > 48.0:
+                        if float(spline[authentic_index]) > authentic_top:
                             features.append('is_authentic_yes')
 
-                        elif float(spline[clout_index]) < 1.5:
+                        elif float(spline[authentic_index]) < authentic_bottom:
                             features.append('is_authentic_no')
 
                     if n == 3:
 
-                        if float(spline[tone_index]) > 89.0:
+                        if float(spline[tone_index]) > tone_top:
                             features.append('is_tone_yes')
 
-                        elif float(spline[tone_index]) < 25.0:
+                        elif float(spline[tone_index]) < tone_bottom:
                             features.append('is_tone_no')
 
                     if n == 4:
@@ -332,18 +332,18 @@ class FeatureConstruction():
 
                     if n == 0:
 
-                        if float(spline[sixltr_index]) > 27.0:
+                        if float(spline[sixltr_index]) > sixltr_top:
                             features.append('many_sixltr')
 
-                        elif float(spline[sixltr_index]) < 15.0:
+                        elif float(spline[sixltr_index]) < sixltr_bottom:
                             features.append('few_sixltr')
 
                     if n == 1:
 
-                        if float(spline[wps_index]) > 18.0:
+                        if float(spline[wps_index]) > wps_top:
                             features.append('high_wps')
 
-                        elif float(spline[wps_index]) < 9.0:
+                        elif float(spline[wps_index]) < wps_bottom:
                             features.append('low_wps')
 
                     if n == 2:
@@ -588,34 +588,34 @@ class FeatureConstruction():
 
                     if n == 0:
 
-                        if float(spline[analytic_index]) > 98.0:
+                        if float(spline[analytic_index]) > analytic_top:
                             features.append('is_analytic_yes')
 
-                        elif float(spline[analytic_index]) < 87.0:
+                        elif float(spline[analytic_index]) < analytic_bottom:
                             features.append('is_analytic_no')
 
                     if n == 1:
 
-                        if float(spline[clout_index]) > 74.0:
+                        if float(spline[clout_index]) > clout_top:
                             features.append('is_clout_yes')
 
-                        elif float(spline[clout_index]) < 50.0:
+                        elif float(spline[clout_index]) < clout_bottom:
                             features.append('is_clout_no')
 
                     if n == 2:
 
-                        if float(spline[authentic_index]) > 48.0:
+                        if float(spline[authentic_index]) > authentic_top:
                             features.append('is_authentic_yes')
 
-                        elif float(spline[clout_index]) < 1.5:
+                        elif float(spline[authentic_index]) < authentic_bottom:
                             features.append('is_authentic_no')
 
                     if n == 3:
 
-                        if float(spline[tone_index]) > 89.0:
+                        if float(spline[tone_index]) > tone_top:
                             features.append('is_tone_yes')
 
-                        elif float(spline[tone_index]) < 25.0:
+                        elif float(spline[tone_index]) < tone_bottom:
                             features.append('is_tone_no')
 
                     if n == 4:
@@ -740,18 +740,18 @@ class FeatureConstruction():
 
                     if n == 28:
 
-                        if float(spline[sixltr_index]) > 27.0:
+                        if float(spline[sixltr_index]) > sixltr_top:
                             features.append('many_sixltr')
 
-                        elif float(spline[sixltr_index]) < 15.0:
+                        elif float(spline[sixltr_index]) < sixltr_bottom:
                             features.append('few_sixltr')
 
                     if n == 29:
 
-                        if float(spline[wps_index]) > 18.0:
+                        if float(spline[wps_index]) > wps_top:
                             features.append('high_wps')
 
-                        elif float(spline[wps_index]) < 9.0:
+                        elif float(spline[wps_index]) < wps_bottom:
                             features.append('low_wps')
 
                     if n == 30:
@@ -1005,6 +1005,21 @@ path_to_store_labelled_urlhashtagmedia_file = '../output/features/labelled_urlha
 path_to_store_labelled_combined_features_file = '../output/features/labelled_combined.csv'
 path_to_store_labelled_combined_features_all_file = '../output/features/labelled_combined_all.csv'
 
+
+# boundary values
+
+analytic_top = 98.0
+analytic_bottom = 77.0
+clout_top = 92.0
+clout_bottom = 50.0
+authentic_top = 58.0
+authentic_bottom = 3.0
+tone_top = 98.0
+tone_bottom = 25.0
+sixltr_top = 27.0
+sixltr_bottom = 16.0
+wps_top = 18.0
+wps_bottom = 9.0
 
 
 if __name__ == '__main__':
