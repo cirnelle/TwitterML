@@ -223,7 +223,7 @@ class Extractor():
 
     def gettweets_by_hashtag(self):
 
-        hashtag_list = ['science','astrobiology']
+        hashtag_list = ['globalwarming']
         retries = 5
         sleep_time = 50
 
@@ -522,12 +522,12 @@ if __name__ == '__main__':
     # get tweets by hashtag
     #################
 
-    #ext.gettweets_by_hashtag()
+    ext.gettweets_by_hashtag()
 
 
     #################
     # get tweets by id
     #################
 
-    ext.gettweets_by_id()
+    #ext.gettweets_by_id()
 

@@ -73,7 +73,6 @@ class StdOutListener(StreamListener):
 
                         tweet = [data['user']['screen_name'],data['created_at'],data['id_str'],str(data['user']['followers_count']),str(data['user']['friends_count']),str(data['retweet_count']),str(data['favorite_count']),data['text'].replace('\n', ' ').replace('\r', '').replace('\t',' ').replace(',', ' ')]
 
-
                         f = open(path_to_store_streamed_tweets,'a')
 
                         f.write(','.join(tweet)+'\n')
@@ -129,7 +128,7 @@ class StdOutListener(StreamListener):
 # variables
 ###############
 
-path_to_store_streamed_tweets = '../tweets/streaming/raw_astrobiology.csv'
+path_to_store_streamed_tweets = '../tweets/streaming/raw_#globalwarming.csv'
 hashtaglist = ['coffee','science'] #amounts to logical OR
 
 if __name__ == '__main__':
@@ -140,7 +139,7 @@ if __name__ == '__main__':
 
     stream = Stream(auth, l)
 
-    stream.filter(languages=["en"],track=['astrobiology'], async=True)
+    stream.filter(languages=["en"],track=['#globalwarming'], async=True)
     #stream.filter(languages=["en"], track=hashtaglist, async=True)
 
 
