@@ -128,7 +128,7 @@ class StdOutListener(StreamListener):
 # variables
 ###############
 
-path_to_store_streamed_tweets = '../tweets/streaming/raw_#globalwarming.csv'
+path_to_store_streamed_tweets = '../tweets/streaming/raw_#nasa.csv'
 hashtaglist = ['coffee','science'] #amounts to logical OR
 
 if __name__ == '__main__':
@@ -139,7 +139,7 @@ if __name__ == '__main__':
 
     stream = Stream(auth, l)
 
-    stream.filter(languages=["en"],track=['#globalwarming'], async=True)
+    stream.filter(languages=["en"],track=['#nasa'], async=True)
     #stream.filter(languages=["en"], track=hashtaglist, async=True)
 
 

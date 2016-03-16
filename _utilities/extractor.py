@@ -223,7 +223,7 @@ class Extractor():
 
     def gettweets_by_hashtag(self):
 
-        hashtag_list = ['globalwarming']
+        hashtag_list = ['science+bad']
         retries = 5
         sleep_time = 50
 
@@ -248,7 +248,9 @@ class Extractor():
                     # get tweets with Twitter search api, EXCLUDING retweets
                     #################
 
-                    tweets=tweepy.Cursor(api.search, q='#'+hashtag+'-filter:retweets', count=100, lang="en").items(1500)
+                    #tweets=tweepy.Cursor(api.search, q='#'+hashtag+'-filter:retweets', count=100, lang="en").items(1500)
+                    tweets=tweepy.Cursor(api.search, q=hashtag+'-filter:retweets', count=100, lang="en").items(1500)
+
 
                     for t in tweets:
 
