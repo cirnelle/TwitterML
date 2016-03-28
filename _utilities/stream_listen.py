@@ -139,7 +139,7 @@ if __name__ == '__main__':
 
     stream = Stream(auth, l)
 
-    stream.filter(languages=["en"],track=['#nasa'], async=True)
+    stream.filter(languages=["en"],track=['#antivax'], async=True)
     #stream.filter(languages=["en"], track=hashtaglist, async=True)
 
 

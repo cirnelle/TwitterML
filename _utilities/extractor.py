@@ -223,7 +223,7 @@ class Extractor():
 
     def gettweets_by_hashtag(self):
 
-        hashtag_list = ['science+bad']
+        hashtag_list = ['pluto']
         retries = 5
         sleep_time = 50
 
@@ -248,8 +248,8 @@ class Extractor():
                     # get tweets with Twitter search api, EXCLUDING retweets
                     #################
 
-                    #tweets=tweepy.Cursor(api.search, q='#'+hashtag+'-filter:retweets', count=100, lang="en").items(1500)
-                    tweets=tweepy.Cursor(api.search, q=hashtag+'-filter:retweets', count=100, lang="en").items(1500)
+                    tweets=tweepy.Cursor(api.search, q='#'+hashtag+'-filter:retweets', count=100, lang="en").items(1500)
+                    #tweets=tweepy.Cursor(api.search, q=hashtag+'-filter:retweets', count=100, lang="en").items(1500)
 
 
                     for t in tweets:
@@ -497,8 +497,8 @@ class Extractor():
 # variables
 ###############
 
-path_to_user_list = '../user_list/user_space.csv'
-path_to_store_raw_tweets = '../tweets/raw_space_20160304.csv'
+path_to_user_list = '../user_list/others/user_nonprofit.txt'
+path_to_store_raw_tweets = '../tweets/others/raw_nonprofit.csv'
 path_to_store_raw_tweets_hashtag = '../tweets/hashtags/raw_#'
 path_to_store_tweets_by_id = 'test.csv'
 
@@ -517,14 +517,14 @@ if __name__ == '__main__':
     # get tweets by user
     #################
 
-    #ext.gettweets_by_user()
+    ext.gettweets_by_user()
 
 
     #################
     # get tweets by hashtag
     #################
 
-    ext.gettweets_by_hashtag()
+    #ext.gettweets_by_hashtag()
 
 
     #################
