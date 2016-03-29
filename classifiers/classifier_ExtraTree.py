@@ -124,7 +124,7 @@ class ExtraTree():
 
         # print the mean accuracy on the given test data and labels
 
-        print ("Classifier score on test data is: %s " % clf.score(X_test_tfidf,y_test))
+        print ("Classifier score on test data is: %0.2f " % clf.score(X_test_tfidf,y_test))
 
         print(metrics.classification_report(y_test, y_predicted))
         cm = metrics.confusion_matrix(y_test, y_predicted)
@@ -149,14 +149,6 @@ class ExtraTree():
         X_tfidf = tfidf_transformer.fit_transform(X_CV)
 
         #################
-        # run classifier on pre-feature-selection data
-        # need it to get feature importance later
-        # cannot use post-feature-selection clf, will result in unequal length!
-        #################
-
-        clf = ExtraTreesClassifier().fit(X_tfidf, y_train)
-
-        #################
         # feature selection
         #################
 
@@ -171,14 +163,25 @@ class ExtraTree():
 
         print ("Shape of array after feature selection is "+str(X_features.shape))
 
-        clf_fs = ExtraTreesClassifier().fit(X_features, y_train)
+        clf = ExtraTreesClassifier().fit(X_features, y_train)
+
+        # get the features which are selected and write to file
+
+        feature_boolean = selector.get_support(indices=False)
+
+        f = open(path_to_store_feature_selection_boolean_file,'w')
+
+        for fb in feature_boolean:
+            f.write(str(fb)+'\n')
+
+        f.close()
 
 
         ##################
         # get cross validation score
         ##################
 
-        scores = cross_val_score(clf_fs, X_features, y_train, cv=10, scoring='f1_weighted')
+        scores = cross_val_score(clf, X_features, y_train, cv=10, scoring='f1_weighted')
         print ("Cross validation score: "+str(scores))
 
         # Get average performance of classifier on training data using 10-fold CV, along with standard deviation
@@ -200,11 +203,11 @@ class ExtraTree():
         X_test_selector = selector.transform(X_test_tfidf)
         print ("Shape of array for test data after feature selection is "+str(X_test_selector.shape))
 
-        y_predicted = clf_fs.predict(X_test_selector)
+        y_predicted = clf.predict(X_test_selector)
 
         # print the mean accuracy on the given test data and labels
 
-        print ("Classifier score on test data is: %0.2f " % clf_fs.score(X_test_selector,y_test))
+        print ("Classifier score on test data is: %0.2f " % clf.score(X_test_selector,y_test))
 
 
         print(metrics.classification_report(y_test, y_predicted))
@@ -386,13 +389,6 @@ class ExtraTree():
         tfidf_transformer = TfidfTransformer(use_idf=use_idf)
         X_tfidf = tfidf_transformer.fit_transform(X_CV)
 
-        #################
-        # run classifier on pre-feature-selection data
-        # need it to get feature importance later
-        # cannot use post-feature-selection clf, will result in unequal length!
-        #################
-
-        clf = ExtraTreesClassifier().fit(X_tfidf, y_train)
 
         #################
         # feature selection
@@ -415,14 +411,25 @@ class ExtraTree():
 
         # run classifier on selected features
 
-        clf_fs = ExtraTreesClassifier().fit(X_features, y_train)
+        clf = ExtraTreesClassifier().fit(X_features, y_train)
+
+        # get the features which are selected and write to file
+
+        feature_boolean = selector.get_support(indices=False)
+
+        f = open(path_to_store_feature_selection_boolean_file,'w')
+
+        for fb in feature_boolean:
+            f.write(str(fb)+'\n')
+
+        f.close()
 
 
         ##################
         # get cross validation score
         ##################
 
-        scores = cross_val_score(clf_fs, X_features, y_train, cv=10, scoring='f1_weighted')
+        scores = cross_val_score(clf, X_features, y_train, cv=10, scoring='f1_weighted')
         print ("Cross validation score: "+str(scores))
 
         # Get average performance of classifier on training data using 10-fold CV, along with standard deviation
@@ -434,11 +441,11 @@ class ExtraTree():
         # run classifier on test data
         #################
 
-        y_predicted = clf_fs.predict(X_test_features)
+        y_predicted = clf.predict(X_test_features)
 
         # print the mean accuracy on the given test data and labels
 
-        print ("Classifier score on test data is: %0.2f " % clf_fs.score(X_test_features,y_test))
+        print ("Classifier score on test data is: %0.2f " % clf.score(X_test_features,y_test))
 
 
         # Print and plot the confusion matrix
@@ -457,43 +464,85 @@ class ExtraTree():
     def get_important_features(self, clf, count_vect):
 
         # get vocabulary
-        vocab = count_vect.vocabulary_
-        vl = []
-
-        for key in vocab.keys():
-            vl.append(key)
-
-        vl.sort()
+        feature_names = count_vect.get_feature_names()
 
         f = open(path_to_store_vocabulary_file, 'w')
 
-        for v in vl:
-            f.write(str(v) + '\n')
+        for fn in feature_names:
+            f.write(str(fn) + '\n')
         f.close()
 
-
         # get most important features
-        feat_imp = clf.feature_importances_
+        feat_importance = clf.feature_importances_
+        feat_imp = []
 
-        print (len(vl))
+        for fi in feat_importance:
+            feat_imp.append(str(fi))
+
+        print (len(feature_names))
         print (len(feat_imp))
+
+        #################
+        # if feature selection was used, need to find out which are the features that are retained
+        #################
+
+        if len(feature_names) != len(feat_imp):
+
+            print ()
+            print ("###### feature selection was used, getting retained features ######")
+
+            lines = open(path_to_store_feature_selection_boolean_file).readlines()
+
+            feature_boolean = []
+
+            for line in lines:
+                spline = line.replace('\n','')
+                feature_boolean.append(spline)
+
+            if len(feature_boolean) == len(feature_names):
+
+                selected_features = zip(feature_names,feature_boolean)
+
+                feature_names = []
+
+                for sf in selected_features:
+                    if sf[1] == 'True':
+                        feature_names.append(sf[0])
+
+                print ("Length of retained features is "+str(len(feature_names)))
+                print ()
+
+            else:
+                print ("length not equal, exiting...")
+                sys.exit()
+
 
         f = open(path_to_store_complete_feature_importance_file, 'w')
         for fea in feat_imp:
             f.write(str(fea) + '\n')
         f.close()
 
-        lines = open(path_to_store_complete_feature_importance_file, 'r').readlines()
-        lines2 = open(path_to_store_vocabulary_file, 'r').readlines()
+        if len(feature_names) == len(feat_imp):
 
-        # create a list with elements sorted by feature importance
-        sortli = sorted(range(len(feat_imp)), key=lambda i: feat_imp[i], reverse=True)[:100]
+            zipped = zip(feat_imp,feature_names)
+            feat_list = []
+
+            for z in zipped:
+                z = list(z)
+                feat_list.append(z)
+
+            feat_list.sort(reverse=True)
+
+        else:
+            print ("Length of coef and feature list not equal, exiting...")
+            sys.exit()
 
         f = open(path_to_store_top_important_features_file, 'w')
-        for i in sortli:
-            f.write(lines[i].replace('\n', '') + '\t' + lines2[i].replace('\n', '') + '\n')
-        f.close()
 
+        for fl in feat_list[:100]:
+            f.write('\t'.join(fl)+'\n')
+
+        f.close()
 
         ##################
         # get feature importance by class
@@ -511,14 +560,14 @@ class ExtraTree():
             #create a list of word which includes ngrams
             n=4
 
-            if spline[1] == 'HRT':
+            if spline[1] == 'HER':
                 for i in range(1,n):
                     n_grams = ngrams(spline[0].split(), i) #output [('one', 'two'), ('two', 'three'), ('three', 'four')]
                     #join the elements within the list together
                     gramify = [' '.join(x) for x in n_grams] #output ['one two', 'two three', 'three four']
                     l1.extend(gramify)
 
-            elif spline[1] == 'LRT':
+            elif spline[1] == 'LER':
                 for i in range(1,n):
                     n_grams = ngrams(spline[0].split(), i)
                     gramify = [' '.join(x) for x in n_grams]
@@ -549,22 +598,22 @@ class ExtraTree():
             hrt_count = hrt.count(f)
             lrt_count = lrt.count(f)
 
-            print ("HRT %s: " % f + str(hrt_count))
-            print ("LRT %s: " % f + str(lrt_count))
+            print ("HER %s: " % f + str(hrt_count))
+            print ("LER %s: " % f + str(lrt_count))
 
-            if (hrt_count-lrt_count)>15:
+            if (hrt_count-lrt_count)>0:
 
-                feat_by_class.append('HRT'+','+f+','+str(hrt_count))
+                feat_by_class.append('HER'+','+f+','+str(hrt_count))
 
 
-            elif (lrt_count-hrt_count)>15:
-                feat_by_class.append('LRT'+','+f+','+str(lrt_count))
+            elif (lrt_count-hrt_count)>0:
+                feat_by_class.append('LER'+','+f+','+str(lrt_count))
 
             else:
                 feat_by_class.append('BOTH'+','+f+','+str(hrt_count)+','+str(lrt_count))
 
 
-        feat_by_class = sorted(feat_by_class)
+        #feat_by_class = sorted(feat_by_class)
 
         file = open(path_to_store_important_features_by_class_file, 'w')
 
@@ -621,19 +670,20 @@ class ExtraTree():
 # variables
 ###############
 
-path_to_labelled_file = '../output/features/labelled_combined_all.csv'
-path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
-path_to_store_vocabulary_file = '../output/feature_importance/extratree/extratree_vocab.txt'
-path_to_store_complete_feature_importance_file = '../output/feature_importance/extratree/extratree_feat_imp_all.txt'
-path_to_store_top_important_features_file = '../output/feature_importance/extratree/extratree_feature_importance.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/extratree/extratree_feat_byClass_combined_all.csv'
+path_to_labelled_file = '../output/features/politics/labelled_combined.csv'
+path_to_stopword_file = '../stopwords/stopwords.csv'
+path_to_store_vocabulary_file = '../output/feature_importance/extratree/politics/extratree_vocab.txt'
+path_to_store_feature_selection_boolean_file = '../output/feature_importance/extratree/politics/extratree_fs_boolean.csv'
+path_to_store_complete_feature_importance_file = '../output/feature_importance/extratree/politics/extratree_feat_imp_all.txt'
+path_to_store_top_important_features_file = '../output/feature_importance/extratree/politics/extratree_feature_importance.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/extratree/politics/extratree_feat_byClass_combined.csv'
 
 
 # for classifier without pipeline
 _ngram_range = (1,1)
 _use_idf = True
-_percentile = 95
-_score_func = f_classif
+_percentile = 85
+_score_func = chi2
 
 
 def get_data_set():

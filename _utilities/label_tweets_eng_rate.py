@@ -1,7 +1,7 @@
 __author__ = 'yi-linghwong'
 
 ################
-# label tweets by engagement rate (HRT, LRT)
+# label tweets by engagement rate (HER, LER)
 # subroutines: calculate engagement rate, label tweets
 ################
 
@@ -41,7 +41,9 @@ class LabelTweetsEngRate():
 
             if len(t) == length:
 
-                engrate = str((np.divide(int(t[5]),int(t[3])))*100)
+                engagement = int(t[5])+(0.5*int((t[6])))
+
+                engrate = str((np.divide(engagement,int(t[3])))*100)
 
                 engrate_list.append([t[0],t[1],t[2],t[3],t[4],t[5],t[6],engrate,t[7],t[8]])
 
@@ -87,7 +89,9 @@ class LabelTweetsEngRate():
 
             if len(t) == length:
 
-                engrate = str((np.divide(int(t[5]),int(t[3])))*100)
+                engagement = int(t[5])+(0.5*int((t[6])))
+
+                engrate = str((np.divide(engagement,int(t[3])))*100)
 
                 engrate_list.append([t[0],t[1],t[2],t[3],t[4],t[5],t[6],engrate,t[7],t[8]])
 
@@ -111,30 +115,30 @@ class LabelTweetsEngRate():
         tweets = self.get_eng_rate()
 
         labelled_tweets = []
-        high_rt = []
-        low_rt = []
+        high_er = []
+        low_er = []
 
         print ("#############################")
         print ("Labelling preprocessed tweets ...")
 
         for t in tweets:
 
-            if float(t[7]) > hrt_boundary:
+            if float(t[7]) > her_boundary:
 
-                labelled_tweets.append([t[9],'HRT'])
-                high_rt.append([t[9],'HRT'])
+                labelled_tweets.append([t[9],'HER'])
+                high_er.append([t[9],'HER'])
 
-            elif float(t[7]) < lrt_boundary:
+            elif float(t[7]) < ler_boundary:
 
-                labelled_tweets.append([t[9],'LRT'])
-                low_rt.append([t[9],'LRT'])
+                labelled_tweets.append([t[9],'LER'])
+                low_er.append([t[9],'LER'])
 
             else:
                 pass
 
 
-        print ("Length of high RT list is "+str(len(high_rt)))
-        print ("Length of low RT list is "+str(len(low_rt)))
+        print ("Length of high ER list is "+str(len(high_er)))
+        print ("Length of low ER list is "+str(len(low_er)))
 
 
         f = open(path_to_store_labelled_tweets, 'w')
@@ -155,29 +159,29 @@ class LabelTweetsEngRate():
         tweets = self.get_eng_rate_raw_tweets()
 
         labelled_tweets = []
-        high_rt = []
-        low_rt = []
+        high_er = []
+        low_er = []
 
         print ("#############################")
         print ("Labelling raw tweets ...")
 
         for t in tweets:
 
-            if float(t[7]) > hrt_boundary:
+            if float(t[7]) > her_boundary:
 
-                labelled_tweets.append([t[9],'HRT',t[8]])
-                high_rt.append([t[9],'HRT'])
+                labelled_tweets.append([t[9],'HER',t[8]])
+                high_er.append([t[9],'HER'])
 
-            elif float(t[7]) < lrt_boundary:
+            elif float(t[7]) < ler_boundary:
 
-                labelled_tweets.append([t[9],'LRT',t[8]])
-                low_rt.append([t[9],'LRT'])
+                labelled_tweets.append([t[9],'LER',t[8]])
+                low_er.append([t[9],'LER'])
 
             else:
                 pass
 
-        print ("Length of high RT list is "+str(len(high_rt)))
-        print ("Length of low RT list is "+str(len(low_rt)))
+        print ("Length of high ER list is "+str(len(high_er)))
+        print ("Length of low ER list is "+str(len(low_er)))
 
         f = open(path_to_store_labelled_tweets_raw, 'w')
 
@@ -196,18 +200,18 @@ class LabelTweetsEngRate():
 # variables
 ################
 
-path_to_preprocessed_tweet_file = '../tweets/preprocessed_space_20160304.csv'
-path_to_store_engrate_output = '../output/engrate/engrate_space_20160304.csv'
-path_to_store_labelled_tweets = '../output/engrate/labelled_space_20160304.csv'
+path_to_preprocessed_tweet_file = '../tweets/others/preprocessed_politics.csv'
+path_to_store_engrate_output = '../output/engrate/others/engrate_politics.csv'
+path_to_store_labelled_tweets = '../output/engrate/others/labelled_politics.csv'
 
 # for LIWC
-path_to_raw_tweet_file = '../tweets/raw_space_20160304.csv'
-path_to_store_engrate_output_raw = '../output/engrate/engrate_space_20160304_raw.csv'
-path_to_store_labelled_tweets_raw = '../output/engrate/labelled_space_20160304_raw.csv'
+path_to_raw_tweet_file = '../tweets/others/raw_politics.csv'
+path_to_store_engrate_output_raw = '../output/engrate/others/engrate_politics_raw.csv'
+path_to_store_labelled_tweets_raw = '../output/engrate/others/labelled_politics_raw.csv'
 
 # engrate parameters
-hrt_boundary = 0.06
-lrt_boundary = 0.00045
+her_boundary = 0.098
+ler_boundary = 0.0016
 
 
 if __name__ == "__main__":

@@ -28,6 +28,8 @@ class TweetProcessing():
 
         lines = open(path_to_raw_tweet_file,'r').readlines()
 
+        print (len(lines))
+
         for line in lines[:1]:
             spline = line.replace('\n','').split(',')
 
@@ -41,7 +43,7 @@ class TweetProcessing():
         lines = open(path_to_raw_tweet_file,'r').readlines()
 
         tweets = []
-        for line in lines:
+        for line in lines[1:]:
 
             spline = line.replace('\n','').split(',')
             tweets.append(spline)
@@ -247,6 +249,7 @@ class TweetProcessing():
             t1 = ' '+t[-1]+' '
             t2 = t1.replace(' rt ',' ')
             t[-1] = t2
+
             tweet_list.append(t)
 
         print (len(tweet_list))
@@ -302,8 +305,8 @@ class TweetProcessing():
 # variables
 ###############
 
-path_to_raw_tweet_file = '../tweets/raw_space_20160304.csv'
-path_to_store_processed_tweet_file = '../tweets/preprocessed_space_20160304.csv'
+path_to_raw_tweet_file = '../tweets/others/raw_nonprofit.csv'
+path_to_store_processed_tweet_file = '../tweets/others/preprocessed_nonprofit.csv'
 
 if __name__ == "__main__":
 

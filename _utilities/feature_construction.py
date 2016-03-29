@@ -268,7 +268,7 @@ class FeatureConstruction():
 
 
                 if len(features) == 0:
-                    print("No feature for this tweet")
+                    print("No liwc feature for this tweet")
                     print (spline[0])
                     features.append('none')
 
@@ -363,7 +363,7 @@ class FeatureConstruction():
                             features.append('no_qmark')
 
                 if len(features) == 0:
-                    print("No feature for this post")
+                    print("No grammar feature for this tweet")
                     print (spline[0])
                     features.append('none')
 
@@ -439,7 +439,7 @@ class FeatureConstruction():
 
 
             if len(features) == 0:
-                print("No feature for this post")
+                print("No sm feature for this tweet")
                 print (t[0])
                 features.append('none')
 
@@ -449,7 +449,7 @@ class FeatureConstruction():
             # append the label to the list
             tweet_features.append([features,t[1]])
 
-        print ("Length of post features list is "+str(len(tweet_features)))
+        print ("Length of tweet features list is "+str(len(tweet_features)))
         print ("Length of url list is "+str(len(url_list)))
         print ("Length of hashtag list is "+str(len(hashtag_list)))
 
@@ -766,7 +766,7 @@ class FeatureConstruction():
 
 
                 if len(features) == 0:
-                    print("No feature for this post")
+                    print("No liwc feature for this tweet")
                     print (spline[0])
                     features.append('none')
 
@@ -791,7 +791,7 @@ class FeatureConstruction():
             spline = line.replace('\n','').split(',')
             tweets.append(spline)
 
-        print ("Length of posts is "+str(len(tweets)))
+        print ("Length of tweets is "+str(len(tweets)))
 
         tweet_features_sm = []
         url_list = []
@@ -831,7 +831,7 @@ class FeatureConstruction():
                     break
 
             if len(features_sm) == 0:
-                print("No feature for this post")
+                print("No SM feature for this post")
                 print (t[0])
                 features_sm.append('none')
 
@@ -990,36 +990,36 @@ class FeatureConstruction():
 # variables
 ###############
 
-path_to_liwc_result_file = '../output/liwc/liwc_raw_space.txt'
-path_to_labelled_raw_file = '../output/engrate/labelled_space_20160304_raw.csv'
-path_to_labelled_preprocessed_file = '../output/engrate/labelled_space_20160304.csv'
+path_to_liwc_result_file = '../output/liwc/liwc_raw_politics.txt'
+path_to_labelled_raw_file = '../output/engrate/others/labelled_politics_raw.csv'
+path_to_labelled_preprocessed_file = '../output/engrate/others/labelled_politics.csv'
 
-path_to_store_psychometric_feature_file = '../output/features/psychometrics.txt'
-path_to_store_grammar_feature_file = '../output/features/grammar.txt'
-path_to_store_combined_feature_file = '../output/features/combined.txt'
-path_to_store_combined_feature_all_file = '../output/features/combined_all.txt' #includes word features
+path_to_store_psychometric_feature_file = '../output/features/politics/psychometrics.txt'
+path_to_store_grammar_feature_file = '../output/features/politics/grammar.txt'
+path_to_store_combined_feature_file = '../output/features/politics/combined.txt'
+path_to_store_combined_feature_all_file = '../output/features/politics/combined_all.txt' #includes word features
 
-path_to_store_labelled_psychometric_file = '../output/features/labelled_psychometrics.csv'
-path_to_store_labelled_grammar_file = '../output/features/labelled_grammar.csv'
-path_to_store_labelled_urlhashtagmedia_file = '../output/features/labelled_urlhashtagmedia.csv'
-path_to_store_labelled_combined_features_file = '../output/features/labelled_combined.csv'
-path_to_store_labelled_combined_features_all_file = '../output/features/labelled_combined_all.csv'
+path_to_store_labelled_psychometric_file = '../output/features/politics/labelled_psychometrics.csv'
+path_to_store_labelled_grammar_file = '../output/features/politics/labelled_grammar.csv'
+path_to_store_labelled_urlhashtagmedia_file = '../output/features/politics/labelled_urlhashtagmedia.csv'
+path_to_store_labelled_combined_features_file = '../output/features/politics/labelled_combined.csv'
+path_to_store_labelled_combined_features_all_file = '../output/features/politics/labelled_combined_all.csv'
 
 
 # boundary values
 
 analytic_top = 98.0
-analytic_bottom = 77.0
-clout_top = 92.0
+analytic_bottom = 73.0
+clout_top = 89.0
 clout_bottom = 50.0
-authentic_top = 58.0
-authentic_bottom = 3.0
+authentic_top = 43.0
+authentic_bottom = 1.1
 tone_top = 98.0
 tone_bottom = 25.0
-sixltr_top = 27.0
+sixltr_top = 30.0
 sixltr_bottom = 16.0
-wps_top = 18.0
-wps_bottom = 9.0
+wps_top = 19.0
+wps_bottom = 8.0
 
 
 if __name__ == '__main__':
