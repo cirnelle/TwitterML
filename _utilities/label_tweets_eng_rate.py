@@ -200,18 +200,18 @@ class LabelTweetsEngRate():
 # variables
 ################
 
-path_to_preprocessed_tweet_file = '../tweets/others/preprocessed_politics.csv'
-path_to_store_engrate_output = '../output/engrate/others/engrate_politics.csv'
-path_to_store_labelled_tweets = '../output/engrate/others/labelled_politics.csv'
+path_to_preprocessed_tweet_file = '../tweets/preprocessed_space.csv'
+path_to_store_engrate_output = '../output/engrate/engrate_space.csv'
+path_to_store_labelled_tweets = '../output/engrate/labelled_space.csv'
 
 # for LIWC
-path_to_raw_tweet_file = '../tweets/others/raw_politics.csv'
-path_to_store_engrate_output_raw = '../output/engrate/others/engrate_politics_raw.csv'
-path_to_store_labelled_tweets_raw = '../output/engrate/others/labelled_politics_raw.csv'
+path_to_raw_tweet_file = '../tweets/raw_space.csv'
+path_to_store_engrate_output_raw = '../output/engrate/engrate_space_raw.csv'
+path_to_store_labelled_tweets_raw = '../output/engrate/labelled_space_raw.csv'
 
 # engrate parameters
 her_boundary = 0.098
-ler_boundary = 0.0016
+ler_boundary = 0.00165
 
 
 if __name__ == "__main__":

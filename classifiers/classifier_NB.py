@@ -722,15 +722,15 @@ class NaiveBayes():
 # variables
 ###############
 
-path_to_labelled_file = '../output/features/politics/labelled_combined_all.csv'
+path_to_labelled_file = '../output/features/space/labelled_combined_all.csv'
 path_to_stopword_file = '../stopwords/stopwords.csv'
-path_to_store_features_by_probability_file = '../output/feature_importance/nb/politics/nb_feat_by_prob.csv'
-path_to_store_feature_selection_boolean_file = '../output/feature_importance/nb/politics/nb_fs_boolean.csv'
-path_to_store_list_of_feature_file = '../output/feature_importance/nb/politics/nb_feature_names.txt'
-path_to_store_coefficient_file = '../output/feature_importance/nb/business/nb_coef.txt'
-path_to_store_feature_log_prob_for_class_0 = '../output/feature_importance/nb/politics/nb_feature_prob_0.csv' #Empirical log probability of features given a class
-path_to_store_feature_log_prob_for_class_1 = '../output/feature_importance/nb/politics/nb_feature_prob_1.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/nb/politics/nb_feat_by_class_combined_all.csv'
+path_to_store_features_by_probability_file = '../output/feature_importance/nb/space/nb_feat_by_prob.csv'
+path_to_store_feature_selection_boolean_file = '../output/feature_importance/nb/space/nb_fs_boolean.csv'
+path_to_store_list_of_feature_file = '../output/feature_importance/nb/space/nb_feature_names.txt'
+path_to_store_coefficient_file = '../output/feature_importance/nb/space/nb_coef.txt'
+path_to_store_feature_log_prob_for_class_0 = '../output/feature_importance/nb/space/nb_feature_prob_0.csv' #Empirical log probability of features given a class
+path_to_store_feature_log_prob_for_class_1 = '../output/feature_importance/nb/space/nb_feature_prob_1.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/nb/space/nb_feat_by_class_combined_all.csv'
 
 
 # for classifier without pipeline

@@ -603,11 +603,11 @@ class ExtraTree():
 
             if (hrt_count-lrt_count)>0:
 
-                feat_by_class.append('HER'+','+f+','+str(hrt_count))
+                feat_by_class.append('HER'+','+f+','+str(hrt_count)+','+str(lrt_count))
 
 
             elif (lrt_count-hrt_count)>0:
-                feat_by_class.append('LER'+','+f+','+str(lrt_count))
+                feat_by_class.append('LER'+','+f+','+str(hrt_count)+','+str(lrt_count))
 
             else:
                 feat_by_class.append('BOTH'+','+f+','+str(hrt_count)+','+str(lrt_count))
@@ -670,13 +670,13 @@ class ExtraTree():
 # variables
 ###############
 
-path_to_labelled_file = '../output/features/politics/labelled_combined.csv'
+path_to_labelled_file = '../output/features/space/labelled_combined_all.csv'
 path_to_stopword_file = '../stopwords/stopwords.csv'
-path_to_store_vocabulary_file = '../output/feature_importance/extratree/politics/extratree_vocab.txt'
-path_to_store_feature_selection_boolean_file = '../output/feature_importance/extratree/politics/extratree_fs_boolean.csv'
-path_to_store_complete_feature_importance_file = '../output/feature_importance/extratree/politics/extratree_feat_imp_all.txt'
-path_to_store_top_important_features_file = '../output/feature_importance/extratree/politics/extratree_feature_importance.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/extratree/politics/extratree_feat_byClass_combined.csv'
+path_to_store_vocabulary_file = '../output/feature_importance/extratree/space/extratree_vocab.txt'
+path_to_store_feature_selection_boolean_file = '../output/feature_importance/extratree/space/extratree_fs_boolean.csv'
+path_to_store_complete_feature_importance_file = '../output/feature_importance/extratree/space/extratree_feat_imp_all.txt'
+path_to_store_top_important_features_file = '../output/feature_importance/extratree/space/extratree_feature_importance.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/extratree/space/extratree_feat_byClass_combined_all.csv'
 
 
 # for classifier without pipeline

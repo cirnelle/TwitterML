@@ -497,8 +497,8 @@ class Extractor():
 # variables
 ###############
 
-path_to_user_list = '../user_list/others/user_nonprofit.txt'
-path_to_store_raw_tweets = '../tweets/others/raw_nonprofit.csv'
+path_to_user_list = '../user_list/user_space.csv'
+path_to_store_raw_tweets = '../tweets/raw_space_20160330.csv'
 path_to_store_raw_tweets_hashtag = '../tweets/hashtags/raw_#'
 path_to_store_tweets_by_id = 'test.csv'
 

@@ -305,8 +305,8 @@ class TweetProcessing():
 # variables
 ###############
 
-path_to_raw_tweet_file = '../tweets/others/raw_nonprofit.csv'
-path_to_store_processed_tweet_file = '../tweets/others/preprocessed_nonprofit.csv'
+path_to_raw_tweet_file = '../tweets/raw_space.csv'
+path_to_store_processed_tweet_file = '../tweets/preprocessed_space.csv'
 
 if __name__ == "__main__":
 

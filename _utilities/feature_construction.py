@@ -990,36 +990,36 @@ class FeatureConstruction():
 # variables
 ###############
 
-path_to_liwc_result_file = '../output/liwc/liwc_raw_politics.txt'
-path_to_labelled_raw_file = '../output/engrate/others/labelled_politics_raw.csv'
-path_to_labelled_preprocessed_file = '../output/engrate/others/labelled_politics.csv'
+path_to_liwc_result_file = '../output/liwc/liwc_raw_space.txt'
+path_to_labelled_raw_file = '../output/engrate/labelled_space_raw.csv'
+path_to_labelled_preprocessed_file = '../output/engrate/labelled_space.csv'
 
-path_to_store_psychometric_feature_file = '../output/features/politics/psychometrics.txt'
-path_to_store_grammar_feature_file = '../output/features/politics/grammar.txt'
-path_to_store_combined_feature_file = '../output/features/politics/combined.txt'
-path_to_store_combined_feature_all_file = '../output/features/politics/combined_all.txt' #includes word features
+path_to_store_psychometric_feature_file = '../output/features/space/psychometrics.txt'
+path_to_store_grammar_feature_file = '../output/features/space/grammar.txt'
+path_to_store_combined_feature_file = '../output/features/space/combined.txt'
+path_to_store_combined_feature_all_file = '../output/features/space/combined_all.txt' #includes word features
 
-path_to_store_labelled_psychometric_file = '../output/features/politics/labelled_psychometrics.csv'
-path_to_store_labelled_grammar_file = '../output/features/politics/labelled_grammar.csv'
-path_to_store_labelled_urlhashtagmedia_file = '../output/features/politics/labelled_urlhashtagmedia.csv'
-path_to_store_labelled_combined_features_file = '../output/features/politics/labelled_combined.csv'
-path_to_store_labelled_combined_features_all_file = '../output/features/politics/labelled_combined_all.csv'
+path_to_store_labelled_psychometric_file = '../output/features/space/labelled_psychometrics.csv'
+path_to_store_labelled_grammar_file = '../output/features/space/labelled_grammar.csv'
+path_to_store_labelled_urlhashtagmedia_file = '../output/features/space/labelled_urlhashtagmedia.csv'
+path_to_store_labelled_combined_features_file = '../output/features/space/labelled_combined.csv'
+path_to_store_labelled_combined_features_all_file = '../output/features/space/labelled_combined_all.csv'
 
 
 # boundary values
 
 analytic_top = 98.0
-analytic_bottom = 73.0
-clout_top = 89.0
+analytic_bottom = 87.0
+clout_top = 74.0
 clout_bottom = 50.0
-authentic_top = 43.0
-authentic_bottom = 1.1
-tone_top = 98.0
+authentic_top = 48.0
+authentic_bottom = 1.4
+tone_top = 91.0
 tone_bottom = 25.0
-sixltr_top = 30.0
-sixltr_bottom = 16.0
-wps_top = 19.0
-wps_bottom = 8.0
+sixltr_top = 27.0
+sixltr_bottom = 15.0
+wps_top = 18.0
+wps_bottom = 9.0
 
 
 if __name__ == '__main__':
