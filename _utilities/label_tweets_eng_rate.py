@@ -210,8 +210,8 @@ path_to_store_engrate_output_raw = '../output/engrate/engrate_space_raw.csv'
 path_to_store_labelled_tweets_raw = '../output/engrate/labelled_space_raw.csv'
 
 # engrate parameters
-her_boundary = 0.098
-ler_boundary = 0.00165
+her_boundary = 0.1015
+ler_boundary = 0.0015
 
 
 if __name__ == "__main__":

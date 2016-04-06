@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+
 ################
 # Get tweets in real time using Twitter streaming API
 ################
@@ -12,6 +14,15 @@ import csv
 import os
 import sys
 import time
+
+
+if os.path.exists("/Users/yi-linghwong/GitHub/TwitterML/"):
+    maindir = "/Users/yi-linghwong/GitHub/TwitterML/"
+elif os.path.exists("/home/yiling/GitHub/GitHub/TwitterML/"):
+    maindir = "/home/yiling/GitHub/GitHub/TwitterML/"
+else:
+    print ("ERROR --> major error")
+    sys.exit(1)
 
 
 if os.path.isfile('../../../keys/twitter_api_keys.txt'):

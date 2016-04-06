@@ -339,4 +339,4 @@ if __name__ == '__main__':
     #gb.create_category_lists_grammar()
     gb.get_boundary_value_grammar()
 
-    gb.plot_histogram()
+    #gb.plot_histogram()
