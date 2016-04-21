@@ -1,0 +1,2 @@
+Filename	Segment	Analytic	Clout	Authentic	Tone	WPS	Sixltr	posemo	negemo	anx	anger	sad	insight	cause	discrep	tentat	certain	differ	see	hear	feel	affiliation	achieve	power	reward	risk	swear	netspeak	assent	nonflu	filler	QMark	Exclam
+politics.txt	1	90.74	74.58	12.54	69.83	19.74	23.47	3.85	1.52	0.21	0.49	0.32	1.16	1.09	1.18	1.01	1.02	1.48	0.77	0.62	0.20	3.13	1.93	3.95	1.36	0.63	0.01	3.83	0.26	0.09	0.00	0.26	0.80

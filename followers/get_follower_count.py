@@ -75,8 +75,10 @@ auth = ''
 
 class Extractor():
 
+    '''
+
     def __init__(self):
-        self.printer("Welcome", 1)
+        #self.printer("Welcome", 1)
 
         global apikey
         global apisecret
@@ -96,7 +98,7 @@ class Extractor():
         # 3: warning
 
 
-        if case == 1:
+        #if case == 1:
             print("Info  ==> ", messagew)
 
         elif case == 2:
@@ -104,6 +106,8 @@ class Extractor():
 
         elif case == 3:
             print("Warning  ==> ", messagew)
+
+    '''
 
     def requestlimit(self):
 
@@ -145,7 +149,7 @@ class Extractor():
 
     def connectToAPI(self, auth):
 
-        self.printer("connecting to twitter API", 1)
+        #self.printer("connecting to twitter API", 1)
 
         # create an API instance. API is a class in tweepy that provides access to the entire
         # Twitter RESTful API methods.

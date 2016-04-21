@@ -196,6 +196,25 @@ class LabelTweetsEngRate():
         return labelled_tweets
 
 
+    def get_mean_and_std(self):
+
+        engrate_list = self.get_eng_rate()
+
+        print ("Length of engrate list is "+str(len(engrate_list)))
+
+        engrate = []
+
+        for el in engrate_list:
+            engrate.append(float(el[-3]))
+
+
+        er_mean = np.mean(engrate)
+        er_std = np.std(engrate)
+
+        print ("Mean is %0.3f" %(er_mean))
+        print ("Standard deviation is %0.3f" %(er_std))
+
+
 ################
 # variables
 ################
@@ -219,11 +238,13 @@ if __name__ == "__main__":
 
     lt = LabelTweetsEngRate()
 
-    #lt.get_eng_rate()
-    lt.label_tweets()
+    lt.get_eng_rate()
+    #lt.label_tweets()
 
     #lt.get_eng_rate_raw_tweets()
     lt.label_tweets_raw()
+
+    #lt.get_mean_and_std()
 
 
 
