@@ -1,9 +1,12 @@
-negemo_yes,space,0.0621
+negemo_yes,space,0
+negemo_yes,space,0
+negemo_yes,space,0
 negemo_yes,space,0.0674
+negemo_yes,space,0.0621
 negemo_yes,space,0.0618
 negemo_yes,space,0.0143
-negemo_yes,space,0.0127
 negemo_yes,space,0.0138
+negemo_yes,space,0.0127
 negemo_yes,politics,0.1021
 negemo_yes,politics,0.1021
 negemo_yes,politics,0.1021
@@ -13,6 +16,9 @@ negemo_yes,politics,0.0626
 negemo_yes,politics,0.0461
 negemo_yes,politics,0.044
 negemo_yes,politics,0.0434
+negemo_yes,business,0
+negemo_yes,business,0
+negemo_yes,business,0
 negemo_yes,business,0.0179
 negemo_yes,business,0.0147
 negemo_yes,business,0

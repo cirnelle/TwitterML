@@ -83,7 +83,7 @@ class CreateSpssInput():
 
         # get the top ten features with highest mean score
 
-        for fm in feat_mean[:10]:
+        for fm in feat_mean[:15]:
             top_feats.append(fm[0])
 
         f = open(path_to_store_feature_mean_score,'w')
@@ -202,5 +202,8 @@ if __name__ == '__main__':
     cs = CreateSpssInput()
 
     #cs.get_space_highest_mean()
+
+
+
     #cs.get_only_her_or_ler()
     cs.create_spss_input()
