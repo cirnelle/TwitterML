@@ -114,6 +114,7 @@ class NaiveBayes():
         print ("Cross validation score: "+str(scores))
 
         # Get average performance of classifier on training data using 10-fold CV, along with standard deviation
+        # the factor two is to signify 2 sigma, which is 95% confidence level
 
         print("Cross validation accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
 
@@ -537,8 +538,8 @@ class NaiveBayes():
         n=10
 
         class_labels = clf.classes_
-        tw_her=clf.feature_log_prob_[0] ##feature probability for HER
-        tw_ler=clf.feature_log_prob_[1] ##feature probability for LER
+        fb_her=clf.feature_log_prob_[0] ##feature probability for HER
+        fb_ler=clf.feature_log_prob_[1] ##feature probability for LER
         feature_names = count_vect.get_feature_names()
 
         f=open(path_to_store_list_of_feature_file, 'w')
@@ -547,15 +548,15 @@ class NaiveBayes():
             f.write(str(fn)+'\n')
         f.close()
 
-        print (len(tw_her))
-        print (len(tw_ler))
+        print (len(fb_her))
+        print (len(fb_ler))
         print (len(feature_names))
 
         #################
         # if feature selection was used, need to find out which are the features that are retained
         #################
 
-        if len(tw_her) != len(feature_names):
+        if len(fb_her) != len(feature_names):
 
             print ()
             print ("###### feature selection was used, getting retained features ######")
@@ -589,14 +590,15 @@ class NaiveBayes():
         #the next two lines are for printing the highest feat_probability for each class
         ################
 
-        topn_class1 = sorted(zip(tw_her, feature_names))[-n:]
-        topn_class2 = sorted(zip(tw_ler, feature_names))[-n:]
+        topn_class1 = sorted(zip(fb_her, feature_names))[-n:]
+        topn_class2 = sorted(zip(fb_ler, feature_names))[-n:]
 
         #################
         # Most important features are the ones where the difference between feat_prob are the biggest
         #################
 
-        diff = [abs(a-b) for a,b in zip(tw_her,tw_ler)]
+        diff = [abs(a-b) for a,b in zip(fb_her,fb_ler)]
+
 
         # sort the list by the value of the difference, and return index of that element###
         sortli = sorted(range(len(diff)), key=lambda i:diff[i], reverse=True)[:200]
@@ -607,10 +609,10 @@ class NaiveBayes():
         imp_feat=[]
         for i in sortli:
 
-            if tw_her[i]>tw_ler[i]:
-                imp_feat.append('HER, '+str(feature_names[i]))
+            if fb_her[i]>fb_ler[i]:
+                imp_feat.append('HER,'+str(feature_names[i])+','+str(diff[i]))
             else:
-                imp_feat.append('LER, '+str(feature_names[i]))
+                imp_feat.append('LER,'+str(feature_names[i])+','+str(diff[i]))
 
 
         #imp_feat=sorted(imp_feat)
@@ -621,6 +623,17 @@ class NaiveBayes():
             f4.write(imf+'\n')
 
         f4.close()
+
+        # write to file for normalisation
+
+        f = open(path_to_store_feat_imp_for_normalisation,'a')
+
+        f.write('\n')
+
+        for imf in imp_feat:
+            f.write(imf+'\n')
+
+        f.close()
 
         #################
         # Get features with highest probability
@@ -643,12 +656,13 @@ class NaiveBayes():
             print ("Length of coef and feature list not equal, exiting...")
             sys.exit()
 
-        f=open(path_to_store_features_by_probability_file, 'w')
+        f=open(path_to_store_features_by_probability_file,'w')
 
         for fl in feat_list:
             f.write(str(fl)+'\n')
 
         f.close()
+
 
 
         ###############
@@ -722,23 +736,24 @@ class NaiveBayes():
 # variables
 ###############
 
-path_to_labelled_file = '../output/features/space/labelled_combined.csv'
-path_to_stopword_file = '../stopwords/stopwords.csv'
-path_to_store_features_by_probability_file = '../output/feature_importance/nb/space/nb_feat_by_prob.csv'
-path_to_store_feature_selection_boolean_file = '../output/feature_importance/nb/space/nb_fs_boolean.csv'
-path_to_store_list_of_feature_file = '../output/feature_importance/nb/space/nb_feature_names.txt'
-path_to_store_coefficient_file = '../output/feature_importance/nb/space/nb_coef.txt'
-path_to_store_feature_log_prob_for_class_0 = '../output/feature_importance/nb/space/nb_feature_prob_0.csv' #Empirical log probability of features given a class
-path_to_store_feature_log_prob_for_class_1 = '../output/feature_importance/nb/space/nb_feature_prob_1.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/nb/space/nb_feat_by_class_combined.csv'
+path_to_labelled_file = '../output/features/nonprofit/labelled_combined.csv'
+path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
+path_to_store_features_by_probability_file = '../output/feature_importance/nb/nonprofit/nb_feat_by_prob.csv'
+path_to_store_feature_selection_boolean_file = '../output/feature_importance/nb/nonprofit/nb_fs_boolean.csv'
+path_to_store_list_of_feature_file = '../output/feature_importance/nb/nonprofit/nb_feature_names.txt'
+path_to_store_coefficient_file = '../output/feature_importance/nb/nonprofit/nb_coef.txt'
+path_to_store_feature_log_prob_for_class_0 = '../output/feature_importance/nb/nonprofit/nb_feature_prob_0.csv' #Empirical log probability of features given a class
+path_to_store_feature_log_prob_for_class_1 = '../output/feature_importance/nb/nonprofit/nb_feature_prob_1.csv'
+path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/nb/nonprofit.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/nb/nonprofit/nb_feat_by_class_combined.csv'
 
 
 # for classifier without pipeline
 _ngram_range = (1,1)
-_alpha = 0.5
-_use_idf = True
+_alpha = 0.6
+_use_idf = False
 _percentile = 85
-_score_func = chi2
+_score_func = f_classif
 
 
 

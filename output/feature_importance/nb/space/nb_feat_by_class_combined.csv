@@ -1,43 +1,43 @@
-HER, has_animated_gif
-HER, has_photo
-LER, assent_yes
-HER, has_video
-HER, has_hashtag
-LER, has_qmark
-LER, is_clout_yes
-LER, many_sixltr
-HER, filler_yes
-LER, reward_yes
-HER, see_yes
-LER, hear_yes
-LER, is_authentic_yes
-LER, achieve_yes
-HER, nonflu_yes
-LER, cause_yes
-LER, affiliation_yes
-LER, is_tone_yes
-LER, power_yes
-LER, has_exclam
-HER, certain_yes
-LER, risk_yes
-HER, high_wps
-HER, is_clout_no
-LER, posemo_yes
-LER, sad_yes
-LER, is_analytic_no
-LER, insight_yes
-HER, few_sixltr
-HER, differ_yes
-LER, is_analytic_yes
-LER, feel_yes
-LER, low_wps
-HER, swear_yes
-LER, is_tone_no
-LER, tentat_yes
-LER, discrep_yes
-HER, is_authentic_no
-HER, anger_yes
-LER, netspeak_yes
-LER, negemo_yes
-HER, has_url
-HER, anx_yes
+HER,has_animated_gif,4.61479088337
+HER,has_photo,3.27959070518
+LER,assent_yes,0.990838003586
+HER,has_video,0.856695235103
+LER,has_qmark,0.702652858202
+HER,has_hashtag,0.683531738601
+LER,is_clout_yes,0.602095571789
+LER,many_sixltr,0.529630668037
+LER,reward_yes,0.489236581715
+LER,hear_yes,0.46875879414
+LER,is_authentic_yes,0.429868156418
+HER,see_yes,0.406985975317
+HER,filler_yes,0.398183084323
+LER,achieve_yes,0.343745776429
+LER,cause_yes,0.331668071165
+LER,affiliation_yes,0.32406877177
+LER,is_tone_yes,0.320151539204
+HER,nonflu_yes,0.314466699838
+LER,power_yes,0.299702738695
+LER,has_exclam,0.286142147922
+LER,risk_yes,0.26255557913
+HER,certain_yes,0.245057272859
+HER,is_clout_no,0.214415487965
+LER,posemo_yes,0.21053854362
+LER,sad_yes,0.176201518687
+HER,high_wps,0.165783757955
+LER,is_analytic_no,0.146090067416
+LER,insight_yes,0.144587661993
+LER,is_analytic_yes,0.143559638796
+LER,is_tone_no,0.114388626727
+LER,low_wps,0.105674447897
+HER,differ_yes,0.104352407333
+LER,tentat_yes,0.101369770596
+LER,feel_yes,0.0966348962312
+HER,swear_yes,0.0961560784772
+HER,few_sixltr,0.0950786596377
+LER,discrep_yes,0.0801100992413
+HER,anger_yes,0.0470330549866
+LER,netspeak_yes,0.0425878766956
+HER,is_authentic_no,0.0376842273009
+LER,negemo_yes,0.0362741166014
+LER,anx_yes,0.0277308415284
+LER,has_url,0.00346934828691

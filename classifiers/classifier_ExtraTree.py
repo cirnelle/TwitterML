@@ -603,14 +603,14 @@ class ExtraTree():
 
             if (hrt_count-lrt_count)>0:
 
-                feat_by_class.append('HER'+','+f+','+str(hrt_count)+','+str(lrt_count))
+                feat_by_class.append(['HER',f,str(hrt_count)])
 
 
             elif (lrt_count-hrt_count)>0:
-                feat_by_class.append('LER'+','+f+','+str(hrt_count)+','+str(lrt_count))
+                feat_by_class.append(['LER',f,str(lrt_count)])
 
             else:
-                feat_by_class.append('BOTH'+','+f+','+str(hrt_count)+','+str(lrt_count))
+                pass
 
 
         #feat_by_class = sorted(feat_by_class)
@@ -618,8 +618,26 @@ class ExtraTree():
         file = open(path_to_store_important_features_by_class_file, 'w')
 
         for f in feat_by_class:
-            file.write(f+'\n')
+            file.write(','.join(f)+'\n')
         file.close()
+
+        # write to file for normalisation
+
+        feat_for_normalisation = []
+
+        for f in feat_by_class:
+            for fl in feat_list:
+                if f[1] == fl[1]:
+                    feat_for_normalisation.append([f[0],f[1],fl[0]])
+
+        f = open(path_to_store_feat_imp_for_normalisation,'a')
+
+        f.write('\n')
+
+        for ff in feat_for_normalisation:
+            f.write(','.join(ff)+'\n')
+
+        f.close()
 
 
     def plot_feature_selection(self):
@@ -670,13 +688,14 @@ class ExtraTree():
 # variables
 ###############
 
-path_to_labelled_file = '../output/features/space/labelled_combined.csv'
-path_to_stopword_file = '../stopwords/stopwords.csv'
-path_to_store_vocabulary_file = '../output/feature_importance/extratree/space/extratree_vocab.txt'
-path_to_store_feature_selection_boolean_file = '../output/feature_importance/extratree/space/extratree_fs_boolean.csv'
-path_to_store_complete_feature_importance_file = '../output/feature_importance/extratree/space/extratree_feat_imp_all.txt'
-path_to_store_top_important_features_file = '../output/feature_importance/extratree/space/extratree_feature_importance.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/extratree/space/extratree_feat_byClass_combined.csv'
+path_to_labelled_file = '../output/features/nonprofit/labelled_combined.csv'
+path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
+path_to_store_vocabulary_file = '../output/feature_importance/extratree/nonprofit/extratree_vocab.txt'
+path_to_store_feature_selection_boolean_file = '../output/feature_importance/extratree/nonprofit/extratree_fs_boolean.csv'
+path_to_store_complete_feature_importance_file = '../output/feature_importance/extratree/nonprofit/extratree_feat_imp_all.txt'
+path_to_store_top_important_features_file = '../output/feature_importance/extratree/nonprofit/extratree_feature_importance.csv'
+path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/extratree/nonprofit.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/extratree/nonprofit/extratree_feat_byClass_combined.csv'
 
 
 # for classifier without pipeline

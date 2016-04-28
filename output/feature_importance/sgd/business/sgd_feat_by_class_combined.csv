@@ -1,29 +1,42 @@
-HER (-9.7375119131964389, 'has_photo')
-HER (-5.2129950642309817, 'has_animated_gif')
-HER (-4.2506998918699681, 'has_video')
-HER (-2.0277807603056823, 'assent_yes')
-HER (-1.7366672722151997, 'low_wps')
-HER (-1.1857902174095338, 'anx_yes')
-HER (-1.1271621090110171, 'differ_yes')
-HER (-1.0483722834243567, 'achieve_yes')
-HER (-0.75236269397033573, 'negemo_yes')
-HER (-0.74959629688958729, 'certain_yes')
-HER (-0.71280421807977401, 'is_analytic_no')
-HER (-0.62951268132175464, 'is_authentic_no')
-HER (-0.62361402234962948, 'risk_yes')
-HER (-0.58960218782462137, 'filler_yes')
-HER (-0.57537520944405529, 'is_tone_yes')
-HER (-0.54117684783799624, 'anger_yes')
-HER (-0.50910032412322381, 'discrep_yes')
-HER (-0.48994439172834181, 'feel_yes')
-HER (-0.48517349701307277, 'tentat_yes')
-HER (-0.36227691144877061, 'is_clout_no')
-HER (-0.28634165081928148, 'has_hashtag')
-HER (-0.22829885254706977, 'power_yes')
-HER (-0.21890085504593981, 'is_tone_no')
-HER (-0.10234389206491987, 'is_authentic_yes')
-LER (4.765917738683628, 'has_url')
-LER (1.495353069677648, 'nonflu_yes')
-LER (0.79420505597274094, 'reward_yes')
-LER (0.6086531184025471, 'has_qmark')
-LER (0.6033431680771788, 'high_wps')
+HER,has_animated_gif,-9.10891366685
+HER,has_photo,-9.05173363537
+HER,has_video,-6.73984126766
+HER,low_wps,-2.83685153936
+HER,assent_yes,-2.68574284388
+HER,differ_yes,-1.06284061641
+HER,achieve_yes,-0.935699214571
+HER,is_analytic_no,-0.892659116958
+HER,certain_yes,-0.872100754156
+HER,anx_yes,-0.68938672379
+HER,anger_yes,-0.685322814446
+HER,is_tone_yes,-0.646054361501
+HER,discrep_yes,-0.587112808655
+HER,is_authentic_no,-0.51091657728
+HER,risk_yes,-0.469786324731
+HER,power_yes,-0.350918036673
+HER,negemo_yes,-0.328388614884
+HER,has_hashtag,-0.242000566014
+HER,tentat_yes,-0.193489391678
+HER,few_sixltr,-0.145168197974
+HER,is_authentic_yes,-0.126689603032
+HER,swear_yes,-0.0956295176339
+LER,has_url,4.21798892793
+LER,nonflu_yes,2.43563061186
+LER,has_qmark,1.82278116142
+LER,reward_yes,1.42604015296
+LER,high_wps,1.41948545453
+LER,hear_yes,0.891123054087
+LER,has_exclam,0.802851701655
+LER,sad_yes,0.620992547926
+LER,see_yes,0.591850287086
+LER,affiliation_yes,0.440657013486
+LER,many_sixltr,0.411994194337
+LER,cause_yes,0.341834596834
+LER,feel_yes,0.302197907797
+LER,posemo_yes,0.273297691958
+LER,is_analytic_yes,0.2636235739
+LER,insight_yes,0.262265831419
+LER,is_tone_no,0.195757303303
+LER,is_clout_yes,0.177765027396
+LER,filler_yes,0.0328256283285
+LER,is_clout_no,0.00998615167062

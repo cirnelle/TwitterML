@@ -563,19 +563,35 @@ class SGD():
         ler = []
 
         for fl in feat_list:
+
             if fl[0] < 0:
-                her.append('HER ' + str(fl))
+                her.append(['HER',fl[1],str(fl[0])])
 
             if fl[0] > 0:
-                ler.append('LER ' + str(fl))
+                ler.append(['LER',fl[1],str(fl[0])])
 
         f = open(path_to_store_important_features_by_class_file, 'w')
 
         for feat in her[:100]:
-            f.write(str(feat) + '\n')
+            f.write(','.join(feat)+'\n')
 
         for feat in reversed(ler[-100:]):
-            f.write(str(feat) + '\n')
+            f.write(','.join(feat)+'\n')
+
+        f.close()
+
+        # write to file for normalisation
+        # note: length might be shorter than length of feature list because some features have weight 0
+
+        f = open(path_to_store_feat_imp_for_normalisation,'a')
+
+        f.write('\n')
+
+        for feat in her[:100]:
+            f.write(','.join(feat)+'\n')
+
+        for feat in reversed(ler[-100:]):
+            f.write(','.join(feat)+'\n')
 
         f.close()
 
@@ -628,18 +644,19 @@ class SGD():
 # variables
 ###############
 
-path_to_labelled_file = '../output/features/space/labelled_combined.csv'
-path_to_stopword_file = '../stopwords/stopwords.csv'
-path_to_store_coefficient_file = '../output/feature_importance/sgd/space/sgd_coef.csv'
-path_to_store_feature_selection_boolean_file = '../output/feature_importance/sgd/space/sgd_fs_boolean.csv'
-path_to_store_list_of_feature_file = '../output/feature_importance/sgd/space/sgd_feature_names.csv'
-path_to_store_feature_and_coef_file = '../output/feature_importance/sgd/space/sgd_coef_and_feat.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/sgd/space/sgd_feat_by_class_combined.csv'
+path_to_labelled_file = '../output/features/nonprofit/labelled_combined.csv'
+path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
+path_to_store_coefficient_file = '../output/feature_importance/sgd/nonprofit/sgd_coef.csv'
+path_to_store_feature_selection_boolean_file = '../output/feature_importance/sgd/nonprofit/sgd_fs_boolean.csv'
+path_to_store_list_of_feature_file = '../output/feature_importance/sgd/nonprofit/sgd_feature_names.csv'
+path_to_store_feature_and_coef_file = '../output/feature_importance/sgd/nonprofit/sgd_coef_and_feat.csv'
+path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/sgd/nonprofit.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/sgd/nonprofit/sgd_feat_by_class_combined.csv'
 
 # for classifier without pipeline
 _ngram_range = (1,1)
-_use_idf = True
-_loss = 'hinge'
+_use_idf = False
+_loss = 'log' # 'hinge' gives linear SVM; 'log' gives logistic regression
 _penalty = 'l2'
 _alpha = 0.0001
 _score_func = chi2

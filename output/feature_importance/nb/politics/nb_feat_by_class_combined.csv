@@ -1,43 +1,43 @@
-HER, has_animated_gif
-HER, differ_yes
-HER, discrep_yes
-LER, is_analytic_yes
-HER, swear_yes
-LER, nonflu_yes
-HER, has_photo
-HER, anger_yes
-HER, has_video
-HER, certain_yes
-LER, hear_yes
-HER, is_tone_no
-HER, anx_yes
-HER, negemo_yes
-HER, is_analytic_no
-HER, sad_yes
-LER, netspeak_yes
-LER, many_sixltr
-LER, has_url
-LER, see_yes
-HER, risk_yes
-LER, assent_yes
-LER, high_wps
-LER, is_tone_yes
-LER, is_authentic_yes
-HER, tentat_yes
-HER, cause_yes
-HER, is_clout_no
-LER, has_qmark
-LER, feel_yes
-LER, few_sixltr
-HER, is_clout_yes
-LER, is_authentic_no
-LER, reward_yes
-HER, power_yes
-LER, has_hashtag
-HER, insight_yes
-LER, posemo_yes
-HER, affiliation_yes
-LER, filler_yes
-HER, low_wps
-LER, has_exclam
-LER, achieve_yes
+HER,has_animated_gif,1.89763042333
+HER,differ_yes,0.885221779063
+HER,discrep_yes,0.865886458637
+HER,has_photo,0.820903102917
+LER,nonflu_yes,0.819816318716
+LER,is_analytic_yes,0.78750650183
+HER,anger_yes,0.781443579237
+HER,swear_yes,0.774487394901
+HER,has_video,0.685757720712
+HER,certain_yes,0.666789415168
+HER,is_tone_no,0.623663990454
+HER,anx_yes,0.607007270839
+LER,hear_yes,0.583516851581
+HER,negemo_yes,0.583005959517
+HER,is_analytic_no,0.571039815114
+HER,sad_yes,0.538301675912
+HER,risk_yes,0.469124594693
+LER,netspeak_yes,0.464869105775
+LER,see_yes,0.463390820836
+LER,many_sixltr,0.460544534129
+LER,has_url,0.451273005696
+LER,assent_yes,0.429866542615
+LER,high_wps,0.353494126759
+LER,is_tone_yes,0.340531672288
+HER,cause_yes,0.301732618717
+HER,tentat_yes,0.299586410885
+HER,is_clout_no,0.261360751471
+LER,is_authentic_yes,0.248378082127
+LER,feel_yes,0.241318889139
+LER,has_qmark,0.229162769198
+HER,is_clout_yes,0.220269448757
+HER,power_yes,0.177931257618
+HER,affiliation_yes,0.153770641928
+HER,insight_yes,0.148088118883
+LER,few_sixltr,0.147665977195
+LER,is_authentic_no,0.106890839584
+LER,reward_yes,0.10147451275
+LER,posemo_yes,0.0849975530352
+LER,has_hashtag,0.0758486527986
+HER,low_wps,0.0715711648472
+LER,filler_yes,0.0493430102656
+HER,achieve_yes,0.036086919889
+LER,has_exclam,0.00517287226762

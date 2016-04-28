@@ -1,42 +1,42 @@
-HER, has_animated_gif
-HER, has_photo
-LER, nonflu_yes
-HER, low_wps
-LER, sad_yes
-HER, assent_yes
-LER, hear_yes
-HER, is_clout_no
-LER, has_qmark
-LER, affiliation_yes
-LER, reward_yes
-LER, is_tone_no
-LER, high_wps
-HER, is_analytic_no
-HER, anx_yes
-LER, risk_yes
-LER, is_analytic_yes
-HER, has_video
-LER, negemo_yes
-LER, has_exclam
-LER, is_clout_yes
-HER, certain_yes
-LER, see_yes
-LER, insight_yes
-LER, many_sixltr
-HER, differ_yes
-LER, is_authentic_yes
-HER, few_sixltr
-HER, is_authentic_no
-LER, cause_yes
-HER, discrep_yes
-LER, achieve_yes
-LER, posemo_yes
-LER, feel_yes
-LER, swear_yes
-HER, filler_yes
-LER, tentat_yes
-LER, power_yes
-LER, is_tone_yes
-LER, anger_yes
-HER, has_url
-HER, has_hashtag
+HER,has_animated_gif,1.90449081235
+HER,has_photo,0.912032529869
+LER,nonflu_yes,0.875712494396
+HER,low_wps,0.792299710729
+LER,sad_yes,0.762458258011
+HER,assent_yes,0.605316876489
+LER,hear_yes,0.479538161785
+HER,is_clout_no,0.469548774608
+LER,has_qmark,0.468850319802
+LER,affiliation_yes,0.423123591126
+LER,reward_yes,0.34426412355
+LER,is_tone_no,0.316117942205
+LER,high_wps,0.304723196013
+HER,is_analytic_no,0.296911653593
+HER,anx_yes,0.291279017526
+LER,risk_yes,0.2838143652
+LER,is_analytic_yes,0.266887034586
+HER,has_video,0.265171560967
+LER,negemo_yes,0.259899308208
+LER,has_exclam,0.253433289178
+LER,is_clout_yes,0.250234432156
+HER,certain_yes,0.24317038819
+LER,see_yes,0.241198372652
+LER,insight_yes,0.232257386945
+LER,many_sixltr,0.210784570962
+HER,differ_yes,0.203642759224
+LER,is_authentic_yes,0.158369465843
+HER,few_sixltr,0.141794638099
+HER,is_authentic_no,0.136117799823
+LER,cause_yes,0.109695399999
+HER,discrep_yes,0.100616548426
+LER,achieve_yes,0.0873637958194
+LER,posemo_yes,0.0746258654172
+LER,feel_yes,0.0717232275096
+LER,swear_yes,0.0544284536465
+HER,filler_yes,0.0444118391057
+LER,tentat_yes,0.0439654295826
+LER,power_yes,0.0436572174158
+LER,is_tone_yes,0.0210559547651
+LER,anger_yes,0.00874997701448
+HER,has_url,0.00399689223253
+HER,has_hashtag,0.000568854173068
