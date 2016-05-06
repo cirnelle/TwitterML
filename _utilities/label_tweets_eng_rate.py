@@ -125,13 +125,28 @@ class LabelTweetsEngRate():
 
             if float(t[7]) > her_boundary:
 
-                labelled_tweets.append([t[9],'HER'])
-                high_er.append([t[9],'HER'])
+                if t[9] == '':
+
+                    labelled_tweets.append(['nil','HER'])
+                    high_er.append(['nil','HER'])
+
+                else:
+
+                    labelled_tweets.append([t[9],'HER'])
+                    high_er.append([t[9],'HER'])
+
 
             elif float(t[7]) < ler_boundary:
 
-                labelled_tweets.append([t[9],'LER'])
-                low_er.append([t[9],'LER'])
+                if t[9] == '':
+
+                    labelled_tweets.append(['nil','LER'])
+                    low_er.append(['nil','LER'])
+
+                else:
+
+                    labelled_tweets.append([t[9],'LER'])
+                    low_er.append([t[9],'LER'])
 
             else:
                 pass
