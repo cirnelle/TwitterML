@@ -43,7 +43,7 @@ class TweetProcessing():
         lines = open(path_to_raw_tweet_file,'r').readlines()
 
         tweets = []
-        for line in lines[1:]:
+        for line in lines:
 
             spline = line.replace('\n','').split(',')
             tweets.append(spline)
@@ -305,8 +305,8 @@ class TweetProcessing():
 # variables
 ###############
 
-path_to_raw_tweet_file = '../tweets/raw_space.csv'
-path_to_store_processed_tweet_file = '../tweets/preprocessed_space.csv'
+path_to_raw_tweet_file = '../output/engrate/sydscifest/from_jim/for_preprocess.csv'
+path_to_store_processed_tweet_file = '../output/engrate/sydscifest/from_jim/ALL_labelled.csv'
 
 if __name__ == "__main__":
 

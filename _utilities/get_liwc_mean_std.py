@@ -48,6 +48,7 @@ class GetLiwcMean():
         liwc_m = np.mean(liwc_scores, axis = 0)
         liwc_s = np.std(liwc_scores, axis = 0)
 
+
         # convert float to string
 
         liwc_mean = []
@@ -64,6 +65,7 @@ class GetLiwcMean():
         print ("Length of cat name list is "+str(len(liwc_cat_name)))
         print ("Length of mean list is "+str(len(liwc_mean)))
         print ("Length of std list is "+str(len(liwc_std)))
+
 
         if len(liwc_cat_name) == len(liwc_mean) == len(liwc_std):
 
@@ -97,8 +99,8 @@ class GetLiwcMean():
 # variables
 ################
 
-path_to_liwc_result_file = '../output/liwc/mean/liwc_space_all.txt'
-path_to_store_liwc_mean_and_std_file = '../output/liwc/mean/space_mean.txt'
+path_to_liwc_result_file = '../output/liwc/sydscifest/liwc_sydscifest_ler.txt'
+path_to_store_liwc_mean_and_std_file = '../output/sydscifest/sydscifest_ler_mean.txt'
 
 
 if __name__ == '__main__':

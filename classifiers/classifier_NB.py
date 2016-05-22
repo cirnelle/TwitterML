@@ -484,6 +484,84 @@ class NaiveBayes():
         return clf, count_vect
 
 
+    def predict_tweets(self):
+
+        docs_train, docs_test, y_train, y_test = train_test_split(X, y, test_size=0.01, random_state=42)
+
+        print("Number of data point is " + str(len(y)))
+
+        ###############
+        # uncomment either one of the below
+        # predict unlabelled tweet OR test classifier on gold standard
+        ###############
+
+        #dataset_topredict = pd.read_csv(path_to_file_to_be_predicted, header=0, names=['tweets'])
+        dataset_topredict = pd.read_csv(path_to_gold_standard_file, header=0, names=['tweets', 'class'])
+
+        X_topredict = dataset_topredict['tweets']
+        y_goldstandard = dataset_topredict['class']
+
+
+        ###############
+        # train classifier
+        ###############
+
+        # Get list of features
+        count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=_ngram_range)
+        X_CV = count_vect.fit_transform(docs_train)
+
+        # print number of unique words (n_features)
+        print("Shape of train data is " + str(X_CV.shape))
+
+        # tfidf transformation###
+
+        tfidf_transformer = TfidfTransformer(use_idf=_use_idf)
+        X_tfidf = tfidf_transformer.fit_transform(X_CV)
+
+        # train the classifier
+
+        print("Fitting data ...")
+        clf = MultinomialNB(alpha=_alpha).fit(X_tfidf, y_train)
+
+        ##################
+        # get cross validation score
+        ##################
+
+        scores = cross_val_score(clf, X_tfidf, y_train, cv=10, scoring='f1_weighted')
+        print("Cross validation score: " + str(scores))
+
+        # Get average performance of classifier on training data using 10-fold CV, along with standard deviation
+        # the factor two is to signify 2 sigma, which is 95% confidence level
+
+        print("Cross validation accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+
+        ##################
+        # run classifier to predict tweets
+        ##################
+
+        X_test_CV = count_vect.transform(X_topredict)
+
+        print("Shape of test data is " + str(X_test_CV.shape))
+
+        X_test_tfidf = tfidf_transformer.transform(X_test_CV)
+
+        y_predicted = clf.predict(X_test_tfidf)
+
+
+        ##################
+        # run classifier on gold standard (tweets that were labelled by twitter insight)
+        ##################
+
+        # print the mean accuracy on the given test data and labels
+
+        print("Classifier score on test data is: %0.2f " % clf.score(X_test_tfidf, y_goldstandard))
+
+        print(metrics.classification_report(y_goldstandard, y_predicted))
+        cm = metrics.confusion_matrix(y_goldstandard, y_predicted)
+        print(cm)
+
+
+
     def cv_and_train(self):
 
         ################
@@ -736,22 +814,25 @@ class NaiveBayes():
 # variables
 ###############
 
-path_to_labelled_file = '../output/features/nonprofit/labelled_combined.csv'
+path_to_labelled_file = '../output/features/space/labelled_combined_all.csv'
+#path_to_labelled_file = '../output/engrate/labelled_space.csv'
 path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
-path_to_store_features_by_probability_file = '../output/feature_importance/nb/nonprofit/nb_feat_by_prob.csv'
-path_to_store_feature_selection_boolean_file = '../output/feature_importance/nb/nonprofit/nb_fs_boolean.csv'
-path_to_store_list_of_feature_file = '../output/feature_importance/nb/nonprofit/nb_feature_names.txt'
-path_to_store_coefficient_file = '../output/feature_importance/nb/nonprofit/nb_coef.txt'
-path_to_store_feature_log_prob_for_class_0 = '../output/feature_importance/nb/nonprofit/nb_feature_prob_0.csv' #Empirical log probability of features given a class
-path_to_store_feature_log_prob_for_class_1 = '../output/feature_importance/nb/nonprofit/nb_feature_prob_1.csv'
-path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/nb/nonprofit.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/nb/nonprofit/nb_feat_by_class_combined.csv'
+path_to_file_to_be_predicted = '../output/to_predict/sydscifest/sydscifest_test'
+path_to_gold_standard_file = '../output/features/sydscifest/labelled_combined_all.csv'
+path_to_store_features_by_probability_file = '../output/feature_importance/nb/space/nb_feat_by_prob.csv'
+path_to_store_feature_selection_boolean_file = '../output/feature_importance/nb/space/nb_fs_boolean.csv'
+path_to_store_list_of_feature_file = '../output/feature_importance/nb/space/nb_feature_names.txt'
+path_to_store_coefficient_file = '../output/feature_importance/nb/space/nb_coef.txt'
+path_to_store_feature_log_prob_for_class_0 = '../output/feature_importance/nb/space/nb_feature_prob_0.csv' #Empirical log probability of features given a class
+path_to_store_feature_log_prob_for_class_1 = '../output/feature_importance/nb/space/nb_feature_prob_1.csv'
+path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/nb/space_1.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/nb/space/nb_feat_by_class_combined.csv'
 
 
 # for classifier without pipeline
-_ngram_range = (1,1)
-_alpha = 0.6
-_use_idf = False
+_ngram_range = (1,2)
+_alpha = 0.4
+_use_idf = True
 _percentile = 85
 _score_func = f_classif
 
@@ -799,7 +880,7 @@ if __name__ == '__main__':
     # select one of the method to split data using Cross Validation
     ###################
 
-    docs_train,docs_test,y_train,y_test = nb.train_test_split()
+    #docs_train,docs_test,y_train,y_test = nb.train_test_split()
     #docs_train,docs_test,y_train,y_test = nb.stratified_shufflesplit()
     #docs_train,docs_test,y_train,y_test = nb.stratified_kfolds()
 
@@ -808,7 +889,7 @@ if __name__ == '__main__':
     # run NB Classifier
     ##################
 
-    clf, count_vect = nb.train_classifier()
+    #clf, count_vect = nb.train_classifier()
 
 
     ###################
@@ -835,7 +916,14 @@ if __name__ == '__main__':
     # Get feature importance
     ###################
 
-    nb.get_important_features(clf,count_vect)
+    #nb.get_important_features(clf,count_vect)
+
+
+    ###################
+    # Run classifier and then predict tweets
+    ###################
+
+    nb.predict_tweets()
 
 
     ##################

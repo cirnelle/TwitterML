@@ -1,100 +1,95 @@
-LER,rocky,1,7
-LER,transit,10,19
-HER,1848,5,0
-HER,provocative,4,0
-BOTH,astronomy accounts,2,2
-LER,element,3,5
-HER,pizza,10,2
-LER,polytechnic,0,7
-LER,mikulski,1,3
-LER,orbital,12,18
-LER,nasaasteroid,1,6
-HER,thumbs,3,1
-HER,apparently,9,5
-LER,launch live,1,4
-LER,space industry,1,3
-BOTH,nasa moon,2,2
-LER,suit,8,12
-LER,space race,1,8
-HER,colorful,16,3
-HER,reaches,12,7
-LER,comet surface,1,2
-HER,gregorian,5,0
-HER,midwest,2,1
-LER,daughter,2,4
-HER,proton,18,0
-LER,resonance,1,2
-LER,escape,3,10
-LER,nasa research,0,9
-LER,movies,3,14
-HER,counting,12,8
-LER,waters,2,4
-HER,bizarre,13,3
-HER,50 years,12,9
-LER,pretty eccentric,0,4
-LER,russia,10,20
-LER,teachers,3,16
-HER,peers,6,2
-HER,isaac,5,0
-LER,lisa,2,3
-HER,day pluto,5,0
-HER,greater,7,0
-LER,technology review,0,5
-HER,evidence ancient,3,0
-HER,partial,5,2
-HER,british,7,1
-HER,iron,19,8
-LER,extrasolar planets,0,6
-BOTH,northern lights,5,5
-HER,planetary35,12,0
-LER,family,18,33
-HER,25 years,4,2
-LER,bread,1,4
-BOTH,minutes launch,2,2
-LER,kron,0,4
-HER,planetary nebula,11,5
-HER,smile,6,0
-HER,cosmonaut,7,4
-HER,perseid meteors,4,1
-LER,aerospace,0,16
-LER,issue,5,12
-HER,1097 image,7,0
-BOTH,spacesuit,6,6
-HER,huge,31,22
-LER,pic spacex,0,3
-LER,flyby data,0,3
-HER,13 000,2,1
-HER,pluto moons,9,1
-LER,msl curiosity,1,4
-LER,breakthrough,4,5
-LER,kazakhstan prep,1,3
-HER,edge solar,7,0
-HER,molten,3,1
-LER,merlin engine,0,3
-LER,8pm,3,8
-LER,water vapor,2,5
-BOTH,safer,3,3
-HER,scratch,2,1
-LER,21,31,43
-LER,protect,3,9
-LER,nanosatellite,0,5
-HER,hands,14,12
-HER,pulling,2,1
-HER,airbus,3,0
-HER,modern,6,3
-LER,picking,1,2
-LER,endeavour ov105,0,3
-HER,chicken egg,2,1
-LER,latest news,0,6
-LER,themed,3,7
-LER,way light,1,3
-BOTH,atomic,5,5
-LER,tickets,1,8
-LER,moa 2007,0,3
-HER,booster,6,4
-BOTH,serving,2,2
-LER,seen new,2,3
-HER,species,12,2
-HER,knew,5,4
-LER,use site,0,5
-HER,caught,26,7
+LER,passion,4
+HER,spending,9
+LER,jones,8
+HER,410,11
+LER,blogging,3
+LER,larry,3
+LER,coldest,2
+LER,prizes,13
+HER,doll,3
+LER,10pm,9
+LER,6pm,11
+LER,technologists,4
+LER,vet,6
+HER,north,25
+HER,luca,2
+HER,begin,15
+LER,rescue,9
+LER,21,43
+HER,took,45
+LER,insight,18
+HER,carry,12
+HER,tail,17
+LER,officials,5
+HER,comets,19
+HER,alive,13
+LER,strategy,3
+HER,leaf,3
+LER,museums,7
+LER,served,2
+HER,weeks,28
+HER,given,9
+LER,oceans,10
+HER,ashes,4
+HER,received,16
+HER,esoc,6
+HER,op,7
+LER,shape,20
+HER,truly,9
+LER,mistakes,4
+LER,airplanes,5
+HER,2170,9
+LER,10a,15
+LER,pleasant,2
+LER,concerns,3
+HER,magellanic,11
+HER,somebody,5
+HER,household,4
+HER,australis,8
+LER,inspiration,7
+HER,changed,8
+HER,metal,10
+HER,sea,32
+LER,fia14,11
+HER,10x,6
+HER,nature,16
+LER,ingredients,4
+HER,deploy,5
+LER,reserve,9
+LER,comment,11
+LER,crane,2
+HER,woman,11
+HER,neemo,2
+HER,flower,4
+HER,gallery,13
+HER,gifparty,3
+LER,perfectly,5
+HER,70,7
+HER,grand,14
+HER,valentine,10
+LER,wonders,8
+LER,truck,4
+HER,lie,5
+LER,talked,7
+HER,dry,7
+LER,role,15
+HER,le,6
+LER,division,5
+LER,author,6
+HER,pleasure,3
+HER,tunnunik,8
+LER,form,13
+HER,43,7
+LER,survey,13
+HER,geyser,4
+HER,nustar,4
+LER,users,9
+LER,symphony,4
+LER,scroll,3
+LER,langley,5
+LER,emissions,4
+LER,educators,6
+HER,delicious,2
+LER,darpa,2
+HER,actions,3
+HER,accurately,3

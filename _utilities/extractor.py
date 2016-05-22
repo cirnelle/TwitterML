@@ -82,6 +82,8 @@ class Extractor():
             spline = line.replace('\n','').split(',')
             users.append(spline[0])
 
+        users = ['SydScienceFest']
+
         print ("Length of user list is "+str(len(users)))
 
         return users
@@ -119,7 +121,7 @@ class Extractor():
                     # get tweets with twitter user_timeline, excluding RTs and Replies
                     ##################
 
-                    tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(2000)
+                    tweets=tweepy.Cursor(api.user_timeline,id=user, include_rts=False, exclude_replies=True).items(3200)
 
                     for t in tweets:
 
@@ -357,7 +359,18 @@ class Extractor():
         retries = 5
         sleep_time = 50
 
-        id_list = [706762867681456128,706761185459363840]
+        #id_list = [706762867681456128,706761185459363840]
+
+        lines = open(path_to_tweet_id_list,'r').readlines()
+
+        id_list = []
+
+        for line in lines:
+            spline = line.replace('\n','')
+            id_list.append(spline)
+
+
+        print ("Length of id list is "+str(len(id_list)))
 
         print ("Getting tweets for id list...")
 
@@ -367,7 +380,7 @@ class Extractor():
 
             tweet=api.get_status(id=id)
 
-            print (tweet)
+            #print (tweet)
 
             for r in range(retries):
 
@@ -498,9 +511,10 @@ class Extractor():
 ###############
 
 path_to_user_list = '../user_list/user_space.csv'
-path_to_store_raw_tweets = '../tweets/raw_space_20160330.csv'
+path_to_tweet_id_list = '../tweets/events/sydscifest_2016/from_jim/sydscifest_aug15-apr16_id.csv'
+path_to_store_raw_tweets = '../tweets/events/sydscifest_2016/raw_sydscifest.csv'
 path_to_store_raw_tweets_hashtag = '../tweets/hashtags/raw_#'
-path_to_store_tweets_by_id = 'test.csv'
+path_to_store_tweets_by_id = '../tweets/events/sydscifest_2016/from_jim/sydscifest_tweets_raw_id.csv'
 
 
 if __name__ == '__main__':
@@ -517,7 +531,7 @@ if __name__ == '__main__':
     # get tweets by user
     #################
 
-    ext.gettweets_by_user()
+    #ext.gettweets_by_user()
 
 
     #################
@@ -531,5 +545,5 @@ if __name__ == '__main__':
     # get tweets by id
     #################
 
-    #ext.gettweets_by_id()
+    ext.gettweets_by_id()
 

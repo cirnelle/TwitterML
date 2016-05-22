@@ -1,0 +1,532 @@
+tweet,label
+is_analytic_no is_clout_no is_authentic_no is_tone_no negemo_yes discrep_yes certain_yes swear_yes few_sixltr low_wps none,HER
+is_analytic_no is_clout_no is_authentic_yes is_tone_no negemo_yes anger_yes insight_yes certain_yes differ_yes reward_yes low_wps has_hashtag,HER
+is_analytic_no is_authentic_no certain_yes has_hashtag,HER
+is_analytic_yes is_authentic_yes cause_yes power_yes many_sixltr has_exclam none,HER
+insight_yes cause_yes tentat_yes differ_yes affiliation_yes none,HER
+is_analytic_no is_authentic_no many_sixltr low_wps none,HER
+is_authentic_no posemo_yes negemo_yes anger_yes cause_yes power_yes reward_yes netspeak_yes many_sixltr has_video has_hashtag has_url,HER
+is_analytic_no is_clout_no is_authentic_no cause_yes certain_yes assent_yes many_sixltr low_wps has_exclam none,HER
+is_analytic_yes is_authentic_yes power_yes many_sixltr has_hashtag,HER
+is_analytic_yes is_authentic_yes is_tone_yes posemo_yes insight_yes netspeak_yes many_sixltr has_photo has_hashtag has_url,HER
+is_analytic_yes is_authentic_no netspeak_yes has_photo has_hashtag has_url,HER
+is_analytic_yes is_authentic_no posemo_yes see_yes feel_yes power_yes netspeak_yes few_sixltr high_wps has_photo has_url,HER
+is_tone_yes posemo_yes see_yes affiliation_yes reward_yes few_sixltr high_wps has_hashtag,HER
+is_clout_yes is_authentic_no is_tone_yes posemo_yes affiliation_yes reward_yes many_sixltr low_wps has_hashtag,HER
+is_authentic_no netspeak_yes low_wps has_photo has_url,HER
+is_clout_no posemo_yes insight_yes differ_yes see_yes high_wps has_hashtag,HER
+is_analytic_yes is_clout_yes is_authentic_no is_tone_yes posemo_yes hear_yes affiliation_yes netspeak_yes many_sixltr low_wps has_exclam none,HER
+is_analytic_no is_clout_yes posemo_yes cause_yes tentat_yes certain_yes differ_yes hear_yes affiliation_yes netspeak_yes has_exclam has_photo has_url,HER
+is_analytic_yes is_clout_no is_authentic_yes differ_yes netspeak_yes high_wps has_photo has_url,HER
+is_clout_yes is_authentic_no power_yes netspeak_yes has_exclam has_photo has_url,HER
+is_clout_yes is_tone_yes posemo_yes affiliation_yes netspeak_yes few_sixltr low_wps has_qmark none,HER
+is_authentic_no cause_yes see_yes feel_yes netspeak_yes few_sixltr high_wps has_photo has_url,HER
+is_analytic_no is_authentic_no is_tone_yes posemo_yes power_yes assent_yes many_sixltr has_hashtag,HER
+is_analytic_no is_clout_no is_authentic_yes insight_yes cause_yes differ_yes few_sixltr has_hashtag,HER
+is_analytic_no is_authentic_no is_tone_yes posemo_yes many_sixltr low_wps none,HER
+is_clout_yes is_authentic_no see_yes power_yes netspeak_yes few_sixltr has_photo has_hashtag has_url,HER
+is_analytic_no is_clout_yes is_authentic_no is_tone_yes posemo_yes insight_yes cause_yes tentat_yes affiliation_yes power_yes netspeak_yes nonflu_yes has_video has_url,HER
+is_analytic_yes is_tone_yes posemo_yes netspeak_yes has_exclam has_photo has_url,HER
+is_clout_yes discrep_yes differ_yes affiliation_yes power_yes has_hashtag,HER
+is_analytic_yes is_authentic_no is_tone_no negemo_yes sad_yes tentat_yes see_yes affiliation_yes netspeak_yes has_exclam has_photo has_url,HER
+is_clout_no is_authentic_yes insight_yes see_yes netspeak_yes few_sixltr has_photo has_hashtag has_url,HER
+is_analytic_yes cause_yes power_yes netspeak_yes has_exclam has_photo has_url,HER
+is_authentic_yes power_yes many_sixltr low_wps has_exclam has_hashtag,HER
+is_clout_yes insight_yes affiliation_yes achieve_yes few_sixltr has_exclam has_hashtag,HER
+is_authentic_no is_tone_no posemo_yes negemo_yes discrep_yes hear_yes power_yes netspeak_yes high_wps has_video has_url,HER
+is_analytic_yes netspeak_yes many_sixltr has_photo has_url,HER
+is_clout_no netspeak_yes nonflu_yes low_wps has_exclam has_photo has_url,HER
+insight_yes tentat_yes netspeak_yes high_wps has_hashtag has_url,HER
+is_analytic_yes is_authentic_yes power_yes has_exclam has_hashtag,HER
+see_yes netspeak_yes has_exclam has_photo has_url,HER
+is_clout_no posemo_yes negemo_yes anger_yes tentat_yes netspeak_yes low_wps has_qmark has_photo has_url,HER
+is_analytic_yes is_clout_no is_authentic_yes is_tone_no negemo_yes differ_yes swear_yes many_sixltr has_hashtag,HER
+is_analytic_yes netspeak_yes few_sixltr has_photo has_url,HER
+is_analytic_yes is_tone_yes posemo_yes tentat_yes hear_yes netspeak_yes few_sixltr has_photo has_hashtag has_url,HER
+is_analytic_no is_clout_yes is_tone_yes posemo_yes insight_yes cause_yes tentat_yes affiliation_yes achieve_yes power_yes reward_yes few_sixltr has_exclam has_hashtag,HER
+tentat_yes netspeak_yes many_sixltr has_photo has_url,HER
+is_analytic_yes netspeak_yes has_photo has_url,HER
+is_tone_yes posemo_yes cause_yes see_yes affiliation_yes reward_yes netspeak_yes has_exclam has_photo has_hashtag has_url,HER
+is_clout_yes posemo_yes negemo_yes insight_yes affiliation_yes netspeak_yes many_sixltr has_photo has_url,HER
+netspeak_yes many_sixltr high_wps has_photo has_hashtag has_url,HER
+is_analytic_yes is_authentic_no hear_yes netspeak_yes has_photo has_url,HER
+certain_yes netspeak_yes high_wps has_photo has_hashtag has_url,HER
+is_analytic_no is_authentic_yes insight_yes discrep_yes few_sixltr high_wps has_hashtag,HER
+is_analytic_yes is_authentic_yes tentat_yes many_sixltr high_wps has_hashtag,HER
+is_analytic_yes is_authentic_yes posemo_yes negemo_yes see_yes affiliation_yes netspeak_yes has_exclam has_qmark has_photo has_url,HER
+is_analytic_yes power_yes has_hashtag,HER
+is_clout_yes is_authentic_no hear_yes affiliation_yes netspeak_yes has_hashtag has_url,HER
+is_analytic_yes is_authentic_no netspeak_yes has_photo has_url,HER
+is_authentic_yes cause_yes power_yes netspeak_yes has_photo has_hashtag has_url,HER
+is_analytic_yes posemo_yes netspeak_yes has_exclam has_photo has_url,HER
+is_analytic_yes power_yes netspeak_yes has_exclam has_photo has_url,HER
+is_analytic_no is_clout_no is_authentic_yes is_tone_yes posemo_yes differ_yes reward_yes many_sixltr low_wps has_exclam none,HER
+is_analytic_yes is_authentic_yes posemo_yes cause_yes power_yes netspeak_yes few_sixltr has_qmark has_url,HER
+is_tone_yes posemo_yes affiliation_yes netspeak_yes few_sixltr has_exclam has_video has_url,HER
+is_authentic_no is_tone_yes posemo_yes certain_yes see_yes reward_yes netspeak_yes has_photo has_hashtag has_url,HER
+is_analytic_no is_authentic_no see_yes netspeak_yes low_wps has_animated_gif has_url,HER
+is_analytic_yes certain_yes power_yes risk_yes netspeak_yes many_sixltr has_photo has_url,HER
+certain_yes affiliation_yes netspeak_yes many_sixltr high_wps has_photo has_url,HER
+is_clout_yes is_tone_yes posemo_yes cause_yes affiliation_yes power_yes reward_yes netspeak_yes many_sixltr has_exclam has_animated_gif has_hashtag has_url,HER
+is_analytic_no insight_yes many_sixltr has_exclam has_hashtag,HER
+is_tone_yes posemo_yes certain_yes affiliation_yes power_yes reward_yes netspeak_yes few_sixltr has_exclam has_hashtag has_url,HER
+is_analytic_yes is_clout_yes is_authentic_no cause_yes power_yes netspeak_yes many_sixltr has_photo has_hashtag has_url,HER
+tentat_yes netspeak_yes high_wps has_photo has_url,HER
+is_tone_yes posemo_yes affiliation_yes achieve_yes netspeak_yes has_exclam has_animated_gif has_url,HER
+is_clout_no is_tone_yes posemo_yes discrep_yes reward_yes few_sixltr high_wps has_hashtag,HER
+is_analytic_yes is_tone_yes posemo_yes netspeak_yes high_wps has_hashtag has_url,HER
+is_clout_yes is_authentic_no is_tone_yes posemo_yes certain_yes affiliation_yes power_yes netspeak_yes assent_yes many_sixltr has_qmark none,HER
+is_analytic_yes is_clout_yes is_authentic_no affiliation_yes achieve_yes netspeak_yes high_wps has_photo has_url,HER
+is_analytic_yes is_clout_no differ_yes feel_yes netspeak_yes high_wps has_photo has_hashtag has_url,HER
+is_clout_yes is_authentic_yes is_tone_no negemo_yes affiliation_yes has_exclam has_hashtag,HER
+is_analytic_yes is_authentic_yes insight_yes has_hashtag,HER
+is_analytic_yes is_authentic_no is_tone_no negemo_yes affiliation_yes swear_yes netspeak_yes high_wps has_hashtag has_url,HER
+is_clout_yes insight_yes certain_yes affiliation_yes netspeak_yes high_wps has_url,HER
+is_authentic_no is_tone_yes posemo_yes reward_yes netspeak_yes low_wps has_url,HER
+is_authentic_no is_tone_no negemo_yes netspeak_yes low_wps has_photo has_url,HER
+hear_yes power_yes many_sixltr has_exclam has_hashtag,HER
+is_authentic_yes is_tone_no negemo_yes sad_yes affiliation_yes low_wps has_hashtag,HER
+is_analytic_yes is_clout_yes is_authentic_yes is_tone_yes posemo_yes discrep_yes tentat_yes certain_yes see_yes affiliation_yes many_sixltr has_exclam has_hashtag,HER
+is_analytic_yes is_authentic_no is_tone_yes posemo_yes cause_yes reward_yes netspeak_yes many_sixltr has_photo has_hashtag has_url,HER
+is_analytic_yes is_authentic_no see_yes feel_yes reward_yes netspeak_yes many_sixltr has_exclam has_photo has_url,HER
+is_analytic_yes is_tone_no negemo_yes anx_yes insight_yes tentat_yes netspeak_yes high_wps has_photo has_url,HER
+is_analytic_yes posemo_yes cause_yes hear_yes power_yes netspeak_yes high_wps has_photo has_hashtag has_url,HER
+is_analytic_yes is_authentic_no netspeak_yes has_photo has_hashtag has_url,HER
+is_analytic_yes is_authentic_yes is_tone_yes posemo_yes affiliation_yes power_yes assent_yes has_exclam has_hashtag,HER
+is_analytic_yes is_authentic_no is_tone_yes posemo_yes netspeak_yes many_sixltr has_video has_hashtag has_url,HER
+is_authentic_no netspeak_yes has_photo has_url,HER
+is_tone_no negemo_yes discrep_yes tentat_yes certain_yes differ_yes see_yes affiliation_yes power_yes risk_yes high_wps has_hashtag,HER
+is_analytic_yes is_clout_yes is_authentic_yes cause_yes discrep_yes affiliation_yes power_yes has_hashtag,HER
+is_analytic_yes is_tone_yes posemo_yes reward_yes netspeak_yes many_sixltr has_photo has_url,HER
+is_analytic_yes is_authentic_no certain_yes reward_yes netspeak_yes many_sixltr has_photo has_hashtag has_url,HER
+is_analytic_no is_clout_yes is_authentic_no certain_yes hear_yes achieve_yes power_yes many_sixltr has_hashtag,HER
+is_authentic_yes see_yes power_yes has_exclam none,HER
+is_authentic_no is_tone_no negemo_yes tentat_yes netspeak_yes has_photo has_hashtag has_url,HER
+is_analytic_yes is_clout_yes is_authentic_no affiliation_yes power_yes netspeak_yes many_sixltr has_exclam has_photo has_url,HER
+is_tone_yes posemo_yes negemo_yes anger_yes insight_yes cause_yes certain_yes differ_yes affiliation_yes achieve_yes netspeak_yes many_sixltr none,HER
+is_analytic_no is_clout_yes is_tone_yes posemo_yes feel_yes affiliation_yes reward_yes netspeak_yes has_url,HER
+see_yes hear_yes netspeak_yes few_sixltr high_wps has_photo has_url,HER
+is_tone_no negemo_yes anger_yes see_yes feel_yes netspeak_yes many_sixltr low_wps has_exclam has_photo has_hashtag has_url,HER
+is_analytic_yes is_clout_yes is_authentic_no is_tone_yes posemo_yes discrep_yes see_yes hear_yes reward_yes nonflu_yes few_sixltr has_hashtag,HER
+is_clout_yes posemo_yes hear_yes netspeak_yes nonflu_yes few_sixltr has_exclam has_url,HER
+is_clout_no insight_yes cause_yes differ_yes netspeak_yes nonflu_yes has_qmark has_photo has_url,HER
+is_authentic_yes is_tone_no negemo_yes differ_yes affiliation_yes power_yes swear_yes netspeak_yes few_sixltr high_wps has_photo has_hashtag has_url,HER
+netspeak_yes low_wps has_exclam has_hashtag has_url,HER
+is_analytic_yes is_authentic_no is_tone_yes posemo_yes netspeak_yes assent_yes few_sixltr has_url,HER
+is_clout_yes is_authentic_no posemo_yes negemo_yes anx_yes discrep_yes affiliation_yes reward_yes netspeak_yes high_wps has_photo has_url,HER
+is_analytic_no is_clout_yes is_authentic_no is_tone_yes posemo_yes affiliation_yes achieve_yes power_yes reward_yes netspeak_yes low_wps has_exclam has_qmark has_url,HER
+is_tone_yes posemo_yes netspeak_yes has_exclam has_photo has_url,HER
+is_analytic_yes is_authentic_yes posemo_yes hear_yes power_yes has_hashtag,HER
+is_analytic_yes is_authentic_yes tentat_yes see_yes netspeak_yes few_sixltr has_photo has_url,HER
+is_clout_no see_yes netspeak_yes many_sixltr high_wps has_photo has_url,HER
+is_analytic_no is_tone_no negemo_yes anger_yes cause_yes swear_yes many_sixltr has_hashtag,HER
+is_clout_yes is_tone_yes posemo_yes tentat_yes affiliation_yes has_qmark has_hashtag,HER
+is_tone_yes posemo_yes cause_yes tentat_yes certain_yes differ_yes feel_yes achieve_yes netspeak_yes has_qmark has_photo has_url,HER
+is_analytic_yes is_authentic_no cause_yes discrep_yes certain_yes hear_yes affiliation_yes netspeak_yes has_qmark has_photo has_hashtag has_url,HER
+affiliation_yes netspeak_yes many_sixltr has_exclam has_photo has_url,HER
+is_analytic_yes cause_yes power_yes netspeak_yes many_sixltr has_photo has_url,HER
+certain_yes see_yes feel_yes netspeak_yes few_sixltr has_exclam has_video has_hashtag has_url,HER
+is_clout_yes hear_yes feel_yes netspeak_yes few_sixltr has_exclam has_photo has_url,HER
+is_analytic_yes is_tone_yes posemo_yes achieve_yes many_sixltr low_wps has_hashtag,HER
+is_analytic_no is_authentic_no is_tone_no negemo_yes anger_yes tentat_yes differ_yes has_qmark has_hashtag,HER
+is_tone_yes posemo_yes reward_yes netspeak_yes low_wps has_hashtag has_url,HER
+is_analytic_yes is_clout_no insight_yes cause_yes differ_yes netspeak_yes has_photo has_url,HER
+is_authentic_no power_yes netspeak_yes many_sixltr has_exclam has_hashtag has_url,HER
+is_tone_yes posemo_yes certain_yes low_wps has_exclam has_hashtag,HER
+is_analytic_no is_authentic_yes is_tone_no negemo_yes sad_yes cause_yes tentat_yes certain_yes affiliation_yes achieve_yes power_yes risk_yes high_wps has_hashtag,HER
+is_analytic_no is_clout_yes insight_yes cause_yes tentat_yes differ_yes few_sixltr has_hashtag,HER
+is_authentic_no is_tone_yes posemo_yes cause_yes power_yes netspeak_yes many_sixltr high_wps has_photo has_url,HER
+is_analytic_no is_clout_yes is_authentic_no affiliation_yes netspeak_yes low_wps has_exclam has_photo has_hashtag has_url,HER
+is_clout_yes is_authentic_yes affiliation_yes power_yes few_sixltr has_hashtag,HER
+is_analytic_no is_authentic_yes insight_yes cause_yes differ_yes affiliation_yes achieve_yes power_yes many_sixltr has_qmark has_hashtag,HER
+is_clout_yes is_authentic_no cause_yes certain_yes affiliation_yes power_yes has_hashtag,HER
+is_analytic_yes many_sixltr low_wps has_exclam has_hashtag,HER
+is_analytic_yes posemo_yes insight_yes achieve_yes power_yes reward_yes netspeak_yes many_sixltr has_exclam has_photo has_hashtag has_url,HER
+is_tone_yes posemo_yes insight_yes see_yes feel_yes power_yes netspeak_yes has_photo has_hashtag has_url,HER
+is_analytic_yes is_authentic_no is_tone_yes posemo_yes differ_yes achieve_yes power_yes high_wps has_hashtag,HER
+is_clout_yes affiliation_yes power_yes netspeak_yes has_exclam has_photo has_url,HER
+is_clout_yes is_authentic_no is_tone_yes posemo_yes certain_yes hear_yes many_sixltr has_exclam none,HER
+is_analytic_no is_authentic_yes certain_yes has_hashtag,HER
+posemo_yes negemo_yes anger_yes differ_yes hear_yes affiliation_yes netspeak_yes high_wps has_photo has_url,HER
+is_analytic_no is_clout_yes affiliation_yes netspeak_yes few_sixltr low_wps has_exclam has_photo has_url,HER
+is_authentic_no discrep_yes see_yes netspeak_yes high_wps has_photo has_url,HER
+tentat_yes certain_yes netspeak_yes high_wps has_photo has_url,HER
+is_analytic_no is_clout_no posemo_yes negemo_yes anger_yes certain_yes differ_yes achieve_yes reward_yes many_sixltr has_hashtag,HER
+is_authentic_no is_tone_yes posemo_yes insight_yes achieve_yes reward_yes netspeak_yes many_sixltr has_exclam has_photo has_url,HER
+is_tone_yes posemo_yes negemo_yes insight_yes tentat_yes reward_yes risk_yes nonflu_yes few_sixltr high_wps has_hashtag,HER
+is_analytic_no is_clout_no tentat_yes differ_yes affiliation_yes few_sixltr has_hashtag,HER
+is_analytic_no is_authentic_no is_tone_yes posemo_yes low_wps has_qmark has_hashtag,HER
+affiliation_yes netspeak_yes has_exclam has_photo has_url,HER
+insight_yes discrep_yes tentat_yes differ_yes see_yes achieve_yes netspeak_yes high_wps has_photo has_hashtag has_url,HER
+is_analytic_yes is_clout_no is_authentic_no is_tone_no negemo_yes anger_yes see_yes achieve_yes swear_yes netspeak_yes has_photo has_url,HER
+is_clout_yes is_authentic_no posemo_yes affiliation_yes netspeak_yes high_wps has_photo has_url,HER
+is_analytic_yes is_authentic_yes certain_yes netspeak_yes many_sixltr low_wps has_exclam has_photo has_hashtag has_url,HER
+hear_yes achieve_yes many_sixltr has_hashtag,HER
+is_analytic_no is_authentic_yes is_tone_yes posemo_yes insight_yes cause_yes tentat_yes differ_yes affiliation_yes achieve_yes power_yes reward_yes netspeak_yes assent_yes many_sixltr has_hashtag,HER
+is_clout_yes insight_yes cause_yes affiliation_yes has_hashtag,HER
+is_tone_yes posemo_yes hear_yes power_yes netspeak_yes nonflu_yes has_exclam has_hashtag has_url,HER
+is_authentic_no cause_yes tentat_yes netspeak_yes low_wps has_qmark has_photo has_hashtag has_url,HER
+is_authentic_yes reward_yes netspeak_yes many_sixltr has_exclam has_photo has_hashtag has_url,HER
+is_authentic_no cause_yes netspeak_yes many_sixltr has_hashtag has_url,HER
+is_tone_yes posemo_yes cause_yes affiliation_yes reward_yes netspeak_yes many_sixltr has_url,HER
+is_tone_no negemo_yes insight_yes power_yes netspeak_yes high_wps has_photo has_url,HER
+is_authentic_no cause_yes affiliation_yes netspeak_yes many_sixltr has_exclam has_photo has_url,HER
+is_analytic_yes is_authentic_yes is_tone_yes posemo_yes tentat_yes netspeak_yes many_sixltr high_wps has_photo has_url,HER
+is_analytic_no is_clout_yes insight_yes affiliation_yes power_yes has_exclam has_hashtag,HER
+is_authentic_no discrep_yes tentat_yes differ_yes power_yes netspeak_yes high_wps has_photo has_url,HER
+is_clout_yes see_yes few_sixltr has_hashtag,HER
+is_analytic_no is_tone_no negemo_yes cause_yes differ_yes many_sixltr low_wps has_hashtag,HER
+is_analytic_yes insight_yes see_yes netspeak_yes many_sixltr has_exclam has_url,HER
+is_analytic_yes posemo_yes see_yes affiliation_yes achieve_yes netspeak_yes high_wps has_photo has_url,HER
+is_clout_yes tentat_yes affiliation_yes power_yes netspeak_yes few_sixltr high_wps has_photo has_hashtag has_url,HER
+is_analytic_yes is_clout_no tentat_yes differ_yes netspeak_yes has_photo has_hashtag has_url,HER
+insight_yes discrep_yes tentat_yes reward_yes has_qmark has_hashtag,HER
+is_clout_no is_tone_no negemo_yes sad_yes achieve_yes power_yes netspeak_yes has_exclam has_qmark has_photo has_url,HER
+is_clout_yes is_authentic_yes posemo_yes insight_yes differ_yes affiliation_yes netspeak_yes few_sixltr high_wps has_url,HER
+is_analytic_yes is_clout_no posemo_yes negemo_yes sad_yes netspeak_yes has_exclam has_photo has_url,HER
+is_tone_no negemo_yes sad_yes affiliation_yes netspeak_yes many_sixltr has_exclam has_url,HER
+is_analytic_yes is_tone_yes posemo_yes differ_yes see_yes feel_yes assent_yes has_hashtag,HER
+is_analytic_yes affiliation_yes power_yes netspeak_yes high_wps has_photo has_url,HER
+is_authentic_no is_tone_yes posemo_yes reward_yes netspeak_yes has_hashtag has_url,HER
+is_analytic_yes is_authentic_no feel_yes affiliation_yes netspeak_yes high_wps has_photo has_url,HER
+is_authentic_no is_tone_no negemo_yes sad_yes see_yes netspeak_yes has_exclam has_photo has_url,HER
+is_analytic_yes is_clout_yes is_authentic_no is_tone_no negemo_yes sad_yes cause_yes discrep_yes tentat_yes reward_yes risk_yes has_qmark has_hashtag,HER
+is_analytic_yes is_authentic_yes power_yes many_sixltr has_hashtag,HER
+is_analytic_yes certain_yes hear_yes power_yes reward_yes netspeak_yes low_wps has_exclam has_url,HER
+is_analytic_yes cause_yes reward_yes low_wps has_exclam has_hashtag,HER
+is_authentic_yes is_tone_no negemo_yes anger_yes cause_yes achieve_yes power_yes many_sixltr has_hashtag,HER
+is_analytic_yes posemo_yes see_yes reward_yes netspeak_yes high_wps has_photo has_url,HER
+is_clout_yes is_authentic_yes cause_yes differ_yes few_sixltr has_hashtag,HER
+is_clout_yes posemo_yes discrep_yes tentat_yes differ_yes hear_yes affiliation_yes power_yes netspeak_yes has_exclam has_hashtag has_url,HER
+is_authentic_yes is_tone_yes posemo_yes insight_yes certain_yes power_yes netspeak_yes nonflu_yes many_sixltr has_exclam has_qmark has_url,HER
+is_authentic_yes posemo_yes cause_yes netspeak_yes few_sixltr has_exclam has_photo has_url,HER
+is_analytic_no is_clout_yes is_authentic_yes discrep_yes tentat_yes differ_yes affiliation_yes reward_yes has_exclam none,HER
+is_analytic_no is_tone_no negemo_yes anger_yes cause_yes differ_yes see_yes affiliation_yes power_yes swear_yes many_sixltr high_wps has_hashtag,HER
+is_analytic_no is_clout_yes see_yes netspeak_yes few_sixltr has_hashtag,HER
+is_analytic_yes is_authentic_no reward_yes netspeak_yes high_wps has_photo has_url,HER
+certain_yes differ_yes affiliation_yes power_yes has_exclam has_hashtag,HER
+is_analytic_yes is_clout_yes is_authentic_no affiliation_yes reward_yes netspeak_yes has_exclam has_photo has_hashtag has_url,HER
+is_analytic_no is_clout_no insight_yes cause_yes certain_yes differ_yes netspeak_yes high_wps has_url,HER
+is_analytic_yes is_authentic_no affiliation_yes netspeak_yes many_sixltr has_photo has_url,HER
+is_analytic_no is_authentic_no see_yes reward_yes netspeak_yes has_qmark has_photo has_url,HER
+is_clout_yes is_authentic_no is_tone_no negemo_yes anger_yes many_sixltr low_wps has_hashtag,HER
+is_analytic_no is_authentic_no is_tone_yes posemo_yes reward_yes many_sixltr low_wps none,HER
+is_authentic_yes is_tone_yes posemo_yes insight_yes tentat_yes see_yes netspeak_yes has_exclam has_url,HER
+posemo_yes negemo_yes cause_yes tentat_yes differ_yes feel_yes power_yes assent_yes high_wps has_hashtag,HER
+is_tone_yes posemo_yes affiliation_yes power_yes netspeak_yes high_wps has_hashtag has_url,HER
+is_analytic_yes insight_yes feel_yes power_yes risk_yes netspeak_yes has_exclam has_photo has_url,HER
+is_clout_yes is_tone_yes posemo_yes cause_yes tentat_yes certain_yes affiliation_yes reward_yes many_sixltr low_wps has_exclam has_hashtag,HER
+is_authentic_no netspeak_yes few_sixltr has_photo has_hashtag has_url,HER
+is_analytic_no is_authentic_no netspeak_yes few_sixltr has_photo has_hashtag has_url,HER
+is_analytic_yes is_authentic_no is_tone_yes posemo_yes reward_yes netspeak_yes many_sixltr has_photo has_url,HER
+is_analytic_no is_authentic_no is_tone_yes posemo_yes cause_yes discrep_yes tentat_yes certain_yes differ_yes see_yes feel_yes affiliation_yes achieve_yes reward_yes high_wps has_hashtag,HER
+is_authentic_yes power_yes many_sixltr low_wps has_exclam has_hashtag,HER
+is_analytic_no is_clout_yes is_authentic_yes cause_yes tentat_yes differ_yes affiliation_yes power_yes has_hashtag,HER
+is_analytic_yes is_tone_yes posemo_yes insight_yes cause_yes achieve_yes reward_yes has_hashtag,HER
+is_analytic_yes see_yes affiliation_yes achieve_yes many_sixltr has_hashtag,HER
+certain_yes low_wps has_exclam has_hashtag,HER
+is_clout_no is_authentic_yes tentat_yes certain_yes differ_yes achieve_yes few_sixltr has_exclam has_hashtag,HER
+is_clout_yes is_authentic_yes is_tone_no negemo_yes anger_yes insight_yes affiliation_yes high_wps has_hashtag,HER
+is_authentic_no discrep_yes see_yes netspeak_yes low_wps has_exclam has_qmark has_photo has_url,HER
+is_authentic_yes is_tone_yes posemo_yes certain_yes differ_yes power_yes reward_yes nonflu_yes has_hashtag,HER
+cause_yes netspeak_yes high_wps has_photo has_url,HER
+is_analytic_no is_clout_yes is_authentic_yes differ_yes affiliation_yes power_yes reward_yes few_sixltr low_wps has_exclam has_hashtag,HER
+netspeak_yes has_photo has_hashtag has_url,HER
+is_analytic_yes is_authentic_no is_tone_yes posemo_yes affiliation_yes power_yes reward_yes netspeak_yes has_exclam has_photo has_hashtag has_url,HER
+is_analytic_yes is_authentic_no netspeak_yes has_photo has_hashtag has_url,HER
+is_analytic_yes posemo_yes netspeak_yes has_exclam has_photo has_url,HER
+is_analytic_yes is_authentic_yes achieve_yes power_yes many_sixltr low_wps has_exclam has_hashtag,HER
+is_analytic_yes is_authentic_no cause_yes see_yes reward_yes few_sixltr has_hashtag,HER
+is_authentic_no see_yes feel_yes affiliation_yes netspeak_yes has_qmark has_photo has_hashtag has_url,HER
+is_analytic_yes insight_yes cause_yes tentat_yes netspeak_yes high_wps has_photo has_url,HER
+is_analytic_no is_tone_yes posemo_yes insight_yes cause_yes tentat_yes certain_yes reward_yes netspeak_yes high_wps has_photo has_hashtag has_url,HER
+is_analytic_yes affiliation_yes netspeak_yes many_sixltr has_exclam has_photo has_url,HER
+is_clout_yes is_tone_yes posemo_yes see_yes affiliation_yes netspeak_yes few_sixltr high_wps has_url,HER
+is_analytic_yes see_yes netspeak_yes low_wps has_exclam has_url,HER
+is_analytic_yes posemo_yes power_yes reward_yes netspeak_yes few_sixltr has_exclam has_photo has_url,HER
+is_tone_yes posemo_yes insight_yes discrep_yes tentat_yes differ_yes affiliation_yes reward_yes netspeak_yes assent_yes has_exclam has_photo has_url,HER
+is_analytic_no is_authentic_no is_tone_yes posemo_yes cause_yes tentat_yes affiliation_yes many_sixltr low_wps has_exclam has_hashtag,HER
+is_analytic_yes feel_yes reward_yes netspeak_yes high_wps has_photo has_url,HER
+is_tone_yes posemo_yes insight_yes power_yes reward_yes netspeak_yes has_photo has_url,HER
+is_analytic_yes is_authentic_yes posemo_yes hear_yes feel_yes netspeak_yes assent_yes nonflu_yes few_sixltr low_wps has_exclam has_photo has_url,HER
+is_clout_yes is_authentic_no is_tone_yes posemo_yes certain_yes feel_yes affiliation_yes reward_yes netspeak_yes assent_yes low_wps has_exclam has_hashtag has_url,HER
+netspeak_yes many_sixltr high_wps has_photo has_url,HER
+is_authentic_yes is_tone_yes posemo_yes insight_yes cause_yes achieve_yes power_yes netspeak_yes many_sixltr has_exclam has_photo has_hashtag has_url,HER
+is_analytic_no is_clout_yes is_tone_no negemo_yes anger_yes cause_yes certain_yes affiliation_yes power_yes swear_yes has_hashtag,HER
+is_clout_yes is_tone_no negemo_yes hear_yes affiliation_yes power_yes assent_yes few_sixltr high_wps has_hashtag,HER
+is_analytic_yes power_yes netspeak_yes high_wps has_photo has_url,HER
+is_analytic_yes is_authentic_no power_yes has_hashtag,HER
+is_analytic_no is_tone_yes posemo_yes insight_yes cause_yes tentat_yes achieve_yes power_yes many_sixltr has_hashtag,HER
+is_authentic_yes power_yes reward_yes has_hashtag,HER
+insight_yes see_yes netspeak_yes many_sixltr high_wps has_photo has_url,HER
+is_analytic_yes affiliation_yes netspeak_yes high_wps has_photo has_url,HER
+is_analytic_yes see_yes achieve_yes netspeak_yes has_qmark has_photo has_url,HER
+is_analytic_yes posemo_yes achieve_yes reward_yes netspeak_yes high_wps has_photo has_url,HER
+is_analytic_no is_authentic_yes is_tone_no negemo_yes differ_yes feel_yes affiliation_yes has_hashtag,HER
+cause_yes feel_yes power_yes netspeak_yes few_sixltr has_photo has_url,HER
+is_analytic_yes posemo_yes cause_yes netspeak_yes high_wps has_photo has_url,HER
+is_analytic_yes cause_yes affiliation_yes netspeak_yes high_wps has_hashtag has_url,HER
+is_analytic_no is_clout_yes is_authentic_no assent_yes low_wps none,LER
+is_analytic_yes is_authentic_yes cause_yes many_sixltr has_hashtag,LER
+tentat_yes differ_yes few_sixltr high_wps has_hashtag,LER
+is_clout_yes discrep_yes tentat_yes differ_yes affiliation_yes power_yes reward_yes netspeak_yes assent_yes has_hashtag,LER
+is_clout_no is_authentic_yes is_tone_yes posemo_yes reward_yes many_sixltr low_wps has_hashtag,LER
+is_analytic_no posemo_yes negemo_yes differ_yes affiliation_yes achieve_yes reward_yes many_sixltr low_wps has_hashtag,LER
+is_analytic_yes is_authentic_yes power_yes has_hashtag,LER
+is_analytic_yes is_clout_no is_authentic_yes insight_yes certain_yes has_hashtag,LER
+reward_yes netspeak_yes assent_yes has_hashtag,LER
+is_analytic_no is_clout_yes is_authentic_yes is_tone_no negemo_yes sad_yes insight_yes tentat_yes differ_yes see_yes affiliation_yes power_yes has_hashtag,LER
+is_clout_yes is_authentic_no affiliation_yes netspeak_yes few_sixltr has_url,LER
+is_clout_yes discrep_yes see_yes affiliation_yes few_sixltr has_hashtag,LER
+is_analytic_yes insight_yes see_yes many_sixltr has_hashtag,LER
+discrep_yes tentat_yes differ_yes netspeak_yes assent_yes few_sixltr high_wps has_hashtag,LER
+is_analytic_no differ_yes see_yes power_yes few_sixltr low_wps has_hashtag,LER
+insight_yes tentat_yes has_hashtag,LER
+is_analytic_yes certain_yes differ_yes hear_yes many_sixltr has_hashtag,LER
+is_clout_yes is_authentic_no cause_yes reward_yes few_sixltr high_wps has_hashtag,LER
+is_clout_yes is_authentic_no tentat_yes hear_yes power_yes netspeak_yes assent_yes has_qmark has_hashtag,LER
+is_clout_no is_authentic_no posemo_yes negemo_yes anger_yes differ_yes see_yes netspeak_yes assent_yes high_wps has_hashtag,LER
+is_analytic_yes is_clout_yes insight_yes affiliation_yes reward_yes high_wps has_hashtag,LER
+is_analytic_no is_clout_yes is_tone_yes posemo_yes insight_yes affiliation_yes low_wps has_hashtag,LER
+is_clout_yes certain_yes few_sixltr has_hashtag,LER
+is_analytic_no is_clout_no is_authentic_no is_tone_yes posemo_yes cause_yes discrep_yes differ_yes power_yes many_sixltr has_hashtag,LER
+is_clout_yes insight_yes tentat_yes see_yes feel_yes power_yes low_wps has_qmark has_hashtag,LER
+is_analytic_no is_clout_yes is_authentic_yes is_tone_yes posemo_yes certain_yes differ_yes affiliation_yes achieve_yes power_yes reward_yes has_exclam has_hashtag,LER
+posemo_yes insight_yes discrep_yes tentat_yes affiliation_yes achieve_yes power_yes has_hashtag,LER
+is_clout_no insight_yes discrep_yes tentat_yes differ_yes few_sixltr high_wps has_hashtag,LER
+is_analytic_no is_authentic_yes is_tone_yes posemo_yes discrep_yes differ_yes affiliation_yes power_yes nonflu_yes has_hashtag,LER
+is_clout_no cause_yes tentat_yes differ_yes high_wps has_hashtag,LER
+is_authentic_yes insight_yes discrep_yes tentat_yes differ_yes has_hashtag,LER
+is_analytic_no is_clout_yes is_authentic_yes is_tone_no negemo_yes insight_yes tentat_yes see_yes has_hashtag,LER
+is_analytic_no is_clout_yes insight_yes cause_yes certain_yes low_wps has_qmark has_hashtag,LER
+is_clout_yes is_authentic_yes is_tone_no negemo_yes anger_yes power_yes many_sixltr low_wps has_exclam has_hashtag,LER
+is_analytic_yes is_tone_yes posemo_yes cause_yes differ_yes power_yes assent_yes high_wps has_hashtag,LER
+is_analytic_yes affiliation_yes many_sixltr low_wps has_exclam has_hashtag,LER
+is_analytic_yes is_tone_yes posemo_yes reward_yes many_sixltr low_wps has_exclam has_hashtag,LER
+insight_yes certain_yes see_yes power_yes high_wps has_hashtag,LER
+is_authentic_yes posemo_yes discrep_yes tentat_yes differ_yes risk_yes few_sixltr has_qmark has_hashtag,LER
+is_analytic_no is_authentic_no is_tone_yes posemo_yes negemo_yes feel_yes reward_yes assent_yes low_wps has_hashtag,LER
+cause_yes achieve_yes netspeak_yes assent_yes high_wps has_hashtag,LER
+is_analytic_no cause_yes differ_yes see_yes many_sixltr has_hashtag,LER
+is_analytic_yes is_tone_yes posemo_yes power_yes many_sixltr has_exclam none,LER
+is_analytic_no is_clout_yes is_tone_yes posemo_yes insight_yes discrep_yes tentat_yes differ_yes feel_yes assent_yes few_sixltr has_hashtag,LER
+is_analytic_no is_clout_yes is_tone_no negemo_yes sad_yes cause_yes see_yes affiliation_yes has_hashtag,LER
+is_clout_yes posemo_yes insight_yes cause_yes discrep_yes affiliation_yes achieve_yes power_yes reward_yes high_wps has_hashtag,LER
+is_clout_yes cause_yes affiliation_yes achieve_yes power_yes few_sixltr low_wps has_exclam has_hashtag,LER
+is_analytic_no is_clout_no is_authentic_yes is_tone_yes posemo_yes insight_yes cause_yes few_sixltr high_wps has_hashtag,LER
+is_tone_yes posemo_yes feel_yes assent_yes low_wps has_hashtag,LER
+is_analytic_no is_tone_no negemo_yes anger_yes achieve_yes power_yes has_hashtag,LER
+is_analytic_yes is_authentic_yes certain_yes high_wps none,LER
+insight_yes cause_yes tentat_yes achieve_yes power_yes reward_yes many_sixltr has_hashtag,LER
+is_analytic_no is_clout_no posemo_yes negemo_yes sad_yes cause_yes tentat_yes differ_yes hear_yes has_hashtag,LER
+is_analytic_no is_tone_yes posemo_yes negemo_yes power_yes reward_yes low_wps has_hashtag,LER
+is_clout_no is_tone_yes posemo_yes differ_yes has_hashtag,LER
+is_authentic_yes posemo_yes negemo_yes cause_yes tentat_yes power_yes many_sixltr has_hashtag,LER
+is_analytic_no is_authentic_no cause_yes achieve_yes reward_yes many_sixltr low_wps has_hashtag,LER
+is_authentic_yes is_tone_yes posemo_yes feel_yes achieve_yes assent_yes few_sixltr has_hashtag,LER
+is_analytic_yes is_authentic_yes certain_yes many_sixltr low_wps has_exclam has_hashtag,LER
+is_analytic_no is_authentic_yes is_tone_no negemo_yes anger_yes insight_yes tentat_yes differ_yes affiliation_yes many_sixltr low_wps has_hashtag,LER
+is_analytic_no is_clout_yes is_authentic_yes posemo_yes negemo_yes insight_yes differ_yes achieve_yes high_wps has_hashtag,LER
+many_sixltr low_wps has_exclam has_hashtag,LER
+is_analytic_no is_clout_no is_authentic_yes insight_yes tentat_yes certain_yes differ_yes power_yes assent_yes few_sixltr has_hashtag,LER
+is_analytic_no is_clout_no is_authentic_yes cause_yes differ_yes hear_yes has_hashtag,LER
+is_authentic_yes is_tone_yes posemo_yes insight_yes tentat_yes affiliation_yes low_wps has_hashtag,LER
+is_analytic_no is_authentic_no is_tone_no negemo_yes anx_yes insight_yes differ_yes many_sixltr has_hashtag,LER
+is_clout_no is_authentic_yes tentat_yes differ_yes achieve_yes reward_yes few_sixltr low_wps has_hashtag,LER
+is_analytic_yes cause_yes tentat_yes netspeak_yes high_wps has_photo has_hashtag has_url,LER
+is_analytic_no is_clout_yes is_authentic_no reward_yes netspeak_yes assent_yes low_wps has_exclam has_hashtag,LER
+is_analytic_no is_clout_no discrep_yes tentat_yes differ_yes many_sixltr has_hashtag,LER
+cause_yes tentat_yes differ_yes hear_yes has_hashtag,LER
+is_analytic_yes is_authentic_yes is_tone_yes posemo_yes insight_yes tentat_yes few_sixltr has_hashtag,LER
+is_analytic_no is_clout_yes is_tone_yes posemo_yes cause_yes hear_yes feel_yes affiliation_yes achieve_yes assent_yes has_hashtag,LER
+is_clout_yes affiliation_yes netspeak_yes few_sixltr low_wps has_exclam has_photo has_hashtag has_url,LER
+is_authentic_yes is_tone_yes posemo_yes see_yes reward_yes assent_yes has_hashtag,LER
+is_authentic_no is_tone_yes posemo_yes cause_yes discrep_yes power_yes many_sixltr has_qmark has_hashtag,LER
+is_analytic_no is_clout_yes insight_yes discrep_yes has_hashtag,LER
+is_analytic_yes is_tone_no negemo_yes cause_yes reward_yes risk_yes many_sixltr high_wps has_hashtag,LER
+is_analytic_no is_tone_yes posemo_yes discrep_yes tentat_yes differ_yes affiliation_yes power_yes reward_yes high_wps has_hashtag,LER
+is_analytic_yes is_clout_yes insight_yes tentat_yes netspeak_yes assent_yes has_hashtag,LER
+is_analytic_no is_tone_yes posemo_yes cause_yes power_yes many_sixltr low_wps has_exclam has_hashtag,LER
+is_analytic_no is_clout_no is_authentic_yes discrep_yes differ_yes few_sixltr high_wps has_hashtag,LER
+is_analytic_yes is_authentic_no see_yes few_sixltr has_hashtag,LER
+is_analytic_no is_clout_no is_authentic_yes is_tone_no negemo_yes anx_yes achieve_yes reward_yes few_sixltr has_hashtag,LER
+insight_yes discrep_yes tentat_yes differ_yes see_yes affiliation_yes reward_yes few_sixltr has_hashtag,LER
+cause_yes discrep_yes feel_yes power_yes few_sixltr has_qmark has_hashtag,LER
+is_tone_yes posemo_yes insight_yes discrep_yes tentat_yes differ_yes power_yes reward_yes few_sixltr high_wps has_hashtag,LER
+is_clout_yes is_authentic_yes is_tone_yes posemo_yes negemo_yes insight_yes tentat_yes differ_yes affiliation_yes nonflu_yes many_sixltr has_hashtag,LER
+is_analytic_no insight_yes discrep_yes tentat_yes differ_yes hear_yes affiliation_yes assent_yes high_wps has_hashtag,LER
+is_clout_yes is_authentic_no is_tone_no negemo_yes cause_yes tentat_yes hear_yes few_sixltr high_wps has_hashtag,LER
+is_analytic_yes is_authentic_yes cause_yes power_yes many_sixltr high_wps has_hashtag,LER
+is_authentic_yes is_tone_no posemo_yes negemo_yes sad_yes insight_yes cause_yes discrep_yes differ_yes hear_yes achieve_yes power_yes reward_yes risk_yes few_sixltr low_wps has_hashtag,LER
+is_analytic_no differ_yes few_sixltr has_hashtag,LER
+is_analytic_no is_clout_yes is_authentic_no is_tone_yes posemo_yes tentat_yes affiliation_yes few_sixltr low_wps has_qmark has_hashtag,LER
+is_authentic_no tentat_yes certain_yes netspeak_yes few_sixltr has_photo has_hashtag has_url,LER
+is_authentic_no is_tone_yes posemo_yes cause_yes tentat_yes certain_yes achieve_yes power_yes reward_yes many_sixltr low_wps has_hashtag,LER
+is_analytic_no cause_yes many_sixltr low_wps has_hashtag,LER
+is_authentic_yes reward_yes few_sixltr has_hashtag,LER
+is_analytic_yes is_clout_no is_authentic_yes differ_yes power_yes many_sixltr low_wps has_exclam has_hashtag,LER
+is_analytic_no is_clout_no is_authentic_yes is_tone_no negemo_yes insight_yes certain_yes differ_yes affiliation_yes swear_yes assent_yes has_hashtag,LER
+is_analytic_yes is_authentic_no posemo_yes negemo_yes tentat_yes hear_yes achieve_yes power_yes has_hashtag,LER
+is_analytic_no is_tone_no negemo_yes anger_yes insight_yes cause_yes few_sixltr has_hashtag,LER
+is_analytic_yes tentat_yes reward_yes few_sixltr has_exclam has_hashtag,LER
+is_analytic_yes is_authentic_no low_wps has_exclam has_hashtag,LER
+is_clout_no is_tone_no negemo_yes anx_yes differ_yes hear_yes risk_yes assent_yes many_sixltr low_wps has_exclam has_qmark has_hashtag,LER
+is_analytic_no is_clout_yes is_authentic_no is_tone_no negemo_yes anger_yes affiliation_yes power_yes netspeak_yes assent_yes many_sixltr has_hashtag,LER
+is_analytic_no is_clout_no is_authentic_yes certain_yes see_yes affiliation_yes achieve_yes few_sixltr high_wps has_hashtag,LER
+is_authentic_yes is_tone_yes posemo_yes cause_yes tentat_yes differ_yes risk_yes has_hashtag,LER
+is_analytic_yes is_clout_no is_authentic_yes is_tone_yes posemo_yes negemo_yes anx_yes differ_yes achieve_yes power_yes few_sixltr high_wps has_hashtag,LER
+is_analytic_no is_clout_yes is_authentic_no is_tone_yes posemo_yes insight_yes tentat_yes hear_yes affiliation_yes achieve_yes few_sixltr high_wps has_hashtag,LER
+is_clout_yes posemo_yes negemo_yes anger_yes cause_yes tentat_yes certain_yes see_yes feel_yes power_yes reward_yes many_sixltr low_wps has_hashtag,LER
+is_analytic_no is_clout_yes cause_yes few_sixltr low_wps has_qmark has_hashtag,LER
+is_analytic_yes is_authentic_yes tentat_yes netspeak_yes assent_yes many_sixltr low_wps has_hashtag,LER
+is_clout_yes is_authentic_no cause_yes certain_yes few_sixltr has_hashtag,LER
+is_tone_yes posemo_yes achieve_yes reward_yes netspeak_yes has_exclam has_photo has_hashtag has_url,LER
+is_tone_yes posemo_yes cause_yes tentat_yes see_yes reward_yes few_sixltr has_qmark has_hashtag,LER
+is_analytic_no is_authentic_no reward_yes netspeak_yes assent_yes many_sixltr low_wps has_hashtag,LER
+is_analytic_yes certain_yes few_sixltr has_hashtag,LER
+is_analytic_yes is_authentic_yes is_tone_no negemo_yes anger_yes tentat_yes achieve_yes few_sixltr has_hashtag,LER
+is_clout_yes is_authentic_yes is_tone_yes posemo_yes insight_yes feel_yes affiliation_yes assent_yes has_exclam has_hashtag,LER
+is_clout_yes is_authentic_no is_tone_no negemo_yes anger_yes hear_yes achieve_yes high_wps has_hashtag,LER
+insight_yes discrep_yes certain_yes power_yes few_sixltr none,LER
+is_clout_no is_authentic_no is_tone_yes posemo_yes discrep_yes tentat_yes differ_yes see_yes affiliation_yes nonflu_yes few_sixltr high_wps has_hashtag,LER
+is_analytic_no is_clout_yes is_tone_yes posemo_yes insight_yes tentat_yes certain_yes affiliation_yes power_yes reward_yes low_wps has_exclam has_hashtag,LER
+is_analytic_no tentat_yes certain_yes differ_yes affiliation_yes reward_yes has_hashtag,LER
+tentat_yes differ_yes see_yes affiliation_yes has_hashtag,LER
+is_analytic_no is_authentic_yes is_tone_yes posemo_yes cause_yes certain_yes differ_yes affiliation_yes achieve_yes power_yes reward_yes has_hashtag,LER
+is_analytic_no is_clout_yes is_authentic_yes insight_yes tentat_yes certain_yes feel_yes low_wps has_qmark has_hashtag,LER
+is_authentic_yes tentat_yes differ_yes affiliation_yes achieve_yes many_sixltr low_wps has_hashtag,LER
+is_tone_yes posemo_yes certain_yes differ_yes affiliation_yes low_wps has_exclam has_hashtag,LER
+is_clout_no tentat_yes differ_yes achieve_yes power_yes low_wps has_hashtag,LER
+is_analytic_no is_clout_yes is_tone_yes posemo_yes discrep_yes affiliation_yes power_yes few_sixltr has_hashtag,LER
+is_analytic_no is_clout_yes cause_yes differ_yes hear_yes affiliation_yes achieve_yes few_sixltr high_wps has_hashtag,LER
+is_authentic_no is_tone_no negemo_yes sad_yes differ_yes power_yes has_hashtag,LER
+is_authentic_yes few_sixltr low_wps has_hashtag,LER
+is_analytic_yes is_authentic_yes is_tone_no negemo_yes insight_yes cause_yes tentat_yes power_yes risk_yes has_hashtag,LER
+is_clout_yes hear_yes has_hashtag,LER
+is_authentic_no is_tone_no posemo_yes negemo_yes sad_yes discrep_yes certain_yes hear_yes achieve_yes power_yes reward_yes risk_yes many_sixltr has_hashtag,LER
+is_clout_no is_authentic_yes is_tone_yes posemo_yes cause_yes feel_yes achieve_yes low_wps has_hashtag,LER
+is_analytic_no is_tone_no negemo_yes insight_yes achieve_yes power_yes risk_yes few_sixltr high_wps has_hashtag,LER
+is_analytic_no is_clout_yes is_authentic_no is_tone_yes posemo_yes cause_yes hear_yes reward_yes few_sixltr has_hashtag,LER
+is_analytic_yes is_authentic_yes is_tone_no negemo_yes anx_yes anger_yes insight_yes cause_yes differ_yes power_yes risk_yes many_sixltr has_hashtag,LER
+insight_yes discrep_yes differ_yes high_wps has_hashtag,LER
+is_authentic_yes has_hashtag,LER
+is_analytic_no is_clout_no posemo_yes negemo_yes anger_yes insight_yes differ_yes affiliation_yes achieve_yes power_yes nonflu_yes has_hashtag,LER
+is_clout_yes is_authentic_no insight_yes cause_yes affiliation_yes power_yes reward_yes few_sixltr has_hashtag,LER
+is_authentic_yes tentat_yes certain_yes feel_yes power_yes few_sixltr has_hashtag,LER
+reward_yes few_sixltr high_wps has_hashtag,LER
+is_analytic_no is_tone_no negemo_yes anger_yes insight_yes differ_yes see_yes has_hashtag,LER
+is_analytic_no is_clout_no is_authentic_yes is_tone_no negemo_yes anx_yes anger_yes differ_yes risk_yes has_hashtag,LER
+is_analytic_no is_clout_yes is_authentic_no is_tone_no negemo_yes anx_yes anger_yes insight_yes tentat_yes reward_yes netspeak_yes assent_yes has_hashtag,LER
+is_analytic_no is_clout_yes is_authentic_yes is_tone_yes posemo_yes tentat_yes certain_yes differ_yes feel_yes affiliation_yes achieve_yes reward_yes few_sixltr has_qmark has_hashtag,LER
+is_clout_yes tentat_yes affiliation_yes power_yes many_sixltr has_exclam has_hashtag,LER
+is_analytic_no is_clout_yes insight_yes cause_yes certain_yes see_yes hear_yes affiliation_yes few_sixltr has_qmark has_hashtag,LER
+is_analytic_yes is_clout_yes affiliation_yes reward_yes has_hashtag,LER
+is_analytic_yes is_authentic_yes power_yes many_sixltr low_wps has_exclam has_hashtag,LER
+is_clout_yes insight_yes cause_yes tentat_yes has_hashtag,LER
+is_analytic_no is_tone_no negemo_yes anger_yes cause_yes discrep_yes tentat_yes differ_yes swear_yes has_qmark has_hashtag,LER
+is_analytic_no is_clout_yes is_authentic_no is_tone_yes posemo_yes certain_yes hear_yes power_yes reward_yes high_wps has_hashtag,LER
+is_tone_yes posemo_yes cause_yes tentat_yes see_yes feel_yes affiliation_yes achieve_yes few_sixltr high_wps has_hashtag,LER
+is_analytic_no is_clout_no is_authentic_yes insight_yes differ_yes affiliation_yes power_yes netspeak_yes filler_yes high_wps has_photo has_url,LER
+is_analytic_no posemo_yes discrep_yes certain_yes see_yes reward_yes nonflu_yes few_sixltr has_hashtag,LER
+is_analytic_yes is_clout_no is_authentic_yes cause_yes tentat_yes few_sixltr has_hashtag,LER
+is_analytic_yes is_authentic_yes is_tone_yes posemo_yes insight_yes cause_yes tentat_yes see_yes high_wps has_hashtag,LER
+is_authentic_yes is_tone_no negemo_yes sad_yes insight_yes tentat_yes achieve_yes power_yes has_hashtag,LER
+is_analytic_no is_authentic_no posemo_yes discrep_yes tentat_yes differ_yes affiliation_yes assent_yes nonflu_yes has_qmark has_hashtag,LER
+is_clout_no is_authentic_yes is_tone_yes posemo_yes insight_yes cause_yes achieve_yes power_yes reward_yes few_sixltr high_wps has_hashtag,LER
+is_analytic_yes low_wps has_exclam has_hashtag,LER
+is_analytic_no is_clout_yes is_authentic_yes insight_yes discrep_yes tentat_yes differ_yes affiliation_yes low_wps has_exclam has_hashtag,LER
+is_clout_no posemo_yes negemo_yes insight_yes certain_yes differ_yes see_yes reward_yes risk_yes few_sixltr low_wps has_hashtag,LER
+is_analytic_yes is_clout_no is_authentic_yes insight_yes tentat_yes see_yes high_wps has_hashtag,LER
+is_clout_yes is_tone_yes posemo_yes insight_yes certain_yes see_yes affiliation_yes achieve_yes power_yes few_sixltr has_hashtag,LER
+is_authentic_yes is_tone_no negemo_yes anger_yes cause_yes tentat_yes affiliation_yes power_yes risk_yes netspeak_yes assent_yes many_sixltr has_hashtag,LER
+is_analytic_no is_clout_yes insight_yes cause_yes affiliation_yes has_qmark has_hashtag,LER
+is_authentic_yes tentat_yes differ_yes see_yes affiliation_yes achieve_yes reward_yes few_sixltr has_hashtag,LER
+is_authentic_yes discrep_yes tentat_yes certain_yes see_yes affiliation_yes achieve_yes few_sixltr none,LER
+is_analytic_no is_clout_yes is_authentic_yes posemo_yes negemo_yes anger_yes insight_yes discrep_yes tentat_yes differ_yes hear_yes achieve_yes power_yes reward_yes netspeak_yes assent_yes few_sixltr high_wps has_hashtag,LER
+is_analytic_no is_clout_yes cause_yes tentat_yes certain_yes differ_yes affiliation_yes achieve_yes power_yes has_hashtag,LER
+is_clout_no is_authentic_yes is_tone_no negemo_yes anx_yes insight_yes certain_yes differ_yes achieve_yes power_yes many_sixltr none,LER
+is_authentic_no is_tone_no negemo_yes discrep_yes differ_yes power_yes reward_yes risk_yes few_sixltr none,LER
+is_analytic_no is_authentic_no is_tone_no negemo_yes anx_yes cause_yes see_yes affiliation_yes power_yes nonflu_yes few_sixltr has_hashtag,LER
+is_analytic_no is_clout_yes see_yes affiliation_yes few_sixltr has_hashtag,LER
+tentat_yes differ_yes power_yes few_sixltr low_wps has_hashtag,LER
+is_analytic_yes is_clout_no is_authentic_yes reward_yes few_sixltr has_hashtag,LER
+is_tone_no negemo_yes anger_yes cause_yes tentat_yes certain_yes differ_yes achieve_yes power_yes high_wps has_hashtag,LER
+is_analytic_no is_tone_no negemo_yes anx_yes insight_yes tentat_yes achieve_yes netspeak_yes few_sixltr has_hashtag,LER
+is_clout_yes is_authentic_no is_tone_yes posemo_yes insight_yes cause_yes tentat_yes achieve_yes has_hashtag,LER
+is_analytic_no is_authentic_yes insight_yes tentat_yes differ_yes hear_yes affiliation_yes achieve_yes reward_yes has_hashtag,LER
+is_analytic_no is_clout_no is_authentic_yes is_tone_yes posemo_yes cause_yes differ_yes many_sixltr has_hashtag,LER
+differ_yes affiliation_yes has_hashtag,LER
+is_analytic_yes is_tone_no negemo_yes cause_yes see_yes reward_yes risk_yes few_sixltr none,LER
+is_analytic_yes is_authentic_yes power_yes low_wps has_exclam has_qmark has_hashtag,LER
+is_clout_no is_authentic_yes differ_yes has_hashtag,LER
+is_analytic_yes is_clout_no cause_yes discrep_yes differ_yes see_yes reward_yes few_sixltr has_hashtag,LER
+is_analytic_no discrep_yes differ_yes affiliation_yes has_hashtag,LER
+is_clout_no is_authentic_yes cause_yes tentat_yes differ_yes achieve_yes power_yes has_hashtag,LER
+is_analytic_no is_clout_no is_authentic_yes cause_yes discrep_yes tentat_yes differ_yes has_qmark has_hashtag,LER
+is_authentic_yes insight_yes feel_yes has_hashtag,LER
+is_analytic_no is_tone_no negemo_yes insight_yes tentat_yes differ_yes see_yes affiliation_yes risk_yes few_sixltr high_wps has_hashtag,LER
+is_clout_yes certain_yes power_yes netspeak_yes high_wps has_url,LER
+is_clout_yes affiliation_yes achieve_yes power_yes reward_yes low_wps has_exclam has_hashtag,LER
+is_analytic_no is_clout_yes posemo_yes certain_yes affiliation_yes achieve_yes power_yes reward_yes few_sixltr has_hashtag,LER
+is_clout_yes is_authentic_no is_tone_yes posemo_yes cause_yes tentat_yes achieve_yes reward_yes low_wps has_hashtag,LER
+is_clout_yes is_authentic_yes affiliation_yes few_sixltr has_hashtag,LER
+is_analytic_yes is_authentic_no is_tone_no negemo_yes anger_yes power_yes risk_yes few_sixltr high_wps has_hashtag,LER
+is_authentic_yes is_tone_no negemo_yes insight_yes cause_yes discrep_yes affiliation_yes achieve_yes power_yes risk_yes low_wps has_hashtag,LER
+is_clout_no is_authentic_yes insight_yes see_yes achieve_yes netspeak_yes high_wps has_photo has_hashtag has_url,LER
+is_clout_yes is_authentic_no is_tone_no negemo_yes anx_yes hear_yes risk_yes few_sixltr low_wps has_hashtag,LER
+is_clout_yes is_authentic_yes posemo_yes insight_yes discrep_yes power_yes reward_yes none,LER
+is_clout_yes certain_yes affiliation_yes achieve_yes power_yes risk_yes has_hashtag,LER
+is_analytic_no is_clout_yes is_tone_no negemo_yes anger_yes insight_yes discrep_yes differ_yes affiliation_yes power_yes netspeak_yes assent_yes low_wps has_qmark has_hashtag,LER
+is_analytic_yes is_clout_no tentat_yes differ_yes see_yes reward_yes few_sixltr low_wps has_hashtag,LER
+is_analytic_no is_clout_no posemo_yes negemo_yes anger_yes tentat_yes differ_yes reward_yes high_wps has_hashtag,LER
+is_analytic_yes is_authentic_yes is_tone_yes posemo_yes insight_yes tentat_yes power_yes low_wps has_hashtag,LER
+insight_yes tentat_yes differ_yes hear_yes achieve_yes few_sixltr high_wps has_hashtag,LER
+is_analytic_no is_clout_yes posemo_yes insight_yes differ_yes affiliation_yes few_sixltr has_hashtag,LER
+is_analytic_no is_clout_yes is_authentic_no posemo_yes negemo_yes cause_yes certain_yes see_yes affiliation_yes achieve_yes power_yes reward_yes risk_yes netspeak_yes assent_yes has_hashtag,LER
+is_authentic_yes differ_yes affiliation_yes netspeak_yes assent_yes low_wps has_exclam has_qmark has_hashtag,LER
+is_analytic_no is_tone_yes posemo_yes cause_yes differ_yes affiliation_yes netspeak_yes assent_yes has_qmark has_photo has_url,LER
+is_analytic_yes is_clout_yes is_authentic_yes is_tone_yes posemo_yes insight_yes see_yes affiliation_yes netspeak_yes has_exclam has_url,LER
+is_tone_yes posemo_yes cause_yes tentat_yes see_yes affiliation_yes netspeak_yes has_qmark has_url,LER
+is_analytic_yes reward_yes netspeak_yes has_exclam has_video has_hashtag has_url,LER
+is_authentic_no cause_yes affiliation_yes achieve_yes power_yes risk_yes netspeak_yes has_qmark has_photo has_url,LER
+is_clout_no is_tone_yes posemo_yes differ_yes hear_yes netspeak_yes many_sixltr has_photo has_url,LER
+is_analytic_yes achieve_yes netspeak_yes high_wps has_photo has_url,LER
+is_analytic_no is_clout_no is_tone_yes posemo_yes feel_yes reward_yes none,LER
+is_clout_yes insight_yes differ_yes netspeak_yes has_qmark has_photo has_url,LER
+is_tone_yes posemo_yes insight_yes affiliation_yes reward_yes netspeak_yes high_wps has_url,LER
+is_authentic_yes insight_yes certain_yes affiliation_yes netspeak_yes high_wps has_url,LER
+netspeak_yes low_wps has_qmark has_url,LER
+is_clout_no cause_yes differ_yes netspeak_yes many_sixltr low_wps has_qmark has_hashtag has_url,LER
+is_tone_yes posemo_yes netspeak_yes many_sixltr high_wps has_url,LER
+is_analytic_yes is_clout_yes is_tone_yes posemo_yes affiliation_yes power_yes netspeak_yes many_sixltr high_wps has_video has_url,LER
+is_analytic_no is_clout_yes is_authentic_no is_tone_yes posemo_yes tentat_yes hear_yes affiliation_yes netspeak_yes has_qmark has_video has_url,LER
+is_analytic_no is_tone_yes posemo_yes differ_yes affiliation_yes reward_yes netspeak_yes nonflu_yes many_sixltr low_wps has_exclam has_url,LER
+is_authentic_no is_tone_yes posemo_yes tentat_yes affiliation_yes reward_yes netspeak_yes has_hashtag has_url,LER
+is_authentic_yes tentat_yes see_yes power_yes has_exclam none,LER
+discrep_yes see_yes hear_yes netspeak_yes few_sixltr high_wps has_photo has_url,LER
+is_clout_yes certain_yes affiliation_yes netspeak_yes low_wps has_url,LER
+is_analytic_yes netspeak_yes low_wps has_exclam has_url,LER
+is_analytic_yes insight_yes power_yes netspeak_yes high_wps has_photo has_url,LER
+is_authentic_no is_tone_yes posemo_yes cause_yes discrep_yes feel_yes netspeak_yes few_sixltr high_wps has_photo has_url,LER
+posemo_yes discrep_yes power_yes netspeak_yes high_wps has_photo has_url,LER
+is_analytic_yes insight_yes certain_yes see_yes hear_yes netspeak_yes has_qmark has_url,LER
+is_authentic_yes netspeak_yes has_exclam has_photo has_url,LER
+is_analytic_yes is_clout_no is_tone_no negemo_yes differ_yes netspeak_yes high_wps has_photo has_url,LER
+is_analytic_no insight_yes cause_yes affiliation_yes netspeak_yes has_qmark has_photo has_url,LER
+is_analytic_yes is_authentic_no is_tone_yes posemo_yes cause_yes achieve_yes reward_yes netspeak_yes low_wps has_exclam has_hashtag has_url,LER
+is_tone_no negemo_yes sad_yes cause_yes discrep_yes see_yes hear_yes netspeak_yes has_exclam has_photo has_url,LER
+is_clout_yes is_authentic_no is_tone_yes posemo_yes see_yes power_yes reward_yes netspeak_yes few_sixltr has_url,LER
+is_tone_yes posemo_yes insight_yes power_yes netspeak_yes few_sixltr has_url,LER
+is_tone_yes posemo_yes cause_yes power_yes netspeak_yes low_wps has_exclam has_url,LER
+is_analytic_yes is_tone_yes posemo_yes cause_yes affiliation_yes achieve_yes power_yes netspeak_yes high_wps has_photo has_url,LER
+is_authentic_yes insight_yes netspeak_yes high_wps has_photo has_url,LER
+is_authentic_no cause_yes tentat_yes netspeak_yes few_sixltr has_qmark has_photo has_url,LER
+is_analytic_yes is_tone_yes posemo_yes cause_yes netspeak_yes high_wps has_photo has_url,LER
+is_authentic_no is_tone_yes posemo_yes insight_yes netspeak_yes many_sixltr high_wps has_photo has_url,LER
+is_authentic_no is_tone_yes posemo_yes tentat_yes see_yes hear_yes achieve_yes power_yes reward_yes netspeak_yes high_wps has_photo has_url,LER
+is_clout_yes is_authentic_no posemo_yes affiliation_yes netspeak_yes assent_yes has_qmark has_photo has_url,LER
+is_analytic_yes is_tone_no negemo_yes insight_yes tentat_yes see_yes netspeak_yes high_wps has_photo has_url,LER
+is_authentic_no netspeak_yes many_sixltr low_wps has_animated_gif has_url,LER
+is_analytic_yes is_clout_yes affiliation_yes netspeak_yes high_wps has_photo has_url,LER
+is_analytic_yes is_tone_no negemo_yes insight_yes see_yes hear_yes netspeak_yes high_wps has_video has_hashtag has_url,LER
+is_tone_yes posemo_yes tentat_yes affiliation_yes netspeak_yes has_exclam has_photo has_url,LER

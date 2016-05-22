@@ -474,6 +474,81 @@ class SGD():
         return clf, count_vect
 
 
+    def predict_tweets(self):
+
+        docs_train, docs_test, y_train, y_test = train_test_split(X, y, test_size=0.01, random_state=42)
+
+        print("Number of data point is " + str(len(y)))
+
+        ###############
+        # uncomment either one of the below
+        # predict unlabelled tweet OR test classifier on gold standard
+        ###############
+
+        # dataset_topredict = pd.read_csv(path_to_file_to_be_predicted, header=0, names=['tweets'])
+        dataset_topredict = pd.read_csv(path_to_gold_standard_file, header=0, names=['tweets', 'class'])
+
+        X_topredict = dataset_topredict['tweets']
+        y_goldstandard = dataset_topredict['class']
+
+        ###############
+        # train classifier
+        ###############
+
+        # Get list of features
+        count_vect = CountVectorizer(stop_words=stopwords, min_df=3, max_df=0.90, ngram_range=_ngram_range)
+        X_CV = count_vect.fit_transform(docs_train)
+
+        # print number of unique words (n_features)
+        print("Shape of train data is " + str(X_CV.shape))
+
+        # tfidf transformation###
+
+        tfidf_transformer = TfidfTransformer(use_idf=_use_idf)
+        X_tfidf = tfidf_transformer.fit_transform(X_CV)
+
+        # train the classifier
+
+        print("Fitting data ...")
+        clf = SGDClassifier(loss=_loss, penalty=_penalty, alpha=_alpha, random_state=42).fit(X_tfidf, y_train)
+
+        ##################
+        # get cross validation score
+        ##################
+
+        scores = cross_val_score(clf, X_tfidf, y_train, cv=10, scoring='f1_weighted')
+        print("Cross validation score: " + str(scores))
+
+        # Get average performance of classifier on training data using 10-fold CV, along with standard deviation
+        # the factor two is to signify 2 sigma, which is 95% confidence level
+
+        print("Cross validation accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+
+        ##################
+        # run classifier to predict tweets
+        ##################
+
+        X_test_CV = count_vect.transform(X_topredict)
+
+        print("Shape of test data is " + str(X_test_CV.shape))
+
+        X_test_tfidf = tfidf_transformer.transform(X_test_CV)
+
+        y_predicted = clf.predict(X_test_tfidf)
+
+        ##################
+        # run classifier on gold standard (tweets that were labelled by twitter insight)
+        ##################
+
+        # print the mean accuracy on the given test data and labels
+
+        print("Classifier score on test data is: %0.2f " % clf.score(X_test_tfidf, y_goldstandard))
+
+        print(metrics.classification_report(y_goldstandard, y_predicted))
+        cm = metrics.confusion_matrix(y_goldstandard, y_predicted)
+        print(cm)
+
+
     def get_important_features(self,clf,count_vect):
 
         # get coef_
@@ -644,19 +719,21 @@ class SGD():
 # variables
 ###############
 
-#path_to_labelled_file = '../output/features/space/labelled_combined_all.csv'
-path_to_labelled_file = '../output/engrate/with_comments/labelled_space_withcomment.csv'
+path_to_labelled_file = '../output/features/space/labelled_combined_all.csv'
+#path_to_labelled_file = '../output/engrate/labelled_space.csv'
 path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
+path_to_file_to_be_predicted = '../output/to_predict/sydscifest/sydscifest_test'
+path_to_gold_standard_file = '../output/features/sydscifest/labelled_combined_all.csv'
 path_to_store_coefficient_file = '../output/feature_importance/sgd/space/sgd_coef.csv'
 path_to_store_feature_selection_boolean_file = '../output/feature_importance/sgd/space/sgd_fs_boolean.csv'
 path_to_store_list_of_feature_file = '../output/feature_importance/sgd/space/sgd_feature_names.csv'
 path_to_store_feature_and_coef_file = '../output/feature_importance/sgd/space/sgd_coef_and_feat.csv'
-path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/sgd/with_comments/space_withcomment_bow.csv'
+path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/sgd/space_bow.csv'
 path_to_store_important_features_by_class_file = '../output/feature_importance/sgd/space/sgd_feat_by_class_bow.csv'
 
 # for classifier without pipeline
-_ngram_range = (1,1)
-_use_idf = False
+_ngram_range = (1,3)
+_use_idf = True
 _loss = 'log' # 'hinge' gives linear SVM; 'log' gives logistic regression
 _penalty = 'l2'
 _alpha = 0.0001
@@ -707,7 +784,7 @@ if __name__ == '__main__':
     # select one of the method to split data using Cross Validation
     ###################
 
-    docs_train,docs_test,y_train,y_test = sgd.train_test_split()
+    #docs_train,docs_test,y_train,y_test = sgd.train_test_split()
     #docs_train,docs_test,y_train,y_test = sgd.stratified_shufflesplit()
     #docs_train,docs_test,y_train,y_test = sgd.stratified_kfolds()
 
@@ -715,7 +792,7 @@ if __name__ == '__main__':
     # run SGD Classifier
     ##################
 
-    clf, count_vect = sgd.train_classifier()
+    #clf, count_vect = sgd.train_classifier()
 
 
     ###################
@@ -742,7 +819,13 @@ if __name__ == '__main__':
     # Get feature importance
     ###################
 
-    sgd.get_important_features(clf,count_vect)
+    #sgd.get_important_features(clf,count_vect)
+
+    ###################
+    # Run classifier and then predict tweets
+    ###################
+
+    sgd.predict_tweets()
 
 
     ##################

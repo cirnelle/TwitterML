@@ -390,7 +390,7 @@ class FeatureConstruction():
     # get url,hashtag and media (images or videos) features
     ################
 
-        lines = open(path_to_labelled_raw_file,'r').readlines()
+        lines = open(path_to_labelled_raw_file,'r',encoding='ISO-8859-1').readlines()
 
         tweets = []
 
@@ -783,7 +783,7 @@ class FeatureConstruction():
         # get url hashtag type features
         ##############
 
-        lines = open(path_to_labelled_raw_file,'r').readlines()
+        lines = open(path_to_labelled_raw_file,'r',encoding='ISO-8859-1').readlines()
 
         tweets = []
 
@@ -919,7 +919,7 @@ class FeatureConstruction():
 
     def join_features_and_target(self):
 
-        lines = open(path_to_labelled_raw_file,'r').readlines()
+        lines = open(path_to_labelled_raw_file,'r',encoding='ISO-8859-1').readlines()
 
         label = []
 
@@ -990,36 +990,36 @@ class FeatureConstruction():
 # variables
 ###############
 
-path_to_liwc_result_file = '../output/liwc/liwc_raw_space.txt'
-path_to_labelled_raw_file = '../output/engrate/labelled_space_raw.csv'
-path_to_labelled_preprocessed_file = '../output/engrate/labelled_space.csv'
+path_to_liwc_result_file = '../output/liwc/sydscifest/liwc_sydscifest_all.txt'
+path_to_labelled_raw_file = '../output/engrate/sydscifest/from_jim/ALL_labelled_raw.csv'
+path_to_labelled_preprocessed_file = '../output/engrate/sydscifest/from_jim/ALL_labelled.csv'
 
-path_to_store_psychometric_feature_file = '../output/features/space/psychometrics.txt'
-path_to_store_grammar_feature_file = '../output/features/space/grammar.txt'
-path_to_store_combined_feature_file = '../output/features/space/combined.txt'
-path_to_store_combined_feature_all_file = '../output/features/space/combined_all.txt' #includes word features
+path_to_store_psychometric_feature_file = '../output/features/sydscifest/psychometrics.txt'
+path_to_store_grammar_feature_file = '../output/features/sydscifest/grammar.txt'
+path_to_store_combined_feature_file = '../output/features/sydscifest/combined.txt'
+path_to_store_combined_feature_all_file = '../output/features/sydscifest/combined_all.txt' #includes word features
 
-path_to_store_labelled_psychometric_file = '../output/features/space/labelled_psychometrics.csv'
-path_to_store_labelled_grammar_file = '../output/features/space/labelled_grammar.csv'
-path_to_store_labelled_urlhashtagmedia_file = '../output/features/space/labelled_urlhashtagmedia.csv'
-path_to_store_labelled_combined_features_file = '../output/features/space/labelled_combined.csv'
-path_to_store_labelled_combined_features_all_file = '../output/features/space/labelled_combined_all.csv'
+path_to_store_labelled_psychometric_file = '../output/features/sydscifest/labelled_psychometrics.csv'
+path_to_store_labelled_grammar_file = '../output/features/sydscifest/labelled_grammar.csv'
+path_to_store_labelled_urlhashtagmedia_file = '../output/features/sydscifest/labelled_urlhashtagmedia.csv'
+path_to_store_labelled_combined_features_file = '../output/features/sydscifest/labelled_combined.csv'
+path_to_store_labelled_combined_features_all_file = '../output/features/sydscifest/labelled_combined_all.csv'
 
 
 # boundary values
 
-analytic_top = 98.0
-analytic_bottom = 87.0
-clout_top = 74.0
+analytic_top = 97.0
+analytic_bottom = 56.0
+clout_top = 88.0
 clout_bottom = 50.0
-authentic_top = 48.0
-authentic_bottom = 1.4
-tone_top = 91.0
+authentic_top = 54.0
+authentic_bottom = 1.59
+tone_top = 93.0
 tone_bottom = 25.0
-sixltr_top = 27.0
-sixltr_bottom = 15.0
+sixltr_top = 30.0
+sixltr_bottom = 16.0
 wps_top = 18.0
-wps_bottom = 9.0
+wps_bottom = 7.0
 
 
 if __name__ == '__main__':
