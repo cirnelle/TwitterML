@@ -47,17 +47,18 @@ class UpdateFollowerCount():
                     t3 = time.strptime(t2,'%b %d %Y')
                     t_max = time.mktime(t3)
 
-                foll_count = self.compute_follower_count(t[0],t[1],t_max,t[2])
+
+                foll_count = self.compute_follower_count(t[0],t[1],t_max,t[3])
 
                 if foll_count <= 0:
 
                     foll_count = follower_count[-1]
-                    t[2] = str(foll_count)
+                    t[3] = str(foll_count)
                     updated_tweets.append(t)
 
                 else:
                     follower_count.append(foll_count)
-                    t[2] = str(foll_count)
+                    t[3] = str(foll_count)
                     updated_tweets.append(t)
 
             else:
@@ -113,9 +114,9 @@ class UpdateFollowerCount():
 
 if __name__ == "__main__":
 
-    path_to_tweet_file = '../tweets/ALL_nofollcorr.csv'
-    path_to_slope_file = '../followers/user_slope_space.txt'
-    path_to_store_updated_tweet_file = '../tweets/space_follcorr.csv'
+    path_to_tweet_file = '../tweets/events/sydscifest_2016/from_jim/raw_nov-apr2016.csv'
+    path_to_slope_file = '../followers/user_slope_sydsciencefest.txt'
+    path_to_store_updated_tweet_file = '../tweets/events/sydscifest_2016/from_jim/raw_ALL_follcorr.csv'
 
     ################
     # create slope dict

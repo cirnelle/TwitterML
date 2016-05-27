@@ -1,0 +1,541 @@
+10
+100
+2016
+absolutely
+achieve_yes
+achieve_yes few_sixltr
+achieve_yes many_sixltr
+achieve_yes netspeak_yes
+achieve_yes power_yes
+achieve_yes reward_yes
+aderin
+aderin pocock
+affiliation_yes
+affiliation_yes achieve_yes
+affiliation_yes few_sixltr
+affiliation_yes has_hashtag
+affiliation_yes low_wps
+affiliation_yes many_sixltr
+affiliation_yes netspeak_yes
+affiliation_yes power_yes
+affiliation_yes reward_yes
+amazing
+anger_yes
+anger_yes cause_yes
+anger_yes insight_yes
+anger_yes tentat_yes
+animals
+anx_yes
+arguing
+askdrkarl
+askdrkarl sydsciencefest
+asks
+assent_yes
+assent_yes few_sixltr
+assent_yes has_hashtag
+assent_yes high_wps
+assent_yes low_wps
+assent_yes many_sixltr
+astronomers
+astronomy
+australia
+aw
+away
+bad
+basically
+best
+better
+big
+biggest
+black
+body
+bring
+cancer
+casual
+cat
+cats
+cause_yes
+cause_yes achieve_yes
+cause_yes affiliation_yes
+cause_yes certain_yes
+cause_yes differ_yes
+cause_yes discrep_yes
+cause_yes few_sixltr
+cause_yes hear_yes
+cause_yes netspeak_yes
+cause_yes power_yes
+cause_yes reward_yes
+cause_yes tentat_yes
+cells
+certain_yes
+certain_yes affiliation_yes
+certain_yes differ_yes
+certain_yes feel_yes
+certain_yes hear_yes
+certain_yes netspeak_yes
+certain_yes power_yes
+certain_yes see_yes
+change
+chat
+chatting
+check
+chem
+chemistry
+cl
+climate
+close
+comet
+comet sydsciencefest
+control
+cool
+course
+dark
+day
+dc
+dc humans
+debate
+decided
+differ_yes
+differ_yes achieve_yes
+differ_yes affiliation_yes
+differ_yes feel_yes
+differ_yes few_sixltr
+differ_yes has_hashtag
+differ_yes hear_yes
+differ_yes many_sixltr
+differ_yes netspeak_yes
+differ_yes power_yes
+differ_yes reward_yes
+differ_yes see_yes
+differences
+different
+difficult
+discrep_yes
+discrep_yes affiliation_yes
+discrep_yes certain_yes
+discrep_yes differ_yes
+discrep_yes see_yes
+discrep_yes tentat_yes
+dk
+dna
+doors
+dr
+dr maggie
+edison
+education
+einstein
+energy
+engineering
+event
+events
+evolution
+excess
+excited
+explain
+fact
+far
+feel_yes
+feel_yes achieve_yes
+feel_yes affiliation_yes
+feel_yes assent_yes
+feel_yes netspeak_yes
+feel_yes power_yes
+festival
+few_sixltr
+few_sixltr has_exclam
+few_sixltr has_hashtag
+few_sixltr has_photo
+few_sixltr has_qmark
+few_sixltr high_wps
+few_sixltr low_wps
+field
+finished
+footage
+forget
+free
+future
+gene
+getting
+getting ready
+going
+good
+got
+gr
+great
+hands
+has_exclam
+has_exclam has_hashtag
+has_exclam has_photo
+has_exclam has_qmark
+has_exclam has_url
+has_hashtag
+has_hashtag aw
+has_hashtag dc
+has_hashtag dk
+has_hashtag has_url
+has_hashtag jb
+has_hashtag kn
+has_hashtag ks
+has_hashtag ls
+has_hashtag mb
+has_hashtag moving
+has_hashtag mp
+has_hashtag pr
+has_hashtag sw
+has_hashtag ud
+has_hashtag wh
+has_photo
+has_photo has_hashtag
+has_photo has_url
+has_qmark
+has_qmark has_hashtag
+has_qmark has_photo
+has_qmark has_url
+has_url
+has_url forget
+has_url getting
+has_url science
+has_url tonight
+has_video
+has_video has_hashtag
+has_video has_url
+having
+hear
+hear_yes
+hear_yes achieve_yes
+hear_yes affiliation_yes
+hear_yes feel_yes
+hear_yes has_hashtag
+hear_yes netspeak_yes
+hear_yes power_yes
+help
+high
+high_wps
+high_wps has_hashtag
+high_wps has_photo
+high_wps has_url
+high_wps has_video
+house
+humans
+idea
+ideas
+important
+incredible
+insight_yes
+insight_yes affiliation_yes
+insight_yes cause_yes
+insight_yes certain_yes
+insight_yes differ_yes
+insight_yes discrep_yes
+insight_yes power_yes
+insight_yes see_yes
+insight_yes tentat_yes
+internet
+is_analytic_no
+is_analytic_no insight_yes
+is_analytic_no is_authentic_no
+is_analytic_no is_authentic_yes
+is_analytic_no is_clout_no
+is_analytic_no is_clout_yes
+is_analytic_no is_tone_no
+is_analytic_no is_tone_yes
+is_analytic_yes
+is_analytic_yes affiliation_yes
+is_analytic_yes cause_yes
+is_analytic_yes certain_yes
+is_analytic_yes insight_yes
+is_analytic_yes is_authentic_no
+is_analytic_yes is_authentic_yes
+is_analytic_yes is_clout_no
+is_analytic_yes is_clout_yes
+is_analytic_yes is_tone_yes
+is_analytic_yes netspeak_yes
+is_analytic_yes posemo_yes
+is_analytic_yes see_yes
+is_authentic_no
+is_authentic_no cause_yes
+is_authentic_no is_tone_no
+is_authentic_no is_tone_yes
+is_authentic_no netspeak_yes
+is_authentic_no posemo_yes
+is_authentic_no see_yes
+is_authentic_yes
+is_authentic_yes cause_yes
+is_authentic_yes certain_yes
+is_authentic_yes discrep_yes
+is_authentic_yes insight_yes
+is_authentic_yes is_tone_no
+is_authentic_yes is_tone_yes
+is_authentic_yes posemo_yes
+is_authentic_yes power_yes
+is_authentic_yes tentat_yes
+is_clout_no
+is_clout_no insight_yes
+is_clout_no is_authentic_no
+is_clout_no is_authentic_yes
+is_clout_no is_tone_yes
+is_clout_no posemo_yes
+is_clout_yes
+is_clout_yes affiliation_yes
+is_clout_yes certain_yes
+is_clout_yes discrep_yes
+is_clout_yes insight_yes
+is_clout_yes is_authentic_no
+is_clout_yes is_authentic_yes
+is_clout_yes is_tone_yes
+is_clout_yes posemo_yes
+is_tone_no
+is_tone_no negemo_yes
+is_tone_no posemo_yes
+is_tone_yes
+is_tone_yes posemo_yes
+jb
+kids
+kind
+kindathinky
+kn
+know
+ks
+later
+left
+leopard
+lets
+library
+life
+light
+like
+live
+longer
+look
+looking
+lot
+lots
+love
+low_wps
+low_wps has_exclam
+low_wps has_hashtag
+low_wps has_qmark
+ls
+maggie
+make
+makes
+male
+man
+many_sixltr
+many_sixltr has_exclam
+many_sixltr has_hashtag
+many_sixltr has_photo
+many_sixltr high_wps
+many_sixltr low_wps
+march
+massive
+mb
+med
+meet
+men
+mg
+miss
+month
+moon
+moving
+mp
+myth
+nanotech
+natsciwk
+need
+negemo_yes
+negemo_yes anger_yes
+negemo_yes anx_yes
+negemo_yes cause_yes
+negemo_yes differ_yes
+negemo_yes insight_yes
+negemo_yes sad_yes
+netspeak_yes
+netspeak_yes assent_yes
+netspeak_yes few_sixltr
+netspeak_yes has_exclam
+netspeak_yes has_photo
+netspeak_yes has_qmark
+netspeak_yes high_wps
+netspeak_yes low_wps
+netspeak_yes many_sixltr
+netspeak_yes nonflu_yes
+new
+night
+nonflu_yes
+nonflu_yes few_sixltr
+nonflu_yes has_hashtag
+officially
+oh
+open
+opening
+packed
+packed house
+panel
+people
+photo
+physical
+physicists
+physics
+picture
+pocock
+population
+population control
+posemo_yes
+posemo_yes achieve_yes
+posemo_yes affiliation_yes
+posemo_yes cause_yes
+posemo_yes certain_yes
+posemo_yes differ_yes
+posemo_yes discrep_yes
+posemo_yes feel_yes
+posemo_yes hear_yes
+posemo_yes insight_yes
+posemo_yes negemo_yes
+posemo_yes netspeak_yes
+posemo_yes reward_yes
+posemo_yes see_yes
+posemo_yes tentat_yes
+power_yes
+power_yes assent_yes
+power_yes few_sixltr
+power_yes has_exclam
+power_yes has_hashtag
+power_yes high_wps
+power_yes low_wps
+power_yes many_sixltr
+power_yes netspeak_yes
+power_yes reward_yes
+power_yes risk_yes
+power_yes swear_yes
+pr
+pre
+pretty
+quantum
+quantum physics
+random
+ready
+really
+research
+reward_yes
+reward_yes few_sixltr
+reward_yes has_hashtag
+reward_yes high_wps
+reward_yes low_wps
+reward_yes many_sixltr
+reward_yes netspeak_yes
+reward_yes nonflu_yes
+reward_yes risk_yes
+right
+risk_yes
+risk_yes few_sixltr
+risk_yes has_hashtag
+risk_yes many_sixltr
+risk_yes netspeak_yes
+robot
+rosetta
+sad_yes
+sad_yes cause_yes
+sad_yes insight_yes
+sand
+say
+saying
+says
+school
+science
+science festival
+scientific
+scientist
+scientists
+second
+seconds
+see_yes
+see_yes achieve_yes
+see_yes affiliation_yes
+see_yes feel_yes
+see_yes hear_yes
+see_yes netspeak_yes
+see_yes power_yes
+see_yes reward_yes
+seeing
+self
+shout
+sign
+snow
+soon
+space
+space ssf15
+space sydsciencefest
+spacecraft
+speaking
+ssf15
+ssf15 askdrkarl
+start
+started
+starting
+stem
+students
+sun
+sw
+swear_yes
+swear_yes many_sixltr
+swear_yes netspeak_yes
+sydney
+sydsciencefest
+sydsciencefest kindathinky
+talk
+talks
+tech
+tell
+tentat_yes
+tentat_yes achieve_yes
+tentat_yes affiliation_yes
+tentat_yes certain_yes
+tentat_yes differ_yes
+tentat_yes hear_yes
+tentat_yes netspeak_yes
+tentat_yes reward_yes
+tentat_yes see_yes
+tesla
+thanks
+things
+think
+thought
+tickets
+today
+today ssf15
+tomorrow
+tomorrow night
+tonight
+tonight ssf15
+tonight sydsciencefest
+topic
+try
+tv
+ud
+universe
+use
+used
+using
+usually
+video
+vs
+want
+wanted
+way
+week
+weekend
+weird
+westinghouse
+wh
+white
+women
+women stem
+work
+working
+world
+yeah
+year
+years
+yes
+young

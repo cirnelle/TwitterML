@@ -1,0 +1,94 @@
+LER,dk,15
+LER,is_analytic_no is_clout_yes is_tone_yes,5
+HER,house,5
+LER,is_authentic_no posemo_yes,5
+LER,posemo_yes insight_yes tentat_yes,5
+HER,physical,2
+LER,is_tone_yes posemo_yes feel_yes,3
+HER,achieve_yes netspeak_yes,7
+HER,is_authentic_no netspeak_yes,8
+HER,see_yes affiliation_yes netspeak_yes,3
+LER,quantum,5
+LER,has_hashtag dc,9
+LER,hands,3
+HER,many_sixltr has_photo has_hashtag,4
+LER,tentat_yes differ_yes see_yes,7
+LER,certain_yes affiliation_yes achieve_yes,2
+LER,risk_yes netspeak_yes,3
+LER,power_yes has_hashtag,9
+LER,high_wps has_hashtag sw,4
+HER,netspeak_yes many_sixltr has_exclam,13
+LER,few_sixltr has_hashtag sw,6
+HER,women stem,3
+HER,has_hashtag has_url getting,5
+LER,risk_yes has_hashtag,4
+LER,certain_yes see_yes affiliation_yes,4
+LER,cats,10
+HER,netspeak_yes nonflu_yes,6
+HER,affiliation_yes reward_yes netspeak_yes,7
+HER,power_yes netspeak_yes many_sixltr,6
+HER,soon,3
+LER,animals,4
+HER,affiliation_yes netspeak_yes has_exclam,4
+LER,is_authentic_yes is_tone_yes,20
+HER,cause_yes netspeak_yes,4
+HER,has_url,167
+HER,netspeak_yes,173
+HER,has_hashtag has_url,57
+HER,has_photo has_url,88
+HER,has_photo,126
+LER,has_hashtag,211
+HER,today,11
+HER,has_photo has_hashtag has_url,38
+LER,is_tone_yes,70
+LER,is_authentic_yes,81
+HER,is_analytic_yes,94
+LER,certain_yes,41
+HER,is_analytic_yes is_clout_yes is_authentic_no,7
+HER,many_sixltr has_exclam,19
+HER,has_exclam has_photo,37
+HER,posemo_yes,99
+HER,high_wps,64
+LER,insight_yes,82
+LER,is_analytic_no,84
+LER,sydsciencefest,128
+LER,is_clout_no is_authentic_yes,25
+HER,check,12
+HER,netspeak_yes many_sixltr,40
+HER,achieve_yes power_yes many_sixltr,5
+HER,is_analytic_no is_authentic_no,12
+HER,affiliation_yes,86
+LER,comet,15
+LER,is_clout_no,44
+HER,opening,3
+HER,has_photo has_hashtag,38
+HER,night,12
+HER,affiliation_yes power_yes,25
+LER,few_sixltr,81
+HER,is_analytic_no is_authentic_yes,6
+LER,netspeak_yes assent_yes,19
+HER,has_exclam,86
+LER,cause_yes,75
+LER,tentat_yes differ_yes,37
+LER,rosetta,6
+LER,is_authentic_yes insight_yes,12
+LER,discrep_yes,43
+LER,differ_yes,89
+LER,achieve_yes,59
+HER,is_authentic_no,81
+LER,want,12
+LER,ssf15,77
+HER,high_wps has_photo has_url,32
+LER,low_wps has_exclam has_hashtag,17
+LER,many_sixltr low_wps,22
+LER,is_clout_yes,75
+LER,is_clout_yes certain_yes,4
+HER,tonight,22
+HER,low_wps has_exclam,25
+LER,see_yes hear_yes,6
+HER,is_tone_no negemo_yes differ_yes,3
+HER,has_exclam has_url,6
+HER,science,38
+LER,hear_yes netspeak_yes,5
+HER,swear_yes many_sixltr,3
+HER,is_analytic_yes is_authentic_no,22

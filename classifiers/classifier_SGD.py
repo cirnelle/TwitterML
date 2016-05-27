@@ -548,6 +548,17 @@ class SGD():
         cm = metrics.confusion_matrix(y_goldstandard, y_predicted)
         print(cm)
 
+        ##################
+        # write prediction results to file
+        ##################
+
+        f = open(path_to_store_predicted_results, 'w')
+
+        for yp in y_predicted:
+            f.write(yp + '\n')
+
+        f.close()
+
 
     def get_important_features(self,clf,count_vect):
 
@@ -719,20 +730,22 @@ class SGD():
 # variables
 ###############
 
-path_to_labelled_file = '../output/features/space/labelled_combined_all.csv'
+path_to_labelled_file = '../output/features/sydscifest/labelled_combined_all.csv'
 #path_to_labelled_file = '../output/engrate/labelled_space.csv'
 path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
 path_to_file_to_be_predicted = '../output/to_predict/sydscifest/sydscifest_test'
-path_to_gold_standard_file = '../output/features/sydscifest/labelled_combined_all.csv'
-path_to_store_coefficient_file = '../output/feature_importance/sgd/space/sgd_coef.csv'
-path_to_store_feature_selection_boolean_file = '../output/feature_importance/sgd/space/sgd_fs_boolean.csv'
-path_to_store_list_of_feature_file = '../output/feature_importance/sgd/space/sgd_feature_names.csv'
-path_to_store_feature_and_coef_file = '../output/feature_importance/sgd/space/sgd_coef_and_feat.csv'
-path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/sgd/space_bow.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/sgd/space/sgd_feat_by_class_bow.csv'
+path_to_gold_standard_file = '../output/features/sydscifest/labelled_combined.csv'
+
+path_to_store_predicted_results = '../output/sydscifest/predicted_results.csv'
+path_to_store_coefficient_file = '../output/feature_importance/sgd/sydscifest/sgd_coef.csv'
+path_to_store_feature_selection_boolean_file = '../output/feature_importance/sgd/sydscifest/sgd_fs_boolean.csv'
+path_to_store_list_of_feature_file = '../output/feature_importance/sgd/sydscifest/sgd_feature_names.csv'
+path_to_store_feature_and_coef_file = '../output/feature_importance/sgd/sydscifest/sgd_coef_and_feat.csv'
+path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/sgd/sydscifest/sydscifest.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/sgd/sydscifest/sgd_feat_by_class_combined_all.csv'
 
 # for classifier without pipeline
-_ngram_range = (1,3)
+_ngram_range = (1,1)
 _use_idf = True
 _loss = 'log' # 'hinge' gives linear SVM; 'log' gives logistic regression
 _penalty = 'l2'
@@ -784,7 +797,7 @@ if __name__ == '__main__':
     # select one of the method to split data using Cross Validation
     ###################
 
-    #docs_train,docs_test,y_train,y_test = sgd.train_test_split()
+    docs_train,docs_test,y_train,y_test = sgd.train_test_split()
     #docs_train,docs_test,y_train,y_test = sgd.stratified_shufflesplit()
     #docs_train,docs_test,y_train,y_test = sgd.stratified_kfolds()
 
@@ -812,20 +825,20 @@ if __name__ == '__main__':
     # use pipeline and use feature selection
     ###################
 
-    #clf, count_vect = sgd.use_pipeline_with_fs()
+    clf, count_vect = sgd.use_pipeline_with_fs()
 
 
     ###################
     # Get feature importance
     ###################
 
-    #sgd.get_important_features(clf,count_vect)
+    sgd.get_important_features(clf,count_vect)
 
     ###################
     # Run classifier and then predict tweets
     ###################
 
-    sgd.predict_tweets()
+    #sgd.predict_tweets()
 
 
     ##################

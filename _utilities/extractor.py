@@ -511,10 +511,10 @@ class Extractor():
 ###############
 
 path_to_user_list = '../user_list/user_space.csv'
-path_to_tweet_id_list = '../tweets/events/sydscifest_2016/from_jim/sydscifest_aug15-apr16_id.csv'
+path_to_tweet_id_list = '../tweets/events/sydscifest_2016/from_jim/id_temp.txt'
 path_to_store_raw_tweets = '../tweets/events/sydscifest_2016/raw_sydscifest.csv'
 path_to_store_raw_tweets_hashtag = '../tweets/hashtags/raw_#'
-path_to_store_tweets_by_id = '../tweets/events/sydscifest_2016/from_jim/sydscifest_tweets_raw_id.csv'
+path_to_store_tweets_by_id = '../tweets/events/sydscifest_2016/from_jim/raw_nov-apr2016.csv'
 
 
 if __name__ == '__main__':

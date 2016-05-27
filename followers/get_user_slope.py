@@ -21,6 +21,8 @@ lines = open('../user_list/user_space.csv','r').readlines()
 
 user_list = []
 
+
+
 for line in lines:
     spline = line.replace('\n','').split(',')
     user_list.append(spline[0])
@@ -96,7 +98,7 @@ for ul in user_list:
     #plt.plot(x, ys)
 
 
-    #plt.show()
+    plt.show()
 
     user_slope.append(ul)
 
@@ -115,7 +117,7 @@ for ul in user_list:
 
 
 # write results to a file
-f = open('user_slope_space.txt','w')
+f = open('user_slope_soace.txt','w')
 
 for usl in user_slope_list:
     f.write(','.join(usl)+'\n')

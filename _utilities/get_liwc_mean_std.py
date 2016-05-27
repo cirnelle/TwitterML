@@ -99,8 +99,8 @@ class GetLiwcMean():
 # variables
 ################
 
-path_to_liwc_result_file = '../output/liwc/sydscifest/liwc_sydscifest_ler.txt'
-path_to_store_liwc_mean_and_std_file = '../output/sydscifest/sydscifest_ler_mean.txt'
+path_to_liwc_result_file = '../output/liwc/sydscifest/liwc_sydscifest_her.txt'
+path_to_store_liwc_mean_and_std_file = '../output/sydscifest/sydscifest_her_mean.txt'
 
 
 if __name__ == '__main__':
