@@ -1,0 +1,193 @@
+
+HER,cause_yes see_yes risk_yes,9.97396292768e-06
+HER,tentat_yes certain_yes risk_yes,9.91989926806e-06
+HER,has_qmark has_video,9.91272097145e-05
+LER,anger_yes achieve_yes netspeak_yes,9.87164262987e-05
+HER,cause_yes power_yes many_sixltr,9.86609839777e-05
+HER,sad_yes certain_yes,9.85444713403e-05
+HER,insight_yes discrep_yes netspeak_yes,9.83791953182e-05
+HER,differ_yes feel_yes affiliation_yes,9.83048089564e-05
+LER,is_authentic_yes cause_yes tentat_yes,9.78834327609e-05
+LER,cause_yes netspeak_yes assent_yes,9.78643375319e-05
+LER,insight_yes discrep_yes see_yes,9.7597575128e-05
+LER,is_analytic_yes see_yes hear_yes,9.75943070558e-05
+HER,anx_yes anger_yes differ_yes,9.75644290931e-06
+HER,differ_yes see_yes achieve_yes,9.70295123088e-05
+HER,anx_yes discrep_yes,9.69217445621e-05
+HER,posemo_yes certain_yes see_yes,9.67794907003e-05
+HER,is_clout_no is_authentic_no differ_yes,9.67338247992e-05
+LER,achieve_yes netspeak_yes has_exclam,9.66148379712e-05
+HER,posemo_yes achieve_yes risk_yes,9.65948974361e-06
+LER,is_authentic_no cause_yes achieve_yes,9.64458775695e-05
+HER,risk_yes few_sixltr,9.62620059352e-05
+LER,is_analytic_yes achieve_yes reward_yes,9.62410699729e-06
+HER,tentat_yes hear_yes power_yes,9.49202083175e-06
+HER,reward_yes netspeak_yes has_video,9.44111770754e-05
+HER,is_analytic_no posemo_yes affiliation_yes,9.43989057442e-05
+HER,is_authentic_no posemo_yes hear_yes,9.43303764681e-05
+HER,posemo_yes negemo_yes certain_yes,9.41460256867e-05
+LER,reward_yes few_sixltr has_exclam,9.38049573311e-05
+LER,is_authentic_yes cause_yes achieve_yes,9.37179017169e-05
+LER,tentat_yes see_yes achieve_yes,9.36828842359e-05
+HER,negemo_yes insight_yes certain_yes,9.36522031964e-05
+HER,is_authentic_no certain_yes affiliation_yes,9.36141139802e-05
+HER,affiliation_yes high_wps,9.34420271997e-05
+LER,posemo_yes insight_yes reward_yes,9.31941740654e-05
+HER,is_analytic_no is_authentic_no see_yes,9.26792272105e-05
+HER,certain_yes power_yes reward_yes,9.25356648034e-05
+LER,is_authentic_yes differ_yes netspeak_yes,9.25212691e-05
+LER,posemo_yes discrep_yes power_yes,9.21697582597e-05
+HER,assent_yes high_wps has_photo,9.21223157093e-05
+HER,is_analytic_yes cause_yes reward_yes,9.19479518968e-06
+LER,is_clout_yes hear_yes affiliation_yes,9.19168553662e-05
+HER,hear_yes feel_yes netspeak_yes,9.17784497569e-05
+HER,assent_yes few_sixltr has_url,9.16045052765e-05
+LER,insight_yes cause_yes risk_yes,9.14643388578e-05
+HER,sad_yes netspeak_yes,9.09788709718e-05
+LER,see_yes reward_yes few_sixltr,9.0715842914e-06
+HER,feel_yes power_yes risk_yes,9.05044784178e-06
+HER,is_clout_no is_authentic_yes certain_yes,9.04663383589e-05
+HER,is_authentic_no certain_yes power_yes,9.03959046916e-05
+LER,posemo_yes cause_yes reward_yes,9.03948958046e-05
+LER,is_analytic_no is_clout_yes see_yes,9.0230642612e-05
+LER,assent_yes many_sixltr has_exclam,9.00697776049e-05
+HER,is_analytic_yes feel_yes affiliation_yes,8.99544896644e-06
+HER,is_analytic_no cause_yes differ_yes,8.99233553408e-05
+HER,certain_yes differ_yes reward_yes,8.98899599936e-05
+LER,insight_yes reward_yes netspeak_yes,8.96746979601e-05
+HER,certain_yes differ_yes see_yes,8.95248212346e-05
+LER,see_yes power_yes many_sixltr,8.94226747838e-05
+HER,anx_yes certain_yes,8.93529873375e-05
+HER,cause_yes tentat_yes feel_yes,8.91443133441e-05
+LER,achieve_yes low_wps has_qmark,8.86822201801e-06
+LER,power_yes has_qmark,8.83714581046e-05
+HER,has_qmark has_video has_hashtag,8.83539981072e-05
+LER,posemo_yes netspeak_yes has_hashtag,8.82691730373e-05
+HER,is_tone_yes posemo_yes feel_yes,8.8198960161e-05
+HER,sad_yes power_yes,8.81173090081e-05
+LER,is_analytic_no is_authentic_no power_yes,8.7856306592e-06
+HER,insight_yes feel_yes power_yes,8.78094749961e-05
+HER,is_clout_yes differ_yes affiliation_yes,8.74208242342e-05
+HER,is_clout_no posemo_yes negemo_yes,8.73849432875e-05
+HER,tentat_yes netspeak_yes has_exclam,8.72653707692e-06
+LER,negemo_yes see_yes power_yes,8.71453000966e-05
+LER,power_yes reward_yes assent_yes,8.7111002312e-05
+HER,is_clout_yes cause_yes differ_yes,8.68842992811e-07
+HER,negemo_yes anger_yes reward_yes,8.68842992811e-06
+LER,is_analytic_no is_clout_yes hear_yes,8.67459605133e-05
+LER,is_clout_yes affiliation_yes reward_yes,8.67441333595e-06
+LER,discrep_yes hear_yes achieve_yes,8.66284988676e-05
+HER,negemo_yes anx_yes anger_yes,8.66149092308e-05
+HER,anx_yes see_yes,8.65137044522e-05
+HER,anger_yes differ_yes see_yes,8.6455593857e-06
+HER,cause_yes see_yes hear_yes,8.64088426945e-05
+HER,insight_yes see_yes achieve_yes,8.61319230359e-05
+HER,is_authentic_yes posemo_yes differ_yes,8.60366182016e-05
+HER,cause_yes feel_yes power_yes,8.58272039116e-05
+LER,is_clout_yes certain_yes see_yes,8.52134473719e-06
+HER,is_authentic_yes reward_yes,8.52102997469e-05
+HER,is_clout_yes is_authentic_no feel_yes,8.51185748566e-06
+LER,is_clout_yes see_yes hear_yes,8.49027215092e-06
+LER,differ_yes affiliation_yes reward_yes,8.48614939646e-05
+LER,cause_yes netspeak_yes has_exclam,8.47748552141e-05
+HER,posemo_yes netspeak_yes has_exclam,8.47082276018e-05
+HER,cause_yes differ_yes power_yes,8.44583091064e-05
+LER,many_sixltr high_wps has_exclam,8.43974539688e-05
+LER,see_yes many_sixltr has_hashtag,8.42988900953e-05
+
+HER,visiting,9.9966883023e-05
+HER,superbowl,9.98430661304e-06
+HER,houston,9.98410669562e-05
+LER,expect,9.98334324761e-05
+HER,trevorpride,9.98327850535e-06
+HER,dawn,9.9805471022e-06
+HER,trips,9.97884638168e-05
+LER,finishthefight,9.97752583171e-05
+LER,scaling,9.97442442029e-07
+LER,que,9.97140289096e-05
+HER,francis,9.97037701854e-05
+LER,teenager,9.95754710563e-06
+LER,scenes,9.95365931055e-05
+LER,nuestro,9.95263615266e-07
+LER,mh370,9.94377518743e-06
+LER,tca16,9.94219505471e-06
+HER,latrines,9.93939986682e-05
+HER,election,9.93839644265e-05
+LER,performance,9.9351555687e-05
+LER,achieve,9.9327194218e-05
+LER,q8,9.91939185504e-06
+HER,irina,9.91302758326e-06
+LER,buddy,9.91302758326e-06
+LER,leads,9.91224245417e-06
+LER,games,9.91125393615e-05
+HER,air,9.90299840866e-05
+LER,ashokaatskoll,9.90057804633e-05
+LER,manager,9.88259454162e-05
+LER,relations,9.876245305e-07
+HER,policing,9.87569404065e-07
+HER,ireland,9.86942599276e-06
+LER,openenrollment,9.86825481527e-06
+LER,term,9.86564015635e-05
+HER,expression,9.86214762708e-05
+HER,aviation,9.8539604438e-06
+HER,prevent,9.85223473989e-05
+LER,snapchat,9.84031267225e-05
+HER,livia,9.83704173148e-05
+HER,dollar,9.83377533077e-05
+HER,bombing,9.8289362182e-05
+HER,enjoy,9.82409426453e-05
+LER,speech,9.8234971614e-05
+HER,highest,9.81928728774e-06
+HER,places,9.81859431463e-05
+LER,nov,9.80888013595e-05
+HER,sentence,9.80642346019e-05
+HER,site,9.80362324706e-05
+HER,500,9.78281179422e-05
+LER,closed,9.77792271139e-05
+HER,died,9.77667949205e-05
+LER,economies,9.77402450342e-06
+HER,smoke,9.77324737318e-05
+HER,ky,9.75525495341e-05
+LER,deforestation,9.75043386829e-05
+LER,caucus,9.74994708195e-05
+LER,sanfrancisco,9.74714529863e-07
+HER,authorities,9.74636814727e-05
+HER,psalm,9.74142726783e-05
+LER,serena,9.73594750507e-05
+HER,destroyed,9.72452662227e-05
+HER,taxed,9.72078031048e-06
+LER,loans,9.71662146988e-05
+LER,im,9.71261340758e-06
+HER,guess,9.71230920866e-05
+HER,features,9.69916258783e-05
+LER,exam,9.69454056035e-05
+HER,waste,9.69265038845e-05
+HER,youthday,9.68629031637e-05
+HER,artist,9.68628844543e-05
+HER,governor,9.66894930797e-05
+LER,town,9.66615148605e-05
+HER,representative,9.66534280752e-05
+LER,follows,9.66374055593e-07
+HER,closes,9.66232202674e-05
+HER,empowers,9.66057473624e-05
+LER,source,9.65606204557e-05
+LER,rose,9.65532027352e-06
+LER,yitao,9.6545712673e-09
+HER,prices,9.65328196053e-05
+LER,spacewalk50,9.65050255517e-06
+HER,silent,9.65050255517e-06
+LER,hits,9.64700795227e-05
+HER,joint,9.6354199826e-05
+HER,shot,9.63525275154e-07
+LER,appearance,9.62220431872e-07
+LER,inspirationmw,9.61707979706e-05
+LER,recording,9.61683193292e-05
+LER,feat,9.60911839079e-05
+LER,fix,9.60910445748e-05
+HER,protected,9.60615308978e-05
+HER,ban,9.59862784397e-05
+LER,encourage,9.59703546396e-05
+HER,tear,9.59657141005e-07
+HER,consequences,9.59626158924e-05
+HER,trust,9.58347563687e-05
+HER,feelgoodfriday,9.57891457307e-05

@@ -50,7 +50,8 @@ class UpdateFollowerCount():
 
                 foll_count = self.compute_follower_count(t[0],t[1],t_max,t[3])
 
-                if foll_count <= 0:
+                #if foll_count <= 0:
+                if foll_count < (0.09 * float(t[3])): # cap the minimum foll count to 2% of max follcount (to avoid engrate being disproportionately big for older tweets)
 
                     foll_count = follower_count[-1]
                     t[3] = str(foll_count)
@@ -111,15 +112,111 @@ class UpdateFollowerCount():
 
         return foll_count
 
+    def update_follcount_with_real_numbers(self):
+
+        lines1 = open(path_to_tweet_file,'r').readlines()
+
+        users = []
+
+        for line in lines1[1:]:
+            spline = line.rstrip('\n').split(',')
+
+            if spline[0] not in users:
+                users.append(spline[0])
+
+        updated_tweets = []
+
+        for u in users:
+
+            print (u)
+
+            ##################
+            # get the dates for follcount file
+            ##################
+
+            date_follcount = []
+
+            lines2 = open(path_to_follcount_files+u+'.csv')
+
+            date_dict = {}
+
+            for line in lines2:
+                spline = line.rstrip('\n').split(',')
+
+                if spline == ['']:
+                    print ("error")
+                    break
+
+                d1 = spline[0].replace('\n', '').split(' ')
+
+                if len(d1) == 6:
+                    d1.remove(d1[2])
+
+                date_s = d1[1] + ' ' + d1[2] + ' ' + d1[4]
+
+                t1 = time.strptime(date_s, '%b %d %Y')
+                t_epoch = time.mktime(t1)
+                date_dict[t_epoch] = spline[1]
+
+
+            #################
+            # get the dates for raw tweet file
+            #################
+
+            date_1 = []
+
+            for line in lines1[1:]:
+                spline = line.rstrip('\n').split(',')
+
+                if spline[0] == u:
+
+                    d1 = spline[1].replace('\n', '').split(' ')
+
+                    if len(d1) == 7:
+                        print ("error")
+                        d1.remove(d1[2])
+
+                    date_s = d1[1] + ' ' + d1[2] + ' ' + d1[5]
+
+                    t1 = time.strptime(date_s, '%b %d %Y')
+                    t_epoch = time.mktime(t1)
+
+                    if t_epoch in date_dict:
+                        spline[3] = date_dict[t_epoch]
+
+                        updated_tweets.append(spline)
+
+        print (" ")
+
+        print (len(updated_tweets))
+
+        f = open(path_to_store_realfoll_tweet_file,'w')
+
+        for ut in updated_tweets:
+            f.write(','.join(ut)+'\n')
+
+        f.close()
+
+# test
+
+###############
+# variables
+###############
+
+path_to_tweet_file = '../tweets/others/old/raw_nonprofit.csv'
+path_to_slope_file = '../followers/slope/user_slope_nonprofit.txt'
+path_to_store_updated_tweet_file = '../tweets/follcorr/others/raw_nonprofit_follcorr.csv'
+
+path_to_follcount_files = '../followers/follcount_'
+path_to_store_realfoll_tweet_file = '../tweets/raw_space_realfoll.csv'
+
+
 
 if __name__ == "__main__":
 
-    path_to_tweet_file = '../tweets/events/sydscifest_2016/from_jim/raw_nov-apr2016.csv'
-    path_to_slope_file = '../followers/user_slope_sydsciencefest.txt'
-    path_to_store_updated_tweet_file = '../tweets/events/sydscifest_2016/from_jim/raw_ALL_follcorr.csv'
 
     ################
-    # create slope dict
+    # create slope dict and update follcount
     ################
 
     lines = open(path_to_slope_file,'r').readlines()
@@ -134,3 +231,12 @@ if __name__ == "__main__":
 
     uf = UpdateFollowerCount()
     uf.update_tweet_list()
+
+
+
+    #################
+    # update follcount with real data mined daily
+    #################
+
+    # uf = UpdateFollowerCount()
+    # uf.update_follcount_with_real_numbers()

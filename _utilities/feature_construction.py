@@ -990,36 +990,36 @@ class FeatureConstruction():
 # variables
 ###############
 
-path_to_liwc_result_file = '../output/liwc/sydscifest/liwc_sydscifest_all.txt'
-path_to_labelled_raw_file = '../output/engrate/sydscifest/from_jim/ALL_labelled_raw.csv'
-path_to_labelled_preprocessed_file = '../output/engrate/sydscifest/from_jim/ALL_labelled.csv'
+path_to_liwc_result_file = '../output/liwc/follcorr/liwc_nonprofit_follcorr.txt'
+path_to_labelled_raw_file = '../output/engrate/follcorr/others/labelled_nonprofit_raw_follcorr.csv'
+path_to_labelled_preprocessed_file = '../output/engrate/follcorr/others/labelled_nonprofit_follcorr.csv'
 
-path_to_store_psychometric_feature_file = '../output/features/sydscifest/psychometrics.txt'
-path_to_store_grammar_feature_file = '../output/features/sydscifest/grammar.txt'
-path_to_store_combined_feature_file = '../output/features/sydscifest/combined.txt'
-path_to_store_combined_feature_all_file = '../output/features/sydscifest/combined_all.txt' #includes word features
+path_to_store_psychometric_feature_file = '../output/features/nonprofit/follcorr/psychometrics.txt'
+path_to_store_grammar_feature_file = '../output/features/nonprofit/follcorr/grammar.txt'
+path_to_store_combined_feature_file = '../output/features/nonprofit/follcorr/combined.txt'
+path_to_store_combined_feature_all_file = '../output/features/nonprofit/follcorr/combined_all.txt' #includes word features
 
-path_to_store_labelled_psychometric_file = '../output/features/sydscifest/labelled_psychometrics.csv'
-path_to_store_labelled_grammar_file = '../output/features/sydscifest/labelled_grammar.csv'
-path_to_store_labelled_urlhashtagmedia_file = '../output/features/sydscifest/labelled_urlhashtagmedia.csv'
-path_to_store_labelled_combined_features_file = '../output/features/sydscifest/labelled_combined.csv'
-path_to_store_labelled_combined_features_all_file = '../output/features/sydscifest/labelled_combined_all.csv'
+path_to_store_labelled_psychometric_file = '../output/features/nonprofit/follcorr/labelled_psychometrics.csv'
+path_to_store_labelled_grammar_file = '../output/features/nonprofit/follcorr/labelled_grammar.csv'
+path_to_store_labelled_urlhashtagmedia_file = '../output/features/nonprofit/follcorr/labelled_urlhashtagmedia.csv'
+path_to_store_labelled_combined_features_file = '../output/features/nonprofit/follcorr/labelled_combined.csv'
+path_to_store_labelled_combined_features_all_file = '../output/features/nonprofit/follcorr/labelled_combined_all.csv'
 
 
 # boundary values
 
-analytic_top = 97.0
-analytic_bottom = 56.0
-clout_top = 88.0
+analytic_top = 98.0
+analytic_bottom = 84.0
+clout_top = 93.0
 clout_bottom = 50.0
-authentic_top = 54.0
-authentic_bottom = 1.59
-tone_top = 93.0
+authentic_top = 20.0
+authentic_bottom = 1.01
+tone_top = 95.0
 tone_bottom = 25.0
-sixltr_top = 30.0
-sixltr_bottom = 16.0
-wps_top = 18.0
-wps_bottom = 7.0
+sixltr_top = 31.0
+sixltr_bottom = 18.0
+wps_top = 17.0
+wps_bottom = 8.0
 
 
 if __name__ == '__main__':

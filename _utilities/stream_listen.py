@@ -68,11 +68,11 @@ class StdOutListener(StreamListener):
     """
     def on_data(self, status):
 
-        data=json.loads(status)
-
         for n in range(5):
 
             try:
+
+                data = json.loads(status)
 
                 if 'created_at' in data:
 
@@ -139,7 +139,7 @@ class StdOutListener(StreamListener):
 # variables
 ###############
 
-path_to_store_streamed_tweets = '../tweets/streaming/raw_#space#science.csv'
+path_to_store_streamed_tweets = '../tweets/streaming/raw_27June2016.csv'
 hashtaglist = ['coffee','science'] #amounts to logical OR
 
 if __name__ == '__main__':
@@ -150,7 +150,7 @@ if __name__ == '__main__':
 
     stream = Stream(auth, l)
 
-    stream.filter(languages=["en"],track=['#trump #trump2016','#science'], async=True)
+    stream.filter(languages=["en"],track=['#science #socialjustice', '#science #education', '#science #space','science space'], async=True)
     #stream.filter(languages=["en"], track=hashtaglist, async=True)
 
 

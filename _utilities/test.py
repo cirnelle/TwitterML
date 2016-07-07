@@ -3,55 +3,47 @@ __author__ = 'yi-linghwong'
 import os
 import sys
 
-lines = open('../tweets/events/sydscifest_2016/from_jim/raw_sydscifest','r').readlines()
+lines = open('/Users/yi-linghwong/Documents/PhD/sydney_science_festival/twitter/maasmuseum/maasmuseum_jan-mar2014.csv', 'r').readlines()
+print (len(lines))
 
-labelled_raw = []
+for line in lines[:1]:
+    spline = line.rstrip('\n').replace('\r', '').replace('\t',' ').split(',')
+    length = len(spline)
 
-for line in lines[:60]:
-    spline = line.replace('\n','').split(',')
-    labelled_raw.append([spline[-1],'HER',spline[-2]])
+tweets = []
 
-print (len(labelled_raw))
+for line in lines[1:]:
+    print (repr(line))
+    spline = line.rstrip('\n').replace('\r', '').replace('\t', ' ').split(',')
 
-for line in lines[60:]:
-    spline = line.replace('\n', '').split(',')
-    labelled_raw.append([spline[-1],'LER', spline[-2]])
+    if len(spline) < length:
 
-print(len(labelled_raw))
+        print(spline)
 
-f = open('../output/engrate/sydscifest/from_jim/labelled_raw.csv','w')
-
-for lr in labelled_raw:
-    f.write(','.join(lr)+'\n')
-
-f.close()
-
-
-######################
-# preprocessed
-######################
-
-lines = open('../tweets/events/sydscifest_2016/from_jim/preprocessed_sydscifest.csv','r').readlines()
-
-labelled= []
-
-for line in lines[:60]:
-    spline = line.replace('\n','').split(',')
-
-
-    labelled.append([spline[-1],'HER'])
-
-print (len(labelled))
-
-for line in lines[60:]:
-    spline = line.replace('\n', '').split(',')
-    labelled.append([spline[-1],'LER'])
-
-print(len(labelled))
-
-f = open('../output/engrate/sydscifest/from_jim/labelled.csv','w')
-
-for l in labelled:
-    f.write(','.join(l)+'\n')
-
-f.close()
+#     if len(spline) == length:
+#         tweets.append(spline)
+#
+#     else:
+#
+#         join_until = len(spline) - 37
+#         text = spline[2:join_until]
+#         comma_removed = ' '.join(text)
+#
+#         # delete the text containing commas and replace it with the no-commas text
+#         del spline[2:join_until]
+#         spline.insert(2,comma_removed)
+#
+#         if len(spline) == 40:
+#             tweets.append(spline)
+#
+#         else:
+#             print ("error")
+#             print (spline)
+#
+#
+# f = open('/Users/yi-linghwong/Documents/PhD/sydney_science_festival/twitter/maasmuseum/maasmuseum_ALL.csv','w')
+#
+# for t in tweets:
+#     f.write(','.join(t)+'\n')
+#
+# f.close()

@@ -114,6 +114,16 @@ class LabelTweetsEngRate():
 
         tweets = self.get_eng_rate()
 
+        # lines = open(path_to_store_engrate_output,'r').readlines()
+        #
+        # tweets = []
+        #
+        # for line in lines:
+        #     spline = line.rstrip('\n').split(',')
+        #     tweets.append(spline)
+
+        print (len(tweets))
+
         labelled_tweets = []
         high_er = []
         low_er = []
@@ -172,6 +182,16 @@ class LabelTweetsEngRate():
     def label_tweets_raw(self):
 
         tweets = self.get_eng_rate_raw_tweets()
+
+        # lines = open(path_to_store_engrate_output_raw,'r').readlines()
+        #
+        # tweets = []
+        #
+        # for line in lines:
+        #     spline = line.rstrip('\n').split(',')
+        #     tweets.append(spline)
+
+        print (len(tweets))
 
         labelled_tweets = []
         high_er = []
@@ -234,18 +254,27 @@ class LabelTweetsEngRate():
 # variables
 ################
 
-path_to_preprocessed_tweet_file = '../tweets/preprocessed_space.csv'
-path_to_store_engrate_output = '../output/engrate/engrate_space.csv'
-path_to_store_labelled_tweets = '../output/engrate/labelled_space.csv'
+# path_to_preprocessed_tweet_file = '../tweets/maas/preprocessed_maas.csv'
+# path_to_store_engrate_output = '../output/engrate/maas/engrate_maas.csv'
+# path_to_store_labelled_tweets = '../output/engrate/maas/labelled_maas.csv'
+
+path_to_preprocessed_tweet_file = '../tweets/follcorr/others/preprocessed_nonprofit_follcorr.csv'
+path_to_store_engrate_output = '../output/engrate/follcorr/others/engrate_nonprofit_follcorr.csv'
+path_to_store_labelled_tweets = '../output/engrate/follcorr/others/labelled_nonprofit_follcorr.csv'
 
 # for LIWC
-path_to_raw_tweet_file = '../tweets/raw_space.csv'
-path_to_store_engrate_output_raw = '../output/engrate/engrate_space_raw.csv'
-path_to_store_labelled_tweets_raw = '../output/engrate/labelled_space_raw.csv'
+# path_to_raw_tweet_file = '../tweets/maas/raw_maas.csv'
+# path_to_store_engrate_output_raw = '../output/engrate/maas/engrate_maas_raw.csv'
+# path_to_store_labelled_tweets_raw = '../output/engrate/maas/labelled_maas_raw.csv'
+
+path_to_raw_tweet_file = '../tweets/follcorr/others/raw_nonprofit_follcorr.csv'
+path_to_store_engrate_output_raw = '../output/engrate/follcorr/others/engrate_nonprofit_raw_follcorr.csv'
+path_to_store_labelled_tweets_raw = '../output/engrate/follcorr/others/labelled_nonprofit_raw_follcorr.csv'
+
 
 # engrate parameters
-her_boundary = 0.1015
-ler_boundary = 0.0015
+her_boundary = 0.04
+ler_boundary = 0.000991
 
 
 if __name__ == "__main__":
@@ -253,8 +282,8 @@ if __name__ == "__main__":
 
     lt = LabelTweetsEngRate()
 
-    lt.get_eng_rate()
-    #lt.label_tweets()
+    #lt.get_eng_rate()
+    lt.label_tweets()
 
     #lt.get_eng_rate_raw_tweets()
     lt.label_tweets_raw()

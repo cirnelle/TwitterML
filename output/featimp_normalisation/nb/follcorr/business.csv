@@ -1,0 +1,804 @@
+
+HER,low_wps has_photo has_url,4.73544462586
+HER,few_sixltr low_wps has_photo,4.44161460381
+HER,low_wps has_photo,3.35325073557
+HER,netspeak_yes low_wps has_photo,3.22852978439
+LER,many_sixltr has_url,3.05538336631
+LER,netspeak_yes many_sixltr has_url,3.04568392246
+HER,low_wps has_animated_gif has_url,2.69793050864
+LER,netspeak_yes low_wps has_url,2.61895404444
+HER,low_wps has_photo has_hashtag,2.40286818688
+HER,low_wps has_animated_gif,2.38897205478
+HER,has_animated_gif has_url,2.3822354651
+HER,many_sixltr low_wps has_photo,2.30815147066
+LER,many_sixltr has_hashtag has_url,2.30672263668
+LER,see_yes netspeak_yes has_url,2.29121753076
+LER,netspeak_yes has_qmark has_url,2.27310869268
+LER,has_exclam has_hashtag has_url,2.23866583121
+LER,netspeak_yes high_wps has_url,2.2348812294
+LER,few_sixltr has_url,2.22964516495
+LER,netspeak_yes many_sixltr has_hashtag,2.22633343761
+LER,low_wps has_url,2.2103033574
+LER,netspeak_yes few_sixltr has_url,2.2048921975
+LER,low_wps has_exclam has_url,2.16218661002
+LER,has_exclam has_url,2.15709756705
+LER,netspeak_yes has_url,2.12495262875
+LER,is_analytic_yes netspeak_yes has_hashtag,2.12463505942
+LER,many_sixltr has_qmark has_url,2.09452315251
+HER,netspeak_yes low_wps has_animated_gif,2.07280138599
+LER,has_qmark has_hashtag has_url,2.05087009776
+LER,has_qmark has_url,1.97448158359
+LER,many_sixltr has_hashtag,1.95699583857
+LER,low_wps has_hashtag has_url,1.92850376723
+HER,few_sixltr low_wps has_video,1.89760471913
+LER,few_sixltr has_exclam has_url,1.88965796788
+HER,certain_yes netspeak_yes low_wps,1.87132774471
+LER,few_sixltr has_hashtag has_url,1.83361475232
+LER,few_sixltr high_wps has_exclam,1.8272552936
+HER,has_exclam has_animated_gif has_url,1.82697979664
+LER,is_authentic_yes netspeak_yes has_url,1.81709786514
+LER,netspeak_yes has_exclam has_url,1.79202428878
+LER,nonflu_yes few_sixltr has_exclam,1.78153559982
+LER,nonflu_yes has_exclam has_hashtag,1.77098117418
+LER,high_wps has_qmark has_url,1.76221674791
+HER,few_sixltr low_wps has_animated_gif,1.75561974674
+HER,low_wps has_exclam has_photo,1.75533663985
+LER,many_sixltr has_exclam has_hashtag,1.75334310862
+LER,affiliation_yes netspeak_yes has_url,1.75214128418
+HER,cause_yes netspeak_yes has_photo,1.75063719741
+LER,high_wps has_url,1.7384859
+LER,tentat_yes see_yes reward_yes,1.73294291369
+LER,low_wps has_qmark has_hashtag,1.73122706212
+LER,has_qmark has_hashtag,1.72322952063
+HER,is_authentic_no few_sixltr,1.72281458182
+LER,risk_yes netspeak_yes has_url,1.71572579484
+LER,is_authentic_yes posemo_yes reward_yes,1.70426415285
+HER,differ_yes netspeak_yes assent_yes,1.70323574334
+LER,is_clout_no see_yes netspeak_yes,1.69959713482
+LER,netspeak_yes has_exclam has_hashtag,1.69197401262
+HER,assent_yes has_exclam has_photo,1.6908911907
+HER,cause_yes netspeak_yes low_wps,1.66163750337
+LER,few_sixltr has_exclam has_hashtag,1.6179378824
+LER,insight_yes netspeak_yes has_url,1.61043029064
+LER,affiliation_yes netspeak_yes nonflu_yes,1.59610554368
+HER,low_wps has_exclam has_animated_gif,1.59333384769
+HER,high_wps has_animated_gif,1.58280989522
+LER,netspeak_yes has_qmark has_hashtag,1.58081485316
+HER,high_wps has_animated_gif has_url,1.58017019669
+LER,high_wps has_exclam has_hashtag,1.57855737697
+LER,power_yes high_wps,1.57747855863
+LER,sad_yes see_yes,1.56655090173
+HER,low_wps has_animated_gif has_hashtag,1.55746752581
+HER,is_authentic_no few_sixltr low_wps,1.5555664563
+LER,low_wps has_qmark has_url,1.55311690199
+LER,see_yes many_sixltr,1.54000261461
+LER,has_exclam has_hashtag,1.52945502928
+HER,differ_yes netspeak_yes low_wps,1.52805830636
+LER,is_analytic_yes achieve_yes power_yes,1.52626560956
+HER,assent_yes few_sixltr low_wps,1.52349686335
+LER,achieve_yes netspeak_yes has_url,1.51366272479
+LER,few_sixltr high_wps has_url,1.51025466967
+LER,achieve_yes many_sixltr,1.50941381936
+LER,see_yes netspeak_yes nonflu_yes,1.50492844329
+LER,reward_yes netspeak_yes nonflu_yes,1.50256692774
+LER,few_sixltr has_qmark has_url,1.49629374121
+LER,many_sixltr high_wps has_qmark,1.49168345054
+LER,many_sixltr has_qmark has_hashtag,1.48021593293
+LER,many_sixltr has_exclam has_url,1.47956678879
+LER,is_authentic_no netspeak_yes has_url,1.47216398878
+HER,is_analytic_no is_clout_no is_tone_yes,1.47155960012
+LER,few_sixltr has_qmark has_hashtag,1.46474502062
+HER,is_authentic_yes few_sixltr,1.46333448692
+HER,is_clout_no is_authentic_yes certain_yes,1.45987536673
+LER,assent_yes high_wps has_hashtag,1.455746727
+LER,high_wps has_hashtag has_url,1.44435811
+HER,has_animated_gif,1.43683194903
+HER,few_sixltr has_animated_gif has_url,1.43528240273
+LER,negemo_yes sad_yes see_yes,1.43482199852
+HER,certain_yes few_sixltr,1.4330726481
+HER,is_authentic_no netspeak_yes has_photo,1.42320672062
+LER,high_wps has_hashtag,1.42116257909
+LER,netspeak_yes few_sixltr has_hashtag,1.41970115074
+HER,posemo_yes netspeak_yes low_wps,1.40883588913
+LER,see_yes affiliation_yes few_sixltr,1.40513562572
+LER,has_exclam has_qmark has_hashtag,1.39466300365
+LER,sad_yes see_yes netspeak_yes,1.37911269002
+HER,few_sixltr has_photo has_url,1.37894806224
+HER,see_yes netspeak_yes low_wps,1.37642879302
+LER,netspeak_yes has_hashtag,1.37627786427
+LER,nonflu_yes has_exclam,1.37123069657
+LER,many_sixltr high_wps has_hashtag,1.37063865628
+HER,is_authentic_no certain_yes netspeak_yes,1.37003071363
+LER,see_yes netspeak_yes has_hashtag,1.3683828308
+LER,netspeak_yes has_hashtag has_url,1.36535298904
+LER,affiliation_yes netspeak_yes has_hashtag,1.3641193257
+HER,tentat_yes netspeak_yes few_sixltr,1.36067184729
+HER,netspeak_yes high_wps has_animated_gif,1.3590814759
+LER,is_analytic_yes insight_yes affiliation_yes,1.35243898224
+LER,netspeak_yes nonflu_yes has_exclam,1.35073564864
+HER,many_sixltr low_wps has_animated_gif,1.34945013091
+LER,many_sixltr high_wps has_video,1.34207921387
+LER,feel_yes low_wps,1.34029393468
+LER,is_analytic_yes netspeak_yes has_url,1.34015335382
+HER,assent_yes few_sixltr high_wps,1.33986340155
+LER,high_wps has_exclam,1.33796669365
+LER,is_clout_no see_yes,1.33743224193
+HER,low_wps has_qmark has_photo,1.33279844442
+HER,assent_yes high_wps has_photo,1.32824891562
+LER,is_clout_yes is_authentic_no insight_yes,1.32801666611
+LER,is_analytic_yes hear_yes affiliation_yes,1.32695701729
+HER,many_sixltr has_photo has_url,1.32418039046
+HER,is_clout_no netspeak_yes few_sixltr,1.32055835882
+LER,hear_yes netspeak_yes many_sixltr,1.31251455775
+HER,netspeak_yes few_sixltr low_wps,1.30125354779
+HER,feel_yes netspeak_yes low_wps,1.30100690491
+LER,high_wps has_video has_url,1.29521513612
+LER,is_authentic_yes netspeak_yes has_hashtag,1.29372297521
+LER,is_clout_yes see_yes affiliation_yes,1.29257267545
+LER,netspeak_yes high_wps has_hashtag,1.29239331496
+LER,reward_yes many_sixltr high_wps,1.28971356457
+LER,negemo_yes discrep_yes affiliation_yes,1.28861350217
+LER,many_sixltr high_wps has_url,1.28528938916
+HER,is_clout_no is_authentic_yes discrep_yes,1.28174772903
+LER,discrep_yes affiliation_yes risk_yes,1.27328594978
+HER,low_wps has_video has_url,1.2723407705
+LER,achieve_yes many_sixltr low_wps,1.27182237635
+LER,is_analytic_yes affiliation_yes netspeak_yes,1.27015699441
+LER,posemo_yes insight_yes feel_yes,1.26730667819
+LER,negemo_yes affiliation_yes power_yes,1.26631750232
+LER,is_analytic_yes achieve_yes reward_yes,1.26608849952
+HER,posemo_yes netspeak_yes few_sixltr,1.26573767832
+LER,achieve_yes reward_yes high_wps,1.2629857672
+HER,is_authentic_yes netspeak_yes has_photo,1.26135105089
+LER,negemo_yes sad_yes tentat_yes,1.25887509529
+LER,sad_yes tentat_yes,1.25887509529
+LER,few_sixltr high_wps has_hashtag,1.25139584349
+LER,posemo_yes see_yes feel_yes,1.2479440223
+HER,power_yes netspeak_yes has_animated_gif,1.24786764011
+LER,affiliation_yes many_sixltr high_wps,1.24763087405
+LER,posemo_yes cause_yes hear_yes,1.2438826623
+HER,assent_yes few_sixltr has_photo,1.23782077059
+HER,few_sixltr low_wps,1.23057040547
+LER,is_clout_yes affiliation_yes netspeak_yes,1.22838839648
+LER,few_sixltr has_hashtag,1.22770411583
+HER,power_yes few_sixltr high_wps,1.22039958936
+HER,is_analytic_yes cause_yes see_yes,1.21705347351
+LER,power_yes reward_yes many_sixltr,1.21695969687
+LER,posemo_yes affiliation_yes many_sixltr,1.2169567733
+HER,power_yes netspeak_yes has_photo,1.21518656866
+LER,reward_yes netspeak_yes has_url,1.21459164181
+LER,is_authentic_yes see_yes many_sixltr,1.21452679174
+LER,is_analytic_no cause_yes netspeak_yes,1.20677521897
+LER,is_clout_yes posemo_yes tentat_yes,1.20425938972
+LER,nonflu_yes many_sixltr has_exclam,1.203598329
+LER,is_clout_yes power_yes,1.20174980869
+HER,netspeak_yes many_sixltr has_photo,1.20043839693
+LER,posemo_yes hear_yes netspeak_yes,1.19891507788
+HER,certain_yes netspeak_yes has_exclam,1.19674176153
+LER,feel_yes low_wps has_hashtag,1.19442453329
+LER,power_yes netspeak_yes has_hashtag,1.19131145462
+HER,few_sixltr has_photo,1.18990046363
+LER,affiliation_yes has_hashtag,1.18818071255
+LER,cause_yes discrep_yes differ_yes,1.18742772544
+HER,low_wps has_video,1.18618573383
+LER,cause_yes hear_yes achieve_yes,1.18496127511
+HER,netspeak_yes assent_yes few_sixltr,1.18373333616
+HER,netspeak_yes few_sixltr has_photo,1.18198022827
+LER,is_clout_yes posemo_yes see_yes,1.17965685405
+LER,netspeak_yes low_wps has_hashtag,1.17156737824
+HER,has_exclam has_animated_gif,1.16968345014
+HER,certain_yes few_sixltr low_wps,1.16576017438
+LER,affiliation_yes power_yes has_exclam,1.16417929938
+LER,power_yes high_wps has_hashtag,1.16380239511
+LER,is_analytic_yes hear_yes,1.16136318293
+LER,cause_yes hear_yes,1.16123044772
+LER,many_sixltr low_wps has_url,1.16121615726
+HER,many_sixltr has_photo,1.15988058626
+HER,is_analytic_no is_authentic_no insight_yes,1.1594894431
+LER,affiliation_yes power_yes high_wps,1.15651196725
+LER,tentat_yes netspeak_yes has_qmark,1.15607829962
+HER,is_authentic_no feel_yes netspeak_yes,1.15171963248
+LER,cause_yes affiliation_yes risk_yes,1.15006119366
+
+HER,ibm,4.85267590996
+HER,skittles,4.75621681595
+HER,nutella,4.40610028754
+HER,has_url ibm,4.20813074106
+HER,chucktaylor,4.02525604057
+HER,oreo,3.61374832574
+LER,live periscope,3.52524864484
+HER,low_wps has_photo,3.47657615172
+HER,chuckii,3.43311718087
+LER,periscope,3.39036446804
+HER,cognitiveera,3.39027245782
+LER,hmlife,3.28362920787
+HER,prada,3.27874924522
+LER,sms,3.25776988786
+HER,cookie,3.12560578182
+HER,has_url pictureoftheweek,3.12242060686
+HER,pictureoftheweek,3.12242060686
+HER,chuck,3.10415607844
+HER,ginni,3.09202141778
+HER,ginni rometty,3.09202141778
+HER,rometty,3.09202141778
+LER,podcast,3.06054002248
+LER,deals,3.06007222734
+LER,ebay,3.0586808302
+LER,musicmonday,3.03526229131
+HER,bmw,3.01605457445
+LER,many_sixltr has_url,3.00953053126
+HER,watson,3.00763043304
+LER,traveltuesday,3.00006713758
+LER,louis vuitton,2.95185941879
+LER,vuitton,2.95185941879
+LER,amazon,2.94603254738
+LER,bailey musicmonday,2.93686834275
+HER,converse,2.9329911759
+HER,disney,2.92837121994
+LER,youtube video,2.92765440452
+LER,nowplaying,2.92712059811
+LER,twitter hq,2.92585318534
+HER,lastpringle,2.92505551638
+HER,cognitive,2.91453727708
+HER,ceo ginni,2.8847637327
+HER,pradacelebs,2.88025955176
+LER,has_url update,2.85490900131
+HER,has_url chucktaylor,2.85253836118
+HER,lvcruise,2.84916972644
+LER,maintenance,2.84890754081
+HER,uber,2.83493067136
+HER,theatres,2.83236103223
+LER,louis,2.80393376873
+HER,summer 2015,2.79778604153
+HER,runsimple,2.79163879959
+HER,has_url didyouknow,2.77688668779
+HER,celebratingmonogram,2.77008704185
+LER,100solutions,2.7682765069
+LER,n5culturechanel,2.76506291055
+LER,espace,2.73553615878
+LER,virgin,2.73284439832
+HER,theforceawakens,2.72465535875
+HER,low_wps has_animated_gif,2.72100454062
+LER,lv,2.71858258974
+HER,kitkat,2.71533690194
+LER,virgin podcast,2.71452871396
+HER,has_url prada,2.71099379434
+LER,twitter,2.70898793489
+HER,itallstarts,2.70778901252
+HER,taylor,2.70294375221
+HER,ibmdesign,2.69622375496
+LER,direct,2.6958405755
+HER,apple ibm,2.69151994024
+HER,ingenuity,2.67742998722
+HER,d23expo,2.67516196647
+HER,amazonsweepstakes,2.66952688379
+HER,rules amazonsweepstakes,2.66952688379
+HER,follow chance,2.66639971309
+HER,chuck taylor,2.66371051456
+HER,louisvuitton celebratingmonogram,2.66026378507
+LER,youtube,2.65942352114
+HER,monstergirls,2.65605902007
+LER,gears2,2.64821998345
+LER,has_url miss,2.64623253884
+HER,has_animated_gif has_url,2.62594051205
+HER,chocolate,2.61383529278
+HER,monstergirlmonday,2.61324114831
+HER,has_url skittles,2.59347002846
+LER,delays,2.5926376593
+HER,lvfall,2.58975454853
+LER,ikeafamily,2.58694793001
+HER,flavor,2.58219320157
+LER,errors,2.58048845634
+HER,ibmwatson,2.56321426853
+HER,lvspring,2.56123722936
+LER,galaxy11,2.54841824255
+LER,sale goes,2.54256730991
+LER,lvexpress,2.5406807488
+HER,has_url apple,2.5393041553
+LER,painting,2.53718839068
+HER,ps4,2.53148918539
+HER,playwithoreo,2.52294983888
+LER,has_url twitter,2.51513925591
+HER,brain,2.51233668749
+LER,burberryacoustic,2.50600726858
+HER,has_url monstergirlmonday,2.49995740244
+LER,amble,2.49930910043
+HER,cinderella,2.49834726405
+HER,is_authentic_no few_sixltr,2.49783502441
+LER,galaxynote,2.49143272546
+HER,eating skittles,2.49040879734
+LER,favorited,2.47956387
+LER,favorited youtube,2.47956387
+LER,has_url favorited,2.47956387
+HER,chip,2.47527279532
+LER,gearup,2.46823190874
+HER,eat skittles,2.46822194541
+HER,cat,2.46545774469
+HER,2015 campaign,2.46115997006
+HER,tangled,2.4483677205
+HER,wind,2.44443742075
+LER,galaxynoteii,2.44402819991
+LER,gaap,2.4415055431
+LER,clue,2.4321267989
+LER,culturel,2.42911661561
+LER,espace culturel,2.42911661561
+HER,sky,2.4280414247
+LER,downtime,2.42591293131
+HER,worthsaying,2.4247699734
+HER,oreosnackhacks,2.42139493843
+LER,naw2016,2.42042372439
+LER,hmisabelmarant,2.41814077164
+LER,benefit,2.40506509433
+LER,10 sale,2.40368649369
+LER,has_url search,2.40031245348
+LER,ss12,2.39888138625
+HER,sponsor,2.3933504442
+HER,taylor star,2.37859078117
+LER,vinyl,2.37301188974
+HER,sb49,2.37281608183
+HER,jar,2.36676499451
+HER,chanelhautecouture,2.36472431117
+HER,bestwithinyourgrasp,2.35784696497
+HER,billion,2.35447393215
+LER,hm,2.35184581954
+LER,cloudworld,2.3488237007
+LER,low_wps has_url,2.34562069911
+LER,has_url deal,2.34513631323
+HER,jar nutella,2.3447929175
+HER,siemens,2.34152853313
+HER,cookies,2.33844817148
+HER,star wars,2.32767764242
+HER,wars,2.32767764242
+LER,architecture,2.327676441
+HER,louisvuitton lvcruise,2.32414105458
+LER,lvlive pfw,2.32124388397
+LER,ff,2.32119025526
+LER,galaxytabs,2.31921153524
+LER,shopasong,2.31782287979
+LER,watch latest,2.31757493944
+LER,island,2.31509344018
+LER,has_url match,2.31414192719
+HER,pancakes,2.30729501073
+HER,lvcruise 2016,2.30376654991
+LER,tab,2.30371692375
+LER,style stories,2.30333671912
+HER,hm15,2.29810075218
+LER,makerfaire,2.2976985232
+LER,ebay20,2.2971375935
+HER,visa,2.29350508007
+LER,peak,2.29113722588
+LER,svoicespeaks,2.28844060343
+LER,few_sixltr has_url,2.28114979205
+HER,smile,2.27810524797
+HER,decktheballs,2.2773527399
+HER,plant,2.27535461695
+LER,iem,2.26927135344
+LER,sms delivery,2.26623876673
+LER,headphones,2.26507051935
+LER,new twitter,2.2563399751
+LER,has_url sms,2.25617052372
+LER,has_url tweets,2.25301036023
+HER,ibm ceo,2.24977393211
+HER,has_url oreo,2.24766495831
+LER,temporarily disabled,2.24204488032
+HER,skittlescloud,2.2397287491
+HER,uberdata,2.23926523093
+LER,airstream,2.23515622132
+LER,video nescafe,2.23434328015
+HER,apple,2.22591715294
+LER,follower,2.22463258298
+LER,week virgin,2.22354215749
+LER,sell,2.22112244058
+LER,twitter com,2.2197557414
+HER,skittlesart,2.21521563687
+LER,diamond,2.21371024017
+HER,prada menswear,2.21235058849
+LER,watch hmlife,2.20743686092
+LER,nolongernotyet,2.2068434351
+LER,gglive,2.2067488323
+LER,amazonlaunchpad,2.20545289488
+HER,nestle,2.20299739742
+LER,latest burberryacoustic,2.20212741046
+HER,flavored,2.19907460624
+
+HER,ibm,4.85267590996
+HER,skittles,4.75621681595
+HER,nutella,4.40610028754
+HER,has_url ibm,4.20813074106
+HER,chucktaylor,4.02525604057
+HER,oreo,3.61374832574
+LER,live periscope,3.52524864484
+HER,low_wps has_photo,3.47657615172
+HER,chuckii,3.43311718087
+LER,periscope,3.39036446804
+HER,cognitiveera,3.39027245782
+LER,hmlife,3.28362920787
+HER,prada,3.27874924522
+LER,sms,3.25776988786
+HER,cookie,3.12560578182
+HER,has_url pictureoftheweek,3.12242060686
+HER,pictureoftheweek,3.12242060686
+HER,chuck,3.10415607844
+HER,ginni,3.09202141778
+HER,ginni rometty,3.09202141778
+HER,rometty,3.09202141778
+LER,podcast,3.06054002248
+LER,deals,3.06007222734
+LER,ebay,3.0586808302
+LER,musicmonday,3.03526229131
+HER,bmw,3.01605457445
+LER,many_sixltr has_url,3.00953053126
+HER,watson,3.00763043304
+LER,traveltuesday,3.00006713758
+LER,louis vuitton,2.95185941879
+LER,vuitton,2.95185941879
+LER,amazon,2.94603254738
+LER,bailey musicmonday,2.93686834275
+HER,converse,2.9329911759
+HER,disney,2.92837121994
+LER,youtube video,2.92765440452
+LER,nowplaying,2.92712059811
+LER,twitter hq,2.92585318534
+HER,lastpringle,2.92505551638
+HER,cognitive,2.91453727708
+HER,ceo ginni,2.8847637327
+HER,pradacelebs,2.88025955176
+LER,has_url update,2.85490900131
+HER,has_url chucktaylor,2.85253836118
+HER,lvcruise,2.84916972644
+LER,maintenance,2.84890754081
+HER,uber,2.83493067136
+HER,theatres,2.83236103223
+LER,louis,2.80393376873
+HER,summer 2015,2.79778604153
+HER,runsimple,2.79163879959
+HER,has_url didyouknow,2.77688668779
+HER,celebratingmonogram,2.77008704185
+LER,100solutions,2.7682765069
+LER,n5culturechanel,2.76506291055
+LER,espace,2.73553615878
+LER,virgin,2.73284439832
+HER,theforceawakens,2.72465535875
+HER,low_wps has_animated_gif,2.72100454062
+LER,lv,2.71858258974
+HER,kitkat,2.71533690194
+LER,virgin podcast,2.71452871396
+HER,has_url prada,2.71099379434
+LER,twitter,2.70898793489
+HER,itallstarts,2.70778901252
+HER,taylor,2.70294375221
+HER,ibmdesign,2.69622375496
+LER,direct,2.6958405755
+HER,apple ibm,2.69151994024
+HER,ingenuity,2.67742998722
+HER,d23expo,2.67516196647
+HER,amazonsweepstakes,2.66952688379
+HER,rules amazonsweepstakes,2.66952688379
+HER,follow chance,2.66639971309
+HER,chuck taylor,2.66371051456
+HER,louisvuitton celebratingmonogram,2.66026378507
+LER,youtube,2.65942352114
+HER,monstergirls,2.65605902007
+LER,gears2,2.64821998345
+LER,has_url miss,2.64623253884
+HER,has_animated_gif has_url,2.62594051205
+HER,chocolate,2.61383529278
+HER,monstergirlmonday,2.61324114831
+HER,has_url skittles,2.59347002846
+LER,delays,2.5926376593
+HER,lvfall,2.58975454853
+LER,ikeafamily,2.58694793001
+HER,flavor,2.58219320157
+LER,errors,2.58048845634
+HER,ibmwatson,2.56321426853
+HER,lvspring,2.56123722936
+LER,galaxy11,2.54841824255
+LER,sale goes,2.54256730991
+LER,lvexpress,2.5406807488
+HER,has_url apple,2.5393041553
+LER,painting,2.53718839068
+HER,ps4,2.53148918539
+HER,playwithoreo,2.52294983888
+LER,has_url twitter,2.51513925591
+HER,brain,2.51233668749
+LER,burberryacoustic,2.50600726858
+HER,has_url monstergirlmonday,2.49995740244
+LER,amble,2.49930910043
+HER,cinderella,2.49834726405
+HER,is_authentic_no few_sixltr,2.49783502441
+LER,galaxynote,2.49143272546
+HER,eating skittles,2.49040879734
+LER,favorited,2.47956387
+LER,favorited youtube,2.47956387
+LER,has_url favorited,2.47956387
+HER,chip,2.47527279532
+LER,gearup,2.46823190874
+HER,eat skittles,2.46822194541
+HER,cat,2.46545774469
+HER,2015 campaign,2.46115997006
+HER,tangled,2.4483677205
+HER,wind,2.44443742075
+LER,galaxynoteii,2.44402819991
+LER,gaap,2.4415055431
+LER,clue,2.4321267989
+LER,culturel,2.42911661561
+LER,espace culturel,2.42911661561
+HER,sky,2.4280414247
+LER,downtime,2.42591293131
+HER,worthsaying,2.4247699734
+HER,oreosnackhacks,2.42139493843
+LER,naw2016,2.42042372439
+LER,hmisabelmarant,2.41814077164
+LER,benefit,2.40506509433
+LER,10 sale,2.40368649369
+LER,has_url search,2.40031245348
+LER,ss12,2.39888138625
+HER,sponsor,2.3933504442
+HER,taylor star,2.37859078117
+LER,vinyl,2.37301188974
+HER,sb49,2.37281608183
+HER,jar,2.36676499451
+HER,chanelhautecouture,2.36472431117
+HER,bestwithinyourgrasp,2.35784696497
+HER,billion,2.35447393215
+LER,hm,2.35184581954
+LER,cloudworld,2.3488237007
+LER,low_wps has_url,2.34562069911
+LER,has_url deal,2.34513631323
+HER,jar nutella,2.3447929175
+HER,siemens,2.34152853313
+HER,cookies,2.33844817148
+HER,star wars,2.32767764242
+HER,wars,2.32767764242
+LER,architecture,2.327676441
+HER,louisvuitton lvcruise,2.32414105458
+LER,lvlive pfw,2.32124388397
+LER,ff,2.32119025526
+LER,galaxytabs,2.31921153524
+LER,shopasong,2.31782287979
+LER,watch latest,2.31757493944
+LER,island,2.31509344018
+LER,has_url match,2.31414192719
+HER,pancakes,2.30729501073
+HER,lvcruise 2016,2.30376654991
+LER,tab,2.30371692375
+LER,style stories,2.30333671912
+HER,hm15,2.29810075218
+LER,makerfaire,2.2976985232
+LER,ebay20,2.2971375935
+HER,visa,2.29350508007
+LER,peak,2.29113722588
+LER,svoicespeaks,2.28844060343
+LER,few_sixltr has_url,2.28114979205
+HER,smile,2.27810524797
+HER,decktheballs,2.2773527399
+HER,plant,2.27535461695
+LER,iem,2.26927135344
+LER,sms delivery,2.26623876673
+LER,headphones,2.26507051935
+LER,new twitter,2.2563399751
+LER,has_url sms,2.25617052372
+LER,has_url tweets,2.25301036023
+HER,ibm ceo,2.24977393211
+HER,has_url oreo,2.24766495831
+LER,temporarily disabled,2.24204488032
+HER,skittlescloud,2.2397287491
+HER,uberdata,2.23926523093
+LER,airstream,2.23515622132
+LER,video nescafe,2.23434328015
+HER,apple,2.22591715294
+LER,follower,2.22463258298
+LER,week virgin,2.22354215749
+LER,sell,2.22112244058
+LER,twitter com,2.2197557414
+HER,skittlesart,2.21521563687
+LER,diamond,2.21371024017
+HER,prada menswear,2.21235058849
+LER,watch hmlife,2.20743686092
+LER,nolongernotyet,2.2068434351
+LER,gglive,2.2067488323
+LER,amazonlaunchpad,2.20545289488
+HER,nestle,2.20299739742
+LER,latest burberryacoustic,2.20212741046
+HER,flavored,2.19907460624
+
+HER,ibm,4.85267590996
+HER,skittles,4.75621681595
+HER,nutella,4.40610028754
+HER,has_url ibm,4.20813074106
+HER,chucktaylor,4.02525604057
+HER,oreo,3.61374832574
+LER,live periscope,3.52524864484
+HER,low_wps has_photo,3.47657615172
+HER,chuckii,3.43311718087
+LER,periscope,3.39036446804
+HER,cognitiveera,3.39027245782
+LER,hmlife,3.28362920787
+HER,prada,3.27874924522
+LER,sms,3.25776988786
+HER,cookie,3.12560578182
+HER,has_url pictureoftheweek,3.12242060686
+HER,pictureoftheweek,3.12242060686
+HER,chuck,3.10415607844
+HER,ginni,3.09202141778
+HER,ginni rometty,3.09202141778
+HER,rometty,3.09202141778
+LER,podcast,3.06054002248
+LER,deals,3.06007222734
+LER,ebay,3.0586808302
+LER,musicmonday,3.03526229131
+HER,bmw,3.01605457445
+LER,many_sixltr has_url,3.00953053126
+HER,watson,3.00763043304
+LER,traveltuesday,3.00006713758
+LER,louis vuitton,2.95185941879
+LER,vuitton,2.95185941879
+LER,amazon,2.94603254738
+LER,bailey musicmonday,2.93686834275
+HER,converse,2.9329911759
+HER,disney,2.92837121994
+LER,youtube video,2.92765440452
+LER,nowplaying,2.92712059811
+LER,twitter hq,2.92585318534
+HER,lastpringle,2.92505551638
+HER,cognitive,2.91453727708
+HER,ceo ginni,2.8847637327
+HER,pradacelebs,2.88025955176
+LER,has_url update,2.85490900131
+HER,has_url chucktaylor,2.85253836118
+HER,lvcruise,2.84916972644
+LER,maintenance,2.84890754081
+HER,uber,2.83493067136
+HER,theatres,2.83236103223
+LER,louis,2.80393376873
+HER,summer 2015,2.79778604153
+HER,runsimple,2.79163879959
+HER,has_url didyouknow,2.77688668779
+HER,celebratingmonogram,2.77008704185
+LER,100solutions,2.7682765069
+LER,n5culturechanel,2.76506291055
+LER,espace,2.73553615878
+LER,virgin,2.73284439832
+HER,theforceawakens,2.72465535875
+HER,low_wps has_animated_gif,2.72100454062
+LER,lv,2.71858258974
+HER,kitkat,2.71533690194
+LER,virgin podcast,2.71452871396
+HER,has_url prada,2.71099379434
+LER,twitter,2.70898793489
+HER,itallstarts,2.70778901252
+HER,taylor,2.70294375221
+HER,ibmdesign,2.69622375496
+LER,direct,2.6958405755
+HER,apple ibm,2.69151994024
+HER,ingenuity,2.67742998722
+HER,d23expo,2.67516196647
+HER,amazonsweepstakes,2.66952688379
+HER,rules amazonsweepstakes,2.66952688379
+HER,follow chance,2.66639971309
+HER,chuck taylor,2.66371051456
+HER,louisvuitton celebratingmonogram,2.66026378507
+LER,youtube,2.65942352114
+HER,monstergirls,2.65605902007
+LER,gears2,2.64821998345
+LER,has_url miss,2.64623253884
+HER,has_animated_gif has_url,2.62594051205
+HER,chocolate,2.61383529278
+HER,monstergirlmonday,2.61324114831
+HER,has_url skittles,2.59347002846
+LER,delays,2.5926376593
+HER,lvfall,2.58975454853
+LER,ikeafamily,2.58694793001
+HER,flavor,2.58219320157
+LER,errors,2.58048845634
+HER,ibmwatson,2.56321426853
+HER,lvspring,2.56123722936
+LER,galaxy11,2.54841824255
+LER,sale goes,2.54256730991
+LER,lvexpress,2.5406807488
+HER,has_url apple,2.5393041553
+LER,painting,2.53718839068
+HER,ps4,2.53148918539
+HER,playwithoreo,2.52294983888
+LER,has_url twitter,2.51513925591
+HER,brain,2.51233668749
+LER,burberryacoustic,2.50600726858
+HER,has_url monstergirlmonday,2.49995740244
+LER,amble,2.49930910043
+HER,cinderella,2.49834726405
+HER,is_authentic_no few_sixltr,2.49783502441
+LER,galaxynote,2.49143272546
+HER,eating skittles,2.49040879734
+LER,favorited,2.47956387
+LER,favorited youtube,2.47956387
+LER,has_url favorited,2.47956387
+HER,chip,2.47527279532
+LER,gearup,2.46823190874
+HER,eat skittles,2.46822194541
+HER,cat,2.46545774469
+HER,2015 campaign,2.46115997006
+HER,tangled,2.4483677205
+HER,wind,2.44443742075
+LER,galaxynoteii,2.44402819991
+LER,gaap,2.4415055431
+LER,clue,2.4321267989
+LER,culturel,2.42911661561
+LER,espace culturel,2.42911661561
+HER,sky,2.4280414247
+LER,downtime,2.42591293131
+HER,worthsaying,2.4247699734
+HER,oreosnackhacks,2.42139493843
+LER,naw2016,2.42042372439
+LER,hmisabelmarant,2.41814077164
+LER,benefit,2.40506509433
+LER,10 sale,2.40368649369
+LER,has_url search,2.40031245348
+LER,ss12,2.39888138625
+HER,sponsor,2.3933504442
+HER,taylor star,2.37859078117
+LER,vinyl,2.37301188974
+HER,sb49,2.37281608183
+HER,jar,2.36676499451
+HER,chanelhautecouture,2.36472431117
+HER,bestwithinyourgrasp,2.35784696497
+HER,billion,2.35447393215
+LER,hm,2.35184581954
+LER,cloudworld,2.3488237007
+LER,low_wps has_url,2.34562069911
+LER,has_url deal,2.34513631323
+HER,jar nutella,2.3447929175
+HER,siemens,2.34152853313
+HER,cookies,2.33844817148
+HER,star wars,2.32767764242
+HER,wars,2.32767764242
+LER,architecture,2.327676441
+HER,louisvuitton lvcruise,2.32414105458
+LER,lvlive pfw,2.32124388397
+LER,ff,2.32119025526
+LER,galaxytabs,2.31921153524
+LER,shopasong,2.31782287979
+LER,watch latest,2.31757493944
+LER,island,2.31509344018
+LER,has_url match,2.31414192719
+HER,pancakes,2.30729501073
+HER,lvcruise 2016,2.30376654991
+LER,tab,2.30371692375
+LER,style stories,2.30333671912
+HER,hm15,2.29810075218
+LER,makerfaire,2.2976985232
+LER,ebay20,2.2971375935
+HER,visa,2.29350508007
+LER,peak,2.29113722588
+LER,svoicespeaks,2.28844060343
+LER,few_sixltr has_url,2.28114979205
+HER,smile,2.27810524797
+HER,decktheballs,2.2773527399
+HER,plant,2.27535461695
+LER,iem,2.26927135344
+LER,sms delivery,2.26623876673
+LER,headphones,2.26507051935
+LER,new twitter,2.2563399751
+LER,has_url sms,2.25617052372
+LER,has_url tweets,2.25301036023
+HER,ibm ceo,2.24977393211
+HER,has_url oreo,2.24766495831
+LER,temporarily disabled,2.24204488032
+HER,skittlescloud,2.2397287491
+HER,uberdata,2.23926523093
+LER,airstream,2.23515622132
+LER,video nescafe,2.23434328015
+HER,apple,2.22591715294
+LER,follower,2.22463258298
+LER,week virgin,2.22354215749
+LER,sell,2.22112244058
+LER,twitter com,2.2197557414
+HER,skittlesart,2.21521563687
+LER,diamond,2.21371024017
+HER,prada menswear,2.21235058849
+LER,watch hmlife,2.20743686092
+LER,nolongernotyet,2.2068434351
+LER,gglive,2.2067488323
+LER,amazonlaunchpad,2.20545289488
+HER,nestle,2.20299739742
+LER,latest burberryacoustic,2.20212741046
+HER,flavored,2.19907460624

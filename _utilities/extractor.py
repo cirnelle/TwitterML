@@ -42,8 +42,8 @@ class Extractor():
         # create dict with api keys
         ###################
 
-        if os.path.isfile('../../../keys/twitter_api_keys.txt'):
-            lines = open('../../../keys/twitter_api_keys.txt','r').readlines()
+        if os.path.isfile('../../../keys/twitter_api_keys_4.txt'):
+            lines = open('../../../keys/twitter_api_keys_4.txt','r').readlines()
 
         else:
             print ("Path not found")
@@ -81,8 +81,6 @@ class Extractor():
         for line in lines:
             spline = line.replace('\n','').split(',')
             users.append(spline[0])
-
-        users = ['SydScienceFest']
 
         print ("Length of user list is "+str(len(users)))
 
@@ -378,13 +376,14 @@ class Extractor():
 
             tweets = []
 
-            tweet=api.get_status(id=id)
+            #tweet=api.get_status(id=id)
 
             #print (tweet)
 
             for r in range(retries):
 
                 try:
+
 
                     rate_limit = api.rate_limit_status()
 
@@ -393,6 +392,7 @@ class Extractor():
 
                     print (remaining)
 
+                    tweet = api.get_status(id=id)
 
                     #dumps serialises strings into JSON (which is very similar to python's dict)
                     json_str= json.dumps(tweet._json)
@@ -480,9 +480,17 @@ class Extractor():
 
                     break
 
+                except tweepy.error.TweepError as e:
+                    print ('Tweepy error' + str(e))
+                    pass
+
                 except Exception as e:
                     print('Failed: ' + str(e))
                     time.sleep(sleep_time)
+
+
+
+
 
 
     def printcsv(self,all_tweets,filename):
@@ -510,11 +518,11 @@ class Extractor():
 # variables
 ###############
 
-path_to_user_list = '../user_list/user_space.csv'
-path_to_tweet_id_list = '../tweets/events/sydscifest_2016/from_jim/id_temp.txt'
-path_to_store_raw_tweets = '../tweets/events/sydscifest_2016/raw_sydscifest.csv'
+path_to_user_list = '../user_list/others/user_nonprofit.txt'
+path_to_tweet_id_list = '../tweets/events/sydscifest_2016/tweets/tweets_ID.txt'
+path_to_store_raw_tweets = '../tweets/others/raw_nonprofit.csv'
 path_to_store_raw_tweets_hashtag = '../tweets/hashtags/raw_#'
-path_to_store_tweets_by_id = '../tweets/events/sydscifest_2016/from_jim/raw_nov-apr2016.csv'
+path_to_store_tweets_by_id = '../tweets/events/sydscifest_2016/tweets/raw_tweets.csv'
 
 
 if __name__ == '__main__':
@@ -531,7 +539,7 @@ if __name__ == '__main__':
     # get tweets by user
     #################
 
-    #ext.gettweets_by_user()
+    ext.gettweets_by_user()
 
 
     #################
@@ -545,5 +553,5 @@ if __name__ == '__main__':
     # get tweets by id
     #################
 
-    ext.gettweets_by_id()
+    #ext.gettweets_by_id()
 

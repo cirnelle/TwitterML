@@ -236,7 +236,7 @@ class SGD():
             'vect__use_idf': (True, False),
             'clf__loss': ('hinge', 'log'),
             'clf__penalty': ('l2', 'l1', 'elasticnet'),
-            'clf__alpha': (0.0001, 0.0005),
+            'clf__alpha': (0.001, 0.0001, 0.0005),
         }
 
         #################
@@ -352,7 +352,7 @@ class SGD():
             'selector__percentile': (85, 95, 100),
             'clf__loss': ('hinge', 'log'),
             'clf__penalty': ('l2', 'l1', 'elasticnet'),
-            'clf__alpha': (0.0001, 0.0005),
+            'clf__alpha': (0.001, 0.0001, 0.0005),
 
         }
 
@@ -730,26 +730,26 @@ class SGD():
 # variables
 ###############
 
-path_to_labelled_file = '../output/features/sydscifest/labelled_combined_all.csv'
-#path_to_labelled_file = '../output/engrate/labelled_space.csv'
+#path_to_labelled_file = '../output/features/maas/labelled_combined.csv'
+path_to_labelled_file = '../output/features/nonprofit/follcorr/labelled_combined_all.csv'
 path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
 path_to_file_to_be_predicted = '../output/to_predict/sydscifest/sydscifest_test'
-path_to_gold_standard_file = '../output/features/sydscifest/labelled_combined.csv'
+path_to_gold_standard_file = '../output/features/maas/sydobs/labelled_combined.csv'
 
-path_to_store_predicted_results = '../output/sydscifest/predicted_results.csv'
-path_to_store_coefficient_file = '../output/feature_importance/sgd/sydscifest/sgd_coef.csv'
-path_to_store_feature_selection_boolean_file = '../output/feature_importance/sgd/sydscifest/sgd_fs_boolean.csv'
-path_to_store_list_of_feature_file = '../output/feature_importance/sgd/sydscifest/sgd_feature_names.csv'
-path_to_store_feature_and_coef_file = '../output/feature_importance/sgd/sydscifest/sgd_coef_and_feat.csv'
-path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/sgd/sydscifest/sydscifest.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/sgd/sydscifest/sgd_feat_by_class_combined_all.csv'
+path_to_store_predicted_results = '../output/predictions/maas/sydobs/predicted_results_sgd.csv'
+path_to_store_coefficient_file = '../output/feature_importance/sgd/nonprofit/follcorr/sgd_coef.csv'
+path_to_store_feature_selection_boolean_file = '../output/feature_importance/sgd/nonprofit/follcorr/sgd_fs_boolean.csv'
+path_to_store_list_of_feature_file = '../output/feature_importance/sgd/nonprofit/follcorr/sgd_feature_names.csv'
+path_to_store_feature_and_coef_file = '../output/feature_importance/sgd/nonprofit/follcorr/sgd_coef_and_feat.csv'
+path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/sgd/follcorr/nonprofit.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/sgd/nonprofit/follcorr/sgd_feat_by_class_combined_all.csv'
 
 # for classifier without pipeline
 _ngram_range = (1,1)
 _use_idf = True
-_loss = 'log' # 'hinge' gives linear SVM; 'log' gives logistic regression
-_penalty = 'l2'
-_alpha = 0.0001
+_loss = 'hinge' # 'hinge' gives linear SVM; 'log' gives logistic regression
+_penalty = 'l1'
+_alpha = 0.0005
 _score_func = chi2
 _percentile = 85
 
@@ -833,6 +833,7 @@ if __name__ == '__main__':
     ###################
 
     sgd.get_important_features(clf,count_vect)
+
 
     ###################
     # Run classifier and then predict tweets

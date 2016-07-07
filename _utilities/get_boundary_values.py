@@ -325,7 +325,7 @@ class GetBoundaryValues():
 # variables
 ##############
 
-path_to_liwc_result_file = '../output/liwc/sydscifest/liwc_sydscifest_b.txt'
+path_to_liwc_result_file = '../output/liwc/follcorr/liwc_nonprofit_follcorr.txt'
 
 
 if __name__ == '__main__':
