@@ -258,23 +258,23 @@ class LabelTweetsEngRate():
 # path_to_store_engrate_output = '../output/engrate/maas/engrate_maas.csv'
 # path_to_store_labelled_tweets = '../output/engrate/maas/labelled_maas.csv'
 
-path_to_preprocessed_tweet_file = '../tweets/follcorr/others/preprocessed_nonprofit_follcorr.csv'
-path_to_store_engrate_output = '../output/engrate/follcorr/others/engrate_nonprofit_follcorr.csv'
-path_to_store_labelled_tweets = '../output/engrate/follcorr/others/labelled_nonprofit_follcorr.csv'
+path_to_preprocessed_tweet_file = '../tweets/realfoll/preprocessed_nonprofit_realfoll.csv'
+path_to_store_engrate_output = '../output/engrate/realfoll/others/engrate_nonprofit_realfoll.csv'
+path_to_store_labelled_tweets = '../output/engrate/realfoll/others/labelled_nonprofit_realfoll.csv'
 
 # for LIWC
 # path_to_raw_tweet_file = '../tweets/maas/raw_maas.csv'
 # path_to_store_engrate_output_raw = '../output/engrate/maas/engrate_maas_raw.csv'
 # path_to_store_labelled_tweets_raw = '../output/engrate/maas/labelled_maas_raw.csv'
 
-path_to_raw_tweet_file = '../tweets/follcorr/others/raw_nonprofit_follcorr.csv'
-path_to_store_engrate_output_raw = '../output/engrate/follcorr/others/engrate_nonprofit_raw_follcorr.csv'
-path_to_store_labelled_tweets_raw = '../output/engrate/follcorr/others/labelled_nonprofit_raw_follcorr.csv'
+path_to_raw_tweet_file = '../tweets/realfoll/raw_nonprofit_realfoll.csv'
+path_to_store_engrate_output_raw = '../output/engrate/realfoll/others/engrate_nonprofit_raw_realfoll.csv'
+path_to_store_labelled_tweets_raw = '../output/engrate/realfoll/others/labelled_nonprofit_raw_realfoll.csv'
 
 
 # engrate parameters
-her_boundary = 0.04
-ler_boundary = 0.000991
+her_boundary = 0.0314
+ler_boundary = 0.001055
 
 
 if __name__ == "__main__":

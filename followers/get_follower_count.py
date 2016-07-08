@@ -45,8 +45,8 @@ for line in lines:
 
 #users = ["nasa","cern"]
 
-if os.path.isfile('/Users/yi-linghwong/keys/twitter_api_keys.txt'):
-    lines = open('/Users/yi-linghwong/keys/twitter_api_keys.txt','r').readlines()
+if os.path.isfile('/Users/yi-linghwong/keys/twitter_api_keys_2.txt'):
+    lines = open('/Users/yi-linghwong/keys/twitter_api_keys_2.txt','r').readlines()
 
 
 else:

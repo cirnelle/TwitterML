@@ -1,61 +1,200 @@
-HER,has_photo,-19.1061696481
-HER,has_animated_gif,-6.66523197298
-HER,has_video,-5.28399961778
-HER,app,-4.62098663045
-HER,has_hashtag,-3.53205009106
-HER,image,-2.82766975201
-HER,certain_yes,-2.79807808661
-HER,differ_yes,-2.15214798076
-HER,pluto,-2.08838505326
-HER,spacewalk,-1.96188677619
-HER,soyuz,-1.76440822076
-HER,people,-1.55675789116
-HER,day,-1.26678506565
-HER,moon,-1.14468336941
-HER,is_authentic_yes,-1.01554881135
-HER,tentat_yes,-0.992893620276
-HER,yearinspace,-0.877982569454
-HER,exomars,-0.672229413547
-HER,years,-0.671214193686
-HER,is_analytic_no,-0.62191440276
-HER,nebula,-0.607587523803
-HER,see_yes,-0.587666661484
-HER,67p,-0.535746697935
-HER,gravitationalwaves,-0.419518549009
-HER,alien,-0.28507995211
-HER,discrep_yes,-0.235079261434
-HER,landing,-0.219207351677
-HER,affiliation_yes,-0.112227904891
-HER,achieve_yes,-0.0919772886481
-HER,stage,-0.0643222554732
-LER,nasa,13.67408533
-LER,ksc,5.78660371777
-LER,astronomy,4.76365036969
-LER,is_authentic_no,3.55529202837
-LER,has_qmark,3.34018456672
-LER,check,3.28520728521
-LER,chabot,3.15367945018
-LER,spon,2.91655356727
-LER,asteroid,2.59891835655
-LER,live,2.37028618448
-LER,astronomer,1.62939867398
-LER,many_sixltr,1.21850778896
-LER,insight_yes,0.915262052428
-LER,cause_yes,0.818661514784
-LER,is_analytic_yes,0.804950796228
-LER,center,0.752976487611
-LER,high_wps,0.595359911298
-LER,briefing,0.575953304999
-LER,earthfromspace,0.541698337653
-LER,daily,0.527932196612
-LER,asknasa,0.498323930556
-LER,carnival,0.454999366814
-LER,goat,0.422468468947
-LER,iss,0.365145503229
-LER,goats,0.274173104381
-LER,is_clout_yes,0.240326886269
-LER,research,0.158669365312
-LER,reveals,0.155672042867
-LER,magazine,0.155505241959
-LER,join,0.137902283185
-LER,tune,0.0636302207027
+HER,has_photo,-7.42863103713
+HER,has_animated_gif,-6.87275582475
+HER,caves2016,-6.14672805358
+HER,has_hashtag has_url nasa,-5.29269180019
+HER,juno,-4.57639017565
+HER,has_video,-4.54403530189
+HER,exomars,-4.50624407595
+HER,has_photo has_url,-4.22741044628
+HER,has_animated_gif has_url,-3.73380627681
+HER,has_photo has_hashtag,-3.67443799464
+HER,has_photo has_hashtag has_url,-3.67443799464
+HER,little,-3.42654068746
+HER,saturn,-3.11138238904
+HER,jupiter,-3.08716415198
+HER,low_wps has_exclam has_photo,-3.07454577862
+HER,app,-2.97955152363
+HER,team,-2.88879835922
+HER,pluto,-2.83265510204
+HER,landing,-2.8067964219
+HER,mars space,-2.60668319983
+HER,gravitationalwaves,-2.48908639074
+HER,sun,-2.40326421965
+HER,summary,-2.35523374886
+HER,know,-2.31901612342
+HER,power_yes many_sixltr low_wps,-2.31524940915
+HER,solar,-2.29177564798
+HER,is_clout_no,-2.25935577832
+HER,orbit,-2.23985599286
+HER,cavenauts,-2.23244435703
+HER,is_authentic_yes insight_yes tentat_yes,-2.17752823572
+HER,want,-2.17453252352
+HER,details,-2.11035750748
+HER,et al,-2.08856630738
+HER,great,-2.06586716813
+HER,moon,-2.05511986951
+HER,landed,-2.02054513277
+HER,twin,-2.00809160671
+HER,short,-1.98454613907
+HER,planet,-1.98203788878
+HER,differ_yes,-1.96890511737
+HER,complex,-1.93852618796
+HER,ligo,-1.93815267957
+HER,falcon,-1.92927213219
+HER,credit,-1.92771362903
+HER,al,-1.90856349076
+HER,has_hashtag has_url want,-1.89963334431
+HER,atmosphere,-1.89430352771
+HER,is_authentic_no netspeak_yes low_wps,-1.88745844301
+HER,nasa app,-1.8226715579
+HER,21,-1.81470131418
+HER,certain_yes affiliation_yes achieve_yes,-1.78617956785
+HER,black,-1.74596374663
+HER,billion,-1.72147631859
+HER,thing,-1.6996580962
+HER,evidence,-1.67243558353
+HER,makemake,-1.64730683528
+HER,died,-1.61100256629
+HER,astronomers,-1.58171613759
+HER,is_authentic_yes,-1.58102750241
+HER,certain_yes,-1.55577922182
+HER,has_hashtag wheniwasyourage,-1.55236900365
+HER,wheniwasyourage,-1.55236900365
+HER,insight_yes cause_yes discrep_yes,-1.54810401679
+HER,possible,-1.54627073306
+HER,see_yes few_sixltr,-1.5403347683
+HER,mineral,-1.53785089165
+HER,has_hashtag has_url cassini,-1.53075410028
+HER,has_url cassini,-1.53075410028
+HER,yearinspace,-1.52584649546
+HER,mysterious,-1.50325186183
+HER,recent,-1.47522829483
+HER,has_video has_url,-1.44953230874
+HER,power_yes reward_yes few_sixltr,-1.44581189008
+HER,few_sixltr low_wps has_photo,-1.43078943913
+HER,negemo_yes,-1.42729439977
+HER,insight_yes tentat_yes affiliation_yes,-1.41626881141
+HER,has_hashtag has_url seti,-1.41415307862
+HER,has_url seti,-1.41415307862
+HER,discovered,-1.40676031033
+HER,president,-1.35525151257
+HER,is_analytic_no,-1.34582519594
+HER,world,-1.33485661216
+HER,achieve_yes netspeak_yes many_sixltr,-1.30301009904
+HER,curiosity,-1.28376685286
+HER,utc,-1.27907791613
+HER,ska,-1.27648175465
+HER,anger_yes certain_yes,-1.2730897845
+HER,negemo_yes anger_yes certain_yes,-1.2730897845
+HER,day,-1.26898939118
+HER,cold,-1.26258685339
+HER,fyi,-1.23767445972
+HER,has_animated_gif has_hashtag,-1.23374760407
+HER,has_animated_gif has_hashtag has_url,-1.23374760407
+HER,gravitational,-1.22546602142
+HER,achieve_yes low_wps,-1.21917926142
+HER,has_hashtag has_url hubble,-1.217187033
+HER,discrep_yes affiliation_yes netspeak_yes,-1.2003789254
+HER,year,-1.19802278998
+HER,sad_yes differ_yes see_yes,-1.19542434831
+HER,tentat_yes achieve_yes,-1.19161048461
+LER,netspeak_yes has_url,11.9853368933
+LER,ksc,9.13566654929
+LER,high_wps has_url,8.82328929117
+LER,nasa,8.19857931096
+LER,has_qmark has_url,7.25479977487
+LER,many_sixltr has_url,7.24033380291
+LER,netspeak_yes many_sixltr has_url,6.35835840575
+LER,chabotspacerace,5.90149258395
+LER,conference,4.98514597369
+LER,join,4.74259106112
+LER,netspeak_yes high_wps has_url,4.62563776981
+LER,deadline,4.46867870221
+LER,has_exclam has_url,4.40616179285
+LER,low_wps has_url,4.31895724074
+LER,few_sixltr has_url,4.29918322606
+LER,startalklive,4.11814501174
+LER,admin,3.7214551606
+LER,meteron,3.64196502978
+LER,forbes,3.62419108272
+LER,svgives,3.3417676204
+LER,chabot,3.24319984265
+LER,netspeak_yes few_sixltr has_url,3.13195995657
+LER,has_exclam has_hashtag,3.12749988496
+LER,spon,3.0542505993
+LER,is_analytic_yes is_authentic_no cause_yes,2.972802866
+LER,donations,2.93319984807
+LER,panel,2.91924997818
+LER,daily,2.8172939392
+LER,low_wps has_qmark has_url,2.71827766847
+LER,mad,2.65384495585
+LER,annual,2.64881740416
+LER,low_wps has_exclam has_url,2.60269508377
+LER,center,2.51307238371
+LER,press,2.49241654914
+LER,has_url photos,2.4872946724
+LER,conditions,2.43851805671
+LER,tune,2.42573556991
+LER,admin bolden,2.37372387953
+LER,habitability,2.36370569653
+LER,google,2.19721214278
+LER,booster,2.17802337915
+LER,learn,2.14393325686
+LER,smallbiz,2.10058871031
+LER,mary,2.07641061458
+LER,has_qmark has_hashtag,2.02827420765
+LER,nasa new,1.99610008091
+LER,is_analytic_no is_clout_no,1.98276250569
+LER,open,1.98083492814
+LER,posemo_yes cause_yes hear_yes,1.96247654643
+LER,insight_yes netspeak_yes,1.94618537686
+LER,impact,1.9441421366
+LER,low_wps has_hashtag,1.94111690476
+LER,biosignature,1.93899046406
+LER,news,1.93113384526
+LER,iss,1.89041139085
+LER,astronomy,1.8855870344
+LER,booster test,1.85656565994
+LER,achieve_yes netspeak_yes has_url,1.850494765
+LER,few_sixltr low_wps has_url,1.83761130041
+LER,differ_yes netspeak_yes,1.82590175759
+LER,astrobiology,1.78505342133
+LER,live,1.78304193125
+LER,has_url check,1.72814248653
+LER,students,1.72483333631
+LER,special,1.72045196929
+LER,bolden,1.71234792942
+LER,talk,1.69086527415
+LER,events,1.61733218399
+LER,is_authentic_no is_tone_no negemo_yes,1.6039929007
+LER,makes,1.59616093139
+LER,astronomy online,1.59540183475
+LER,setitalks,1.5835553863
+LER,netspeak_yes has_qmark,1.50242351151
+LER,low_wps has_hashtag has_url,1.44738100189
+LER,netspeak_yes assent_yes has_url,1.43274919788
+LER,assent_yes has_url,1.43274919788
+LER,reveals,1.40339572857
+LER,risk_yes netspeak_yes,1.39332722781
+LER,is_authentic_yes many_sixltr,1.39321710197
+LER,netspeak_yes many_sixltr,1.3929697505
+LER,livingplanet16,1.38526636028
+LER,has_hashtag livingplanet16,1.38526636028
+LER,support,1.37933641495
+LER,netspeak_yes has_url nasa,1.37683139541
+LER,insight_yes netspeak_yes high_wps,1.37211047688
+LER,has_url live,1.36437681752
+LER,has_exclam has_qmark has_hashtag,1.36175080601
+LER,many_sixltr high_wps has_url,1.35775262346
+LER,needed,1.35629304241
+LER,marrow,1.35299961231
+LER,organics,1.31190470587
+LER,netspeak_yes few_sixltr,1.30482303111
+LER,insight_yes cause_yes netspeak_yes,1.28952124887
+LER,goat,1.28695071556
+LER,winners,1.27994108181
+LER,many_sixltr high_wps has_hashtag,1.26686974427
+LER,has_url nasa,1.25869276929
+LER,building,1.25521926578
+LER,is_analytic_yes netspeak_yes many_sixltr,1.24828531884
+LER,innovation expo,1.23437795631

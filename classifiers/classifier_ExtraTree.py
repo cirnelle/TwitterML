@@ -775,18 +775,18 @@ class ExtraTree():
 ###############
 
 #path_to_labelled_file = '../output/features/maas/labelled_combined.csv'
-path_to_labelled_file = '../output/features/nonprofit/follcorr/labelled_combined_all.csv'
+path_to_labelled_file = '../output/features/space/realfoll/labelled_combined.csv'
 path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
 path_to_file_to_be_predicted = '../output/to_predict/sydscifest/sydscifest_test'
 path_to_gold_standard_file = '../output/features/maas/maasmuseum/labelled_combined.csv'
 
 path_to_store_predicted_results = '../output/predictions/maas/maasmuseum/predicted_results_et.csv'
-path_to_store_vocabulary_file = '../output/feature_importance/extratree/nonprofit/follcorr/extratree_vocab.txt'
-path_to_store_feature_selection_boolean_file = '../output/feature_importance/extratree/nonprofit/follcorr/extratree_fs_boolean.csv'
-path_to_store_complete_feature_importance_file = '../output/feature_importance/extratree/nonprofit/follcorr/extratree_feat_imp_all.txt'
-path_to_store_top_important_features_file = '../output/feature_importance/extratree/nonprofit/follcorr/extratree_feature_importance.csv'
-path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/extratree/follcorr/nonprofit.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/extratree/nonprofit/follcorr/extratree_feat_byClass_combined_all.csv'
+path_to_store_vocabulary_file = '../output/feature_importance/extratree/space/realfoll/extratree_vocab.txt'
+path_to_store_feature_selection_boolean_file = '../output/feature_importance/extratree/space/realfoll/extratree_fs_boolean.csv'
+path_to_store_complete_feature_importance_file = '../output/feature_importance/extratree/space/realfoll/extratree_feat_imp_all.txt'
+path_to_store_top_important_features_file = '../output/feature_importance/extratree/space/realfoll/extratree_feature_importance.csv'
+path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/extratree/realfoll/space_new.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/extratree/space/realfoll/extratree_feat_byClass_combined.csv'
 
 
 # for classifier without pipeline
@@ -847,7 +847,7 @@ if __name__ == '__main__':
     # run ExtraTree Classifier
     ##################
 
-    #clf, count_vect = et.train_classifier()
+    clf, count_vect = et.train_classifier()
 
 
     ###################
@@ -867,7 +867,7 @@ if __name__ == '__main__':
     # use pipeline and use feature selection
     ###################
 
-    clf, count_vect = et.use_pipeline_with_fs()
+    #clf, count_vect = et.use_pipeline_with_fs()
 
 
     ###################

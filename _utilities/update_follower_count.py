@@ -112,6 +112,7 @@ class UpdateFollowerCount():
 
         return foll_count
 
+
     def update_follcount_with_real_numbers(self):
 
         lines1 = open(path_to_tweet_file,'r').readlines()
@@ -133,8 +134,6 @@ class UpdateFollowerCount():
             ##################
             # get the dates for follcount file
             ##################
-
-            date_follcount = []
 
             lines2 = open(path_to_follcount_files+u+'.csv')
 
@@ -163,7 +162,7 @@ class UpdateFollowerCount():
             # get the dates for raw tweet file
             #################
 
-            date_1 = []
+            user_tweets = []
 
             for line in lines1[1:]:
                 spline = line.rstrip('\n').split(',')
@@ -182,9 +181,15 @@ class UpdateFollowerCount():
                     t_epoch = time.mktime(t1)
 
                     if t_epoch in date_dict:
-                        spline[3] = date_dict[t_epoch]
 
-                        updated_tweets.append(spline)
+                        if date_dict[t_epoch] != 'nan':
+                            spline[3] = date_dict[t_epoch]
+                            user_tweets.append(spline)
+
+                            updated_tweets.append(spline)
+
+            print (len(user_tweets))
+
 
         print (" ")
 
@@ -197,40 +202,40 @@ class UpdateFollowerCount():
 
         f.close()
 
-# test
+
 
 ###############
 # variables
 ###############
 
-path_to_tweet_file = '../tweets/others/old/raw_nonprofit.csv'
-path_to_slope_file = '../followers/slope/user_slope_nonprofit.txt'
-path_to_store_updated_tweet_file = '../tweets/follcorr/others/raw_nonprofit_follcorr.csv'
+path_to_tweet_file = '../tweets/others/raw_nonprofit.csv'
+path_to_slope_file = '../followers/slope/user_slope_space.txt'
+path_to_store_updated_tweet_file = '../tweets/follcorr/others/raw_space_follcorr.csv'
 
 path_to_follcount_files = '../followers/follcount_'
-path_to_store_realfoll_tweet_file = '../tweets/raw_space_realfoll.csv'
+path_to_store_realfoll_tweet_file = '../tweets/realfoll/raw_nonprofit_realfoll.csv'
 
 
 
 if __name__ == "__main__":
 
 
-    ################
-    # create slope dict and update follcount
-    ################
-
-    lines = open(path_to_slope_file,'r').readlines()
-
-    slope_dict = {}
-
-    for line in lines:
-        spline = line.replace('\n','').split(',')
-        slope_dict[spline[0]] = spline[1]
-
-    print ("Length of slope_dict is "+str(len(slope_dict)))
-
-    uf = UpdateFollowerCount()
-    uf.update_tweet_list()
+    # ################
+    # # create slope dict and update follcount
+    # ################
+    #
+    # lines = open(path_to_slope_file,'r').readlines()
+    #
+    # slope_dict = {}
+    #
+    # for line in lines:
+    #     spline = line.replace('\n','').split(',')
+    #     slope_dict[spline[0]] = spline[1]
+    #
+    # print ("Length of slope_dict is "+str(len(slope_dict)))
+    #
+    # uf = UpdateFollowerCount()
+    # uf.update_tweet_list()
 
 
 
@@ -238,5 +243,5 @@ if __name__ == "__main__":
     # update follcount with real data mined daily
     #################
 
-    # uf = UpdateFollowerCount()
-    # uf.update_follcount_with_real_numbers()
+    uf = UpdateFollowerCount()
+    uf.update_follcount_with_real_numbers()
