@@ -45,12 +45,12 @@ for line in lines:
 
 #users = ["nasa","cern"]
 
-if os.path.isfile('/Users/yi-linghwong/keys/twitter_api_keys_2.txt'):
-    lines = open('/Users/yi-linghwong/keys/twitter_api_keys_2.txt','r').readlines()
+if os.path.isfile('/Users/yi-linghwong/keys/twitter_api_keys_3.txt'):
+    lines = open('/Users/yi-linghwong/keys/twitter_api_keys_3.txt','r').readlines()
 
 
 else:
-    print ("Path not found")
+    print ("Path not found for key")
     sys.exit(1)
 
 api_dict = {}

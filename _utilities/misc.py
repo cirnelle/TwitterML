@@ -123,18 +123,18 @@ for line in lines:
 
 print (len(users))
 
-users = ['zz','zzz']
 
 for u in users:
 
-    lines = open('../followers/follcount_'+u+'.txt','r').readlines()
+    lines = open('../followers/follcount_'+u+'.csv','r').readlines()
 
     follcount_old = []
     new_list = []
 
     for line in lines:
         spline = line.rstrip('\n').split(',')
-        follcount_old.append(spline)
+        if spline != ['']:
+            follcount_old.append(spline)
 
     length = len(follcount_old)
 
@@ -144,7 +144,6 @@ for u in users:
     length = len(follcount_old)
     follcount_old.insert(length - 3,['Fri Jul  9 16:12:47 2016','0'])
 
-
     target_dates = []
 
     date_epoch = []
@@ -153,33 +152,35 @@ for u in users:
     for line in lines:
         spline = line.rstrip('\n').split(',')
 
-        d1 = spline[0].replace('\n', '').split(' ')
+        if spline != ['']:
 
-        if len(d1) == 6:
-            d1.remove(d1[2])
+            d1 = spline[0].replace('\n', '').split(' ')
 
 
-        if (d1[1] == 'Jul' and d1[4] == '2016'):
+            if len(d1) == 6:
+                d1.remove(d1[2])
 
-            if d1[2] == '8':
-                date_s = d1[1] + ' ' + d1[2] + ' ' + d1[4]
+            if (d1[1] == 'Jul' and d1[4] == '2016'):
 
-                t1 = time.strptime(date_s, '%b %d %Y')
-                t_epoch = time.mktime(t1)
-                date_epoch.append(t_epoch)
-                follcount.append(float(spline[1]))
+                if d1[2] == '8':
+                    date_s = d1[1] + ' ' + d1[2] + ' ' + d1[4]
 
-                target_dates.append(spline)
+                    t1 = time.strptime(date_s, '%b %d %Y')
+                    t_epoch = time.mktime(t1)
+                    date_epoch.append(t_epoch)
+                    follcount.append(float(spline[1]))
 
-            if d1[2] == '12':
-                date_s = d1[1] + ' ' + d1[2] + ' ' + d1[4]
+                    target_dates.append(spline)
 
-                t1 = time.strptime(date_s, '%b %d %Y')
-                t_epoch = time.mktime(t1)
-                date_epoch.append(t_epoch)
-                follcount.append(float(spline[1]))
+                if d1[2] == '12':
+                    date_s = d1[1] + ' ' + d1[2] + ' ' + d1[4]
 
-                target_dates.append(spline)
+                    t1 = time.strptime(date_s, '%b %d %Y')
+                    t_epoch = time.mktime(t1)
+                    date_epoch.append(t_epoch)
+                    follcount.append(float(spline[1]))
+
+                    target_dates.append(spline)
 
     slope = linregress(date_epoch, follcount)[0]
     t_max = date_epoch[1]
@@ -191,65 +192,66 @@ for u in users:
     for fo in follcount_old:
         date_1 = fo[0].rstrip('\n').split(' ')
 
-        if len(date_1) == 6:
-            date_1.remove(date_1[2])
+        if date_1 != ['']:
+
+            if len(date_1) == 6:
+                date_1.remove(date_1[2])
+
+            if date_1[1] == 'Jul' and date_1[2] == '9' and date_1[4] == '2016':
 
 
-        if date_1[1] == 'Jul' and date_1[2] == '9' and date_1[4] == '2016':
+                d2 = date_1[1] + ' ' + date_1[2] + ' ' + date_1[4]
+
+                t1 = time.strptime(d2, '%b %d %Y')
+                t_epoch = time.mktime(t1)
+
+                t_delta = t_max - t_epoch
+
+                y_delta = slope * t_delta
+
+                foll_count = float(foll_count_max) - y_delta
+
+                foll_count = int(foll_count)
+
+                fo[1] = str(foll_count)
+
+            if date_1[1] == 'Jul' and date_1[2] == '10' and date_1[4] == '2016':
+
+                d2 = date_1[1] + ' ' + date_1[2] + ' ' + date_1[4]
+
+                t1 = time.strptime(d2, '%b %d %Y')
+                t_epoch = time.mktime(t1)
+
+                t_delta = t_max - t_epoch
+
+                y_delta = slope * t_delta
+
+                foll_count = float(foll_count_max) - y_delta
+
+                foll_count = int(foll_count)
+
+                fo[1] = str(foll_count)
+
+            if date_1[1] == 'Jul' and date_1[2] == '11' and date_1[4] == '2016':
+
+                d2 = date_1[1] + ' ' + date_1[2] + ' ' + date_1[4]
+
+                t1 = time.strptime(d2, '%b %d %Y')
+
+                t_epoch = time.mktime(t1)
+
+                t_delta = t_max - t_epoch
+
+                y_delta = slope * t_delta
+
+                foll_count = float(foll_count_max) - y_delta
+
+                foll_count = int(foll_count)
+
+                fo[1] = str(foll_count)
 
 
-            d2 = date_1[1] + ' ' + date_1[2] + ' ' + date_1[4]
-
-            t1 = time.strptime(d2, '%b %d %Y')
-            t_epoch = time.mktime(t1)
-
-            t_delta = t_max - t_epoch
-
-            y_delta = slope * t_delta
-
-            foll_count = float(foll_count_max) - y_delta
-
-            foll_count = int(foll_count)
-
-            fo[1] = str(foll_count)
-
-        if date_1[1] == 'Jul' and date_1[2] == '10' and date_1[4] == '2016':
-
-            d2 = date_1[1] + ' ' + date_1[2] + ' ' + date_1[4]
-
-            t1 = time.strptime(d2, '%b %d %Y')
-            t_epoch = time.mktime(t1)
-
-            t_delta = t_max - t_epoch
-
-            y_delta = slope * t_delta
-
-            foll_count = float(foll_count_max) - y_delta
-
-            foll_count = int(foll_count)
-
-            fo[1] = str(foll_count)
-
-        if date_1[1] == 'Jul' and date_1[2] == '11' and date_1[4] == '2016':
-
-            d2 = date_1[1] + ' ' + date_1[2] + ' ' + date_1[4]
-
-            t1 = time.strptime(d2, '%b %d %Y')
-
-            t_epoch = time.mktime(t1)
-
-            t_delta = t_max - t_epoch
-
-            y_delta = slope * t_delta
-
-            foll_count = float(foll_count_max) - y_delta
-
-            foll_count = int(foll_count)
-
-            fo[1] = str(foll_count)
-
-
-    f = open('../followers/follcount_'+u+'.txt','w')
+    f = open('../followers/follcount_'+u+'.csv','w')
 
     for fo in follcount_old:
         f.write(','.join(fo)+'\n')
