@@ -1331,20 +1331,20 @@ class NormaliseFeatureImportance():
 # variables
 ################
 
-path_to_space_feature_score_file = '../output/featimp_normalisation/extratree/space.csv'
-path_to_politics_feature_score_file = '../output/featimp_normalisation/extratree/politics.csv'
-path_to_business_feature_score_file = '../output/featimp_normalisation/extratree/business.csv'
-path_to_nonprofit_feature_score_file = '../output/featimp_normalisation/extratree/nonprofit.csv'
+path_to_space_feature_score_file = '../output/featimp_normalisation/nb/follcorr/space.csv'
+path_to_politics_feature_score_file = '../output/featimp_normalisation/nb/follcorr/politics.csv'
+path_to_business_feature_score_file = '../output/featimp_normalisation/nb/follcorr/business.csv'
+path_to_nonprofit_feature_score_file = '../output/featimp_normalisation/nb/follcorr/nonprofit.csv'
 
-path_to_store_normalised_space_feature_file = '../output/featimp_normalisation/extratree/normalised_space.csv'
-path_to_store_normalised_politics_feature_file = '../output/featimp_normalisation/extratree/normalised_politics.csv'
-path_to_store_normalised_business_feature_file = '../output/featimp_normalisation/extratree/normalised_business.csv'
-path_to_store_normalised_nonprofit_feature_file = '../output/featimp_normalisation/extratree/normalised_nonprofit.csv'
+path_to_store_normalised_space_feature_file = '../output/featimp_normalisation/nb/follcorr/normalised/normalised_space.csv'
+path_to_store_normalised_politics_feature_file = '../output/featimp_normalisation/nb/follcorr/normalised/normalised_politics.csv'
+path_to_store_normalised_business_feature_file = '../output/featimp_normalisation/nb/follcorr/normalised/normalised_business.csv'
+path_to_store_normalised_nonprofit_feature_file = '../output/featimp_normalisation/nb/follcorr/normalised/normalised_nonprofit.csv'
 
 # DO NOT change the following!
-path_to_space_nb_file = '../output/featimp_normalisation/nb/space.csv'
-path_to_space_sgd_file = '../output/featimp_normalisation/sgd/space.csv'
-path_to_space_extratree_file = '../output/featimp_normalisation/extratree/space.csv'
+path_to_space_nb_file = '../output/featimp_normalisation/nb/follcorr/space.csv'
+path_to_space_sgd_file = '../output/featimp_normalisation/sgd/follcorr/space.csv'
+path_to_space_extratree_file = '../output/featimp_normalisation/extratree/follcorr/space.csv'
 
 
 if __name__ == '__main__':

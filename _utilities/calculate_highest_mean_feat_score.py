@@ -379,27 +379,28 @@ class CalculateHighestMean():
 ##############
 
 # change the FIELD for the following
-path_to_nb_file = '../output/featimp_normalisation/nb/politics.csv'
-path_to_sgd_file = '../output/featimp_normalisation/sgd/politics.csv'
-path_to_extratree_file = '../output/featimp_normalisation/extratree/politics.csv'
+path_to_nb_file = '../output/featimp_normalisation/nb/follcorr/nonprofit.csv'
+path_to_sgd_file = '../output/featimp_normalisation/sgd/follcorr/nonprofit.csv'
+path_to_extratree_file = '../output/featimp_normalisation/extratree/follcorr/nonprofit.csv'
 
 # change the CLASSIFIER for the following
-path_to_space_feature_score_file = '../output/featimp_normalisation/extratree/space.csv'
-path_to_politics_feature_score_file = '../output/featimp_normalisation/extratree/politics.csv'
-path_to_business_feature_score_file = '../output/featimp_normalisation/extratree/business.csv'
-path_to_nonprofit_feature_score_file = '../output/featimp_normalisation/extratree/nonprofit.csv'
+path_to_space_feature_score_file = '../output/featimp_normalisation/extratree/follcorr/space.csv'
+path_to_politics_feature_score_file = '../output/featimp_normalisation/extratree/follcorr/politics.csv'
+path_to_business_feature_score_file = '../output/featimp_normalisation/extratree/follcorr/business.csv'
+path_to_nonprofit_feature_score_file = '../output/featimp_normalisation/extratree/follcorr/nonprofit.csv'
 
 # change the CLASSIFIER and FIELD for the following
-path_to_feature_score_file_cf = '../output/featimp_normalisation/extratree/politics.csv'
-path_to_store_normalised_feature_file = '../output/featimp_normalisation/extratree/others/politics_normalised.csv'
+path_to_feature_score_file_cf = '../output/featimp_normalisation/extratree/follcorr/nonprofit.csv'
+#path_to_store_normalised_feature_file = '../output/featimp_normalisation/extratree/others/politics_normalised.csv'
+path_to_store_normalised_feature_file = '../output/featimp_normalisation/extratree/follcorr/per_field/nonprofit_normalised.csv'
 
 #------------------
 
 # change the FIELD for the following
-path_to_normalised_nb_file = '../output/featimp_normalisation/nb/others/politics_normalised.csv'
-path_to_normalised_sgd_file = '../output/featimp_normalisation/sgd/others/politics_normalised.csv'
-path_to_normalised_extratree_file = '../output/featimp_normalisation/extratree/others/politics_normalised.csv'
-path_to_store_feature_mean_score = '../output/spss/others/politics_feature_mean.csv'
+path_to_normalised_nb_file = '../output/featimp_normalisation/nb/follcorr/per_field/nonprofit_normalised.csv'
+path_to_normalised_sgd_file = '../output/featimp_normalisation/sgd/follcorr/per_field/nonprofit_normalised.csv'
+path_to_normalised_extratree_file = '../output/featimp_normalisation/extratree/follcorr/per_field/nonprofit_normalised.csv'
+path_to_store_feature_mean_score = '../output/spss/follcorr/feature_means/nonprofit_feature_mean.csv'
 
 
 

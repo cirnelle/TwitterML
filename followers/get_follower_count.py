@@ -42,7 +42,6 @@ for line in lines:
     users.append(spline[0])
 
 
-
 #users = ["nasa","cern"]
 
 if os.path.isfile('/Users/yi-linghwong/keys/twitter_api_keys_3.txt'):
@@ -186,7 +185,7 @@ class Extractor():
 
     def printcsv(self, date, follcount, user):
 
-        with open('follcount_'+user+'.csv', 'a', newline='') as csvfile:
+        with open('follcount/follcount_'+user+'.csv', 'a', newline='') as csvfile:
             csvtweets = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
             csvtweets.writerow([follcount, date])
 
