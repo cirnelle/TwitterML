@@ -384,15 +384,15 @@ path_to_sgd_file = '../output/featimp_normalisation/sgd/follcorr/nonprofit.csv'
 path_to_extratree_file = '../output/featimp_normalisation/extratree/follcorr/nonprofit.csv'
 
 # change the CLASSIFIER for the following
-path_to_space_feature_score_file = '../output/featimp_normalisation/extratree/follcorr/space.csv'
-path_to_politics_feature_score_file = '../output/featimp_normalisation/extratree/follcorr/politics.csv'
-path_to_business_feature_score_file = '../output/featimp_normalisation/extratree/follcorr/business.csv'
-path_to_nonprofit_feature_score_file = '../output/featimp_normalisation/extratree/follcorr/nonprofit.csv'
+path_to_space_feature_score_file = '../output/featimp_normalisation/sgd/follcorr/space.csv'
+path_to_politics_feature_score_file = '../output/featimp_normalisation/sgd/follcorr/politics.csv'
+path_to_business_feature_score_file = '../output/featimp_normalisation/sgd/follcorr/business.csv'
+path_to_nonprofit_feature_score_file = '../output/featimp_normalisation/sgd/follcorr/nonprofit.csv'
 
 # change the CLASSIFIER and FIELD for the following
-path_to_feature_score_file_cf = '../output/featimp_normalisation/extratree/follcorr/nonprofit.csv'
+path_to_feature_score_file_cf = '../output/featimp_normalisation/sgd/follcorr/nonprofit.csv'
 #path_to_store_normalised_feature_file = '../output/featimp_normalisation/extratree/others/politics_normalised.csv'
-path_to_store_normalised_feature_file = '../output/featimp_normalisation/extratree/follcorr/per_field/nonprofit_normalised.csv'
+path_to_store_normalised_feature_file = '../output/featimp_normalisation/sgd/follcorr/per_field/nonprofit_normalised.csv'
 
 #------------------
 
@@ -413,12 +413,12 @@ if __name__ == '__main__':
     # run this first for all classifiers and fields
     #############
 
-    #ch.get_normalised_feat_score()
+    ch.get_normalised_feat_score()
 
 
     #############
     # then run this for all fields
     #############
 
-    ch.get_highest_mean()
+    #ch.get_highest_mean()
 

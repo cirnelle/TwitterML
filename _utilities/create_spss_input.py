@@ -83,7 +83,7 @@ class CreateSpssInput():
 
         # get the top ten features with highest mean score
 
-        for fm in feat_mean[:15]:
+        for fm in feat_mean[:20]:
             top_feats.append(fm[0])
 
         f = open(path_to_store_feature_mean_score,'w')
