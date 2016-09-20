@@ -1,49 +1,28 @@
-__author__ = 'yi-linghwong'
-
 import os
 import sys
+import subprocess
+from pymongo import MongoClient
+from datetime import datetime
 
-lines = open('/Users/yi-linghwong/Documents/PhD/sydney_science_festival/twitter/maasmuseum/maasmuseum_jan-mar2014.csv', 'r').readlines()
-print (len(lines))
+client = MongoClient()
 
-for line in lines[:1]:
-    spline = line.rstrip('\n').replace('\r', '').replace('\t',' ').split(',')
-    length = len(spline)
+db = client.twitter_db
+
+tweets_iterator = db.twitter_collection.find()
 
 tweets = []
 
-for line in lines[1:]:
-    print (repr(line))
-    spline = line.rstrip('\n').replace('\r', '').replace('\t', ' ').split(',')
+for tweet in tweets_iterator:
 
-    if len(spline) < length:
+    tweets.append(tweet['text'])
 
-        print(spline)
+    #print (tweet['text'])
 
-#     if len(spline) == length:
-#         tweets.append(spline)
-#
-#     else:
-#
-#         join_until = len(spline) - 37
-#         text = spline[2:join_until]
-#         comma_removed = ' '.join(text)
-#
-#         # delete the text containing commas and replace it with the no-commas text
-#         del spline[2:join_until]
-#         spline.insert(2,comma_removed)
-#
-#         if len(spline) == 40:
-#             tweets.append(spline)
-#
-#         else:
-#             print ("error")
-#             print (spline)
-#
-#
-# f = open('/Users/yi-linghwong/Documents/PhD/sydney_science_festival/twitter/maasmuseum/maasmuseum_ALL.csv','w')
-#
-# for t in tweets:
-#     f.write(','.join(t)+'\n')
-#
-# f.close()
+print (len(tweets))
+
+f = open('test.csv','w')
+
+for t in tweets:
+    f.write(t+"\n")
+
+f.close()

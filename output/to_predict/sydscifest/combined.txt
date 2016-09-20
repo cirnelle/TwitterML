@@ -1,0 +1,2 @@
+tweets
+is_clout_yes is_authentic_yes posemo_yes insight_yes tentat_yes certain_yes affiliation_yes power_yes netspeak_yes has_hashtag has_photo

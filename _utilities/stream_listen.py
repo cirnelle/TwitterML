@@ -14,7 +14,11 @@ import csv
 import os
 import sys
 import time
+from twilio.rest import TwilioRestClient
 
+#------------------------------------
+# Twitter API
+#------------------------------------
 
 if os.path.exists("/Users/yi-linghwong/GitHub/TwitterML/"):
     maindir = "/Users/yi-linghwong/GitHub/TwitterML/"
@@ -25,8 +29,8 @@ else:
     sys.exit(1)
 
 
-if os.path.isfile('../../../keys/twitter_api_keys.txt'):
-    lines = open('../../../keys/twitter_api_keys.txt','r').readlines()
+if os.path.isfile('../../../keys/twitter_api_keys_5.txt'):
+    lines = open('../../../keys/twitter_api_keys_5.txt','r').readlines()
 
 
 else:
@@ -46,6 +50,16 @@ consumer_secret = api_dict["API_secret"]
 
 access_token = api_dict["Access_token"]
 access_token_secret = api_dict["Access_token_secret"]
+
+#-------------------------------
+# Twilio API, to send sms alerts
+#-------------------------------
+
+ACCOUNT_SID = 'AC817c734cbe1b13d2bbe97940e4efc413'
+AUTH_TOKEN = 'd927e3830852ec14b06b302960833645'
+
+client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
+
 
 tweets = []
 
@@ -150,7 +164,7 @@ if __name__ == '__main__':
 
     stream = Stream(auth, l)
 
-    stream.filter(languages=["en"],track=['#science #socialjustice', '#science #education', '#science #space','science space'], async=True)
+    stream.filter(languages=["en"],track=['astrobiology'], async=True)
     #stream.filter(languages=["en"], track=hashtaglist, async=True)
 
 

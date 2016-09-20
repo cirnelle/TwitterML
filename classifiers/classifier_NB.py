@@ -495,11 +495,11 @@ class NaiveBayes():
         # predict unlabelled tweet OR test classifier on gold standard
         ###############
 
-        #dataset_topredict = pd.read_csv(path_to_file_to_be_predicted, header=0, names=['tweets'])
-        dataset_topredict = pd.read_csv(path_to_gold_standard_file, header=0, names=['tweets', 'class'])
+        dataset_topredict = pd.read_csv(path_to_file_to_be_predicted, header=0, names=['tweets'])
+        #dataset_topredict = pd.read_csv(path_to_gold_standard_file, header=0, names=['tweets', 'class'])
 
         X_topredict = dataset_topredict['tweets']
-        y_goldstandard = dataset_topredict['class']
+        #y_goldstandard = dataset_topredict['class'] # comment this if task is to predict unlabelled tweets
 
 
         ###############
@@ -551,13 +551,17 @@ class NaiveBayes():
         # run classifier on gold standard (tweets that were labelled by twitter insight)
         ##################
 
+        ##################
+        # comment out the following if task is to predict unlabelled tweets
+        ##################
+
         # print the mean accuracy on the given test data and labels
 
-        print("Classifier score on test data is: %0.2f " % clf.score(X_test_tfidf, y_goldstandard))
-
-        print(metrics.classification_report(y_goldstandard, y_predicted))
-        cm = metrics.confusion_matrix(y_goldstandard, y_predicted)
-        print(cm)
+        # print("Classifier score on test data is: %0.2f " % clf.score(X_test_tfidf, y_goldstandard))
+        #
+        # print(metrics.classification_report(y_goldstandard, y_predicted))
+        # cm = metrics.confusion_matrix(y_goldstandard, y_predicted)
+        # print(cm)
 
         ##################
         # write prediction results to file
@@ -823,12 +827,12 @@ class NaiveBayes():
 ###############
 
 #path_to_labelled_file = '../output/features/maas/labelled_combined.csv'
-path_to_labelled_file = '../output/features/nonprofit/follcorr/labelled_combined.csv'
+path_to_labelled_file = '../output/features/space/follcorr/labelled_combined.csv'
 path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
-path_to_file_to_be_predicted = '../output/to_predict/sydscifest/sydscifest_test'
-path_to_gold_standard_file = '../output/features/maas/maasmuseum/labelled_combined.csv'
+path_to_file_to_be_predicted = '../output/to_predict/sydscifest/combined.txt'
+path_to_gold_standard_file = '../output/features/maas/sydobs/labelled_combined.csv'
 
-path_to_store_predicted_results = '../output/predictions/maas/maasmuseum/predicted_results_nb.csv'
+path_to_store_predicted_results = '../output/predictions/maas/festival_tweets/predicted_results_nb.csv'
 path_to_store_features_by_probability_file = '../output/feature_importance/nb/nonprofit/follcorr/nb_feat_by_prob.csv'
 path_to_store_feature_selection_boolean_file = '../output/feature_importance/nb/nonprofit/follcorr/nb_fs_boolean.csv'
 path_to_store_list_of_feature_file = '../output/feature_importance/nb/nonprofit/follcorr/nb_feature_names.txt'
@@ -890,7 +894,7 @@ if __name__ == '__main__':
     # select one of the method to split data using Cross Validation
     ###################
 
-    docs_train,docs_test,y_train,y_test = nb.train_test_split()
+    #docs_train,docs_test,y_train,y_test = nb.train_test_split()
     #docs_train,docs_test,y_train,y_test = nb.stratified_shufflesplit()
     #docs_train,docs_test,y_train,y_test = nb.stratified_kfolds()
 
@@ -899,7 +903,7 @@ if __name__ == '__main__':
     # run NB Classifier
     ##################
 
-    clf, count_vect = nb.train_classifier()
+    #clf, count_vect = nb.train_classifier()
 
 
     ###################
@@ -926,14 +930,14 @@ if __name__ == '__main__':
     # Get feature importance
     ###################
 
-    nb.get_important_features(clf,count_vect)
+    #nb.get_important_features(clf,count_vect)
 
 
     ###################
     # Run classifier and then predict tweets
     ###################
 
-    #nb.predict_tweets()
+    nb.predict_tweets()
 
 
     ##################

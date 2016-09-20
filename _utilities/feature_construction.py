@@ -990,7 +990,7 @@ class FeatureConstruction():
 # variables
 ###############
 
-path_to_liwc_result_file = '../output/liwc/realfoll/liwc_nonprofit_realfoll.txt'
+path_to_liwc_result_file = '../output/liwc/sydscifest/festival_tweets/liwc_festival_tweets.txt'
 path_to_labelled_raw_file = '../output/engrate/realfoll/others/labelled_nonprofit_raw_realfoll.csv'
 path_to_labelled_preprocessed_file = '../output/engrate/realfoll/others/labelled_nonprofit_realfoll.csv'
 
