@@ -178,6 +178,7 @@ class UpdateFollowerCount():
                     date_s = d1[1] + ' ' + d1[2] + ' ' + d1[5]
 
                     t1 = time.strptime(date_s, '%b %d %Y')
+
                     t_epoch = time.mktime(t1)
 
                     if t_epoch in date_dict:
@@ -212,7 +213,7 @@ path_to_tweet_file = '../tweets/others/raw_nonprofit.csv'
 path_to_slope_file = '../followers/slope/user_slope_space.txt'
 path_to_store_updated_tweet_file = '../tweets/follcorr/others/raw_space_follcorr.csv'
 
-path_to_follcount_files = '../followers/follcount_'
+path_to_follcount_files = '../followers/follcount/follcount_'
 path_to_store_realfoll_tweet_file = '../tweets/realfoll/raw_nonprofit_realfoll.csv'
 
 

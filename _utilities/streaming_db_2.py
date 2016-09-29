@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3.4
+
 __author__ = 'yi-linghwong'
 
 import os
@@ -16,21 +18,21 @@ from twilio.rest import TwilioRestClient
 #------------------------------------
 
 
-if os.path.exists("/Users/yi-linghwong/GitHub/TwitterML/"):
-    maindir = "/Users/yi-linghwong/GitHub/TwitterML/"
-elif os.path.exists("/home/yiling/GitHub/GitHub/TwitterML/"):
-    maindir = "/home/yiling/GitHub/GitHub/TwitterML/"
+# if os.path.exists("/Users/yi-linghwong/GitHub/TwitterML/"):
+#     maindir = "/Users/yi-linghwong/GitHub/TwitterML/"
+# elif os.path.exists("/home/yiling/GitHub/GitHub/TwitterML/"):
+#     maindir = "/home/yiling/GitHub/GitHub/TwitterML/"
+# else:
+#     print ("ERROR --> major error")
+#     sys.exit(1)
+
+
+if os.path.isfile('/Users/yi-linghwong/keys/twitter_api_keys_6.txt'):
+    lines = open('/Users/yi-linghwong/keys/twitter_api_keys_6.txt','r').readlines()
+
+
 else:
-    print ("ERROR --> major error")
-    sys.exit(1)
-
-
-if os.path.isfile('../../../keys/twitter_api_keys_6.txt'):
-    lines = open('../../../keys/twitter_api_keys_6.txt','r').readlines()
-
-
-else:
-    print ("Path not found")
+    print ("Path to key not found")
     sys.exit(1)
 
 api_dict = {}
@@ -88,7 +90,7 @@ class listener(StreamListener):
                     # exclude retweets from stream
 
                     if 'retweeted_status' not in data:
-                        print([data['created_at'], data['text']])
+                        #print([data['created_at'], data['text']])
 
                         screen_name = data['user']['screen_name']
                         created_at = data['created_at']
@@ -122,15 +124,15 @@ class listener(StreamListener):
 
                 # send SMS alert, flag is set to false after first error to prevent continuous sms sending
 
-                if self.flag:
-
-                    twilio_client.messages.create(
-                        to='+61406815706',
-                        from_='+61447752987',
-                        body='nasa failed ondata',
-                    )
-
-                    self.flag = False
+                # if self.flag:
+                #
+                #     twilio_client.messages.create(
+                #         to='+61406815706',
+                #         from_='+61447752987',
+                #         body='nasa failed ondata',
+                #     )
+                #
+                #     self.flag = False
 
                 time.sleep(5)
 
@@ -141,11 +143,11 @@ class listener(StreamListener):
 
         print(status)
 
-        twilio_client.messages.create(
-            to='+61406815706',
-            from_='+61447752987',
-            body='nasa failed on error',
-        )
+        # twilio_client.messages.create(
+        #     to='+61406815706',
+        #     from_='+61447752987',
+        #     body='nasa failed on error',
+        # )
 
         return True
 
@@ -153,24 +155,32 @@ class listener(StreamListener):
 
         print('Timeout...')
 
-        twilio_client.messages.create(
-            to='+61406815706',
-            from_='+61447752987',
-            body='nasa timeout',
-        )
+        # twilio_client.messages.create(
+        #     to='+61406815706',
+        #     from_='+61447752987',
+        #     body='nasa timeout',
+        # )
 
         return True  # To continue listening
 
 
 if __name__ == '__main__':
 
+    # create instance of the tweepy tweet stream listener
     l = listener()
+
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
 
+    # create instance of the tweepy stream
     stream = Stream(auth, l)
 
-    stream.filter(languages=["en"],track=['nasa'], async=True)
-    #stream.filter(languages=["en"], track=hashtaglist, async=True)
+    stream.filter(languages=["en"], track=['nasa'], async=True)
+    # stream.filter(languages=["en"], track=hashtaglist, async=True)
+
+
+
+
+
 
 

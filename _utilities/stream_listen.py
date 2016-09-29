@@ -29,8 +29,8 @@ else:
     sys.exit(1)
 
 
-if os.path.isfile('../../../keys/twitter_api_keys_5.txt'):
-    lines = open('../../../keys/twitter_api_keys_5.txt','r').readlines()
+if os.path.isfile('/Users/yi-linghwong/keys/twitter_api_keys_1.txt'):
+    lines = open('/Users/yi-linghwong/keys/twitter_api_keys_1.txt','r').readlines()
 
 
 else:
@@ -94,7 +94,7 @@ class StdOutListener(StreamListener):
 
                     if 'retweeted_status' not in data:
 
-                        print ([data['created_at'],data['text']])
+                        #print ([data['created_at'],data['text']])
 
                         tweet = [data['user']['screen_name'],data['created_at'],data['id_str'],str(data['user']['followers_count']),str(data['user']['friends_count']),str(data['retweet_count']),str(data['favorite_count']),data['text'].replace('\n', ' ').replace('\r', '').replace('\t',' ').replace(',', ' ')]
 
@@ -126,7 +126,7 @@ class StdOutListener(StreamListener):
 
     def write_to_file(self,tweets):
 
-        print ("Writing data to file ...")
+        #print ("Writing data to file ...")
 
         f = open(path_to_store_streamed_tweets,'a')
 
@@ -153,8 +153,8 @@ class StdOutListener(StreamListener):
 # variables
 ###############
 
-path_to_store_streamed_tweets = '../tweets/streaming/raw_27June2016.csv'
-hashtaglist = ['coffee','science'] #amounts to logical OR
+path_to_store_streamed_tweets = '../tweets/streaming/raw_Europa26Sep2016.csv'
+#hashtaglist = ['coffee','science'] #amounts to logical OR
 
 if __name__ == '__main__':
 
@@ -164,7 +164,7 @@ if __name__ == '__main__':
 
     stream = Stream(auth, l)
 
-    stream.filter(languages=["en"],track=['astrobiology'], async=True)
+    stream.filter(languages=["en"],track=['Europa Jupiter, #europa, Nasa Europa, Hubble Europa, Europa moon, Europa telescope, Europa ocean, Europa life, Europa subsurface, Europa water, Europa ice, Europa icy, Europa planet'], async=True)
     #stream.filter(languages=["en"], track=hashtaglist, async=True)
 
 

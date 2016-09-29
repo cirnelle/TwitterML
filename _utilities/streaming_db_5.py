@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3.4
+
 __author__ = 'yi-linghwong'
 
 import os
@@ -25,8 +27,8 @@ else:
     sys.exit(1)
 
 
-if os.path.isfile('../../../keys/twitter_api_keys_9.txt'):
-    lines = open('../../../keys/twitter_api_keys_9.txt','r').readlines()
+if os.path.isfile('/Users/yi-linghwong/keys/twitter_api_keys_9.txt'):
+    lines = open('/Users/yi-linghwong/keys/twitter_api_keys_9.txt','r').readlines()
 
 
 else:
@@ -88,7 +90,7 @@ class listener(StreamListener):
                     # exclude retweets from stream
 
                     if 'retweeted_status' not in data:
-                        print([data['created_at'], data['text']])
+                        #print([data['created_at'], data['text']])
 
                         screen_name = data['user']['screen_name']
                         created_at = data['created_at']
@@ -122,15 +124,15 @@ class listener(StreamListener):
 
                 # send SMS alert, flag is set to false after first error to prevent continuous sms sending
 
-                if self.flag:
-
-                    twilio_client.messages.create(
-                        to='+61406815706',
-                        from_='+61447752987',
-                        body='planets failed ondata',
-                    )
-
-                    self.flag = False
+                # if self.flag:
+                #
+                #     twilio_client.messages.create(
+                #         to='+61406815706',
+                #         from_='+61447752987',
+                #         body='planets failed ondata',
+                #     )
+                #
+                #     self.flag = False
 
                 time.sleep(5)
 
@@ -141,11 +143,11 @@ class listener(StreamListener):
 
         print(status)
 
-        twilio_client.messages.create(
-            to='+61406815706',
-            from_='+61447752987',
-            body='planets failed on error',
-        )
+        # twilio_client.messages.create(
+        #     to='+61406815706',
+        #     from_='+61447752987',
+        #     body='planets failed on error',
+        # )
 
         return True
 
@@ -153,11 +155,11 @@ class listener(StreamListener):
 
         print('Timeout...')
 
-        twilio_client.messages.create(
-            to='+61406815706',
-            from_='+61447752987',
-            body='planets timeout',
-        )
+        # twilio_client.messages.create(
+        #     to='+61406815706',
+        #     from_='+61447752987',
+        #     body='planets timeout',
+        # )
 
         return True  # To continue listening
 

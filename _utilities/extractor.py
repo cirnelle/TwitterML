@@ -519,10 +519,10 @@ class Extractor():
 ###############
 
 path_to_user_list = '../user_list/others/user_nonprofit.txt'
-path_to_tweet_id_list = '../tweets/events/sydscifest_2016/tweets/tweets_ID.txt'
+path_to_tweet_id_list = '/Users/yi-linghwong/Documents/PhD/RESEARCH/NASA_data/twitter/data/tweet_id_ALL.csv'
 path_to_store_raw_tweets = '../tweets/others/raw_nonprofit.csv'
 path_to_store_raw_tweets_hashtag = '../tweets/hashtags/raw_#'
-path_to_store_tweets_by_id = '../tweets/events/sydscifest_2016/tweets/raw_tweets.csv'
+path_to_store_tweets_by_id = '/Users/yi-linghwong/Documents/PhD/RESEARCH/NASA_data/twitter/data/tweets_ALL.csv'
 
 
 if __name__ == '__main__':
@@ -539,7 +539,7 @@ if __name__ == '__main__':
     # get tweets by user
     #################
 
-    ext.gettweets_by_user()
+    #ext.gettweets_by_user()
 
 
     #################
@@ -553,5 +553,5 @@ if __name__ == '__main__':
     # get tweets by id
     #################
 
-    #ext.gettweets_by_id()
+    ext.gettweets_by_id()
 

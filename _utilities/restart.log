@@ -1,0 +1,26 @@
+Time stamp: Thu Sep 22 20:46:00 2016
+Command 'pgrep -f streaming_db_1.py' returned non-zero exit status 1
+restarting streaming 1 ...
+exit code 1
+Command 'pgrep -f streaming_db_2.py' returned non-zero exit status 1
+restarting streaming 2 ...
+exit code 1
+Command 'pgrep -f streaming_db_3.py' returned non-zero exit status 1
+restarting streaming 3 ...
+exit code 1
+Command 'pgrep -f streaming_db_4.py' returned non-zero exit status 1
+restarting streaming 4 ...
+exit code 1
+Command 'pgrep -f streaming_db_5.py' returned non-zero exit status 1
+restarting streaming 5 ...
+exit code 1
+Time stamp: Thu Sep 22 20:48:01 2016
+Command 'pgrep -f streaming_db_4.py' returned non-zero exit status 1
+restarting streaming 4 ...
+exit code 1
+
+####################
+Time stamp: Thu Sep 22 20:50:00 2016
+Command 'pgrep -f streaming_db_4.py' returned non-zero exit status 1
+restarting streaming 4 ...
+exit code 1
