@@ -12,6 +12,7 @@ from pymongo import MongoClient
 import json
 import subprocess
 from twilio.rest import TwilioRestClient
+import resource
 
 #------------------------------------
 # Twitter API
@@ -90,7 +91,8 @@ class listener(StreamListener):
                     # exclude retweets from stream
 
                     if 'retweeted_status' not in data:
-                        #print([data['created_at'], data['text']])
+
+                        print([data['created_at'], data['text']])
 
                         screen_name = data['user']['screen_name']
                         created_at = data['created_at']

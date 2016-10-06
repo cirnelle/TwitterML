@@ -27,7 +27,7 @@ class LabelTweetsEngRate():
         print ()
         print ("Length of tweet list is "+str(len(tweets)))
 
-        for line in lines[:1]:
+        for line in lines:
             spline = line.replace('\n','').split(',')
             length = len(spline)
 
@@ -112,15 +112,19 @@ class LabelTweetsEngRate():
 
     def label_tweets(self):
 
-        tweets = self.get_eng_rate()
+        #tweets = self.get_eng_rate()
 
-        # lines = open(path_to_store_engrate_output,'r').readlines()
-        #
-        # tweets = []
-        #
-        # for line in lines:
-        #     spline = line.rstrip('\n').split(',')
-        #     tweets.append(spline)
+        #------------------------------
+        # uncomment the following if already have gold standard (real) engrate
+
+        lines = open(path_to_store_engrate_output,'r').readlines()
+
+        tweets = []
+
+        for line in lines:
+            spline = line.rstrip('\n').split(',')
+            tweets.append(spline)
+        #------------------------------
 
         print (len(tweets))
 
@@ -181,15 +185,20 @@ class LabelTweetsEngRate():
 
     def label_tweets_raw(self):
 
-        tweets = self.get_eng_rate_raw_tweets()
+        #tweets = self.get_eng_rate_raw_tweets()
 
-        # lines = open(path_to_store_engrate_output_raw,'r').readlines()
-        #
-        # tweets = []
-        #
-        # for line in lines:
-        #     spline = line.rstrip('\n').split(',')
-        #     tweets.append(spline)
+        #------------------------------
+        # uncomment the following if already have gold standard (real) engrate
+
+        lines = open(path_to_store_engrate_output_raw,'r').readlines()
+
+        tweets = []
+
+        for line in lines:
+            spline = line.rstrip('\n').split(',')
+            tweets.append(spline)
+
+        #------------------------------
 
         print (len(tweets))
 
@@ -254,27 +263,27 @@ class LabelTweetsEngRate():
 # variables
 ################
 
-# path_to_preprocessed_tweet_file = '../tweets/maas/preprocessed_maas.csv'
-# path_to_store_engrate_output = '../output/engrate/maas/engrate_maas.csv'
-# path_to_store_labelled_tweets = '../output/engrate/maas/labelled_maas.csv'
+path_to_preprocessed_tweet_file = '../tweets/nasa/preprocessed_nasa.csv'
+path_to_store_engrate_output = '../output/engrate/nasa/REAL_engrate_nasa.csv'
+path_to_store_labelled_tweets = '../output/engrate/nasa/REAL_labelled_nasa.csv'
 
-path_to_preprocessed_tweet_file = '../tweets/realfoll/preprocessed_nonprofit_realfoll.csv'
-path_to_store_engrate_output = '../output/engrate/realfoll/others/engrate_nonprofit_realfoll.csv'
-path_to_store_labelled_tweets = '../output/engrate/realfoll/others/labelled_nonprofit_realfoll.csv'
+# path_to_preprocessed_tweet_file = '../tweets/realfoll/preprocessed_nonprofit_realfoll.csv'
+# path_to_store_engrate_output = '../output/engrate/realfoll/others/engrate_nonprofit_realfoll.csv'
+# path_to_store_labelled_tweets = '../output/engrate/realfoll/others/labelled_nonprofit_realfoll.csv'
 
 # for LIWC
-# path_to_raw_tweet_file = '../tweets/maas/raw_maas.csv'
-# path_to_store_engrate_output_raw = '../output/engrate/maas/engrate_maas_raw.csv'
-# path_to_store_labelled_tweets_raw = '../output/engrate/maas/labelled_maas_raw.csv'
+path_to_raw_tweet_file = '../tweets/nasa/raw_nasa.csv'
+path_to_store_engrate_output_raw = '../output/engrate/nasa/REAL_engrate_nasa_raw.csv'
+path_to_store_labelled_tweets_raw = '../output/engrate/nasa/REAL_labelled_nasa_raw.csv'
 
-path_to_raw_tweet_file = '../tweets/realfoll/raw_nonprofit_realfoll.csv'
-path_to_store_engrate_output_raw = '../output/engrate/realfoll/others/engrate_nonprofit_raw_realfoll.csv'
-path_to_store_labelled_tweets_raw = '../output/engrate/realfoll/others/labelled_nonprofit_raw_realfoll.csv'
+# path_to_raw_tweet_file = '../tweets/realfoll/raw_nonprofit_realfoll.csv'
+# path_to_store_engrate_output_raw = '../output/engrate/realfoll/others/engrate_nonprofit_raw_realfoll.csv'
+# path_to_store_labelled_tweets_raw = '../output/engrate/realfoll/others/labelled_nonprofit_raw_realfoll.csv'
 
 
 # engrate parameters
-her_boundary = 0.0314
-ler_boundary = 0.001055
+her_boundary = 0.0334
+ler_boundary = 0.00701
 
 
 if __name__ == "__main__":

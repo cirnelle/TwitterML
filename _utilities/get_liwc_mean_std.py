@@ -45,6 +45,8 @@ class GetLiwcMean():
             liwc_score = [float(i) for i in l]
             liwc_scores.append(liwc_score)
 
+        print("Length of tweet list is " + str(len(liwc_scores)))
+
         liwc_m = np.mean(liwc_scores, axis = 0)
         liwc_s = np.std(liwc_scores, axis = 0)
 
@@ -99,8 +101,8 @@ class GetLiwcMean():
 # variables
 ################
 
-path_to_liwc_result_file = '../output/liwc/sydscifest/liwc_sydscifest_her.txt'
-path_to_store_liwc_mean_and_std_file = '../output/sydscifest/sydscifest_her_mean.txt'
+path_to_liwc_result_file = '../output/liwc/nasa/liwc_nasa_ALL.txt'
+path_to_store_liwc_mean_and_std_file = '../output/liwc/mean/nasa/liwc_nasa_mean.txt'
 
 
 if __name__ == '__main__':

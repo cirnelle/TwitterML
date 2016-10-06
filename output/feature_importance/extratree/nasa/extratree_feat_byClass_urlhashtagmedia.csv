@@ -1,0 +1,9 @@
+LER,has_photo,321
+LER,has_photo has_url,186
+HER,has_video has_hashtag,131
+LER,has_photo has_hashtag,135
+HER,has_hashtag has_url,256
+HER,has_hashtag,259
+HER,has_video,183
+HER,has_animated_gif,46
+HER,has_animated_gif has_hashtag,30

@@ -933,10 +933,10 @@ class FeatureConstruction():
         # select one of the features to compare
         ##############
 
-        lines2 = open(path_to_store_psychometric_feature_file,'r').readlines()
+        #lines2 = open(path_to_store_psychometric_feature_file,'r').readlines()
         #lines2 = open(path_to_store_grammar_feature_file,'r').readlines()
         #lines2 = open(path_to_store_combined_feature_file,'r').readlines()
-        #lines2 = open(path_to_store_combined_feature_all_file,'r').readlines()
+        lines2 = open(path_to_store_combined_feature_all_file,'r').readlines()
 
         features = []
 
@@ -968,10 +968,10 @@ class FeatureConstruction():
         # select one of the path to store result
         ###############
 
-        f = open(path_to_store_labelled_psychometric_file,'w')
+        #f = open(path_to_store_labelled_psychometric_file,'w')
         #f = open(path_to_store_labelled_grammar_file,'w')
         #f = open(path_to_store_labelled_combined_features_file,'w')
-        #f = open(path_to_store_labelled_combined_features_all_file,'w')
+        f = open(path_to_store_labelled_combined_features_all_file,'w')
 
         # add header
         header = ['tweet','label']
@@ -990,47 +990,47 @@ class FeatureConstruction():
 # variables
 ###############
 
-path_to_liwc_result_file = '../output/liwc/sydscifest/festival_tweets/liwc_festival_tweets.txt'
-path_to_labelled_raw_file = '../output/engrate/realfoll/others/labelled_nonprofit_raw_realfoll.csv'
-path_to_labelled_preprocessed_file = '../output/engrate/realfoll/others/labelled_nonprofit_realfoll.csv'
+path_to_liwc_result_file = '../output/liwc/nasa/liwc_nasa_real_engrate.txt'
+path_to_labelled_raw_file = '../output/engrate/nasa/REAL_labelled_nasa_raw.csv'
+path_to_labelled_preprocessed_file = '../output/engrate/nasa/REAL_labelled_nasa.csv'
 
-path_to_store_psychometric_feature_file = '../output/features/nonprofit/realfoll/psychometrics.txt'
-path_to_store_grammar_feature_file = '../output/features/nonprofit/realfoll/grammar.txt'
-path_to_store_combined_feature_file = '../output/features/nonprofit/realfoll/combined.txt'
-path_to_store_combined_feature_all_file = '../output/features/nonprofit/realfoll/combined_all.txt' #includes word features
+path_to_store_psychometric_feature_file = '../output/features/nasa/real/psychometrics.txt'
+path_to_store_grammar_feature_file = '../output/features/nasa/real/grammar.txt'
+path_to_store_combined_feature_file = '../output/features/nasa/real/combined.txt'
+path_to_store_combined_feature_all_file = '../output/features/nasa/real/combined_all.txt' #includes word features
 
-path_to_store_labelled_psychometric_file = '../output/features/nonprofit/realfoll/labelled_psychometrics.csv'
-path_to_store_labelled_grammar_file = '../output/features/nonprofit/realfoll/labelled_grammar.csv'
-path_to_store_labelled_urlhashtagmedia_file = '../output/features/nonprofit/realfoll/labelled_urlhashtagmedia.csv'
-path_to_store_labelled_combined_features_file = '../output/features/nonprofit/realfoll/labelled_combined.csv'
-path_to_store_labelled_combined_features_all_file = '../output/features/nonprofit/realfoll/labelled_combined_all.csv'
+path_to_store_labelled_psychometric_file = '../output/features/nasa/real/labelled_psychometrics.csv'
+path_to_store_labelled_grammar_file = '../output/features/nasa/real/labelled_grammar.csv'
+path_to_store_labelled_urlhashtagmedia_file = '../output/features/nasa/real/labelled_urlhashtagmedia.csv'
+path_to_store_labelled_combined_features_file = '../output/features/nasa/real/labelled_combined.csv'
+path_to_store_labelled_combined_features_all_file = '../output/features/nasa/real/labelled_combined_all.csv'
 
 
 # boundary values
 
 analytic_top = 98.0
-analytic_bottom = 80.0
-clout_top = 91.0
+analytic_bottom = 86.0
+clout_top = 87.0
 clout_bottom = 50.0
-authentic_top = 19.0
-authentic_bottom = 1.01
-tone_top = 95.0
+authentic_top = 43.0
+authentic_bottom = 2.0
+tone_top = 87.0
 tone_bottom = 25.0
-sixltr_top = 31.0
-sixltr_bottom = 19.0
-wps_top = 17.0
-wps_bottom = 8.0
+sixltr_top = 26.0
+sixltr_bottom = 16.0
+wps_top = 23.0
+wps_bottom = 9.0
 
 
 if __name__ == '__main__':
 
     fc = FeatureConstruction()
 
-    fc.liwc_psychometric_features()
+    #fc.liwc_psychometric_features()
     #fc.liwc_grammar_features()
     #fc.url_hashtag_media_feature()
     #fc.combine_features()
-    #fc.combine_features_all()
+    fc.combine_features_all()
 
     fc.join_features_and_target()
 

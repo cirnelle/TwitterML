@@ -529,9 +529,9 @@ import sys
 #---------------------------------------
 
 ################
-# extract only fb posts which I have reallike number (Facebook)
+# extract only tweets which I have realfoll number
 ################
-#
+
 # import os
 # import sys
 # import time
@@ -541,7 +541,7 @@ import sys
 # # get the dates for follcount file
 # ##################
 #
-# lines2 = open('/Users/yi-linghwong/GitHub/FacebookML/user_list/likes/NASA.txt','r').readlines()
+# lines2 = open('../followers/follcount_interpolated/NASA.csv','r').readlines()
 #
 # date_dict = {}
 #
@@ -552,14 +552,21 @@ import sys
 #         print("error")
 #         break
 #
-#     d1 = spline[0].replace('\n', '').split(' ')
+#     d1 = spline[0].replace('\n', '').split('-')
 #
-#     if len(d1) == 6:
-#         d1.remove(d1[2])
+#     # if len(d1) == 6:
+#     #     d1.remove(d1[2])
 #
-#     date_s = d1[1] + ' ' + d1[2] + ' ' + d1[4]
+#     if int(d1[1]) < 10:
+#         d1[1] = '0'+ d1[1]
 #
-#     t1 = time.strptime(date_s, '%b %d %Y')
+#     if int(d1[2]) < 10:
+#         d1[2] = '0' + d1[2]
+#
+#
+#     date_s = d1[2] + ' ' + d1[1] + ' ' + d1[0]
+#
+#     t1 = time.strptime(date_s, '%d %m %Y')
 #     t_epoch = time.mktime(t1)
 #     date_dict[t_epoch] = spline[1]
 #
@@ -567,33 +574,34 @@ import sys
 # # get the dates for raw tweet file
 # #################
 #
-# lines1 = open('/Users/yi-linghwong/Documents/PhD/RESEARCH/NASA_data/facebook/data/ORI_fb_posts_reallike.csv', 'r').readlines()
+# lines1 = open('../tweets/nasa/raw_nasa.csv', 'r').readlines()
 #
 # print (len(lines1))
 #
-# fb_posts = []
+# tweets = []
+# follcount_list = []
 #
 # for line in lines1:
 #     spline = line.rstrip('\n').split(',')
 #
-#     d1 = spline[4].replace('\n', '').split(' ')
+#     d2 = spline[1].replace('\n', '').split(' ')
 #
-#     if len(d1) != 3:
+#     if len(d2) != 6:
 #         print("error")
 #         #d1.remove(d1[2])
 #
-#     d2 = d1[0].replace('\n','').split('/')
+#     # d2 = d1[2].replace('\n','').split('/')
+#     #
+#     # if int(d2[0]) < 10:
+#     #     d2[0]='0'+d2[0]
+#     #
+#     # if int(d2[1]) < 10:
+#     #     d2[1]='0'+d2[1]
 #
-#     if int(d2[0]) < 10:
-#         d2[0]='0'+d2[0]
 #
-#     if int(d2[1]) < 10:
-#         d2[1]='0'+d2[1]
+#     date_s = d2[2] + ' ' + d2[1] + ' ' + d2[5]
 #
-#
-#     date_s = d2[0] + ' ' + d2[1] + ' ' + d2[2]
-#
-#     t1 = time.strptime(date_s, '%m %d %y')
+#     t1 = time.strptime(date_s, '%d %b %Y')
 #
 #     #print (t1)
 #
@@ -604,20 +612,19 @@ import sys
 #
 #         if date_dict[t_epoch] != 'nan':
 #             #spline[3] = date_dict[t_epoch]
-#             spline.append(date_dict[t_epoch])
-#             fb_posts.append(spline)
+#             follcount = date_dict[t_epoch]
+#             tweets.append([spline[0],spline[1],spline[2],follcount,spline[4],spline[5],spline[6],spline[7],spline[8]])
 #
 #     else:
-#         spline.append('n/a')
-#         fb_posts.append(spline)
+#         pass
 #
-# print(len(fb_posts))
+# print(len(tweets))
 #
 #
-# f = open('/Users/yi-linghwong/Documents/PhD/RESEARCH/NASA_data/facebook/data/ORI_fb_posts_reallike_updated.csv', 'w')
+# f = open('../tweets/nasa/nasa_realfoll.csv', 'w')
 #
-# for ut in fb_posts:
-#     f.write(','.join(ut) + '\n')
+# for t in tweets:
+#     f.write(','.join(t) + '\n')
 #
 # f.close()
 
@@ -656,43 +663,43 @@ import sys
 # insert REAL Twitter engagement rate from a list into raw NASA tweets
 ##########################
 
-lines1 = open('../tweets/nasa/raw_nasa.csv','r').readlines()
-lines2 = open('../output/engrate/nasa/REAL_engrate_list.csv','r').readlines()
-
-tweets = []
-
-for line in lines1:
-    spline = line.rstrip('\n').split(',')
-    tweets.append(spline)
-
-print (len(tweets))
-
-engrates = []
-
-for line in lines2:
-    spline = line.rstrip('\n')
-    engrates.append(spline)
-
-print (len(engrates))
-
-tweets_with_engrate = []
-
-for index1,e in enumerate(engrates):
-
-    for index2, t in enumerate(tweets):
-
-        if index2 == index1:
-            t.insert(7,e)
-            tweets_with_engrate.append(t)
-
-print (len(tweets_with_engrate))
-
-f = open('../output/engrate/nasa/READ_engrate_nasa_raw.csv','w')
-
-for te in tweets_with_engrate:
-    f.write(','.join(te)+'\n')
-
-f.close()
+# lines1 = open('../tweets/nasa/raw_nasa.csv','r').readlines()
+# lines2 = open('../output/engrate/nasa/REAL_engrate_list.csv','r').readlines()
+#
+# tweets = []
+#
+# for line in lines1:
+#     spline = line.rstrip('\n').split(',')
+#     tweets.append(spline)
+#
+# print (len(tweets))
+#
+# engrates = []
+#
+# for line in lines2:
+#     spline = line.rstrip('\n')
+#     engrates.append(spline)
+#
+# print (len(engrates))
+#
+# tweets_with_engrate = []
+#
+# for index1,e in enumerate(engrates):
+#
+#     for index2, t in enumerate(tweets):
+#
+#         if index2 == index1:
+#             t.insert(7,e)
+#             tweets_with_engrate.append(t)
+#
+# print (len(tweets_with_engrate))
+#
+# f = open('../output/engrate/nasa/READ_engrate_nasa_raw.csv','w')
+#
+# for te in tweets_with_engrate:
+#     f.write(','.join(te)+'\n')
+#
+# f.close()
 
 
 

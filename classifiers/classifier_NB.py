@@ -826,26 +826,29 @@ class NaiveBayes():
 # variables
 ###############
 
-#path_to_labelled_file = '../output/features/maas/labelled_combined.csv'
-path_to_labelled_file = '../output/features/space/follcorr/labelled_combined.csv'
+path_to_labelled_file = '../output/features/nasa/derived/labelled_combined.csv'
+#path_to_labelled_file = '../output/features/space/follcorr/labelled_combined.csv'
 path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
+
 path_to_file_to_be_predicted = '../output/to_predict/sydscifest/combined.txt'
 path_to_gold_standard_file = '../output/features/maas/sydobs/labelled_combined.csv'
-
 path_to_store_predicted_results = '../output/predictions/maas/festival_tweets/predicted_results_nb.csv'
-path_to_store_features_by_probability_file = '../output/feature_importance/nb/nonprofit/follcorr/nb_feat_by_prob.csv'
-path_to_store_feature_selection_boolean_file = '../output/feature_importance/nb/nonprofit/follcorr/nb_fs_boolean.csv'
-path_to_store_list_of_feature_file = '../output/feature_importance/nb/nonprofit/follcorr/nb_feature_names.txt'
-path_to_store_coefficient_file = '../output/feature_importance/nb/nonprofit/follcorr/nb_coef.txt'
-path_to_store_feature_log_prob_for_class_0 = '../output/feature_importance/nb/nonprofit/follcorr/nb_feature_prob_0.csv' #Empirical log probability of features given a class
-path_to_store_feature_log_prob_for_class_1 = '../output/feature_importance/nb/nonprofit/follcorr/nb_feature_prob_1.csv'
-path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/nb/follcorr/nonprofit.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/nb/nonprofit/follcorr/nb_feat_by_class_combined.csv'
+
+path_to_store_features_by_probability_file = '../output/feature_importance/nb/nasa/nb_feat_by_prob.csv'
+path_to_store_feature_selection_boolean_file = '../output/feature_importance/nb/nasa/nb_fs_boolean.csv'
+path_to_store_list_of_feature_file = '../output/feature_importance/nb/nasa/nb_feature_names.txt'
+path_to_store_coefficient_file = '../output/feature_importance/nb/nasa/nb_coef.txt'
+path_to_store_feature_log_prob_for_class_0 = '../output/feature_importance/nb/nasa/nb_feature_prob_0.csv' #Empirical log probability of features given a class
+path_to_store_feature_log_prob_for_class_1 = '../output/feature_importance/nb/nasa/nb_feature_prob_1.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/nb/nasa/nb_feat_by_class_combined.csv'
+
+path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/nb/nasa/nasa_derived.csv'
+
 
 
 # for classifier without pipeline
 _ngram_range = (1,1)
-_alpha = 0.6
+_alpha = 0.4
 _use_idf = False
 _percentile = 85
 _score_func = f_classif
@@ -894,7 +897,7 @@ if __name__ == '__main__':
     # select one of the method to split data using Cross Validation
     ###################
 
-    #docs_train,docs_test,y_train,y_test = nb.train_test_split()
+    docs_train,docs_test,y_train,y_test = nb.train_test_split()
     #docs_train,docs_test,y_train,y_test = nb.stratified_shufflesplit()
     #docs_train,docs_test,y_train,y_test = nb.stratified_kfolds()
 
@@ -903,7 +906,7 @@ if __name__ == '__main__':
     # run NB Classifier
     ##################
 
-    #clf, count_vect = nb.train_classifier()
+    clf, count_vect = nb.train_classifier()
 
 
     ###################
@@ -930,14 +933,14 @@ if __name__ == '__main__':
     # Get feature importance
     ###################
 
-    #nb.get_important_features(clf,count_vect)
+    nb.get_important_features(clf,count_vect)
 
 
     ###################
     # Run classifier and then predict tweets
     ###################
 
-    nb.predict_tweets()
+    #nb.predict_tweets()
 
 
     ##################

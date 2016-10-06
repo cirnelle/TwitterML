@@ -734,25 +734,28 @@ class SGD():
 # variables
 ###############
 
-#path_to_labelled_file = '../output/features/maas/labelled_combined.csv'
-path_to_labelled_file = '../output/features/space/follcorr/labelled_combined.csv'
+path_to_labelled_file = '../output/features/nasa/real/labelled_combined.csv'
+#path_to_labelled_file = '../output/features/space/follcorr/labelled_combined.csv'
 path_to_stopword_file = '../../TwitterML/stopwords/stopwords.csv'
+
 path_to_file_to_be_predicted = '../output/to_predict/sydscifest/combined.txt'
 path_to_gold_standard_file = '../output/features/maas/sydobs/labelled_combined.csv'
-
 path_to_store_predicted_results = '../output/predictions/maas/festival_tweets/predicted_results_sgd.csv'
-path_to_store_coefficient_file = '../output/feature_importance/sgd/nonprofit/follcorr/sgd_coef.csv'
-path_to_store_feature_selection_boolean_file = '../output/feature_importance/sgd/nonprofit/follcorr/sgd_fs_boolean.csv'
-path_to_store_list_of_feature_file = '../output/feature_importance/sgd/nonprofit/follcorr/sgd_feature_names.csv'
-path_to_store_feature_and_coef_file = '../output/feature_importance/sgd/nonprofit/follcorr/sgd_coef_and_feat.csv'
-path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/sgd/follcorr/nonprofit.csv'
-path_to_store_important_features_by_class_file = '../output/feature_importance/sgd/nonprofit/follcorr/sgd_feat_by_class_combined.csv'
+
+path_to_store_coefficient_file = '../output/feature_importance/sgd/nasa/sgd_coef.csv'
+path_to_store_feature_selection_boolean_file = '../output/feature_importance/sgd/nasa/sgd_fs_boolean.csv'
+path_to_store_list_of_feature_file = '../output/feature_importance/sgd/nasa/sgd_feature_names.csv'
+path_to_store_feature_and_coef_file = '../output/feature_importance/sgd/nasa/sgd_coef_and_feat.csv'
+path_to_store_important_features_by_class_file = '../output/feature_importance/sgd/nasa/sgd_feat_by_class_combined.csv'
+
+path_to_store_feat_imp_for_normalisation = '../output/featimp_normalisation/sgd/nasa/nasa_real.csv'
+
 
 # for classifier without pipeline
 _ngram_range = (1,1)
 _use_idf = True
 _loss = 'log' # 'hinge' gives linear SVM; 'log' gives logistic regression
-_penalty = 'elasticnet'
+_penalty = 'l2'
 _alpha = 0.0005
 _score_func = chi2
 _percentile = 85
@@ -801,7 +804,7 @@ if __name__ == '__main__':
     # select one of the method to split data using Cross Validation
     ###################
 
-    #docs_train,docs_test,y_train,y_test = sgd.train_test_split()
+    docs_train,docs_test,y_train,y_test = sgd.train_test_split()
     #docs_train,docs_test,y_train,y_test = sgd.stratified_shufflesplit()
     #docs_train,docs_test,y_train,y_test = sgd.stratified_kfolds()
 
@@ -809,7 +812,7 @@ if __name__ == '__main__':
     # run SGD Classifier
     ##################
 
-    #clf, count_vect = sgd.train_classifier()
+    clf, count_vect = sgd.train_classifier()
 
 
     ###################
@@ -836,14 +839,14 @@ if __name__ == '__main__':
     # Get feature importance
     ###################
 
-    #sgd.get_important_features(clf,count_vect)
+    sgd.get_important_features(clf,count_vect)
 
 
     ###################
     # Run classifier and then predict tweets
     ###################
 
-    sgd.predict_tweets()
+    #sgd.predict_tweets()
 
 
     ##################

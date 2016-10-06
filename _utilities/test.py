@@ -2,141 +2,64 @@
 
 import os
 import sys
+import psutil
 import subprocess
-from pymongo import MongoClient
-from datetime import datetime
 import time
 
-client = MongoClient('localhost', 27017)
+try:
 
-#----------------------
-# create iterator for each database
+    mongod_pid = subprocess.check_output(['pgrep', '-f', 'mongod'], universal_newlines=True)
 
-db = client.twitter_astrobiology
-#db.authenticate("admin","TQe56wa($:(^[[/}",source="admin")
+    print (mongod_pid)
 
-astrobiology_iterator = db.astrobiology_collection.find()
+    process = psutil.Process(int(mongod_pid))
 
-db = client.twitter_nasa
-#db.authenticate("admin","TQe56wa($:(^[[/}",source="admin")
+    mongod_memory = process.memory_info().rss
 
-nasa_iterator = db.nasa_collection.find()
+    print (mongod_memory)
 
-db = client.twitter_space
-#db.authenticate("admin","TQe56wa($:(^[[/}",source="admin")
+    if mongod_memory > 16000000:
 
-space_iterator = db.space_collection.find()
+        print ("memory limit exceeded")
+        process.terminate()
 
-db = client.twitter_iss
-#db.authenticate("admin","TQe56wa($:(^[[/}",source="admin")
+        time.sleep(5)
 
-iss_iterator = db.iss_collection.find()
+        print()
+        print('####################')
 
-db = client.twitter_planets
-#db.authenticate("admin","TQe56wa($:(^[[/}",source="admin")
+        now = time.strftime("%c")
+        print("Time stamp: %s" % now)
 
-planets_iterator = db.planets_collection.find()
+        print("restarting mongod...")
 
-astro_tweets = []
-nasa_tweets = []
-space_tweets = []
-iss_tweets = []
-planets_tweets = []
+        FNULL = open(os.devnull, 'w')
 
-print ()
-now = time.strftime("%c")
-print ("Time stamp: %s"  % now )
+        args = ['mongod', '--dbpath', os.path.expanduser('/data/db')]
 
-#-----------------------
-# iterate through tweets and append to list
+        with open("/Users/yi-linghwong/GitHub/TwitterML/_utilities/nohup_mongod.out", 'a') as out:
 
-for tweet in astrobiology_iterator:
+            subprocess.Popen(args, stderr=out, stdout=out)
 
-    astro_tweets.append([tweet['screen_name'],tweet['created_at'],tweet['id_str'],str(tweet['followers_count'])
-                   ,str(tweet['friends_count']),str(tweet['retweet_count']),str(tweet['favourite_count']),tweet['text']])
-
-    #print (tweet['text'])
+        print ("mongod restarted")
 
 
-print (len(astro_tweets))
+except Exception as e:
 
-for tweet in nasa_iterator:
+    print (e)
 
-    nasa_tweets.append([tweet['screen_name'],tweet['created_at'],tweet['id_str'],str(tweet['followers_count'])
-                   ,str(tweet['friends_count']),str(tweet['retweet_count']),str(tweet['favourite_count']),tweet['text']])
+    print("mongod not running, starting mongod...")
 
-    #print (tweet['text'])
+    FNULL = open(os.devnull, 'w')
 
+    args = ['mongod', '--dbpath', os.path.expanduser('/data/db')]
 
-print (len(nasa_tweets))
+    with open("/Users/yi-linghwong/GitHub/TwitterML/_utilities/nohup_mongod.out", 'a') as out:
 
-for tweet in space_iterator:
-
-    space_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], str(tweet['followers_count'])
-                           , str(tweet['friends_count']), str(tweet['retweet_count']),
-                        str(tweet['favourite_count']), tweet['text']])
-
-    # print (tweet['text'])
+        subprocess.Popen(args, stderr=out, stdout=out)
 
 
-print(len(space_tweets))
-
-for tweet in iss_iterator:
-
-    iss_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], str(tweet['followers_count'])
-                           , str(tweet['friends_count']), str(tweet['retweet_count']),
-                        str(tweet['favourite_count']), tweet['text']])
-
-    # print (tweet['text'])
 
 
-print(len(iss_tweets))
-
-for tweet in planets_iterator:
-
-    planets_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], str(tweet['followers_count'])
-                           , str(tweet['friends_count']), str(tweet['retweet_count']),
-                        str(tweet['favourite_count']), tweet['text']])
-
-    # print (tweet['text'])
 
 
-print(len(planets_tweets))
-
-#---------------------------------
-# write to file
-
-f = open('../tweets/streaming/db/astrobiology.csv','w')
-
-for t in astro_tweets:
-    f.write(','.join(t)+"\n")
-
-f.close()
-
-f = open('../tweets/streaming/db/nasa.csv','w')
-
-for t in nasa_tweets:
-    f.write(','.join(t)+"\n")
-
-f.close()
-
-f = open('../tweets/streaming/db/space.csv','w')
-
-for t in space_tweets:
-    f.write(','.join(t)+"\n")
-
-f.close()
-
-f = open('../tweets/streaming/db/iss.csv','w')
-
-for t in iss_tweets:
-    f.write(','.join(t)+"\n")
-
-f.close()
-
-f = open('../tweets/streaming/db/planets.csv','w')
-
-for t in planets_tweets:
-    f.write(','.join(t)+"\n")
-
-f.close()

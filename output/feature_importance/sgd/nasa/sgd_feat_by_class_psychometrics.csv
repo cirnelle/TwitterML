@@ -1,0 +1,47 @@
+HER,cause_yes affiliation_yes,-2.36600180138
+HER,cause_yes affiliation_yes netspeak_yes,-1.8141213228
+HER,differ_yes,-1.59162444308
+HER,see_yes affiliation_yes,-1.55156978717
+HER,tentat_yes differ_yes,-1.51565830078
+HER,certain_yes,-1.41384897611
+HER,negemo_yes,-1.23680318129
+HER,insight_yes,-1.22971669726
+HER,is_analytic_no insight_yes,-1.18106103541
+HER,posemo_yes cause_yes affiliation_yes,-0.915355986634
+HER,is_authentic_yes,-0.868163454398
+HER,is_analytic_no,-0.814339565881
+HER,tentat_yes,-0.767762913009
+HER,discrep_yes,-0.677133040905
+HER,is_authentic_yes is_tone_yes,-0.610620842989
+HER,is_authentic_yes is_tone_yes posemo_yes,-0.610620842989
+HER,sad_yes,-0.56862489491
+HER,insight_yes see_yes,-0.565154811315
+HER,is_analytic_yes is_authentic_yes,-0.500207930655
+HER,posemo_yes negemo_yes,-0.42661773195
+HER,is_analytic_no is_clout_yes,-0.401748485944
+HER,differ_yes affiliation_yes,-0.150820041843
+HER,negemo_yes sad_yes,-0.118656783492
+HER,see_yes affiliation_yes achieve_yes,-0.117361808798
+HER,netspeak_yes assent_yes,-0.0840659612908
+HER,feel_yes netspeak_yes,-0.0567551821859
+HER,certain_yes affiliation_yes,-0.0377871289648
+HER,is_analytic_no is_clout_yes is_authentic_no,-0.000752238025375
+LER,hear_yes,1.748332703
+LER,is_clout_no,1.40133380046
+LER,cause_yes,1.36351075633
+LER,hear_yes netspeak_yes,1.35619629638
+LER,cause_yes netspeak_yes,1.05276605224
+LER,tentat_yes netspeak_yes,1.02426508696
+LER,affiliation_yes netspeak_yes,0.995401633897
+LER,is_authentic_no,0.985715539356
+LER,is_analytic_yes,0.450487319337
+LER,cause_yes power_yes netspeak_yes,0.292961516636
+LER,cause_yes power_yes,0.292961516636
+LER,is_authentic_yes cause_yes netspeak_yes,0.292437520905
+LER,is_authentic_yes insight_yes,0.27181030309
+LER,achieve_yes reward_yes netspeak_yes,0.229253794288
+LER,is_clout_yes is_authentic_no affiliation_yes,0.182750347782
+LER,see_yes netspeak_yes,0.160879736123
+LER,is_authentic_yes affiliation_yes netspeak_yes,0.11672043802
+LER,is_authentic_no affiliation_yes,0.0992757132948
+LER,affiliation_yes achieve_yes netspeak_yes,0.0357608857892

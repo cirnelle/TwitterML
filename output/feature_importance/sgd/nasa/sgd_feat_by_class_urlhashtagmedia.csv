@@ -1,0 +1,12 @@
+HER,has_video has_hashtag,-3.24517273422
+HER,has_video has_hashtag has_url,-3.24517273422
+HER,has_hashtag,-2.73835480951
+HER,has_animated_gif has_hashtag,-1.75694793881
+HER,has_animated_gif has_hashtag has_url,-1.75694793881
+HER,has_photo has_hashtag,-1.13423108019
+HER,has_photo has_hashtag has_url,-1.13423108019
+LER,has_photo has_url,3.64896764837
+LER,has_video,2.47163658008
+LER,has_hashtag has_url,2.22771134934
+LER,has_photo,0.369192469448
+LER,has_animated_gif,0.192206339395
