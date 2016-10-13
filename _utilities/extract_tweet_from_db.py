@@ -29,11 +29,16 @@ db = client.twitter_planets
 
 planets_iterator = db.planets_collection.find()
 
+db = client.twitter_climate
+
+climate_iterator = db.climate_collection.find()
+
 astro_tweets = []
 nasa_tweets = []
 space_tweets = []
 iss_tweets = []
 planets_tweets = []
+climate_tweets = []
 
 #-----------------------
 # iterate through tweets and append to list
@@ -91,6 +96,17 @@ for tweet in planets_iterator:
 
 print(len(planets_tweets))
 
+for tweet in climate_iterator:
+
+    climate_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], str(tweet['followers_count'])
+                           , str(tweet['friends_count']), str(tweet['retweet_count']),
+                        str(tweet['favourite_count']), tweet['text']])
+
+    # print (tweet['text'])
+
+
+print(len(climate_tweets))
+
 #---------------------------------
 # write to file
 
@@ -123,6 +139,13 @@ for t in iss_tweets:
 f.close()
 
 f = open('../tweets/streaming/db/planets.csv','w')
+
+for t in planets_tweets:
+    f.write(','.join(t)+"\n")
+
+f.close()
+
+f = open('../tweets/streaming/db/climate.csv','w')
 
 for t in planets_tweets:
     f.write(','.join(t)+"\n")

@@ -94,7 +94,7 @@ class StdOutListener(StreamListener):
 
                     if 'retweeted_status' not in data:
 
-                        #print ([data['created_at'],data['text']])
+                        print ([data['created_at'],data['text']])
 
                         tweet = [data['user']['screen_name'],data['created_at'],data['id_str'],str(data['user']['followers_count']),str(data['user']['friends_count']),str(data['retweet_count']),str(data['favorite_count']),data['text'].replace('\n', ' ').replace('\r', '').replace('\t',' ').replace(',', ' ')]
 
@@ -153,7 +153,7 @@ class StdOutListener(StreamListener):
 # variables
 ###############
 
-path_to_store_streamed_tweets = '../tweets/streaming/raw_Europa26Sep2016.csv'
+path_to_store_streamed_tweets = '../tweets/streaming/raw_#climatechange.csv'
 #hashtaglist = ['coffee','science'] #amounts to logical OR
 
 if __name__ == '__main__':
@@ -164,7 +164,7 @@ if __name__ == '__main__':
 
     stream = Stream(auth, l)
 
-    stream.filter(languages=["en"],track=['Europa Jupiter, #europa, Nasa Europa, Hubble Europa, Europa moon, Europa telescope, Europa ocean, Europa life, Europa subsurface, Europa water, Europa ice, Europa icy, Europa planet'], async=True)
+    stream.filter(languages=["en"],track=['#climatechange,climate change,#climate,#globalwarming,#agw,global warming'], async=True)
     #stream.filter(languages=["en"], track=hashtaglist, async=True)
 
 

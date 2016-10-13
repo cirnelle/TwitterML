@@ -305,8 +305,11 @@ class TweetProcessing():
 # variables
 ###############
 
-path_to_raw_tweet_file = '../output/engrate/nasa/REAL_engrate_nasa_raw.csv'
-path_to_store_processed_tweet_file = '../output/engrate/nasa/REAL_engrate_nasa.csv'
+#path_to_raw_tweet_file = '../output/engrate/nasa/REAL_engrate_nasa_raw.csv'
+path_to_raw_tweet_file = '/Users/yi-linghwong/GitHub/_big_files/twitter/raw_#streaming_space.csv'
+
+#path_to_store_processed_tweet_file = '../output/engrate/nasa/REAL_engrate_nasa.csv'
+path_to_store_processed_tweet_file = '/Users/yi-linghwong/GitHub/_big_files/twitter/preprocessed_#streaming_space.csv'
 
 if __name__ == "__main__":
 

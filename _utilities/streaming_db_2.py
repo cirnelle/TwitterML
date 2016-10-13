@@ -27,8 +27,8 @@ from twilio.rest import TwilioRestClient
 #     sys.exit(1)
 
 
-if os.path.isfile('/Users/yi-linghwong/keys/twitter_api_keys_6.txt'):
-    lines = open('/Users/yi-linghwong/keys/twitter_api_keys_6.txt','r').readlines()
+if os.path.isfile('/Users/yi-linghwong/keys/twitter_api_keys_1.txt'):
+    lines = open('/Users/yi-linghwong/keys/twitter_api_keys_1.txt','r').readlines()
 
 
 else:

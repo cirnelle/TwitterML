@@ -179,7 +179,38 @@ except Exception as e:
         #   )
 
 
+#-------------------
+# streaming db 6
 
+try:
+
+    subprocess.check_output("pgrep -f streaming_db_6.py", shell=True, universal_newlines=True)
+
+except Exception as e:
+
+    print()
+    print('####################')
+
+    now = time.strftime("%c")
+    print("Time stamp: %s" % now)
+
+    print(e)
+    print ("restarting streaming 5 ...")
+
+    args = ['nohup', 'python3.4', '/Users/yi-linghwong/GitHub/TwitterML/_utilities/streaming_db_6.py','2>&1', '&']
+
+    with open("/Users/yi-linghwong/GitHub/TwitterML/_utilities/nohup.out", 'a') as out:
+        subprocess.Popen(args, stderr=out, stdout=out)
+
+    if e.returncode == 1:
+
+        print ("exit code 1")
+
+        # twilio_client.messages.create(
+        #     to='+61406815706',
+        #     from_='+61447752987',
+        #     body='streaming db 6 stopped running'
+        #   )
 
 
 
