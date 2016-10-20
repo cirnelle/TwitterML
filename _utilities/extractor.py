@@ -349,7 +349,6 @@ class Extractor():
                     time.sleep(sleep_time)
 
 
-
     def gettweets_by_id(self):
 
 
@@ -489,7 +488,143 @@ class Extractor():
                     time.sleep(sleep_time)
 
 
+    def gettweets_by_replies(self):
 
+        ori_tweet_id_list = ['788147826345676800']
+
+        retries = 5
+        sleep_time = 50
+
+        for id in ori_tweet_id_list:
+
+            replies = []
+
+            for r in range(retries):
+
+                try:
+
+                    rate_limit = api.rate_limit_status()
+
+                    remaining = rate_limit['resources']['statuses']['/statuses/user_timeline']['remaining']
+                    reset_time = rate_limit['resources']['statuses']['/statuses/user_timeline']['reset']
+
+                    print(remaining)
+
+                    #################
+                    # get tweets with Twitter search api, EXCLUDING retweets
+                    #################
+
+                    tweets = tweepy.Cursor(api.search, q='@mtobis' , count=100,
+                                           lang="en").items(1500)
+                    # tweets=tweepy.Cursor(api.search, q=hashtag+'-filter:retweets', count=100, lang="en").items(1500)
+
+
+                    for t in tweets:
+
+                        # dumps serialises strings into JSON (which is very similar to python's dict)
+                        json_str = json.dumps(t._json)
+
+                        # loads deserialises a string and create a python dict, i.e. it parses the JSON to create a python dict
+                        data = json.loads(json_str)
+
+
+                        if 'in_reply_to_status_id_str' in data:
+
+                            if data['in_reply_to_status_id_str'] == id:
+                                print (data)
+
+
+                                #################
+                                # check if media exists, and which type
+                                #################
+
+                                if 'extended_entities' in data:
+
+                                    if 'media' in data['extended_entities']:
+
+                                        if data['extended_entities']['media'] != []:
+
+                                            length = len(data['extended_entities']['media'])
+
+                                            for n in range(length):
+                                                type = data['extended_entities']['media'][n]['type']
+
+
+                                elif 'entities' in data:
+
+                                    if 'urls' in data['entities']:
+
+                                        if (data['entities']['urls'] != []):
+
+                                            length = len(data['entities']['urls'])
+
+                                            for n in range(length):
+
+                                                if (data['entities']['urls'][n]['display_url'].startswith('youtu')):
+                                                    type = 'video'
+                                                    break
+
+                                                elif (data['entities']['urls'][n]['display_url'].startswith('vine')):
+                                                    type = 'video'
+                                                    break
+
+                                                elif (data['entities']['urls'][n]['display_url'].startswith('amp.twimg')):
+                                                    type = 'video'
+                                                    break
+
+                                                elif (data['entities']['urls'][n]['display_url'].startswith('snpy.tv')):
+                                                    type = 'video'
+                                                    break
+
+                                                elif (data['entities']['urls'][n]['display_url'].startswith('vimeo')):
+                                                    type = 'video'
+                                                    break
+
+                                                else:
+                                                    type = 'no_media'
+
+                                        else:
+                                            type = 'no_media'
+
+                                    else:
+                                        type = 'no_media'
+
+                                else:
+                                    type = 'no_media'
+
+                                ################
+                                # append list of parameters to tweet list
+                                ################
+
+                                replies.append([data['user']['screen_name'], data['created_at'], data['in_reply_to_status_id_str'], data['id_str'],
+                                                       str(data['user']['followers_count']), str(data['user']['friends_count']),
+                                                       str(data['retweet_count']), str(data['favorite_count']),
+                                                       'has_' + str(type),
+                                                       data['text'].replace('\n', ' ').replace('\r', '').replace('\t',
+                                                                                                                 ' ').replace(
+                                                           ',', ' ')])
+
+                    #################
+                    # write (append) data to file for each user
+                    #################
+
+                    f = open(path_to_store_raw_replies, 'w')
+
+                    header = ['user', 'created_time', 'in_reply_to', 'tweet_id', 'user_follcount', 'user_following', 'retweet',
+                              'favourite', 'has_media', 'message']
+
+                    replies.insert(0, header)
+
+                    for rp in replies:
+                        f.write(','.join(rp) + '\n')
+
+                    f.close()
+
+                    break
+
+                except Exception as e:
+                    print('Failed: ' + str(e))
+                    time.sleep(sleep_time)
 
 
 
@@ -520,9 +655,11 @@ class Extractor():
 
 path_to_user_list = '../user_list/others/user_nonprofit.txt'
 path_to_tweet_id_list = '/Users/yi-linghwong/Documents/PhD/RESEARCH/NASA_data/twitter/data/tweet_id_ALL.csv'
+
 path_to_store_raw_tweets = '../tweets/others/raw_nonprofit.csv'
 path_to_store_raw_tweets_hashtag = '../tweets/hashtags/raw_#'
 path_to_store_tweets_by_id = '/Users/yi-linghwong/Documents/PhD/RESEARCH/NASA_data/twitter/data/tweets_ALL.csv'
+path_to_store_raw_replies = '../tweets/replies/test.csv'
 
 
 if __name__ == '__main__':
@@ -546,7 +683,7 @@ if __name__ == '__main__':
     # get tweets by hashtag
     #################
 
-    ext.gettweets_by_hashtag()
+    #ext.gettweets_by_hashtag()
 
 
     #################
@@ -554,4 +691,10 @@ if __name__ == '__main__':
     #################
 
     #ext.gettweets_by_id()
+
+    #################
+    # get tweets by replies
+    #################
+
+    ext.gettweets_by_replies()
 
