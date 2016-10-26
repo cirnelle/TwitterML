@@ -28,8 +28,8 @@ import resource
 #     sys.exit(1)
 
 
-if os.path.isfile('/Users/yi-linghwong/keys/twitter_api_keys_23.txt'):
-    lines = open('/Users/yi-linghwong/keys/twitter_api_keys_23.txt','r').readlines()
+if os.path.isfile('/Users/yi-linghwong/keys/twitter_api_keys_29.txt'):
+    lines = open('/Users/yi-linghwong/keys/twitter_api_keys_29.txt','r').readlines()
 
 
 else:
@@ -103,9 +103,48 @@ class listener(StreamListener):
                         favourite_count = data['favorite_count']
                         text = data['text'].replace('\n', ' ').replace('\r', '').replace('\t', ' ').replace(',', ' ')
 
-                        tweets = {"screen_name": screen_name, "created_at": created_at, "id_str": tweet_id,
+
+                        if 'in_reply_to_screen_name' in data:
+
+                            if data['in_reply_to_screen_name'] != None:
+
+                                in_reply_to_user = data['in_reply_to_screen_name']
+
+                            elif data['in_reply_to_screen_name'] == None:
+
+                                in_reply_to_user = 'None'
+
+                        else:
+
+                            in_reply_to_user = 'None'
+
+                        # in reply to status id
+
+                        if 'in_reply_to_status_id' in data:
+
+                            if data['in_reply_to_status_id'] != None:
+
+                                in_reply_to_status_id = data['in_reply_to_status_id']
+
+                            elif data['in_reply_to_status_id'] == None:
+
+                                in_reply_to_status_id = 'None'
+
+                        else:
+
+                            in_reply_to_status_id = 'None'
+
+
+                        tweets = {"screen_name": screen_name, "created_at": created_at, "id_str": tweet_id, "in_reply_to_user": in_reply_to_user,
+                                  "in_reply_to_status_id": in_reply_to_status_id,
                                   "followers_count": followers_count, "friends_count": friends_count,
                                   "retweet_count": retweet_count, "favourite_count": favourite_count, "text": text,}
+
+                        # tweets = {"screen_name": screen_name, "created_at": created_at, "id_str": tweet_id,
+                        #           "followers_count": followers_count, "friends_count": friends_count,
+                        #           "retweet_count": retweet_count, "favourite_count": favourite_count, "text": text,}
+
+                        print (tweets)
 
                         collection.insert(tweets)
 
@@ -174,17 +213,19 @@ if __name__ == '__main__':
 
     stream = Stream(auth, l)
 
-    lines = open('../user_list/user_space.csv','r').readlines()
+
+    lines = open('../user_list/user_space.csv', 'r').readlines()
 
     users = []
 
     for line in lines:
         spline = line.rstrip('\n').split(',')
-        users.append('@'+str(spline[0]))
+        users.append('@' + str(spline[0]))
 
     users = ','.join(users)
 
-    stream.filter(languages=["en"],track=[users], async=True)
+    stream.filter(languages=["en"], track=[users], async=True)
+
     #stream.filter(languages=["en"], track=hashtaglist, async=True)
 
 

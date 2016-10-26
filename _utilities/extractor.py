@@ -87,11 +87,6 @@ class Extractor():
         return users
 
 
-    def get_tweet_id_list(self):
-
-        pass
-
-
     def gettweets_by_user(self):
 
         user_list = self.create_user_list()
@@ -352,7 +347,7 @@ class Extractor():
     def gettweets_by_id(self):
 
 
-        id_list = self.get_tweet_id_list()
+        #id_list = self.get_tweet_id_list()
         retries = 5
         sleep_time = 50
 
@@ -366,6 +361,7 @@ class Extractor():
             spline = line.replace('\n','')
             id_list.append(spline)
 
+        id_list = ['789077499166818304']
 
         print ("Length of id list is "+str(len(id_list)))
 
@@ -398,6 +394,9 @@ class Extractor():
 
                     #loads deserialises a string and create a python dict, i.e. it parses the JSON to create a python dict
                     data=json.loads(json_str)
+
+                    print (data)
+
 
                     #################
                     # check if media exists, and which type
@@ -464,7 +463,6 @@ class Extractor():
                     ################
 
                     tweets.append([data['user']['screen_name'],data['created_at'],data['id_str'],str(data['user']['followers_count']),str(data['user']['friends_count']),str(data['retweet_count']),str(data['favorite_count']),'has_'+str(type),data['text'].replace('\n', ' ').replace('\r', '').replace('\t',' ').replace(',', ' ')])
-
 
                     #################
                     # write (append) data to file for each user
@@ -690,11 +688,11 @@ if __name__ == '__main__':
     # get tweets by id
     #################
 
-    #ext.gettweets_by_id()
+    ext.gettweets_by_id()
 
     #################
     # get tweets by replies
     #################
 
-    ext.gettweets_by_replies()
+    #ext.gettweets_by_replies()
 

@@ -101,7 +101,25 @@ class listener(StreamListener):
                         favourite_count = data['favorite_count']
                         text = data['text'].replace('\n', ' ').replace('\r', '').replace('\t', ' ').replace(',', ' ')
 
+                        if 'in_reply_to_screen_name' in data:
+
+                            in_reply_to_user = data['in_reply_to_screen_name']
+
+                        else:
+
+                            in_reply_to_user = 'None'
+
+                        if 'in_reply_to_status_id' in data:
+
+                            in_reply_to_status_id = data['in_reply_to_status_id']
+
+                        else:
+
+                            in_reply_to_status_id = 'None'
+
                         tweets = {"screen_name": screen_name, "created_at": created_at, "id_str": tweet_id,
+                                  "in_reply_to_user": in_reply_to_user,
+                                  "in_reply_to_status_id": in_reply_to_status_id,
                                   "followers_count": followers_count, "friends_count": friends_count,
                                   "retweet_count": retweet_count, "favourite_count": favourite_count, "text": text,}
 

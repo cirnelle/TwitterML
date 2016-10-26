@@ -33,6 +33,10 @@ db = client.twitter_climate
 
 climate_iterator = db.climate_collection.find()
 
+db = client.twitter_spaceusers
+
+spaceusers_iterator = db.spaceusers_collection.find()
+
 astro_tweets = []
 nasa_tweets = []
 space_tweets = []
@@ -40,13 +44,17 @@ iss_tweets = []
 planets_tweets = []
 climate_tweets = []
 
+spaceusers_tweets = []
+
 #-----------------------
 # iterate through tweets and append to list
 
 for tweet in astrobiology_iterator:
 
-    astro_tweets.append([tweet['screen_name'],tweet['created_at'],tweet['id_str'],str(tweet['followers_count'])
-                   ,str(tweet['friends_count']),str(tweet['retweet_count']),str(tweet['favourite_count']),tweet['text']])
+    astro_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], tweet['in_reply_to_user'],
+                         str(tweet['in_reply_to_status_id']),
+                         str(tweet['followers_count']), str(tweet['friends_count']), str(tweet['retweet_count']),
+                         str(tweet['favourite_count']), tweet['text']])
 
     #print (tweet['text'])
 
@@ -55,8 +63,10 @@ print (len(astro_tweets))
 
 for tweet in nasa_iterator:
 
-    nasa_tweets.append([tweet['screen_name'],tweet['created_at'],tweet['id_str'],str(tweet['followers_count'])
-                   ,str(tweet['friends_count']),str(tweet['retweet_count']),str(tweet['favourite_count']),tweet['text']])
+    nasa_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], tweet['in_reply_to_user'],
+                        str(tweet['in_reply_to_status_id']),
+                        str(tweet['followers_count']), str(tweet['friends_count']), str(tweet['retweet_count']),
+                        str(tweet['favourite_count']), tweet['text']])
 
     #print (tweet['text'])
 
@@ -65,9 +75,10 @@ print (len(nasa_tweets))
 
 for tweet in space_iterator:
 
-    space_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], str(tweet['followers_count'])
-                           , str(tweet['friends_count']), str(tweet['retweet_count']),
-                        str(tweet['favourite_count']), tweet['text']])
+    space_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], tweet['in_reply_to_user'],
+                         str(tweet['in_reply_to_status_id']),
+                         str(tweet['followers_count']), str(tweet['friends_count']), str(tweet['retweet_count']),
+                         str(tweet['favourite_count']), tweet['text']])
 
     # print (tweet['text'])
 
@@ -76,9 +87,10 @@ print(len(space_tweets))
 
 for tweet in iss_iterator:
 
-    iss_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], str(tweet['followers_count'])
-                           , str(tweet['friends_count']), str(tweet['retweet_count']),
-                        str(tweet['favourite_count']), tweet['text']])
+    iss_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], tweet['in_reply_to_user'],
+                       str(tweet['in_reply_to_status_id']),
+                       str(tweet['followers_count']), str(tweet['friends_count']), str(tweet['retweet_count']),
+                       str(tweet['favourite_count']), tweet['text']])
 
     # print (tweet['text'])
 
@@ -87,9 +99,10 @@ print(len(iss_tweets))
 
 for tweet in planets_iterator:
 
-    planets_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], str(tweet['followers_count'])
-                           , str(tweet['friends_count']), str(tweet['retweet_count']),
-                        str(tweet['favourite_count']), tweet['text']])
+    planets_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], tweet['in_reply_to_user'],
+                           str(tweet['in_reply_to_status_id']),
+                           str(tweet['followers_count']), str(tweet['friends_count']), str(tweet['retweet_count']),
+                           str(tweet['favourite_count']), tweet['text']])
 
     # print (tweet['text'])
 
@@ -98,14 +111,27 @@ print(len(planets_tweets))
 
 for tweet in climate_iterator:
 
-    climate_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], str(tweet['followers_count'])
-                           , str(tweet['friends_count']), str(tweet['retweet_count']),
-                        str(tweet['favourite_count']), tweet['text']])
+    climate_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], tweet['in_reply_to_user'],
+                           str(tweet['in_reply_to_status_id']),
+                           str(tweet['followers_count']), str(tweet['friends_count']), str(tweet['retweet_count']),
+                           str(tweet['favourite_count']), tweet['text']])
 
     # print (tweet['text'])
 
 
 print(len(climate_tweets))
+
+for tweet in spaceusers_iterator:
+
+    spaceusers_tweets.append([tweet['screen_name'], tweet['created_at'], tweet['id_str'], tweet['in_reply_to_user'],
+                              str(tweet['in_reply_to_status_id']),
+                              str(tweet['followers_count']), str(tweet['friends_count']), str(tweet['retweet_count']),
+                              str(tweet['favourite_count']), tweet['text']])
+
+    # print (tweet['text'])
+
+
+print(len(spaceusers_tweets))
 
 #---------------------------------
 # write to file
@@ -148,6 +174,13 @@ f.close()
 f = open('../tweets/streaming/db/climate.csv','w')
 
 for t in planets_tweets:
+    f.write(','.join(t)+"\n")
+
+f.close()
+
+f = open('../tweets/streaming/db/space_users.csv','w')
+
+for t in spaceusers_tweets:
     f.write(','.join(t)+"\n")
 
 f.close()

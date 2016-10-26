@@ -1,65 +1,190 @@
 #!/usr/bin/python3.4
 
+__author__ = 'yi-linghwong'
+
 import os
 import sys
-import psutil
-import subprocess
 import time
+from tweepy import Stream
+from tweepy import OAuthHandler
+from tweepy.streaming import StreamListener
+from pymongo import MongoClient
+import json
+import subprocess
+from twilio.rest import TwilioRestClient
 
-try:
+#------------------------------------
+# Twitter API
+#------------------------------------
 
-    mongod_pid = subprocess.check_output(['pgrep', '-f', 'mongod'], universal_newlines=True)
 
-    print (mongod_pid)
+# if os.path.exists("/Users/yi-linghwong/GitHub/TwitterML/"):
+#     maindir = "/Users/yi-linghwong/GitHub/TwitterML/"
+# elif os.path.exists("/home/yiling/GitHub/GitHub/TwitterML/"):
+#     maindir = "/home/yiling/GitHub/GitHub/TwitterML/"
+# else:
+#     print ("ERROR --> major error")
+#     sys.exit(1)
 
-    process = psutil.Process(int(mongod_pid))
 
-    mongod_memory = process.memory_info().rss
+if os.path.isfile('/home/ubuntu/keys/twitter_api_keys_28.txt'):
+    lines = open('/home/ubuntu/keys/twitter_api_keys_28.txt','r').readlines()
 
-    print (mongod_memory)
 
-    if mongod_memory > 16000000:
+else:
+    print ("Path not found")
+    sys.exit(1)
 
-        print ("memory limit exceeded")
-        process.terminate()
+api_dict = {}
 
-        time.sleep(5)
+for line in lines:
+    spline=line.replace("\n","").split()
+    #creates a list with key and value. Split splits a string at the space and stores the result in a list
 
-        print()
-        print('####################')
+    api_dict[spline[0]]=spline[1]
 
-        now = time.strftime("%c")
-        print("Time stamp: %s" % now)
+consumer_key = api_dict["API_key"]
+consumer_secret = api_dict["API_secret"]
 
-        print("restarting mongod...")
+access_token = api_dict["Access_token"]
+access_token_secret = api_dict["Access_token_secret"]
+
+#-------------------------------
+# Twilio API, to send sms alerts
+#-------------------------------
+
+ACCOUNT_SID = 'AC817c734cbe1b13d2bbe97940e4efc413'
+AUTH_TOKEN = 'd927e3830852ec14b06b302960833645'
+
+twilio_client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
+
+
+class listener(StreamListener):
+
+    def __init__(self, start_time=time.time(), time_limit=60):
+
+        self.flag = True
 
         FNULL = open(os.devnull, 'w')
+        #mongod = subprocess.Popen(['sudo', 'service', 'mongod', 'start'], stdout=FNULL, stderr=subprocess.STDOUT)
+        #mongod = subprocess.Popen(['mongod', '--auth', '--dbpath', os.path.expanduser('/home/yiling/webapps/mongodb/data/'), '--port', '23643'],stdout=FNULL, stderr=subprocess.STDOUT)
+        mongod = subprocess.Popen(['mongod', '--dbpath', os.path.expanduser('/data/db'), '--port', '27017'],stdout=FNULL, stderr=subprocess.STDOUT)
 
-        args = ['mongod', '--dbpath', os.path.expanduser('/data/db')]
-
-        with open("/Users/yi-linghwong/GitHub/TwitterML/_utilities/nohup_mongod.out", 'a') as out:
-
-            subprocess.Popen(args, stderr=out, stdout=out)
-
-        print ("mongod restarted")
+        self.time = start_time
+        self.limit = time_limit
 
 
-except Exception as e:
+    def on_data(self, status):
 
-    print (e)
+        #while (time.time() - self.time) < self.limit:
 
-    print("mongod not running, starting mongod...")
+        for n in range(5):
 
-    FNULL = open(os.devnull, 'w')
+            try:
 
-    args = ['mongod', '--dbpath', os.path.expanduser('/data/db')]
+                client = MongoClient('localhost', 27017)
+                db = client['twitter_climateusers']
+                #db.authenticate("admin","TQe56wa($:(^[[/}",source="admin") # important!
+                collection = db['climateusers_collection']
+                data = json.loads(status)
 
-    with open("/Users/yi-linghwong/GitHub/TwitterML/_utilities/nohup_mongod.out", 'a') as out:
+                if 'created_at' in data:
 
-        subprocess.Popen(args, stderr=out, stdout=out)
+                    # exclude retweets from stream
+
+                    if 'retweeted_status' not in data:
+
+                        #print([data['created_at'], data['text']])
+
+                        screen_name = data['user']['screen_name']
+                        created_at = data['created_at']
+                        tweet_id = data['id_str']
+                        followers_count = data['user']['followers_count']
+                        friends_count = data['user']['friends_count']
+                        retweet_count = data['retweet_count']
+                        favourite_count = data['favorite_count']
+                        text = data['text'].replace('\n', ' ').replace('\r', '').replace('\t', ' ').replace(',', ' ')
+
+                        tweets = {"screen_name": screen_name, "created_at": created_at, "id_str": tweet_id,
+                                  "followers_count": followers_count, "friends_count": friends_count,
+                                  "retweet_count": retweet_count, "favourite_count": favourite_count, "text": text,}
+
+                        collection.insert(tweets)
+
+                        self.flag = True
+
+                        break
+
+                    else:
+                        break
+
+                else:
+                    break
+
+            except BaseException as e:
+
+                print ('failed ondata,', str(e))
+
+                # send SMS alert, flag is set to false after first error to prevent continuous sms sending
+
+#                 if self.flag:
+#
+#                 	twilio_client.messages.create(
+#                     	to='+61406815706',
+#                     	from_='+61447752987',
+#                     	body='nectar2 planets failed ondata',
+#                 	)
+#
+#                 	self.flag = False
+
+                time.sleep(5)
+
+        return True #when return False then process finished with exit code 0
 
 
+    def on_error(self, status):
+
+        print(status)
+
+#         twilio_client.messages.create(
+#             to='+61406815706',
+#             from_='+61447752987',
+#             body='nectar2 planets failed on error',
+#         )
+
+        return True
+
+    def on_timeout(self):
+
+        print('Timeout...')
+
+#         twilio_client.messages.create(
+#             to='+61406815706',
+#             from_='+61447752987',
+#             body='nectar2 planets timeout',
+#         )
+
+        return True  # To continue listening
 
 
+if __name__ == '__main__':
 
+    l = listener()
+    auth = OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(access_token, access_token_secret)
 
+    stream = Stream(auth, l)
+
+    lines = open('/home/ubuntu/TwitterML/user_list/user_climate.csv', 'r').readlines()
+
+    users = []
+
+    for line in lines:
+        spline = line.rstrip('\n').split(',')
+        users.append('@' + str(spline[0]))
+
+    users = ','.join(users)
+
+    stream.filter(languages=["en"], track=[users], async=True)
+
+#stream.filter(languages=["en"], track=hashtaglist, async=True)
