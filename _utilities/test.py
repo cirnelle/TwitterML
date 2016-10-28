@@ -1,4 +1,4 @@
-#!/usr/bin/python3.4
+#!/usr/local/bin/python3.4
 
 __author__ = 'yi-linghwong'
 
@@ -18,17 +18,17 @@ from twilio.rest import TwilioRestClient
 #------------------------------------
 
 
-# if os.path.exists("/Users/yi-linghwong/GitHub/TwitterML/"):
-#     maindir = "/Users/yi-linghwong/GitHub/TwitterML/"
-# elif os.path.exists("/home/yiling/GitHub/GitHub/TwitterML/"):
-#     maindir = "/home/yiling/GitHub/GitHub/TwitterML/"
-# else:
-#     print ("ERROR --> major error")
-#     sys.exit(1)
+if os.path.exists("/Users/yi-linghwong/GitHub/TwitterML/"):
+    maindir = "/Users/yi-linghwong/GitHub/TwitterML/"
+elif os.path.exists("/home/yiling/GitHub/GitHub/TwitterML/"):
+    maindir = "/home/yiling/GitHub/GitHub/TwitterML/"
+else:
+    print ("ERROR --> major error")
+    sys.exit(1)
 
 
-if os.path.isfile('/home/ubuntu/keys/twitter_api_keys_28.txt'):
-    lines = open('/home/ubuntu/keys/twitter_api_keys_28.txt','r').readlines()
+if os.path.isfile('/home/yiling/GitHub/keys/twitter_api_keys_23.txt'):
+    lines = open('/home/yiling/GitHub/keys/twitter_api_keys_23.txt','r').readlines()
 
 
 else:
@@ -66,9 +66,8 @@ class listener(StreamListener):
         self.flag = True
 
         FNULL = open(os.devnull, 'w')
-        #mongod = subprocess.Popen(['sudo', 'service', 'mongod', 'start'], stdout=FNULL, stderr=subprocess.STDOUT)
-        #mongod = subprocess.Popen(['mongod', '--auth', '--dbpath', os.path.expanduser('/home/yiling/webapps/mongodb/data/'), '--port', '23643'],stdout=FNULL, stderr=subprocess.STDOUT)
-        mongod = subprocess.Popen(['mongod', '--dbpath', os.path.expanduser('/data/db'), '--port', '27017'],stdout=FNULL, stderr=subprocess.STDOUT)
+        mongod = subprocess.Popen(['mongod', '--auth', '--dbpath', os.path.expanduser('/home/yiling/webapps/mongodb/data/'), '--port', '23643'],stdout=FNULL, stderr=subprocess.STDOUT)
+        #mongod = subprocess.Popen(['mongod', '--dbpath', os.path.expanduser('/data/db')], stdout=FNULL, stderr=subprocess.STDOUT)
 
         self.time = start_time
         self.limit = time_limit
@@ -82,10 +81,10 @@ class listener(StreamListener):
 
             try:
 
-                client = MongoClient('localhost', 27017)
-                db = client['twitter_climateusers']
-                #db.authenticate("admin","TQe56wa($:(^[[/}",source="admin") # important!
-                collection = db['climateusers_collection']
+                client = MongoClient('localhost', 23643)
+                db = client['twitter_spaceusers']
+                db.authenticate("admin","TQe56wa($:(^[[/}",source="admin") # important!
+                collection = db['spaceusers_collection']
                 data = json.loads(status)
 
                 if 'created_at' in data:
@@ -121,21 +120,20 @@ class listener(StreamListener):
                 else:
                     break
 
+
             except BaseException as e:
 
                 print ('failed ondata,', str(e))
 
-                # send SMS alert, flag is set to false after first error to prevent continuous sms sending
-
 #                 if self.flag:
 #
-#                 	twilio_client.messages.create(
-#                     	to='+61406815706',
-#                     	from_='+61447752987',
-#                     	body='nectar2 planets failed ondata',
-#                 	)
+#                     twilio_client.messages.create(
+#                         to='+61406815706',
+#                         from_='+61447752987',
+#                         body='webfaction planets failed ondata',
+#                     )
 #
-#                 	self.flag = False
+#                     self.flag = False
 
                 time.sleep(5)
 
@@ -149,7 +147,7 @@ class listener(StreamListener):
 #         twilio_client.messages.create(
 #             to='+61406815706',
 #             from_='+61447752987',
-#             body='nectar2 planets failed on error',
+#             body='webfaction planets failed on error',
 #         )
 
         return True
@@ -161,7 +159,7 @@ class listener(StreamListener):
 #         twilio_client.messages.create(
 #             to='+61406815706',
 #             from_='+61447752987',
-#             body='nectar2 planets timeout',
+#             body='webfaction planets timeout',
 #         )
 
         return True  # To continue listening
@@ -175,16 +173,23 @@ if __name__ == '__main__':
 
     stream = Stream(auth, l)
 
-    lines = open('/home/ubuntu/TwitterML/user_list/user_climate.csv', 'r').readlines()
+    lines1 = open('/home/yiling/GitHub/jobs/TwitterML/user_list/user_space.csv','r').readlines()
+    lines2 = open('/home/yiling/GitHub/jobs/TwitterML/user_list/user_space_individual.csv','r').readlines()
+
+    lines = lines1 + lines2
 
     users = []
+    temp = []
 
     for line in lines:
         spline = line.rstrip('\n').split(',')
-        users.append('@' + str(spline[0]))
+
+        if spline[0] not in temp:
+            users.append('@' + str(spline[0]))
+            temp.append(spline[0])
 
     users = ','.join(users)
 
-    stream.filter(languages=["en"], track=[users], async=True)
+    stream.filter(languages=["en"],track=[users], async=True)
 
-#stream.filter(languages=["en"], track=hashtaglist, async=True)
+    #stream.filter(languages=["en"], track=hashtaglist, async=True)

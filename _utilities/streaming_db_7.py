@@ -28,8 +28,8 @@ import resource
 #     sys.exit(1)
 
 
-if os.path.isfile('/Users/yi-linghwong/keys/twitter_api_keys_29.txt'):
-    lines = open('/Users/yi-linghwong/keys/twitter_api_keys_29.txt','r').readlines()
+if os.path.isfile('/Users/yi-linghwong/keys/twitter_api_keys_1.txt'):
+    lines = open('/Users/yi-linghwong/keys/twitter_api_keys_1.txt','r').readlines()
 
 
 else:
@@ -144,7 +144,7 @@ class listener(StreamListener):
                         #           "followers_count": followers_count, "friends_count": friends_count,
                         #           "retweet_count": retweet_count, "favourite_count": favourite_count, "text": text,}
 
-                        print (tweets)
+                        #print (tweets)
 
                         collection.insert(tweets)
 
@@ -214,13 +214,21 @@ if __name__ == '__main__':
     stream = Stream(auth, l)
 
 
-    lines = open('../user_list/user_space.csv', 'r').readlines()
+    lines1 = open('../user_list/user_space.csv', 'r').readlines()
+    lines2 = open('../user_list/user_space_individual.csv','r').readlines()
+
+    lines = lines1 + lines2
 
     users = []
+    temp = []
 
     for line in lines:
         spline = line.rstrip('\n').split(',')
-        users.append('@' + str(spline[0]))
+
+        if spline[0] not in temp:
+            users.append('@' + str(spline[0]))
+            temp.append(spline[0])
+
 
     users = ','.join(users)
 
