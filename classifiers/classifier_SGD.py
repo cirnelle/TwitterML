@@ -99,7 +99,7 @@ class SGD():
         # train the classifier
 
         print("Fitting data ...")
-        clf = SGDClassifier(loss=_loss, penalty=_penalty, alpha=_alpha, random_state=42).fit(X_tfidf, y_train)
+        clf = SGDClassifier(loss=_loss, penalty=_penalty, alpha=_alpha, n_iter=_n_iter, random_state=42).fit(X_tfidf, y_train)
 
 
         ##################
@@ -165,7 +165,7 @@ class SGD():
 
         print("Shape of array after feature selection is " + str(X_features.shape))
 
-        clf = SGDClassifier(loss=_loss, penalty=_penalty, alpha=_alpha, random_state=42).fit(X_features, y_train)
+        clf = SGDClassifier(loss=_loss, penalty=_penalty, alpha=_alpha, n_iter=_n_iter, random_state=42).fit(X_features, y_train)
 
         # get the features which are selected and write to file
 
@@ -236,6 +236,7 @@ class SGD():
             'vect__use_idf': (True, False),
             'clf__loss': ('hinge', 'log'),
             'clf__penalty': ('l2', 'l1', 'elasticnet'),
+            'clf__n_iter': (5,10), #interesting because big n_iter doesn't perform as well as small one
             'clf__alpha': (0.001, 0.0001, 0.0005),
         }
 
@@ -352,6 +353,7 @@ class SGD():
             'selector__percentile': (85, 95, 100),
             'clf__loss': ('hinge', 'log'),
             'clf__penalty': ('l2', 'l1', 'elasticnet'),
+            'clf__n_iter': (5,10), #interesting because big n_iter doesn't perform as well as small one
             'clf__alpha': (0.001, 0.0001, 0.0005),
 
         }
@@ -756,6 +758,7 @@ _ngram_range = (1,1)
 _use_idf = True
 _loss = 'log' # 'hinge' gives linear SVM; 'log' gives logistic regression
 _penalty = 'l2'
+_n_iter = 5
 _alpha = 0.0005
 _score_func = chi2
 _percentile = 85

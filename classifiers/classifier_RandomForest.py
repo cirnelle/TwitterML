@@ -6,7 +6,7 @@ from sklearn import cross_validation
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
-from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.grid_search import GridSearchCV
 from sklearn.cross_validation import train_test_split
@@ -24,7 +24,7 @@ from collections import Counter
 from nltk.util import ngrams
 
 
-class ExtraTree():
+class RandomForest():
 
     def train_test_split(self):
 
@@ -96,7 +96,7 @@ class ExtraTree():
         # train the classifier
 
         print ("Fitting data ...")
-        clf = ExtraTreesClassifier(n_estimators=_n_estimators, criterion=_criterion, max_depth=_max_depth, min_samples_split=_min_samples_split).fit(X_tfidf, y_train)
+        clf = RandomForestClassifier(n_estimators=_n_estimators, criterion=_criterion, max_depth=_max_depth, min_samples_split=_min_samples_split).fit(X_tfidf, y_train)
 
 
         ##################
@@ -164,7 +164,7 @@ class ExtraTree():
 
         print ("Shape of array after feature selection is "+str(X_features.shape))
 
-        clf = ExtraTreesClassifier(n_estimators=_n_estimators, criterion=_criterion, max_depth=_max_depth, min_samples_split=_min_samples_split).fit(X_features, y_train)
+        clf = RandomForestClassifier(n_estimators=_n_estimators, criterion=_criterion, max_depth=_max_depth, min_samples_split=_min_samples_split).fit(X_features, y_train)
 
         # get the features which are selected and write to file
 
@@ -226,7 +226,7 @@ class ExtraTree():
 
         pipeline = Pipeline([
                 ('vect', TfidfVectorizer(stop_words=stopwords, min_df=3, max_df=0.90)),
-                ('clf', ExtraTreesClassifier()),
+                ('clf', RandomForestClassifier()),
         ])
 
 
@@ -287,7 +287,7 @@ class ExtraTree():
         # train the classifier
 
         print ("Fitting data with best parameters ...")
-        clf = ExtraTreesClassifier().fit(X_tfidf, y_train)
+        clf = RandomForestClassifier().fit(X_tfidf, y_train)
 
         ##################
         # get cross validation score
@@ -337,7 +337,7 @@ class ExtraTree():
         pipeline = Pipeline([
                 ('vect', TfidfVectorizer(stop_words=stopwords, min_df=3, max_df=0.90)),
                 ("selector", SelectPercentile()),
-                ('clf', ExtraTreesClassifier()),
+                ('clf', RandomForestClassifier()),
         ])
 
 
@@ -420,7 +420,7 @@ class ExtraTree():
 
         # run classifier on selected features
 
-        clf = ExtraTreesClassifier().fit(X_features, y_train)
+        clf = RandomForestClassifier().fit(X_features, y_train)
 
         # get the features which are selected and write to file
 
@@ -506,7 +506,7 @@ class ExtraTree():
         # train the classifier
 
         print("Fitting data ...")
-        clf = ExtraTreesClassifier().fit(X_tfidf, y_train)
+        clf = RandomForestClassifier().fit(X_tfidf, y_train)
 
         ##################
         # get cross validation score
@@ -757,7 +757,7 @@ class ExtraTree():
 
         transform = SelectPercentile(score_func=_score_func)
 
-        clf = Pipeline([('anova', transform), ('clf', ExtraTreesClassifier())])
+        clf = Pipeline([('anova', transform), ('clf', RandomForestClassifier())])
 
         ###############################################################################
         # Plot the cross-validation score as a function of percentile of features
@@ -852,60 +852,60 @@ if __name__ == '__main__':
     y = get_data_set()[1]
     stopwords = get_stop_words()
 
-    et = ExtraTree()
+    rf = RandomForest()
 
     ###################
     # select one of the method to split data using Cross Validation
     ###################
 
-    docs_train,docs_test,y_train,y_test = et.train_test_split()
-    #docs_train,docs_test,y_train,y_test = et.stratified_shufflesplit()
-    #docs_train,docs_test,y_train,y_test = et.stratified_kfolds()
+    docs_train,docs_test,y_train,y_test = rf.train_test_split()
+    #docs_train,docs_test,y_train,y_test = rf.stratified_shufflesplit()
+    #docs_train,docs_test,y_train,y_test = rf.stratified_kfolds()
 
 
     ##################
     # run ExtraTree Classifier
     ##################
 
-    clf, count_vect = et.train_classifier()
+    clf, count_vect = rf.train_classifier()
 
 
     ###################
     # run ExtraTree Classifier and use feature selection
     ###################
 
-    #clf, count_vect = et.train_classifier_use_feature_selection()
+    #clf, count_vect = rf.train_classifier_use_feature_selection()
 
 
     ###################
     # use pipeline
     ###################
 
-    #clf, count_vect = et.use_pipeline()
+    #clf, count_vect = rf.use_pipeline()
 
     ###################
     # use pipeline and use feature selection
     ###################
 
-    #clf, count_vect = et.use_pipeline_with_fs()
+    #clf, count_vect = rf.use_pipeline_with_fs()
 
 
     ###################
     # Get feature importance
     ###################
 
-    et.get_important_features(clf,count_vect)
+    rf.get_important_features(clf,count_vect)
 
 
     ###################
     # Run classifier and then predict tweets
     ###################
 
-    #et.predict_tweets()
+    #rf.predict_tweets()
 
 
     ##################
     # Plot feature selection
     ##################
 
-    #et.plot_feature_selection()
+    #rf.plot_feature_selection()
