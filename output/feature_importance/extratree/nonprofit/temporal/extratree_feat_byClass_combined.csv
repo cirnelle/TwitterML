@@ -1,0 +1,90 @@
+HER,anx_yes discrep_yes,35
+HER,differ_yes high_wps,4
+LER,affiliation_yes swear_yes,2
+LER,insight_yes risk_yes,4
+LER,posemo_yes many_sixltr,22
+HER,certain_yes low_wps,3
+LER,is_clout_yes netspeak_yes,11
+LER,filler_yes,8
+LER,affiliation_yes has_exclam,12
+HER,see_yes few_sixltr,5
+LER,affiliation_yes has_qmark,7
+HER,sad_yes power_yes,18
+HER,is_analytic_no hear_yes,3
+HER,discrep_yes feel_yes,12
+HER,low_wps has_video,10
+LER,negemo_yes feel_yes,2
+LER,certain_yes has_hashtag,2
+HER,is_analytic_no certain_yes,11
+HER,nonflu_yes has_photo,3
+HER,is_clout_yes feel_yes,6
+HER,discrep_yes many_sixltr,2
+HER,hear_yes high_wps,3
+HER,anx_yes certain_yes,10
+HER,sad_yes feel_yes,6
+LER,see_yes has_hashtag,4
+HER,feel_yes risk_yes,6
+HER,anx_yes risk_yes,6
+LER,achieve_yes high_wps,4
+HER,negemo_yes reward_yes,9
+HER,is_authentic_yes low_wps,2
+LER,is_clout_no see_yes,3
+HER,anx_yes hear_yes,4
+HER,many_sixltr has_animated_gif,5
+HER,hear_yes many_sixltr,5
+LER,insight_yes many_sixltr,5
+HER,anx_yes achieve_yes,3
+HER,anx_yes differ_yes,10
+LER,power_yes has_exclam,4
+HER,netspeak_yes has_animated_gif,19
+LER,risk_yes nonflu_yes,2
+HER,reward_yes swear_yes,3
+HER,tentat_yes risk_yes,16
+HER,anger_yes reward_yes,8
+HER,anx_yes netspeak_yes,4
+HER,hear_yes few_sixltr,5
+LER,nonflu_yes low_wps,8
+LER,affiliation_yes nonflu_yes,2
+LER,assent_yes filler_yes,5
+LER,is_clout_yes many_sixltr,2
+LER,nonflu_yes has_exclam,3
+LER,assent_yes nonflu_yes,7
+LER,is_clout_no power_yes,4
+HER,netspeak_yes filler_yes,6
+HER,differ_yes has_hashtag,2
+LER,cause_yes many_sixltr,5
+HER,risk_yes assent_yes,4
+LER,is_analytic_no reward_yes,2
+LER,power_yes swear_yes,5
+LER,tentat_yes low_wps,2
+LER,affiliation_yes assent_yes,4
+HER,has_photo,4323
+HER,has_photo has_hashtag,2933
+HER,has_url,7001
+HER,netspeak_yes has_photo,844
+HER,netspeak_yes,7117
+HER,has_hashtag,5304
+LER,has_exclam has_hashtag,947
+HER,power_yes,3499
+HER,has_exclam has_photo,1147
+HER,has_hashtag has_url,4566
+HER,few_sixltr has_photo,528
+LER,high_wps,2136
+HER,affiliation_yes,3788
+LER,is_analytic_yes,2458
+HER,posemo_yes,3886
+LER,many_sixltr,2711
+LER,netspeak_yes many_sixltr,2031
+HER,negemo_yes anger_yes,822
+LER,is_authentic_yes,2291
+HER,has_photo has_url,1390
+HER,power_yes netspeak_yes,2211
+HER,negemo_yes,1867
+LER,achieve_yes,1923
+HER,is_analytic_no,2300
+HER,insight_yes,1811
+HER,cause_yes,1767
+HER,risk_yes,988
+HER,few_sixltr,2161
+HER,low_wps has_photo,356
+HER,is_clout_yes,2055

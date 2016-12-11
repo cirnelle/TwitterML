@@ -990,36 +990,36 @@ class FeatureConstruction():
 # variables
 ###############
 
-path_to_liwc_result_file = '../output/liwc/nasa/liwc_nasa_real_engrate.txt'
-path_to_labelled_raw_file = '../output/engrate/nasa/REAL_labelled_nasa_raw.csv'
-path_to_labelled_preprocessed_file = '../output/engrate/nasa/REAL_labelled_nasa.csv'
+path_to_liwc_result_file = '../output/liwc/temporal/liwc_nonprofit_training.txt'
+path_to_labelled_raw_file = '../output/engrate/nonprofit/temporal/training_nonprofit_raw.csv'
+path_to_labelled_preprocessed_file = '../output/engrate/nonprofit/temporal/training_nonprofit.csv'
 
-path_to_store_psychometric_feature_file = '../output/features/nasa/real/psychometrics.txt'
-path_to_store_grammar_feature_file = '../output/features/nasa/real/grammar.txt'
-path_to_store_combined_feature_file = '../output/features/nasa/real/combined.txt'
-path_to_store_combined_feature_all_file = '../output/features/nasa/real/combined_all.txt' #includes word features
+path_to_store_psychometric_feature_file = '../output/features/nonprofit/temporal/training/psychometrics.txt'
+path_to_store_grammar_feature_file = '../output/features/nonprofit/temporal/training/grammar.txt'
+path_to_store_combined_feature_file = '../output/features/nonprofit/temporal/training/combined.txt'
+path_to_store_combined_feature_all_file = '../output/features/nonprofit/temporal/training/combined_all.txt' #includes word features
 
-path_to_store_labelled_psychometric_file = '../output/features/nasa/real/labelled_psychometrics.csv'
-path_to_store_labelled_grammar_file = '../output/features/nasa/real/labelled_grammar.csv'
-path_to_store_labelled_urlhashtagmedia_file = '../output/features/nasa/real/labelled_urlhashtagmedia.csv'
-path_to_store_labelled_combined_features_file = '../output/features/nasa/real/labelled_combined.csv'
-path_to_store_labelled_combined_features_all_file = '../output/features/nasa/real/labelled_combined_all.csv'
+path_to_store_labelled_psychometric_file = '../output/features/nonprofit/temporal/training/labelled_psychometrics.csv'
+path_to_store_labelled_grammar_file = '../output/features/nonprofit/temporal/training/labelled_grammar.csv'
+path_to_store_labelled_urlhashtagmedia_file = '../output/features/nonprofit/temporal/training/labelled_urlhashtagmedia.csv'
+path_to_store_labelled_combined_features_file = '../output/features/nonprofit/temporal/training/labelled_combined.csv'
+path_to_store_labelled_combined_features_all_file = '../output/features/nonprofit/temporal/training/labelled_combined_all.csv'
 
 
 # boundary values
 
 analytic_top = 98.0
-analytic_bottom = 86.0
-clout_top = 87.0
+analytic_bottom = 82.0
+clout_top = 93.0
 clout_bottom = 50.0
-authentic_top = 43.0
-authentic_bottom = 2.0
-tone_top = 87.0
+authentic_top = 19.0
+authentic_bottom = 1.0
+tone_top = 96.0
 tone_bottom = 25.0
-sixltr_top = 26.0
-sixltr_bottom = 16.0
-wps_top = 23.0
-wps_bottom = 9.0
+sixltr_top = 31.0
+sixltr_bottom = 18.0
+wps_top = 17.0
+wps_bottom = 8.0
 
 
 if __name__ == '__main__':

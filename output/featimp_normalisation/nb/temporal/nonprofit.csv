@@ -1,0 +1,402 @@
+
+LER,is_analytic_yes netspeak_yes has_url,3.52870533148
+LER,is_clout_no netspeak_yes,3.30472316039
+HER,has_animated_gif,3.28059062751
+HER,low_wps has_photo has_url,3.1526170746
+HER,achieve_yes netspeak_yes has_photo,3.13977679695
+HER,has_animated_gif has_url,2.96828016471
+HER,few_sixltr has_photo has_url,2.92896054315
+HER,few_sixltr has_photo,2.90472130695
+HER,netspeak_yes few_sixltr has_photo,2.8791935772
+HER,has_animated_gif has_hashtag,2.83838682813
+HER,has_animated_gif has_hashtag has_url,2.83838682813
+LER,assent_yes has_url,2.81189429268
+LER,netspeak_yes assent_yes has_url,2.81189429268
+HER,has_exclam has_animated_gif,2.73466742223
+LER,see_yes netspeak_yes has_url,2.73365903842
+LER,assent_yes high_wps has_hashtag,2.73030726966
+HER,few_sixltr has_photo has_hashtag,2.72925404641
+HER,risk_yes netspeak_yes has_photo,2.72763065462
+LER,many_sixltr has_video has_url,2.71768263957
+HER,few_sixltr low_wps has_photo,2.68825137212
+LER,is_authentic_yes see_yes netspeak_yes,2.64092504409
+HER,low_wps has_photo,2.58324051259
+LER,assent_yes many_sixltr has_hashtag,2.55554680744
+LER,is_analytic_yes see_yes netspeak_yes,2.51710010346
+LER,posemo_yes netspeak_yes has_url,2.42722633832
+HER,power_yes netspeak_yes has_photo,2.42564437991
+HER,has_exclam has_animated_gif has_hashtag,2.38125104077
+HER,netspeak_yes low_wps has_photo,2.36524970371
+LER,is_clout_no netspeak_yes has_video,2.35663834945
+LER,is_authentic_yes netspeak_yes has_url,2.35276385049
+LER,posemo_yes see_yes power_yes,2.26268103969
+HER,differ_yes power_yes risk_yes,2.257690188
+HER,reward_yes netspeak_yes has_photo,2.23747156271
+HER,high_wps has_animated_gif,2.23623346868
+HER,low_wps has_photo has_hashtag,2.22421135403
+HER,negemo_yes anger_yes sad_yes,2.17741567891
+LER,high_wps has_video has_url,2.14970561336
+LER,assent_yes has_exclam has_hashtag,2.12999181305
+LER,netspeak_yes assent_yes many_sixltr,2.10788823575
+HER,netspeak_yes has_photo has_hashtag,2.10193381846
+HER,netspeak_yes has_photo,2.07681567354
+HER,differ_yes netspeak_yes has_photo,2.0758508873
+HER,low_wps has_animated_gif,2.07076536739
+HER,anger_yes sad_yes,2.05227920524
+LER,netspeak_yes assent_yes has_hashtag,2.03755249194
+HER,netspeak_yes high_wps has_animated_gif,2.03274634658
+LER,many_sixltr low_wps has_url,2.03026120156
+LER,assent_yes many_sixltr,2.02491865011
+LER,many_sixltr has_exclam has_hashtag,2.0147305554
+LER,assent_yes many_sixltr high_wps,2.0108911941
+HER,many_sixltr low_wps has_photo,2.01045942756
+HER,assent_yes few_sixltr has_photo,2.00096164332
+LER,is_authentic_yes hear_yes,1.99848883747
+LER,is_clout_no netspeak_yes many_sixltr,1.99615034848
+LER,cause_yes netspeak_yes has_hashtag,1.97986209146
+LER,assent_yes has_hashtag has_url,1.97921939016
+LER,is_authentic_yes netspeak_yes assent_yes,1.97130237626
+HER,netspeak_yes has_photo has_url,1.97098369649
+LER,low_wps has_exclam has_url,1.94785547212
+HER,discrep_yes certain_yes differ_yes,1.93358823181
+HER,has_exclam has_photo has_hashtag,1.91669700799
+HER,low_wps has_exclam has_photo,1.91582484403
+HER,certain_yes power_yes risk_yes,1.90981029393
+HER,anger_yes tentat_yes,1.89825104653
+LER,is_analytic_yes netspeak_yes assent_yes,1.88459806783
+HER,few_sixltr has_animated_gif,1.88255542283
+HER,high_wps has_animated_gif has_hashtag,1.85131345648
+HER,risk_yes netspeak_yes has_exclam,1.84924190158
+HER,few_sixltr has_exclam has_photo,1.84698060139
+HER,few_sixltr has_exclam has_animated_gif,1.84565677624
+HER,certain_yes differ_yes feel_yes,1.82427704763
+LER,is_authentic_yes hear_yes netspeak_yes,1.82285800099
+HER,netspeak_yes has_exclam has_photo,1.80429977674
+LER,has_video has_url,1.79991355003
+HER,has_exclam has_photo,1.79961309461
+HER,negemo_yes anger_yes tentat_yes,1.79901368378
+HER,feel_yes netspeak_yes has_photo,1.7903138628
+LER,many_sixltr has_video,1.7845298399
+HER,anger_yes certain_yes,1.77865872203
+LER,assent_yes high_wps has_url,1.77018764858
+HER,is_clout_yes is_tone_no posemo_yes,1.75933577901
+LER,is_authentic_yes see_yes,1.75541137286
+LER,see_yes netspeak_yes many_sixltr,1.73672983339
+LER,netspeak_yes many_sixltr has_video,1.73034521375
+HER,netspeak_yes few_sixltr has_animated_gif,1.72809002172
+LER,reward_yes has_exclam has_hashtag,1.72296904068
+LER,assent_yes many_sixltr has_url,1.7121145621
+LER,is_clout_no netspeak_yes few_sixltr,1.70564892102
+HER,has_exclam has_animated_gif has_url,1.70511037491
+LER,has_exclam has_hashtag has_url,1.66761074814
+HER,netspeak_yes has_animated_gif,1.65950500778
+LER,assent_yes has_hashtag,1.65659799975
+HER,anger_yes discrep_yes certain_yes,1.65536240685
+HER,negemo_yes risk_yes,1.65519329158
+HER,negemo_yes anger_yes certain_yes,1.65393071265
+LER,assent_yes has_qmark has_hashtag,1.65054460046
+HER,discrep_yes certain_yes power_yes,1.63974943122
+HER,anger_yes certain_yes differ_yes,1.63796077925
+HER,anger_yes affiliation_yes power_yes,1.63068260443
+LER,is_authentic_yes see_yes hear_yes,1.62742308787
+HER,has_exclam has_qmark has_photo,1.62634817498
+LER,tentat_yes netspeak_yes has_url,1.6233453043
+HER,low_wps has_exclam has_animated_gif,1.62058372831
+LER,see_yes affiliation_yes low_wps,1.61926151012
+HER,certain_yes differ_yes hear_yes,1.60917510438
+HER,high_wps has_animated_gif has_url,1.59869437941
+LER,has_exclam has_url,1.59660548932
+LER,insight_yes affiliation_yes many_sixltr,1.59618693991
+HER,assent_yes low_wps has_photo,1.59206046512
+LER,is_analytic_yes netspeak_yes has_hashtag,1.5904274177
+HER,low_wps has_animated_gif has_hashtag,1.57506462052
+HER,affiliation_yes netspeak_yes has_photo,1.57180042151
+LER,assent_yes has_exclam has_url,1.56938662465
+HER,certain_yes differ_yes power_yes,1.56821583469
+LER,hear_yes netspeak_yes many_sixltr,1.56734894007
+LER,is_analytic_yes is_authentic_yes netspeak_yes,1.56008663979
+HER,anger_yes insight_yes differ_yes,1.55965336312
+HER,feel_yes power_yes netspeak_yes,1.54800624853
+HER,posemo_yes affiliation_yes risk_yes,1.5469245499
+HER,differ_yes risk_yes netspeak_yes,1.54558540808
+LER,posemo_yes netspeak_yes high_wps,1.54210287972
+HER,anger_yes tentat_yes differ_yes,1.54109803365
+HER,few_sixltr has_exclam has_video,1.54014516933
+LER,cause_yes netspeak_yes assent_yes,1.53701214646
+HER,affiliation_yes few_sixltr has_hashtag,1.5272335024
+HER,anger_yes cause_yes affiliation_yes,1.52260415979
+LER,assent_yes many_sixltr has_qmark,1.51847974797
+HER,is_clout_yes discrep_yes affiliation_yes,1.51667291955
+HER,negemo_yes risk_yes netspeak_yes,1.51394607003
+LER,low_wps has_url,1.51392747457
+LER,is_authentic_yes netspeak_yes has_exclam,1.51331101562
+HER,has_photo has_hashtag,1.51320660769
+HER,has_photo has_hashtag has_url,1.51320660769
+LER,is_analytic_yes is_authentic_yes see_yes,1.51311106791
+LER,achieve_yes netspeak_yes assent_yes,1.50832124066
+HER,anger_yes insight_yes certain_yes,1.50442373735
+HER,has_exclam has_photo has_url,1.50423546252
+HER,cause_yes netspeak_yes has_photo,1.49624717339
+LER,is_tone_yes posemo_yes many_sixltr,1.49059923461
+LER,posemo_yes many_sixltr,1.49059923461
+LER,has_exclam has_qmark has_hashtag,1.48396783849
+LER,has_exclam has_hashtag,1.48162315515
+LER,is_analytic_yes reward_yes netspeak_yes,1.47923343867
+LER,is_authentic_yes see_yes affiliation_yes,1.47834084882
+LER,insight_yes netspeak_yes assent_yes,1.47543057668
+HER,negemo_yes anger_yes discrep_yes,1.47028122989
+HER,is_tone_no posemo_yes,1.46944505859
+HER,is_tone_no posemo_yes negemo_yes,1.46944505859
+LER,is_analytic_yes netspeak_yes,1.46911000123
+LER,netspeak_yes has_exclam has_hashtag,1.46585343323
+HER,is_clout_yes discrep_yes certain_yes,1.46303937632
+HER,netspeak_yes low_wps has_animated_gif,1.46105747159
+LER,reward_yes netspeak_yes assent_yes,1.45985645115
+LER,is_analytic_yes see_yes,1.45265433467
+LER,is_analytic_yes is_clout_yes tentat_yes,1.45145467177
+HER,tentat_yes risk_yes,1.44412628524
+HER,tentat_yes risk_yes netspeak_yes,1.44412628524
+HER,anger_yes differ_yes affiliation_yes,1.43256944257
+LER,see_yes affiliation_yes many_sixltr,1.43045075873
+LER,affiliation_yes has_exclam,1.42915287873
+HER,is_analytic_yes posemo_yes insight_yes,1.42863067395
+HER,is_analytic_yes certain_yes power_yes,1.42246593003
+LER,has_exclam has_qmark has_url,1.42043692992
+LER,cause_yes many_sixltr,1.41271688136
+HER,insight_yes certain_yes power_yes,1.40778272397
+LER,reward_yes has_exclam,1.40702588217
+LER,posemo_yes netspeak_yes nonflu_yes,1.40586536095
+LER,affiliation_yes netspeak_yes has_url,1.40562563668
+HER,anger_yes cause_yes discrep_yes,1.40088163954
+LER,few_sixltr has_qmark has_url,1.39862429558
+LER,insight_yes netspeak_yes has_url,1.39768638922
+LER,assent_yes has_qmark,1.39527641188
+LER,netspeak_yes assent_yes has_qmark,1.39527641188
+HER,is_tone_no negemo_yes risk_yes,1.3940392672
+HER,anger_yes discrep_yes,1.39290299735
+HER,low_wps has_animated_gif has_url,1.39019656513
+LER,few_sixltr has_video has_url,1.38927483542
+LER,is_authentic_yes hear_yes affiliation_yes,1.38534736234
+LER,is_authentic_yes affiliation_yes reward_yes,1.38279986392
+HER,tentat_yes certain_yes power_yes,1.37551321472
+LER,assent_yes high_wps,1.37465687641
+HER,few_sixltr has_animated_gif has_url,1.37401096573
+LER,affiliation_yes netspeak_yes assent_yes,1.37281742695
+HER,anger_yes discrep_yes differ_yes,1.37146252795
+LER,insight_yes achieve_yes netspeak_yes,1.37000931385
+HER,differ_yes risk_yes,1.36903223087
+HER,is_analytic_no is_tone_no posemo_yes,1.36526235608
+LER,posemo_yes many_sixltr has_exclam,1.36387301223
+LER,netspeak_yes has_url,1.3610977794
+LER,is_clout_no is_authentic_yes netspeak_yes,1.35812667088
+LER,affiliation_yes many_sixltr has_qmark,1.35760798217
+LER,netspeak_yes assent_yes high_wps,1.35420843244
+LER,is_analytic_yes is_authentic_yes tentat_yes,1.35394060699
+LER,is_analytic_yes is_authentic_yes hear_yes,1.3520583593
+HER,posemo_yes negemo_yes risk_yes,1.35154726556
+HER,has_photo,1.34736248855
+HER,certain_yes netspeak_yes has_photo,1.34725377708
+LER,few_sixltr has_exclam has_url,1.3463587357
+LER,affiliation_yes reward_yes has_hashtag,1.3458435117
+LER,is_clout_yes tentat_yes affiliation_yes,1.34407173475
+
+HER,jude,5.02279737122
+HER,st jude,5.02279737122
+LER,liana,4.75403615006
+LER,volunteer liana,4.74830799949
+LER,egfellow,4.73478906753
+HER,488,4.54166809081
+HER,488 7386,4.53792507178
+HER,7386,4.53792507178
+HER,866,4.5360210856
+HER,866 488,4.5360210856
+LER,impinv,4.51052409292
+LER,video4change,4.44288023655
+HER,pet,4.38500157947
+LER,19th 2015,4.38020113329
+HER,retweet,4.37815933456
+LER,buessecker,4.37553187181
+LER,buessecker peru,4.37553187181
+LER,liana buessecker,4.37553187181
+LER,socent,4.37542974782
+LER,5th march,4.37040832824
+LER,feb 5th,4.37040832824
+LER,march 19th,4.37040832824
+LER,program feb,4.37040832824
+HER,pp,4.32580990933
+LER,has_url video4change,4.2844919872
+HER,lgbtq,4.28357830825
+HER,abortion,4.25385809732
+LER,bigboldchange,4.18673886729
+HER,adoptaspca,4.17027418598
+LER,video4change daily,4.12232414415
+LER,daily stories,4.1077585252
+HER,kids st,4.0840830375
+HER,pet week,4.03477862828
+HER,help home,4.02017683521
+HER,retweet adoptaspca,4.01231098282
+HER,standwithpp,4.00431769106
+HER,st,4.00221010197
+LER,has_url egfellow,3.92646859404
+HER,home pet,3.88724916703
+HER,rotary,3.8685137157
+LER,socents,3.85402152229
+LER,acumen,3.83435396488
+LER,befearless,3.81721548387
+HER,endalz,3.80735580925
+HER,notmycandidate,3.79913871015
+HER,pray,3.78007467042
+LER,2015 volunteer,3.76263389774
+HER,lgbtq youth,3.75516469088
+HER,habitat,3.74041384433
+LER,africayouthfwd,3.71914494001
+LER,kiva,3.71594621887
+LER,egfellow org,3.70130933803
+LER,gwconf2015,3.6862746709
+HER,rescued,3.6760664659
+LER,seizethefuture,3.66892494986
+LER,fellows,3.66177147554
+LER,egfellows,3.63928154513
+LER,getbeyondbetter,3.63552565009
+LER,entrepreneurs,3.63095751531
+HER,polio,3.62443168395
+LER,86aids,3.61437587602
+HER,parenthood,3.58988182539
+HER,planned parenthood,3.58988182539
+LER,turn donation,3.58929637761
+HER,reprorights,3.57138509407
+HER,alzheimer,3.57020150222
+LER,thanks ff,3.56612141808
+LER,2nd trip,3.55066850515
+LER,kf26,3.5440030272
+HER,gopdebate,3.54078810029
+LER,hervey 2nd,3.53703908808
+LER,trip cartagena,3.52357419687
+HER,tpp,3.5132659485
+LER,sechallenge,3.5043756379
+HER,has_animated_gif,3.49591963554
+LER,socentchat,3.47814771271
+LER,cartagena,3.47104808113
+HER,has_animated_gif has_url,3.44634907157
+HER,transgender,3.44083001239
+HER,trans,3.41857277551
+HER,has_url st,3.41272901392
+LER,skollwf,3.40555845051
+HER,freeraif,3.37294238272
+LER,acumenfellowsama,3.37252034911
+LER,elderly care,3.37069916746
+HER,ppact4hillary,3.36538805852
+LER,cusco orphanage,3.36177836012
+HER,kunduz,3.35722129202
+LER,is_clout_no netspeak_yes,3.35646927625
+HER,habitatforhumanity,3.34916938394
+HER,wewontgoback,3.3486573577
+HER,anti abortion,3.34083552676
+LER,orphanage program,3.33329315963
+HER,extremists,3.32933795437
+LER,cusco,3.31279327662
+LER,periscope,3.30325321527
+HER,lgbt,3.30159996363
+HER,happytail,3.29576524031
+HER,endpolio,3.29313535263
+LER,children center,3.27896682744
+HER,imwithher,3.27572826715
+HER,has_exclam has_animated_gif,3.27367400873
+LER,camilla,3.27277462817
+LER,abroad la,3.27249025382
+LER,peru cusco,3.26222313373
+LER,ff,3.25885881713
+LER,abroad honduras,3.25476013283
+LER,camilla farrell,3.25403157408
+LER,farrell,3.25403157408
+HER,reprohealth,3.25188549751
+LER,chile elderly,3.24985071903
+LER,espa,3.24737558518
+LER,espa ol,3.24737558518
+LER,ol,3.24737558518
+LER,cartagena abroaderview,3.22991447019
+HER,women health,3.21887468365
+LER,farrell medical,3.21393226965
+LER,honduras camilla,3.21393226965
+LER,kf27,3.19375922864
+LER,bbgnbt,3.19051269822
+LER,investee,3.18829251586
+LER,livestrong,3.1790397271
+LER,hervey,3.17140851783
+LER,jessica hervey,3.17140851783
+LER,entrepreneurship,3.1708911959
+LER,program june,3.16537830124
+HER,scotus,3.16156286993
+LER,has_url arrival,3.1593072241
+LER,august,3.14866338905
+LER,mcon,3.14216973462
+LER,volunteer colombia,3.14152003372
+LER,has_url turn,3.13963027148
+HER,inourcorner,3.13044050779
+HER,safe legal,3.12817842641
+HER,msf,3.12642443263
+HER,legal abortion,3.12554499003
+HER,has_url breaking,3.12451759499
+LER,5th,3.12219986592
+LER,belize,3.12195531862
+LER,cartagena pictures,3.11413963514
+LER,pictures children,3.11413963514
+HER,iran,3.10137450921
+HER,cruelty,3.09642094417
+LER,medical program,3.09560567645
+LER,peru,3.09089134637
+LER,befair,3.08988016456
+LER,live periscope,3.08906639547
+HER,has_animated_gif has_hashtag,3.08184495912
+HER,flintwatercrisis,3.07751928683
+LER,video4justice,3.0702634324
+HER,24 866,3.06569410638
+LER,assent_yes has_url,3.04905265844
+HER,gop,3.04715827405
+HER,solidarity,3.04571361032
+LER,uploaded,3.04199351508
+HER,has_url lgbtq,3.04171098036
+LER,que,3.03690792407
+HER,anti,3.03587038593
+HER,mondaymotivation,3.03451632537
+LER,workonpurpose,3.03235168941
+LER,perry volunteer,3.03202177241
+HER,flint,3.03101066053
+LER,arrival,3.02670920133
+HER,askdrkasich,3.0212726818
+LER,has_url uploaded,3.02008478959
+LER,15 social,3.01667757275
+LER,kathmandu 15,3.01667757275
+LER,tech,3.01387769092
+LER,give2future,3.01299685303
+HER,muttmonday,3.00647989953
+LER,vojin,3.00138721879
+HER,home happytail,2.98546448279
+HER,lifeline,2.98311406014
+LER,sxsw2016,2.97895770439
+HER,animals,2.97852205311
+LER,milan,2.96680516929
+HER,planned,2.96518726494
+HER,nationalcomingoutday,2.96154684308
+LER,dxichat,2.96078908382
+HER,didyouknow,2.96042495457
+LER,sector,2.95758276929
+LER,skoll,2.95566273318
+HER,forever home,2.95553368993
+LER,mayoclinicradio,2.94830727665
+LER,ashoka,2.94786642725
+HER,gas,2.94575594873
+LER,abroaderview,2.94442413768
+HER,equalityforward,2.94428254847
+HER,gettough,2.93849479965
+LER,inviting,2.93713613149
+LER,vojin nepal,2.93293162491
+HER,support 866,2.93112708614
+HER,birth control,2.92900727892
+HER,few_sixltr has_photo,2.92794960881
+LER,ashokaatskoll,2.92706062249
+HER,florida,2.92382721088
+LER,kf25,2.92077629164
+HER,wildlifewednesday,2.91468035529
+HER,valentinesday,2.91234580883
+HER,lifeline 866,2.90912701136

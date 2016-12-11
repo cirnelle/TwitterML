@@ -259,31 +259,159 @@ class LabelTweetsEngRate():
         print ("Standard deviation is %0.3f" %(er_std))
 
 
+    # ------------------------------
+
+    def label_tweets_with_date(self):
+
+        tweets = self.get_eng_rate()
+
+        # ------------------------------
+        # uncomment the following if already have gold standard (real) engrate
+
+        # lines = open(path_to_store_engrate_output, 'r').readlines()
+        #
+        # tweets = []
+        #
+        # for line in lines:
+        #     spline = line.rstrip('\n').split(',')
+        #     tweets.append(spline)
+
+        print(len(tweets))
+
+        labelled_tweets = []
+        high_er = []
+        low_er = []
+
+        print("#############################")
+        print("Labelling preprocessed posts ...")
+
+        for t in tweets:
+
+            if float(t[7]) > her_boundary:
+
+                if t[9] == '':
+
+                    labelled_tweets.append([t[1], 'nil', 'HER'])
+                    high_er.append(['nil', 'HER'])
+
+                else:
+
+                    labelled_tweets.append([t[1], t[9], 'HER'])
+                    high_er.append([t[9], 'HER'])
+
+            elif float(t[7]) < ler_boundary:
+
+                if t[9] == '':
+
+                    labelled_tweets.append([t[1], 'nil', 'LER'])
+                    low_er.append(['nil', 'LER'])
+
+                else:
+
+                    labelled_tweets.append([t[1], t[9], 'LER'])
+                    low_er.append([t[9], 'LER'])
+
+            else:
+                pass
+
+        print("Length of high ER list is " + str(len(high_er)))
+        print("Length of low ER list is " + str(len(low_er)))
+
+        f = open(path_to_store_labelled_tweets_with_date, 'w')
+
+        for lt in labelled_tweets:
+            f.write(','.join(lt) + '\n')
+
+        f.close()
+
+        print("Length of labelled posts is " + str(len(labelled_tweets)))
+
+
+    def label_tweets_raw_with_date(self):
+
+        tweets = self.get_eng_rate_raw_tweets()
+
+        # ------------------------------
+        # uncomment the following if already have gold standard (real) engrate
+
+        # lines = open(path_to_store_engrate_output, 'r').readlines()
+        #
+        # fb_posts = []
+        #
+        # for line in lines:
+        #     spline = line.rstrip('\n').split(',')
+        #     fb_posts.append(spline)
+
+        print(len(tweets))
+
+        labelled_tweets = []
+        high_er = []
+        low_er = []
+
+        print("#############################")
+        print("Labelling preprocessed posts ...")
+
+        for t in tweets:
+
+            if float(t[7]) > her_boundary:
+
+                if t[9] == '':
+
+                    labelled_tweets.append([t[1], 'nil', 'HER', t[8]])
+                    high_er.append(['nil', 'HER'])
+
+                else:
+
+                    labelled_tweets.append([t[1], t[9], 'HER', t[8]])
+                    high_er.append([t[9], 'HER'])
+
+            elif float(t[7]) < ler_boundary:
+
+                if t[9] == '':
+
+                    labelled_tweets.append([t[1], 'nil', 'LER', t[8]])
+                    low_er.append(['nil', 'LER'])
+
+                else:
+
+                    labelled_tweets.append([t[1], t[9], 'LER', t[8]])
+                    low_er.append([t[9], 'LER'])
+
+            else:
+                pass
+
+        print("Length of high ER list is " + str(len(high_er)))
+        print("Length of low ER list is " + str(len(low_er)))
+
+        f = open(path_to_store_labelled_tweets_raw_with_date, 'w')
+
+        for lt in labelled_tweets:
+            f.write(','.join(lt) + '\n')
+
+        f.close()
+
+        print("Length of labelled posts is " + str(len(labelled_tweets)))
+
+
 ################
 # variables
 ################
 
-path_to_preprocessed_tweet_file = '../tweets/nasa/preprocessed_nasa.csv'
-path_to_store_engrate_output = '../output/engrate/nasa/REAL_engrate_nasa.csv'
-path_to_store_labelled_tweets = '../output/engrate/nasa/REAL_labelled_nasa.csv'
-
-# path_to_preprocessed_tweet_file = '../tweets/realfoll/preprocessed_nonprofit_realfoll.csv'
-# path_to_store_engrate_output = '../output/engrate/realfoll/others/engrate_nonprofit_realfoll.csv'
-# path_to_store_labelled_tweets = '../output/engrate/realfoll/others/labelled_nonprofit_realfoll.csv'
+path_to_preprocessed_tweet_file = '../tweets/nonprofit/preprocessed_nonprofit.csv'
+path_to_store_engrate_output = '../output/engrate/nonprofit/engrate_nonprofit.csv'
+path_to_store_labelled_tweets = '../output/engrate/nonprofit/labelled_nonprofit.csv'
+path_to_store_labelled_tweets_with_date = '../output/engrate/nonprofit/temporal/labelled_nonprofit_dates.csv'
 
 # for LIWC
-path_to_raw_tweet_file = '../tweets/nasa/raw_nasa.csv'
-path_to_store_engrate_output_raw = '../output/engrate/nasa/REAL_engrate_nasa_raw.csv'
-path_to_store_labelled_tweets_raw = '../output/engrate/nasa/REAL_labelled_nasa_raw.csv'
-
-# path_to_raw_tweet_file = '../tweets/realfoll/raw_nonprofit_realfoll.csv'
-# path_to_store_engrate_output_raw = '../output/engrate/realfoll/others/engrate_nonprofit_raw_realfoll.csv'
-# path_to_store_labelled_tweets_raw = '../output/engrate/realfoll/others/labelled_nonprofit_raw_realfoll.csv'
+path_to_raw_tweet_file = '../tweets/nonprofit/raw_nonprofit.csv'
+path_to_store_engrate_output_raw = '../output/engrate/nonprofit/engrate_nonprofit_raw.csv'
+path_to_store_labelled_tweets_raw = '../output/engrate/nonprofit/labelled_nonprofit_raw.csv'
+path_to_store_labelled_tweets_raw_with_date = '../output/engrate/nonprofit/temporal/labelled_nonprofit_raw_dates.csv'
 
 
 # engrate parameters
-her_boundary = 0.0334
-ler_boundary = 0.00701
+her_boundary = 0.023
+ler_boundary = 0.00093
 
 
 if __name__ == "__main__":
@@ -292,12 +420,19 @@ if __name__ == "__main__":
     lt = LabelTweetsEngRate()
 
     #lt.get_eng_rate()
-    lt.label_tweets()
+    #lt.label_tweets()
 
     #lt.get_eng_rate_raw_tweets()
-    lt.label_tweets_raw()
+    #lt.label_tweets_raw()
 
     #lt.get_mean_and_std()
+
+    ##################
+    # label engrate plus date
+    ##################
+
+    lt.label_tweets_with_date()
+    lt.label_tweets_raw_with_date()
 
 
 

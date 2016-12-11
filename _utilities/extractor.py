@@ -1,11 +1,3 @@
-
-
-##########################
-#
-# version 1.0
-# comments: - initial creation of the class
-#
-###########################
 __author__ = 'yi-linghwong'
 
 ##
@@ -17,7 +9,6 @@ import json
 import os
 import sys
 import csv
-from tweepy.streaming import StreamListener
 
 
 if os.path.exists("/Users/yi-linghwong/GitHub/TwitterML/"):
@@ -488,7 +479,7 @@ class Extractor():
 
     def gettweets_by_replies(self):
 
-        ori_tweet_id_list = ['788147826345676800']
+        ori_tweet_id_list = []
 
         retries = 5
         sleep_time = 50
@@ -512,7 +503,7 @@ class Extractor():
                     # get tweets with Twitter search api, EXCLUDING retweets
                     #################
 
-                    tweets = tweepy.Cursor(api.search, q='@mtobis' , count=100,
+                    tweets = tweepy.Cursor(api.search, q='@string' , count=100,
                                            lang="en").items(1500)
                     # tweets=tweepy.Cursor(api.search, q=hashtag+'-filter:retweets', count=100, lang="en").items(1500)
 
@@ -669,13 +660,11 @@ if __name__ == '__main__':
     ext = Extractor()
     api = ext.connetToApi()
 
-
     #################
     # get tweets by user
     #################
 
     #ext.gettweets_by_user()
-
 
     #################
     # get tweets by hashtag

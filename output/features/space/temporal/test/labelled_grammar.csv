@@ -1,0 +1,3506 @@
+tweet,label
+no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam has_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam has_qmark,HER
+low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+low_wps no_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+low_wps has_exclam has_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+low_wps has_exclam has_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr low_wps has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam has_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr low_wps has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr low_wps has_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps no_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam has_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+few_sixltr no_exclam has_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr low_wps no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps has_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+has_exclam has_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam has_qmark,HER
+low_wps has_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+no_exclam has_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+has_exclam has_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps has_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+has_exclam has_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+few_sixltr low_wps has_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam has_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps no_exclam has_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam has_qmark,HER
+many_sixltr has_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+has_exclam has_qmark,HER
+low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps has_exclam has_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr low_wps has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam has_qmark,HER
+has_exclam no_qmark,HER
+few_sixltr no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam has_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps no_exclam has_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam has_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+low_wps no_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps has_exclam has_qmark,HER
+has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+few_sixltr low_wps no_exclam has_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr low_wps has_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+low_wps no_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+low_wps has_exclam has_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr low_wps has_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+few_sixltr low_wps has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+no_exclam has_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+no_exclam has_qmark,HER
+low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam has_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam has_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+low_wps has_exclam has_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+few_sixltr low_wps has_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr has_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+many_sixltr high_wps has_exclam no_qmark,HER
+few_sixltr no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam has_qmark,HER
+low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr low_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr has_exclam has_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr no_exclam has_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam has_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+few_sixltr low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps has_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+high_wps no_exclam no_qmark,HER
+no_exclam has_qmark,HER
+no_exclam has_qmark,HER
+low_wps no_exclam no_qmark,HER
+few_sixltr low_wps has_exclam no_qmark,HER
+has_exclam no_qmark,HER
+many_sixltr has_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+no_exclam no_qmark,HER
+low_wps has_exclam no_qmark,HER
+no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,HER
+few_sixltr low_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+few_sixltr no_exclam no_qmark,HER
+few_sixltr high_wps no_exclam no_qmark,HER
+many_sixltr no_exclam no_qmark,HER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr has_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr low_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr low_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+few_sixltr low_wps has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+low_wps has_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+low_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+low_wps has_exclam has_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr low_wps has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr low_wps has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+low_wps no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+low_wps no_exclam no_qmark,LER
+few_sixltr low_wps has_exclam no_qmark,LER
+few_sixltr low_wps has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+low_wps no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr has_exclam has_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr low_wps no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam has_qmark,LER
+low_wps no_exclam no_qmark,LER
+low_wps no_exclam has_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr low_wps no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr has_exclam no_qmark,LER
+no_exclam has_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr low_wps no_exclam has_qmark,LER
+low_wps no_exclam has_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+low_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr low_wps no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+low_wps no_exclam has_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+low_wps has_exclam has_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr low_wps has_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+low_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr low_wps has_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr low_wps no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr low_wps has_exclam no_qmark,LER
+few_sixltr low_wps has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+few_sixltr no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+low_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+low_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr low_wps has_exclam has_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+low_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+low_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+low_wps no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr low_wps has_exclam no_qmark,LER
+few_sixltr low_wps has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam has_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr low_wps has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+low_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+few_sixltr low_wps has_exclam has_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr low_wps has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+low_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+low_wps no_exclam has_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+low_wps no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr low_wps has_exclam no_qmark,LER
+no_exclam has_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+many_sixltr has_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+many_sixltr low_wps no_exclam has_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam has_qmark,LER
+few_sixltr low_wps has_exclam has_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam has_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+low_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+low_wps has_exclam has_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr low_wps no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr low_wps no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr low_wps no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr low_wps has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+low_wps no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr low_wps no_exclam has_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam has_qmark,LER
+few_sixltr low_wps has_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr has_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam has_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam has_qmark,LER
+low_wps no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+has_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr low_wps has_exclam no_qmark,LER
+has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr low_wps has_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+low_wps has_exclam no_qmark,LER
+many_sixltr low_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr low_wps has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr low_wps has_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam has_qmark,LER
+no_exclam has_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr low_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+many_sixltr low_wps has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr has_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr low_wps no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+few_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+has_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr low_wps no_exclam has_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr low_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr high_wps no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam has_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+high_wps no_exclam no_qmark,LER
+many_sixltr has_exclam no_qmark,LER
+many_sixltr no_exclam no_qmark,LER
+low_wps no_exclam has_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+few_sixltr no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER
+no_exclam no_qmark,LER

@@ -1,0 +1,93 @@
+LER,is_clout_no posemo_yes negemo_yes,8
+LER,insight_yes certain_yes affiliation_yes,15
+HER,posemo_yes low_wps,3
+LER,negemo_yes anger_yes tentat_yes,8
+HER,anger_yes certain_yes,11
+LER,anger_yes insight_yes power_yes,3
+HER,is_analytic_yes cause_yes netspeak_yes,27
+LER,reward_yes has_exclam has_hashtag,5
+LER,power_yes low_wps has_hashtag,4
+LER,posemo_yes see_yes power_yes,15
+HER,hear_yes few_sixltr,7
+LER,power_yes has_qmark,3
+LER,negemo_yes certain_yes differ_yes,3
+LER,see_yes netspeak_yes nonflu_yes,20
+HER,is_authentic_yes see_yes has_hashtag,2
+HER,insight_yes affiliation_yes reward_yes,6
+HER,is_analytic_no power_yes,4
+HER,anx_yes insight_yes cause_yes,6
+LER,is_tone_no negemo_yes certain_yes,5
+LER,netspeak_yes high_wps has_qmark,6
+HER,is_clout_no netspeak_yes has_photo,3
+HER,posemo_yes cause_yes power_yes,9
+LER,is_analytic_yes is_tone_no,43
+LER,anger_yes affiliation_yes netspeak_yes,4
+LER,see_yes netspeak_yes assent_yes,7
+LER,discrep_yes tentat_yes affiliation_yes,14
+HER,certain_yes risk_yes,9
+LER,is_analytic_yes posemo_yes feel_yes,5
+LER,is_clout_yes insight_yes discrep_yes,14
+LER,negemo_yes sad_yes see_yes,15
+HER,has_qmark has_animated_gif has_url,7
+HER,differ_yes achieve_yes netspeak_yes,9
+HER,netspeak_yes assent_yes high_wps,30
+HER,differ_yes many_sixltr low_wps,3
+LER,discrep_yes certain_yes see_yes,20
+HER,swear_yes netspeak_yes low_wps,3
+HER,feel_yes risk_yes netspeak_yes,3
+HER,insight_yes netspeak_yes has_photo,14
+HER,tentat_yes affiliation_yes risk_yes,5
+LER,is_tone_yes posemo_yes negemo_yes,18
+HER,negemo_yes anx_yes cause_yes,9
+HER,is_analytic_yes is_authentic_yes reward_yes,3
+HER,cause_yes certain_yes differ_yes,10
+LER,is_clout_yes posemo_yes see_yes,11
+LER,is_authentic_yes netspeak_yes high_wps,14
+HER,is_clout_no is_authentic_yes cause_yes,8
+LER,is_analytic_yes netspeak_yes has_url,5
+LER,reward_yes few_sixltr high_wps,9
+LER,is_analytic_yes is_authentic_yes tentat_yes,12
+HER,is_clout_yes see_yes netspeak_yes,13
+HER,many_sixltr has_qmark has_video,3
+LER,affiliation_yes power_yes many_sixltr,18
+HER,anger_yes certain_yes affiliation_yes,5
+HER,is_analytic_yes cause_yes see_yes,13
+HER,negemo_yes cause_yes certain_yes,5
+LER,cause_yes hear_yes affiliation_yes,13
+LER,nonflu_yes few_sixltr has_exclam,23
+LER,power_yes many_sixltr low_wps,6
+LER,nonflu_yes has_exclam has_hashtag,24
+HER,negemo_yes insight_yes discrep_yes,5
+LER,affiliation_yes power_yes low_wps,4
+HER,is_authentic_yes certain_yes feel_yes,2
+HER,is_analytic_yes is_clout_yes discrep_yes,3
+LER,sad_yes see_yes,17
+HER,see_yes risk_yes,11
+HER,anger_yes discrep_yes,4
+LER,posemo_yes negemo_yes insight_yes,11
+LER,posemo_yes many_sixltr,4
+LER,is_authentic_yes affiliation_yes many_sixltr,3
+HER,tentat_yes assent_yes,2
+LER,posemo_yes feel_yes achieve_yes,3
+LER,hear_yes achieve_yes reward_yes,8
+LER,see_yes hear_yes achieve_yes,5
+LER,insight_yes affiliation_yes risk_yes,5
+LER,reward_yes low_wps has_qmark,3
+LER,affiliation_yes many_sixltr high_wps,6
+LER,insight_yes differ_yes see_yes,8
+LER,negemo_yes certain_yes,9
+HER,is_analytic_yes cause_yes affiliation_yes,5
+LER,affiliation_yes assent_yes,3
+HER,is_authentic_yes insight_yes many_sixltr,4
+LER,power_yes reward_yes few_sixltr,15
+HER,is_analytic_no cause_yes netspeak_yes,11
+LER,negemo_yes tentat_yes,7
+HER,negemo_yes anx_yes power_yes,6
+HER,is_analytic_no is_clout_yes tentat_yes,9
+HER,is_analytic_no is_clout_no is_tone_no,10
+LER,negemo_yes sad_yes netspeak_yes,8
+LER,is_tone_no negemo_yes see_yes,5
+LER,affiliation_yes reward_yes many_sixltr,7
+LER,is_authentic_yes cause_yes affiliation_yes,13
+HER,is_analytic_no feel_yes netspeak_yes,2
+LER,nonflu_yes many_sixltr has_photo,4
